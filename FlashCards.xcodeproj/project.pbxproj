@@ -21,6 +21,7 @@
 		9F4CF25B2718BEA400C7BBA5 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CF2532718BEA400C7BBA5 /* Progress.swift */; };
 		9F4CF25D2718BEA400C7BBA5 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CF2552718BEA400C7BBA5 /* Card.swift */; };
 		9F4CF25F2718BEA400C7BBA5 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CF2572718BEA400C7BBA5 /* Content.swift */; };
+		9F4CF2632718C5A800C7BBA5 /* DeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CF2622718C5A800C7BBA5 /* DeckViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		9F4CF2532718BEA400C7BBA5 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		9F4CF2552718BEA400C7BBA5 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		9F4CF2572718BEA400C7BBA5 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		9F4CF2622718C5A800C7BBA5 /* DeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				5DE6026C2718B86E00341772 /* AppDelegate.swift */,
 				5DE6026E2718B86E00341772 /* SceneDelegate.swift */,
 				5DE602702718B86E00341772 /* ViewController.swift */,
+				9F4CF2622718C5A800C7BBA5 /* DeckViewController.swift */,
 				5DE602722718B86E00341772 /* Main.storyboard */,
 				5DE602782718B87000341772 /* Assets.xcassets */,
 				5DE6027A2718B87000341772 /* LaunchScreen.storyboard */,
@@ -289,6 +292,7 @@
 				5DE602772718B86E00341772 /* FlashCards.xcdatamodeld in Sources */,
 				9F4CF25B2718BEA400C7BBA5 /* Progress.swift in Sources */,
 				5DE6026F2718B86E00341772 /* SceneDelegate.swift in Sources */,
+				9F4CF2632718C5A800C7BBA5 /* DeckViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
