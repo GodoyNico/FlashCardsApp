@@ -8,50 +8,36 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Decks-->
-        <scene sceneID="PiF-us-vjk">
+        <!--My Decks-->
+        <scene sceneID="ysu-Qc-a0k">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Iy-qV-9AX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="cWw-wI-916" customClass="DeckViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Acn-L9-zb7">
+                <viewController id="kBQ-UT-ntk" customClass="DeckViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kEl-Bt-1to">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SZy-vq-JAR">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Teste" id="keS-ZE-7o8">
-                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="gOe-ld-vfJ">
-                                            <connections>
-                                                <action selector="addDeck:" destination="cWw-wI-916" id="Zzg-Az-Rle"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eMh-Ww-HBc">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eMh-Ww-HBc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Deck-Cell-ID" id="Wq6-qC-GP2" customClass="DeckTableViewCell" customModule="FlashCards" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wq6-qC-GP2" id="rP1-cP-DVY" customClass="DeckTableViewCell" customModule="FlashCards" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DeckTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VI7-Xr-OMz">
-                                                    <rect key="frame" x="20" y="10" width="71.5" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DeckTitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VI7-Xr-OMz">
+                                                    <rect key="frame" x="20" y="11.5" width="71.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="VI7-Xr-OMz" firstAttribute="top" secondItem="rP1-cP-DVY" secondAttribute="topMargin" constant="-1" id="Han-gN-dVs"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="VI7-Xr-OMz" secondAttribute="bottom" constant="1.5" id="JNb-TY-1lB"/>
-                                                <constraint firstItem="VI7-Xr-OMz" firstAttribute="leading" secondItem="rP1-cP-DVY" secondAttribute="leadingMargin" id="kVi-eV-uDm"/>
+                                                <constraint firstItem="VI7-Xr-OMz" firstAttribute="centerY" secondItem="rP1-cP-DVY" secondAttribute="centerY" id="0aa-ed-xtq"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VI7-Xr-OMz" secondAttribute="trailing" constant="20" symbolic="YES" id="GQP-Mb-aih"/>
+                                                <constraint firstItem="VI7-Xr-OMz" firstAttribute="leading" secondItem="rP1-cP-DVY" secondAttribute="leadingMargin" id="Ij7-Ql-Gej"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -61,19 +47,30 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Ub5-c2-cNw"/>
+                        <viewLayoutGuide key="safeArea" id="Yfj-u6-Skt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yfj-u6-Skt" firstAttribute="bottom" secondItem="eMh-Ww-HBc" secondAttribute="bottom" id="0zi-vx-p8U"/>
+                            <constraint firstItem="eMh-Ww-HBc" firstAttribute="top" secondItem="Yfj-u6-Skt" secondAttribute="top" id="DXk-KK-Qh0"/>
+                            <constraint firstItem="eMh-Ww-HBc" firstAttribute="trailing" secondItem="Yfj-u6-Skt" secondAttribute="trailing" id="IWG-Eq-BTL"/>
+                            <constraint firstItem="eMh-Ww-HBc" firstAttribute="leading" secondItem="Yfj-u6-Skt" secondAttribute="leading" id="gBD-VX-ZyX"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Decks" image="menucard" catalog="system" id="1dN-rd-qTp"/>
-                    <navigationItem key="navigationItem" id="3Nu-iL-c6U"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" title="My Decks" id="Etv-q7-KBQ">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="gOe-ld-vfJ">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="addDeck:" destination="kBQ-UT-ntk" id="gh3-vb-Nn9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="addButton" destination="gOe-ld-vfJ" id="TnS-61-hLS"/>
-                        <outlet property="decksTableView" destination="eMh-Ww-HBc" id="hUI-8w-OWv"/>
+                        <outlet property="decksTableView" destination="eMh-Ww-HBc" id="BTl-hg-KGW"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wvd-SD-pfn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992.75362318840587" y="864.50892857142856"/>
+            <point key="canvasLocation" x="2130" y="865"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9Zd-2E-rMJ">
@@ -81,20 +78,43 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8Bl-T3-sML" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sHz-Jy-hiC">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="cWw-wI-916" kind="relationship" relationship="viewControllers" id="hL1-MC-xR4"/>
+                        <segue destination="jOw-Z5-IOW" kind="relationship" relationship="viewControllers" id="W8d-04-5tM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7C-sv-INe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="864.50892857142856"/>
         </scene>
+        <!--Decks-->
+        <scene sceneID="vie-aR-RIQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jOw-Z5-IOW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Decks" image="menucard" catalog="system" id="nZ1-WJ-8XA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bsp-wO-va2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kBQ-UT-ntk" kind="relationship" relationship="rootViewController" id="uVX-4P-LNx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efL-gI-6QH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1109" y="865"/>
+        </scene>
     </scenes>
     <resources>
         <image name="menucard" catalog="system" width="107" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

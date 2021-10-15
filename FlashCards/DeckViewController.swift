@@ -16,9 +16,7 @@ class DeckViewController: UIViewController, UITableViewDelegate, UITableViewData
     var decks: [Deck] = []
 
     @IBOutlet weak var decksTableView: UITableView!
-    
-    @IBOutlet weak var addButton: UIBarButtonItem!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
