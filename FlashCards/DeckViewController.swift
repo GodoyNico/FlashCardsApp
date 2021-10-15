@@ -31,6 +31,17 @@ class DeckViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.decks = try context.fetch(Deck.fetchRequest())
             DispatchQueue.main.async {
                 self.decksTableView.reloadData()
+                /*
+                for deck in self.decks {
+                    print("Title: \(deck.title)")
+                    print("ID: \(deck.id)")
+                    print("Date: \(deck.create_date)")
+                    print("Progress: \(deck.progress)")
+                    print("Cards: \(deck.cards?.count)")
+                    print("-----------------------------\n")
+                }
+                */
+                
             }
         } catch { }
         
@@ -109,6 +120,9 @@ class DeckViewController: UIViewController, UITableViewDelegate, UITableViewData
             // Create a Deck Object
             let newDeck = Deck(context: self.context)
             newDeck.title = textField?.text
+            newDeck.id = UUID()
+            newDeck.create_date = Date.now
+            newDeck.cards = []
             
             // Save the Data
             do {
