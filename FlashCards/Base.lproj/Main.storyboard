@@ -66,11 +66,70 @@
                     </navigationItem>
                     <connections>
                         <outlet property="decksTableView" destination="eMh-Ww-HBc" id="BTl-hg-KGW"/>
+                        <segue destination="ic1-M6-GAy" kind="show" identifier="GoToDeckDetails" id="waK-a4-9vS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wvd-SD-pfn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2130" y="865"/>
+        </scene>
+        <!--DeckTitle-->
+        <scene sceneID="qeM-fK-XsT">
+            <objects>
+                <viewController id="ic1-M6-GAy" customClass="DeckDetailsViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xaf-0j-Xkn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gpH-98-CmX">
+                                <rect key="frame" x="0.0" y="85" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Card-Cell-ID" id="s7b-jK-fnZ" customClass="CardTableViewCell">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s7b-jK-fnZ" id="Mki-mt-s87" customClass="DeckTableViewCell" customModule="FlashCards" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CardTitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tez-xb-sAM">
+                                                    <rect key="frame" x="20" y="11.5" width="69.5" height="21"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tez-xb-sAM" secondAttribute="trailing" constant="20" symbolic="YES" id="Rc7-Ln-cPt"/>
+                                                <constraint firstItem="tez-xb-sAM" firstAttribute="leading" secondItem="Mki-mt-s87" secondAttribute="leadingMargin" id="Ycj-ro-6De"/>
+                                                <constraint firstItem="tez-xb-sAM" firstAttribute="centerY" secondItem="Mki-mt-s87" secondAttribute="centerY" id="aFj-yI-1FJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cardTitleCell" destination="tez-xb-sAM" id="VwG-QX-9qf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vca-tH-yJi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="DeckTitle" id="ifR-7N-4ko">
+                        <barButtonItem key="rightBarButtonItem" title="Add Card" style="plain" id="ZZq-oy-zWd">
+                            <connections>
+                                <action selector="addCard:" destination="ic1-M6-GAy" id="Sq3-pr-deJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cardsTableView" destination="gpH-98-CmX" id="o9V-bY-xB5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M7R-kE-xyk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3028" y="865"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9Zd-2E-rMJ">

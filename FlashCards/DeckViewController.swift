@@ -12,6 +12,7 @@ class DeckViewController: UIViewController, UITableViewDelegate, UITableViewData
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     let deckCellId: String = "Deck-Cell-ID"
+    let deckSegueId: String = "GoToDeckDetails"
     
     var decks: [Deck] = []
 
@@ -67,43 +68,56 @@ class DeckViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    // MARK: Edit Deck
+    
+    // MARK: Go To Deck Details
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let deck = self.decks[indexPath.row]
-        
-        let alert = UIAlertController(title: "Edit Deck", message: "Edit Title: ", preferredStyle: .alert)
-        
-        alert.addTextField()
-        
-        let textField = alert.textFields!.first
-        textField?.text = deck.title
-
-        
-        let saveButton = UIAlertAction(title: "Save", style: .default) { (action) in
-            
-            // Get textfield for the alert
-            let textField = alert.textFields!.first
-            
-            // Edit title Deck Object
-            deck.title = textField?.text
-            
-            // Save the Data
-            do {
-                try self.context.save()
-            } catch { }
-            
-            // Re-Fetch the Data
-            self.fetchDecks()
-            
-        }
-        
-        alert.addAction(saveButton)
-        
-        self.present(alert, animated: true, completion: nil)
-        
-
+        performSegue(withIdentifier: deckSegueId, sender: decks[indexPath.row])
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let deckDetails = segue.destination as? DeckDetailsViewController else { return }
+
+        deckDetails.deck = sender as? Deck
+        
+    }
+    
+//    // MARK: Edit Deck
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//
+//        let deck = self.decks[indexPath.row]
+//
+//        let alert = UIAlertController(title: "Edit Deck", message: "Edit Title: ", preferredStyle: .alert)
+//
+//        alert.addTextField()
+//
+//        let textField = alert.textFields!.first
+//        textField?.text = deck.title
+//
+//
+//        let saveButton = UIAlertAction(title: "Save", style: .default) { (action) in
+//
+//            // Get textfield for the alert
+//            let textField = alert.textFields!.first
+//
+//            // Edit title Deck Object
+//            deck.title = textField?.text
+//
+//            // Save the Data
+//            do {
+//                try self.context.save()
+//            } catch { }
+//
+//            // Re-Fetch the Data
+//            self.fetchDecks()
+//
+//        }
+//
+//        alert.addAction(saveButton)
+//
+//        self.present(alert, animated: true, completion: nil)
+//
+//
+//    }
     
     // MARK: Add Deck
     @IBAction func addDeck(_ sender: Any) {

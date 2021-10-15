@@ -23,6 +23,8 @@
 		9F4CF25F2718BEA400C7BBA5 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CF2572718BEA400C7BBA5 /* Content.swift */; };
 		9F4CF2632718C5A800C7BBA5 /* DeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CF2622718C5A800C7BBA5 /* DeckViewController.swift */; };
 		C067DF042719F131007F1EB5 /* DeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF032719F131007F1EB5 /* DeckTableViewCell.swift */; };
+		C067DF06271A15E9007F1EB5 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF05271A15E9007F1EB5 /* CardTableViewCell.swift */; };
+		C067DF08271A160F007F1EB5 /* DeckDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF07271A160F007F1EB5 /* DeckDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		9F4CF2572718BEA400C7BBA5 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		9F4CF2622718C5A800C7BBA5 /* DeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewController.swift; sourceTree = "<group>"; };
 		C067DF032719F131007F1EB5 /* DeckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTableViewCell.swift; sourceTree = "<group>"; };
+		C067DF05271A15E9007F1EB5 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		C067DF07271A160F007F1EB5 /* DeckDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 				9F4CF2622718C5A800C7BBA5 /* DeckViewController.swift */,
 				C067DF032719F131007F1EB5 /* DeckTableViewCell.swift */,
 				5DE602722718B86E00341772 /* Main.storyboard */,
+				C067DF07271A160F007F1EB5 /* DeckDetailsViewController.swift */,
+				C067DF05271A15E9007F1EB5 /* CardTableViewCell.swift */,
 				5DE602782718B87000341772 /* Assets.xcassets */,
 				5DE6027A2718B87000341772 /* LaunchScreen.storyboard */,
 				5DE6027D2718B87000341772 /* Info.plist */,
@@ -288,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F4CF25D2718BEA400C7BBA5 /* Card.swift in Sources */,
+				C067DF06271A15E9007F1EB5 /* CardTableViewCell.swift in Sources */,
 				5DE602712718B86E00341772 /* ViewController.swift in Sources */,
 				9F4CF2592718BEA400C7BBA5 /* Deck.swift in Sources */,
 				5DE6026D2718B86E00341772 /* AppDelegate.swift in Sources */,
@@ -296,6 +303,7 @@
 				C067DF042719F131007F1EB5 /* DeckTableViewCell.swift in Sources */,
 				9F4CF25B2718BEA400C7BBA5 /* Progress.swift in Sources */,
 				5DE6026F2718B86E00341772 /* SceneDelegate.swift in Sources */,
+				C067DF08271A160F007F1EB5 /* DeckDetailsViewController.swift in Sources */,
 				9F4CF2632718C5A800C7BBA5 /* DeckViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
