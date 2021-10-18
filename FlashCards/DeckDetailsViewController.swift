@@ -53,25 +53,59 @@ class DeckDetailsViewController: UIViewController, UITableViewDelegate, UITableV
 
         let card = (self.deck?.cards?[indexPath.row])! as Card
         
-        cell.cardTitleCell.text = card.id?.description
+        cell.frontContentCell.text = card.front_content?.text
         
+        cell.backContentCell.text = card.back_content?.text
+
         return cell
         
     }
     
     @IBAction func addCard(_ sender: Any) {
         
-//        // Create a Card Object
-//        let newCard = Card(context: self.context)
-//        newCard.id = UUID()
-//
-//        // Save the Data
-//        do {
-//            try self.context.save()
-//        } catch { }
-//
-//        // Re-Fetch the Data
-//        self.fetchCards()
+        let alert = UIAlertController(title: "Add Card", message: "Create your card:", preferredStyle: .alert)
+        
+        alert.addTextField()
+        alert.addTextField()
+        
+        let submitButton = UIAlertAction(title: "Add", style: .default) { (action) in
+            
+            // Get textfield for the alert
+            let textFieldFront = alert.textFields!.first
+            
+            let frontContent = Content(context: self.context)
+            frontContent.text = textFieldFront?.text
+            
+            let textFieldBack = alert.textFields!.last
+            
+            let backContent = Content(context: self.context)
+            backContent.text = textFieldBack?.text
+            
+            
+            
+            // Create a Deck Object
+            let newCard = Card(context: self.context)
+            newCard.front_content = frontContent
+            newCard.back_content = backContent
+            newCard.id = UUID()
+            newCard.progress = []
+            
+            print(newCard.front_content?.text)
+            print(newCard.back_content?.text)
+            
+            // Save the Data
+            do {
+                try self.context.save()
+            } catch { }
+            
+            // Re-Fetch the Data
+            self.fetchCards()
+            
+        }
+        
+        alert.addAction(submitButton)
+        
+        self.present(alert, animated: true, completion: nil)
             
     }
     
