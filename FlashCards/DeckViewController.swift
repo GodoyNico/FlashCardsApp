@@ -125,7 +125,6 @@ class DeckViewController: UIViewController, UITableViewDelegate, UITableViewData
             newDeck.title = textField?.text
             newDeck.id = UUID()
             newDeck.created_date = Date.now
-            newDeck.cards = []
             
             // Save the Data
             do {
