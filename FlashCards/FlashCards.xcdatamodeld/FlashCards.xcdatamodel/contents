@@ -6,32 +6,27 @@
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="progress" optional="YES" attributeType="Transformable" customClassName="[Progress]"/>
         <attribute name="progress_counter" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="content" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Content" inverseName="card" inverseEntity="Content"/>
-        <relationship name="deck" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Deck" inverseName="deck" inverseEntity="Deck"/>
-        <relationship name="evolution" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Progress" inverseName="progress" inverseEntity="Progress"/>
+        <relationship name="deck" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Deck" inverseName="cards" inverseEntity="Deck"/>
     </entity>
     <entity name="Content" representedClassName="Content" syncable="YES">
         <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="text" optional="YES" attributeType="String"/>
-        <relationship name="card" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Card" inverseName="content" inverseEntity="Card"/>
     </entity>
     <entity name="Deck" representedClassName="Deck" syncable="YES">
-        <attribute name="cards" optional="YES" attributeType="Transformable" customClassName="[Card]"/>
-        <attribute name="create_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="created_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="progress" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
-        <relationship name="deck" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Card" inverseName="deck" inverseEntity="Card"/>
+        <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Card" inverseName="deck" inverseEntity="Card"/>
     </entity>
     <entity name="Progress" representedClassName="Progress" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="status" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <relationship name="progress" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Card" inverseName="evolution" inverseEntity="Card"/>
     </entity>
     <elements>
-        <element name="Card" positionX="-54" positionY="27" width="128" height="149"/>
-        <element name="Content" positionX="-18" positionY="72" width="128" height="74"/>
-        <element name="Deck" positionX="-63" positionY="-18" width="128" height="119"/>
-        <element name="Progress" positionX="-36" positionY="54" width="128" height="74"/>
+        <element name="Card" positionX="-54" positionY="27" width="128" height="119"/>
+        <element name="Content" positionX="-18" positionY="72" width="128" height="59"/>
+        <element name="Deck" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="Progress" positionX="-36" positionY="54" width="128" height="59"/>
     </elements>
 </model>

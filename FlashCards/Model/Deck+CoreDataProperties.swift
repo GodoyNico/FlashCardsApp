@@ -2,7 +2,7 @@
 //  Deck+CoreDataProperties.swift
 //  FlashCards
 //
-//  Created by Julia Silveira de Souza on 18/10/21.
+//  Created by Igor Marques Vicente on 19/10/21.
 //
 //
 
@@ -16,29 +16,28 @@ extension Deck {
         return NSFetchRequest<Deck>(entityName: "Deck")
     }
 
-    @NSManaged public var cards: [Card]?
-    @NSManaged public var create_date: Date?
+    @NSManaged public var created_date: Date?
     @NSManaged public var id: UUID?
     @NSManaged public var progress: Double
     @NSManaged public var title: String?
-    @NSManaged public var deck: NSSet?
+    @NSManaged public var cards: NSSet?
 
 }
 
-// MARK: Generated accessors for deck
+// MARK: Generated accessors for cards
 extension Deck {
 
-    @objc(addDeckObject:)
-    @NSManaged public func addToDeck(_ value: Card)
+    @objc(addCardsObject:)
+    @NSManaged public func addToCards(_ value: Card)
 
-    @objc(removeDeckObject:)
-    @NSManaged public func removeFromDeck(_ value: Card)
+    @objc(removeCardsObject:)
+    @NSManaged public func removeFromCards(_ value: Card)
 
-    @objc(addDeck:)
-    @NSManaged public func addToDeck(_ values: NSSet)
+    @objc(addCards:)
+    @NSManaged public func addToCards(_ values: NSSet)
 
-    @objc(removeDeck:)
-    @NSManaged public func removeFromDeck(_ values: NSSet)
+    @objc(removeCards:)
+    @NSManaged public func removeFromCards(_ values: NSSet)
 
 }
 

@@ -10,6 +10,8 @@ import UIKit
 class DeckDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var deck: Deck?
+    var cards: [Card] = []
+
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
     var cardCellId: String = "Card-Cell-ID"
@@ -23,16 +25,15 @@ class DeckDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         cardsTableView.delegate = self
         cardsTableView.dataSource = self
        
+        fetchCards()
     }
     
     func fetchCards() {
-        do {
-            self.deck?.cards = try context.fetch(Card.fetchRequest())
-            DispatchQueue.main.async {
-                self.cardsTableView.reloadData()
-            }
-        } catch { }
+        self.cards = self.deck?.cards?.objectEnumerator().allObjects as! [Card]
         
+        DispatchQueue.main.async {
+            self.cardsTableView.reloadData()
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -51,10 +52,9 @@ class DeckDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         
         let cell = cardsTableView.dequeueReusableCell(withIdentifier: cardCellId) as! CardTableViewCell
 
-        let card = (self.deck?.cards?[indexPath.row])! as Card
+        let card = self.cards[indexPath.row] as Card
         
         cell.frontContentCell.text = card.front_content?.text
-        
         cell.backContentCell.text = card.back_content?.text
 
         return cell
@@ -81,8 +81,6 @@ class DeckDetailsViewController: UIViewController, UITableViewDelegate, UITableV
             let backContent = Content(context: self.context)
             backContent.text = textFieldBack?.text
             
-            
-            
             // Create a Deck Object
             let newCard = Card(context: self.context)
             newCard.front_content = frontContent
@@ -90,8 +88,8 @@ class DeckDetailsViewController: UIViewController, UITableViewDelegate, UITableV
             newCard.id = UUID()
             newCard.progress = []
             
-            print(newCard.front_content?.text)
-            print(newCard.back_content?.text)
+            self.deck?.addToCards(newCard)
+            newCard.deck = self.deck
             
             // Save the Data
             do {

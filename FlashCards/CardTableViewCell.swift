@@ -10,7 +10,7 @@ import UIKit
 class CardTableViewCell: UITableViewCell {
 
     @IBOutlet weak var frontContentCell: UILabel!
-    @IBOutlet var backContentCell: UILabel!
+    @IBOutlet weak var backContentCell: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
