@@ -7,24 +7,60 @@
 
 import UIKit
 
-class DeckDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+typealias PracticeData = (countCards: Int, isFront: Bool)
 
+class DeckDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     var deck: Deck?
     var cards: [Card] = []
-
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-    var cardCellId: String = "Card-Cell-ID"
+    var practiceSegueID: String = "goToPractice"
     
-    @IBOutlet weak var cardsTableView: UITableView!
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    var cardCellId: String = "Card-Cell-ID"
         
+    @IBOutlet weak var cardsTableView: UITableView!
+    @IBAction func practice(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Practice", message: "How many cards do you want practice?", preferredStyle: .alert)
+        
+        alert.addTextField()
+        
+        let frontButton = UIAlertAction(title: "Frente", style: .default) { [self] (action) in
+            guard let text = alert.textFields?.first?.text,
+                  let countCards = Int(text) else { return }
+            let practiceData = PracticeData(countCards: countCards, isFront: true)
+            performSegue(withIdentifier: self.practiceSegueID, sender: practiceData)
+        }
+        
+        let backButton = UIAlertAction(title: "Verso", style: .default) { [self] (action) in
+            guard let text = alert.textFields?.first?.text,
+                  let countCards = Int(text) else { return }
+            let practiceData = PracticeData(countCards: countCards, isFront: false)
+            performSegue(withIdentifier: self.practiceSegueID, sender: practiceData)
+        }
+        
+        alert.addAction(frontButton)
+        alert.addAction(backButton)
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let practiceViewController = segue.destination as? PracticeViewController,
+            let practiceData = sender as? PracticeData else { return }
+        
+        practiceViewController.practiceData = practiceData
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navigationItem.title = deck?.title
         cardsTableView.delegate = self
         cardsTableView.dataSource = self
-       
+        
         fetchCards()
     }
     
@@ -51,12 +87,12 @@ class DeckDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = cardsTableView.dequeueReusableCell(withIdentifier: cardCellId) as! CardTableViewCell
-
+        
         let card = self.cards[indexPath.row] as Card
         
         cell.frontContentCell.text = card.front_content?.text
         cell.backContentCell.text = card.back_content?.text
-
+        
         return cell
         
     }
@@ -104,7 +140,7 @@ class DeckDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         alert.addAction(submitButton)
         
         self.present(alert, animated: true, completion: nil)
-            
+        
     }
     
     // MARK: Delete Card
@@ -126,7 +162,7 @@ class DeckDetailsViewController: UIViewController, UITableViewDelegate, UITableV
             
             // Re-Fetch the Data
             self.fetchCards()
-
+            
         }
         
         // Return Swipe Action
@@ -136,26 +172,26 @@ class DeckDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     
     // MARK: Edit Card
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        
         let card = self.cards[indexPath.row]
-
+        
         let alert = UIAlertController(title: "Edit Card", message: "Edit Title: ", preferredStyle: .alert)
-
+        
         alert.addTextField()
         alert.addTextField()
-
+        
         let textFieldFront = alert.textFields!.first
         textFieldFront?.text = card.front_content?.text
         
         let textFieldBack = alert.textFields!.last
         textFieldBack?.text = card.back_content?.text
-
+        
         let saveButton = UIAlertAction(title: "Save", style: .default) { (action) in
-
+            
             // Get textfield for the alert
             let textFieldFront = alert.textFields!.first
             let textFieldBack = alert.textFields!.last
-
+            
             let frontContent = Content(context: self.context)
             frontContent.text = textFieldFront?.text
             
@@ -165,19 +201,19 @@ class DeckDetailsViewController: UIViewController, UITableViewDelegate, UITableV
             // Edit title Deck Object
             card.front_content = frontContent
             card.back_content = backContent
-
+            
             // Save the Data
             do {
                 try self.context.save()
             } catch { }
-
+            
             // Re-Fetch the Data
             self.fetchCards()
-
+            
         }
-
+        
         alert.addAction(saveButton)
-
+        
         self.present(alert, animated: true, completion: nil)
     }
 }

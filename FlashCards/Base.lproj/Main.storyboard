@@ -76,14 +76,13 @@
         <!--DeckTitle-->
         <scene sceneID="qeM-fK-XsT">
             <objects>
-                <viewController id="ic1-M6-GAy" customClass="DeckDetailsViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ic1-M6-GAy" customClass="DeckDetailsViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xaf-0j-Xkn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gpH-98-CmX">
-                                <rect key="frame" x="0.0" y="85" width="414" height="725"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gpH-98-CmX">
+                                <rect key="frame" x="0.0" y="179" width="414" height="601"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Card-Cell-ID" rowHeight="94" id="s7b-jK-fnZ" customClass="CardTableViewCell" customModule="FlashCards" customModuleProvider="target">
@@ -128,9 +127,28 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9l-oq-k0G">
+                                <rect key="frame" x="170" y="118" width="74.5" height="31"/>
+                                <color key="backgroundColor" red="0.76995939020000004" green="0.90894478560000003" blue="0.96079343559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Praticar"/>
+                                <connections>
+                                    <action selector="practice:" destination="ic1-M6-GAy" eventType="touchUpInside" id="oe2-Ht-aGY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vca-tH-yJi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gpH-98-CmX" firstAttribute="top" secondItem="t9l-oq-k0G" secondAttribute="bottom" constant="30" id="Nem-pM-OuV"/>
+                            <constraint firstItem="t9l-oq-k0G" firstAttribute="centerX" secondItem="Xaf-0j-Xkn" secondAttribute="centerX" id="RuV-fz-cJ6"/>
+                            <constraint firstItem="gpH-98-CmX" firstAttribute="centerX" secondItem="t9l-oq-k0G" secondAttribute="centerX" id="gtf-QX-PRY"/>
+                            <constraint firstItem="gpH-98-CmX" firstAttribute="leading" secondItem="Vca-tH-yJi" secondAttribute="leading" id="iBk-z4-KoC"/>
+                            <constraint firstItem="Vca-tH-yJi" firstAttribute="bottom" secondItem="gpH-98-CmX" secondAttribute="bottom" constant="33" id="qY3-a1-6kr"/>
+                            <constraint firstItem="t9l-oq-k0G" firstAttribute="top" secondItem="Vca-tH-yJi" secondAttribute="top" constant="30" id="wfc-1J-OLA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="DeckTitle" id="ifR-7N-4ko">
                         <barButtonItem key="rightBarButtonItem" title="Add Card" style="plain" id="ZZq-oy-zWd">
@@ -141,11 +159,54 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cardsTableView" destination="gpH-98-CmX" id="o9V-bY-xB5"/>
+                        <segue destination="LOR-fw-rph" kind="presentation" identifier="goToPractice" id="HfZ-rj-wGr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M7R-kE-xyk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3027.536231884058" y="864.50892857142856"/>
+        </scene>
+        <!--Practice View Controller-->
+        <scene sceneID="Fze-u2-e08">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="LOR-fw-rph" customClass="PracticeViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z16-iI-uTh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="xVQ-dg-msV">
+                                <rect key="frame" x="186.5" y="400.5" width="41.5" height="95"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="132-sL-YDg">
+                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0S-Fn-AMj">
+                                        <rect key="frame" x="0.0" y="74.5" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UOd-9C-cPw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xVQ-dg-msV" firstAttribute="centerY" secondItem="z16-iI-uTh" secondAttribute="centerY" id="CpD-kF-mTu"/>
+                            <constraint firstItem="xVQ-dg-msV" firstAttribute="centerX" secondItem="z16-iI-uTh" secondAttribute="centerX" id="Jq1-Ns-pAx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardSide" destination="e0S-Fn-AMj" id="jDw-Db-jqQ"/>
+                        <outlet property="numberOfCards" destination="132-sL-YDg" id="AzP-gh-kfl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8GA-oh-M1N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3890" y="865"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9Zd-2E-rMJ">
