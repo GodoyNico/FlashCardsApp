@@ -11,15 +11,34 @@ typealias PracticeData = (countCards: Int, isFront: Bool, selectedDeck: Deck)
 
 class DeckDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var deck: Deck?
-    var cards: [Card] = []
-    var practiceSegueID: String = "goToPractice"
-    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    var deck: Deck?
+    var cards: [Card] = []
+    
+    var practiceSegueID: String = "goToPractice"
     var cardCellId: String = "Card-Cell-ID"
-        
+    
     @IBOutlet weak var cardsTableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationItem.title = deck?.title
+        cardsTableView.delegate = self
+        cardsTableView.dataSource = self
+        
+        fetchCards()
+    }
+    
+    func fetchCards() {
+        guard let deckCards = self.deck?.cards?.allObjects as? [Card] else { return }
+        self.cards = deckCards
+        
+        DispatchQueue.main.async {
+            self.cardsTableView.reloadData()
+        }
+    }
     
     @IBAction func practice(_ sender: Any) {
         
@@ -55,25 +74,6 @@ class DeckDetailsViewController: UIViewController, UITableViewDelegate, UITableV
             let practiceData = sender as? PracticeData else { return }
         
         practiceViewController.practiceData = practiceData
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        navigationItem.title = deck?.title
-        cardsTableView.delegate = self
-        cardsTableView.dataSource = self
-        
-        fetchCards()
-    }
-    
-    func fetchCards() {
-        guard let deckCards = self.deck?.cards?.objectEnumerator().allObjects as? [Card] else { return }
-        self.cards = deckCards
-        
-        DispatchQueue.main.async {
-            self.cardsTableView.reloadData()
-        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

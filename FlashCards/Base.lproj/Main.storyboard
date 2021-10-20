@@ -159,54 +159,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cardsTableView" destination="gpH-98-CmX" id="o9V-bY-xB5"/>
-                        <segue destination="LOR-fw-rph" kind="presentation" identifier="goToPractice" id="HfZ-rj-wGr"/>
+                        <segue destination="czm-hc-I3L" kind="show" identifier="goToPractice" id="rMb-RS-eYU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M7R-kE-xyk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3027.536231884058" y="864.50892857142856"/>
-        </scene>
-        <!--Practice View Controller-->
-        <scene sceneID="Fze-u2-e08">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="LOR-fw-rph" customClass="PracticeViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="z16-iI-uTh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="xVQ-dg-msV">
-                                <rect key="frame" x="186.5" y="400.5" width="41.5" height="95"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="132-sL-YDg">
-                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0S-Fn-AMj">
-                                        <rect key="frame" x="0.0" y="74.5" width="41.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="UOd-9C-cPw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="xVQ-dg-msV" firstAttribute="centerY" secondItem="z16-iI-uTh" secondAttribute="centerY" id="CpD-kF-mTu"/>
-                            <constraint firstItem="xVQ-dg-msV" firstAttribute="centerX" secondItem="z16-iI-uTh" secondAttribute="centerX" id="Jq1-Ns-pAx"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="cardSide" destination="e0S-Fn-AMj" id="jDw-Db-jqQ"/>
-                        <outlet property="numberOfCards" destination="132-sL-YDg" id="AzP-gh-kfl"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8GA-oh-M1N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3890" y="865"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9Zd-2E-rMJ">
@@ -245,6 +203,61 @@
             </objects>
             <point key="canvasLocation" x="1109" y="865"/>
         </scene>
+        <!--Practice View Controller-->
+        <scene sceneID="Mg4-dl-8uK">
+            <objects>
+                <viewController id="czm-hc-I3L" customClass="PracticeViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9hr-YZ-ouV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFL-T9-S9X">
+                                <rect key="frame" x="82" y="248" width="250" height="400"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conteudo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46m-xg-o6l">
+                                        <rect key="frame" x="87.5" y="189.5" width="75" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="AIK-po-Rny"/>
+                                    <constraint firstItem="46m-xg-o6l" firstAttribute="centerX" secondItem="JFL-T9-S9X" secondAttribute="centerX" id="drk-m9-28S"/>
+                                    <constraint firstAttribute="height" constant="400" id="uw2-uC-cVU"/>
+                                    <constraint firstItem="46m-xg-o6l" firstAttribute="centerY" secondItem="JFL-T9-S9X" secondAttribute="centerY" id="wOl-oH-vBi"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51k-yT-mHl">
+                                <rect key="frame" x="168.5" y="706" width="77" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Proximo"/>
+                                <connections>
+                                    <action selector="nextCard:" destination="czm-hc-I3L" eventType="touchUpInside" id="YL9-ap-0zj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1dC-mM-qft"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="51k-yT-mHl" firstAttribute="centerX" secondItem="9hr-YZ-ouV" secondAttribute="centerX" id="aMw-RG-3sN"/>
+                            <constraint firstItem="JFL-T9-S9X" firstAttribute="centerX" secondItem="9hr-YZ-ouV" secondAttribute="centerX" id="bjU-B6-TxT"/>
+                            <constraint firstItem="51k-yT-mHl" firstAttribute="top" secondItem="JFL-T9-S9X" secondAttribute="bottom" constant="58" id="o6p-Hf-HRz"/>
+                            <constraint firstItem="JFL-T9-S9X" firstAttribute="centerY" secondItem="9hr-YZ-ouV" secondAttribute="centerY" id="po4-if-IPx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4FF-tf-qR5"/>
+                    <connections>
+                        <outlet property="cardView" destination="JFL-T9-S9X" id="veq-4l-RJ8"/>
+                        <outlet property="contentLabel" destination="46m-xg-o6l" id="UAu-fL-PRx"/>
+                        <outlet property="rememberedButton" destination="51k-yT-mHl" id="TeR-4a-dcF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9F-Gi-cqf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3977" y="865"/>
+        </scene>
     </scenes>
     <resources>
         <image name="menucard" catalog="system" width="107" height="128"/>
@@ -253,6 +266,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

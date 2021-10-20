@@ -2,7 +2,7 @@
 //  Content+CoreDataClass.swift
 //  FlashCards
 //
-//  Created by Igor Marques Vicente on 19/10/21.
+//  Created by Igor Marques Vicente on 20/10/21.
 //
 //
 

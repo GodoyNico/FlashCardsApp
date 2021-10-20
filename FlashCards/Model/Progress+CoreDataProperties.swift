@@ -2,7 +2,7 @@
 //  Progress+CoreDataProperties.swift
 //  FlashCards
 //
-//  Created by Igor Marques Vicente on 19/10/21.
+//  Created by Igor Marques Vicente on 20/10/21.
 //
 //
 
@@ -18,6 +18,7 @@ extension Progress {
 
     @NSManaged public var date: Date?
     @NSManaged public var status: Bool
+    @NSManaged public var card: Card?
 
 }
 

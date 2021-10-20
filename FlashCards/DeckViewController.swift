@@ -57,8 +57,7 @@ class DeckViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    
-     //MARK: Go To Deck Details
+    // MARK: Go To Deck Details
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: deckSegueId, sender: decks[indexPath.row])
     }
