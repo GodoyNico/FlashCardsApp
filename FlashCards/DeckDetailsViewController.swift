@@ -7,7 +7,7 @@
 
 import UIKit
 
-typealias PracticeData = (countCards: Int, isFront: Bool)
+typealias PracticeData = (countCards: Int, isFront: Bool, selectedDeck: Deck)
 
 class DeckDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -20,6 +20,7 @@ class DeckDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     var cardCellId: String = "Card-Cell-ID"
         
     @IBOutlet weak var cardsTableView: UITableView!
+    
     @IBAction func practice(_ sender: Any) {
         
         let alert = UIAlertController(title: "Practice", message: "How many cards do you want practice?", preferredStyle: .alert)
@@ -28,15 +29,17 @@ class DeckDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         
         let frontButton = UIAlertAction(title: "Frente", style: .default) { [self] (action) in
             guard let text = alert.textFields?.first?.text,
-                  let countCards = Int(text) else { return }
-            let practiceData = PracticeData(countCards: countCards, isFront: true)
+                  let countCards = Int(text),
+                  let deckSelected = self.deck else { return }
+            let practiceData = PracticeData(countCards: countCards, isFront: true, selectedDeck: deckSelected)
             performSegue(withIdentifier: self.practiceSegueID, sender: practiceData)
         }
         
         let backButton = UIAlertAction(title: "Verso", style: .default) { [self] (action) in
             guard let text = alert.textFields?.first?.text,
-                  let countCards = Int(text) else { return }
-            let practiceData = PracticeData(countCards: countCards, isFront: false)
+                  let countCards = Int(text),
+                  let deckSelected = self.deck else { return }
+            let practiceData = PracticeData(countCards: countCards, isFront: false, selectedDeck: deckSelected)
             performSegue(withIdentifier: self.practiceSegueID, sender: practiceData)
         }
         
@@ -65,7 +68,8 @@ class DeckDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func fetchCards() {
-        self.cards = self.deck?.cards?.objectEnumerator().allObjects as! [Card]
+        guard let deckCards = self.deck?.cards?.objectEnumerator().allObjects as? [Card] else { return }
+        self.cards = deckCards
         
         DispatchQueue.main.async {
             self.cardsTableView.reloadData()

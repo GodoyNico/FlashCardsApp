@@ -58,16 +58,16 @@ class DeckViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
-    // MARK: Go To Deck Details
+     //MARK: Go To Deck Details
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: deckSegueId, sender: decks[indexPath.row])
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let deckDetails = segue.destination as? DeckDetailsViewController else { return }
 
         deckDetails.deck = sender as? Deck
-        
+
     }
     
 //    // MARK: Edit Deck
@@ -81,7 +81,6 @@ class DeckViewController: UIViewController, UITableViewDelegate, UITableViewData
 //
 //        let textField = alert.textFields!.first
 //        textField?.text = deck.title
-//
 //
 //        let saveButton = UIAlertAction(title: "Save", style: .default) { (action) in
 //
@@ -104,7 +103,6 @@ class DeckViewController: UIViewController, UITableViewDelegate, UITableViewData
 //        alert.addAction(saveButton)
 //
 //        self.present(alert, animated: true, completion: nil)
-//
 //
 //    }
     
