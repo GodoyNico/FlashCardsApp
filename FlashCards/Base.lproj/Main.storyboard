@@ -230,19 +230,37 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51k-yT-mHl">
-                                <rect key="frame" x="168.5" y="706" width="77" height="31"/>
+                                <rect key="frame" x="284" y="706" width="100" height="31"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="kZP-Uo-SJf"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Proximo"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Remember"/>
                                 <connections>
-                                    <action selector="nextCard:" destination="czm-hc-I3L" eventType="touchUpInside" id="YL9-ap-0zj"/>
+                                    <action selector="remembered:" destination="czm-hc-I3L" eventType="touchUpInside" id="09R-sK-KEQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHj-5M-yol">
+                                <rect key="frame" x="30" y="706" width="140" height="31"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="sMu-TC-Rfl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="No remembered"/>
+                                <connections>
+                                    <action selector="noRemembered:" destination="czm-hc-I3L" eventType="touchUpInside" id="MPB-RA-jWK"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1dC-mM-qft"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="51k-yT-mHl" firstAttribute="centerX" secondItem="9hr-YZ-ouV" secondAttribute="centerX" id="aMw-RG-3sN"/>
+                            <constraint firstItem="1dC-mM-qft" firstAttribute="trailing" secondItem="51k-yT-mHl" secondAttribute="trailing" constant="30" id="QO1-aV-XTH"/>
+                            <constraint firstItem="vHj-5M-yol" firstAttribute="top" secondItem="JFL-T9-S9X" secondAttribute="bottom" constant="58" id="Spu-4y-PEU"/>
                             <constraint firstItem="JFL-T9-S9X" firstAttribute="centerX" secondItem="9hr-YZ-ouV" secondAttribute="centerX" id="bjU-B6-TxT"/>
+                            <constraint firstItem="vHj-5M-yol" firstAttribute="leading" secondItem="1dC-mM-qft" secondAttribute="leading" constant="30" id="eyR-WX-Oof"/>
                             <constraint firstItem="51k-yT-mHl" firstAttribute="top" secondItem="JFL-T9-S9X" secondAttribute="bottom" constant="58" id="o6p-Hf-HRz"/>
                             <constraint firstItem="JFL-T9-S9X" firstAttribute="centerY" secondItem="9hr-YZ-ouV" secondAttribute="centerY" id="po4-if-IPx"/>
                         </constraints>
@@ -251,12 +269,44 @@
                     <connections>
                         <outlet property="cardView" destination="JFL-T9-S9X" id="veq-4l-RJ8"/>
                         <outlet property="contentLabel" destination="46m-xg-o6l" id="UAu-fL-PRx"/>
+                        <outlet property="noRememberedButton" destination="vHj-5M-yol" id="9C6-UR-hNM"/>
                         <outlet property="rememberedButton" destination="51k-yT-mHl" id="TeR-4a-dcF"/>
+                        <segue destination="Dyx-as-Tbq" kind="presentation" identifier="goToFeedback" id="1R0-6H-kqt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9F-Gi-cqf" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3977" y="865"/>
+        </scene>
+        <!--Feedback View Controller-->
+        <scene sceneID="RQg-Ll-9Vr">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Dyx-as-Tbq" customClass="FeedbackViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ryr-gk-KXE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você acertou x e errou y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="933-3n-NcF">
+                                <rect key="frame" x="109.5" y="437.5" width="195.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ice-PC-zo4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="933-3n-NcF" firstAttribute="centerY" secondItem="ryr-gk-KXE" secondAttribute="centerY" id="ST1-Y3-dv5"/>
+                            <constraint firstItem="933-3n-NcF" firstAttribute="centerX" secondItem="ryr-gk-KXE" secondAttribute="centerX" id="iE5-cI-Fhs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="feedbackLabel" destination="933-3n-NcF" id="A48-py-gH6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDv-x3-Pf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4887" y="865"/>
         </scene>
     </scenes>
     <resources>
@@ -267,8 +317,14 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

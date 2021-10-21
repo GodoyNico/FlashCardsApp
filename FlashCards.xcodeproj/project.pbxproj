@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D4018512721DBE900036FB5 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4018502721DBE900036FB5 /* FeedbackViewController.swift */; };
 		5DE6026D2718B86E00341772 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6026C2718B86E00341772 /* AppDelegate.swift */; };
 		5DE6026F2718B86E00341772 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6026E2718B86E00341772 /* SceneDelegate.swift */; };
 		5DE602712718B86E00341772 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE602702718B86E00341772 /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D4018502721DBE900036FB5 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		5DE602692718B86E00341772 /* FlashCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE6026C2718B86E00341772 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DE6026E2718B86E00341772 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				5DE602702718B86E00341772 /* ViewController.swift */,
 				9F4CF2622718C5A800C7BBA5 /* DeckViewController.swift */,
 				9FF47A62271F551400A4C0CC /* PracticeViewController.swift */,
+				5D4018502721DBE900036FB5 /* FeedbackViewController.swift */,
 				C067DF07271A160F007F1EB5 /* DeckDetailsViewController.swift */,
 				C067DF032719F131007F1EB5 /* DeckTableViewCell.swift */,
 				C067DF05271A15E9007F1EB5 /* CardTableViewCell.swift */,
@@ -315,6 +318,7 @@
 				5DE602712718B86E00341772 /* ViewController.swift in Sources */,
 				5DE6026D2718B86E00341772 /* AppDelegate.swift in Sources */,
 				C0D297CB2720A6AE00B9161C /* Content+CoreDataClass.swift in Sources */,
+				5D4018512721DBE900036FB5 /* FeedbackViewController.swift in Sources */,
 				C0D297CC2720A6AE00B9161C /* Content+CoreDataProperties.swift in Sources */,
 				C0D297CA2720A6AE00B9161C /* Card+CoreDataProperties.swift in Sources */,
 				5DE602772718B86E00341772 /* FlashCards.xcdatamodeld in Sources */,
