@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ir3-1K-gml">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -11,7 +11,7 @@
         <!--CreateDeck-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="CreateDeck" title="CreateDeck" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateDeck" title="CreateDeck" id="Y6W-OH-hqX" customClass="CreateDeckViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,18 +22,56 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Deck title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W6e-ce-sj7">
+                                <rect key="frame" x="20" y="130" width="374" height="18.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="W6e-ce-sj7" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="3Mf-U6-6Ps"/>
+                            <constraint firstItem="W6e-ce-sj7" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="42" id="3PB-Ee-j3g"/>
                             <constraint firstItem="FnX-MH-G1p" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HA5-QG-3mn"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="W6e-ce-sj7" secondAttribute="trailing" constant="20" id="HkZ-us-o1r"/>
                             <constraint firstItem="FnX-MH-G1p" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Uoq-Z5-suT"/>
+                            <constraint firstItem="W6e-ce-sj7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="paa-RY-IXB"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Create Deck" id="EC0-QS-YUA">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="mON-MK-kKF"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="7lK-5U-yIp">
+                            <connections>
+                                <action selector="createDeck:" destination="Y6W-OH-hqX" id="aYB-ag-sRu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="createDeck" destination="7lK-5U-yIp" id="8Yx-wM-Dac"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="77" y="135"/>
+            <point key="canvasLocation" x="858" y="135"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="grJ-F6-BXE">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rgq-UO-D9E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="ir3-1K-gml" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A27-yy-vzI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="5pe-Hv-LX7"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="76.811594202898561" y="134.59821428571428"/>
         </scene>
     </scenes>
     <resources>
