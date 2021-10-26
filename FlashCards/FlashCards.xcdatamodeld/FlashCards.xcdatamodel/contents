@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="Card" representedClassName="Card" syncable="YES">
-        <attribute name="back_content" optional="YES" attributeType="Transformable" customClassName="Content"/>
-        <attribute name="front_content" optional="YES" attributeType="Transformable" customClassName="Content"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="progress" optional="YES" attributeType="Transformable" customClassName="[Progress]"/>
         <attribute name="progress_counter" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="back_content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="back_card" inverseEntity="Content"/>
         <relationship name="deck" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Deck" inverseName="cards" inverseEntity="Deck"/>
+        <relationship name="front_content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="front_card" inverseEntity="Content"/>
+        <relationship name="progress" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Progress" inverseName="card" inverseEntity="Progress"/>
     </entity>
     <entity name="Content" representedClassName="Content" syncable="YES">
         <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="back_card" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Card" inverseName="back_content" inverseEntity="Card"/>
+        <relationship name="front_card" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Card" inverseName="front_content" inverseEntity="Card"/>
     </entity>
     <entity name="Deck" representedClassName="Deck" syncable="YES">
         <attribute name="created_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -22,11 +24,12 @@
     <entity name="Progress" representedClassName="Progress" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="status" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="card" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Card" inverseName="progress" inverseEntity="Card"/>
     </entity>
     <elements>
         <element name="Card" positionX="-54" positionY="27" width="128" height="119"/>
-        <element name="Content" positionX="-18" positionY="72" width="128" height="59"/>
+        <element name="Content" positionX="-18" positionY="72" width="128" height="89"/>
         <element name="Deck" positionX="-63" positionY="-18" width="128" height="104"/>
-        <element name="Progress" positionX="-36" positionY="54" width="128" height="59"/>
+        <element name="Progress" positionX="-36" positionY="54" width="128" height="74"/>
     </elements>
 </model>
