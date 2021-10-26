@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CVB-E6-asv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Deck" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lrp-Mp-6Pt">
+                                <rect key="frame" x="169.5" y="432.5" width="75" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Praticar"/>
+                                <connections>
+                                    <segue destination="F7a-KY-Dl0" kind="show" id="362-m5-b6t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llq-zP-ezc">
+                                <rect key="frame" x="143.5" y="583.5" width="127" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Adicionar Cards"/>
+                                <connections>
+                                    <segue destination="2Xf-0f-iQ6" kind="show" id="Olv-8g-0OL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="llq-zP-ezc" firstAttribute="top" secondItem="Lrp-Mp-6Pt" secondAttribute="bottom" constant="120" id="22l-qV-4TH"/>
+                            <constraint firstItem="llq-zP-ezc" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Iyx-lB-ngo"/>
+                            <constraint firstItem="Lrp-Mp-6Pt" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="duF-Fm-i9E"/>
+                            <constraint firstItem="Lrp-Mp-6Pt" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="vi0-v4-hHF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NVz-SY-F9r">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="Riy-os-2Mg">
+                            <connections>
+                                <segue destination="eCB-2z-GLB" kind="show" id="836-Sz-dWr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="41.517857142857139"/>
+        </scene>
+        <!--Edit-->
+        <scene sceneID="Avk-0G-7pA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Edit" id="eCB-2z-GLB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="CFc-hf-IGX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EHk-IG-RZ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2100" y="8"/>
+        </scene>
+        <!--Practice-->
+        <scene sceneID="C0r-Ce-OF5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Practice" id="F7a-KY-Dl0" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1Cx-ef-8ju"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hRX-ey-KOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2080" y="42"/>
+        </scene>
+        <!--AddCards-->
+        <scene sceneID="GZr-UU-b70">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="AddCards" storyboardName="Edit" referencedIdentifier="AddCards" id="2Xf-0f-iQ6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="IZS-QX-MoV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TWr-x5-MJz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2080" y="74"/>
+        </scene>
+        <!--Deck-->
+        <scene sceneID="9lK-o1-oyf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CVB-E6-asv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Deck" image="menucard" catalog="system" id="1mq-cL-tmV"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rIz-EK-VJR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="hjO-ts-kzQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pVc-Vu-ub9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="389.85507246376812" y="41.517857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menucard" catalog="system" width="107" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
