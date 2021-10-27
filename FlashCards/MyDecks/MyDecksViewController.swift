@@ -78,7 +78,6 @@ extension MyDecksViewController: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Self.titlemyDecksCellID, for: indexPath) as! TitleMyDecksCollectionViewCell
 
             cell.myDecksTitleLabel.text = "My Decks"
-            
             return cell
             
         } else {
@@ -100,14 +99,24 @@ extension MyDecksViewController: UICollectionViewDataSource {
 
 extension MyDecksViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        if indexPath.section != 0 {
-            let ratio = 161.0/197.0
-            let width = collectionView.bounds.width
-            return CGSize(width: width, height: width*ratio)
+
+        let width = collectionView.frame.width
+
+        if indexPath.section == 0 {
+            return CGSize(width: width, height: 44)
         }
-        
-        return UICollectionViewFlowLayout.automaticSize
-        
+
+        return CGSize(width: width, height: 197)
+
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+
+        if section == 0 {
+            return UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
+        }
+
+        return UIEdgeInsets(top: 12, left: 0, bottom: 0, right: 0)
+
     }
 }
