@@ -55,9 +55,11 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Add card"/>
+                                                <connections>
+                                                    <action selector="createCard:" destination="Xoh-LK-gab" eventType="touchUpInside" id="lVD-Ae-0Bd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.7573238015" green="0.99024373290000001" blue="0.82743126150000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -86,7 +88,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Deck" id="V4K-pk-vXN">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="mON-MK-kKF"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="mON-MK-kKF">
+                            <connections>
+                                <action selector="cancel:" destination="Xoh-LK-gab" id="uPJ-jy-h0k"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="7lK-5U-yIp">
                             <connections>
                                 <action selector="createDeck:" destination="Xoh-LK-gab" id="N7w-2E-oui"/>
@@ -94,8 +100,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addCardButton" destination="xLW-dZ-LT3" id="cEG-zz-zOT"/>
-                        <outlet property="cancelButton" destination="mON-MK-kKF" id="Ken-yH-iOb"/>
                         <outlet property="deckDone" destination="7lK-5U-yIp" id="rGL-08-QNY"/>
                         <outlet property="newDeckTextfield" destination="l0v-cR-d45" id="TB7-Av-GQg"/>
                         <outlet property="numberOfCardsLabel" destination="pg0-Gs-A8M" id="lAy-rR-a9h"/>
@@ -103,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hL-oh-55l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857.97101449275374" y="841.74107142857144"/>
+            <point key="canvasLocation" x="923" y="842"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bo5-Ne-JuL">
