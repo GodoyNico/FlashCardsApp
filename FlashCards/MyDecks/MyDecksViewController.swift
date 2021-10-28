@@ -6,6 +6,7 @@ class MyDecksViewController: UIViewController {
     
     static let myDecksCellID: String = "myDecksCell"
     static let titlemyDecksCellID: String = "titleMyDecksCell"
+    let deckSegueId: String = "GoToDeckDetails"
 
     var myDecks: [Deck] = []
     
@@ -72,6 +73,7 @@ extension MyDecksViewController: UICollectionViewDataSource {
         return countCells
     }
     
+    // MARK: List MyDecks
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if indexPath.section == 0 {
@@ -93,6 +95,19 @@ extension MyDecksViewController: UICollectionViewDataSource {
             return cell
         }
         
+    }
+    
+    // MARK: Go To Deck Details
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: deckSegueId, sender: myDecks[indexPath.row])
+
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let deckDetails = segue.destination as? DeckDetailsViewController else { return }
+
+        deckDetails.deck = sender as? Deck
+
     }
     
 }

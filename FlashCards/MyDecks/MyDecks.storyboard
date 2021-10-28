@@ -27,8 +27,54 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="progressDecksCell" id="pZk-zQ-DvW" customClass="ProgressDecksCollectionViewCell">
+                                        <rect key="frame" x="4" y="0.0" width="374" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bjK-ew-gk8">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0P8-fX-vG1">
+                                                    <rect key="frame" x="0.0" y="12" width="374" height="25"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0P8-fX-vG1" firstAttribute="leading" secondItem="bjK-ew-gk8" secondAttribute="leading" id="PbT-Ly-bWz"/>
+                                                <constraint firstItem="0P8-fX-vG1" firstAttribute="top" secondItem="bjK-ew-gk8" secondAttribute="top" constant="12" id="SrJ-RG-5Ms"/>
+                                                <constraint firstAttribute="bottom" secondItem="0P8-fX-vG1" secondAttribute="bottom" constant="12" id="hpy-iW-d3j"/>
+                                                <constraint firstAttribute="trailing" secondItem="0P8-fX-vG1" secondAttribute="trailing" id="wAH-Jq-erl"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="374" height="49"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchDecksCell" id="lkA-5V-BlC" customClass="SearchDecksCollectionViewCell" customModule="FlashCards" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="59" width="374" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Pyb-6o-Lbb">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cia-6a-nk4">
+                                                    <rect key="frame" x="0.0" y="12" width="374" height="25"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="cia-6a-nk4" secondAttribute="bottom" constant="12" id="6Rj-Fv-KeO"/>
+                                                <constraint firstAttribute="trailing" secondItem="cia-6a-nk4" secondAttribute="trailing" id="MwP-SO-ax5"/>
+                                                <constraint firstItem="cia-6a-nk4" firstAttribute="leading" secondItem="Pyb-6o-Lbb" secondAttribute="leading" id="ORS-IN-YLr"/>
+                                                <constraint firstItem="cia-6a-nk4" firstAttribute="top" secondItem="Pyb-6o-Lbb" secondAttribute="top" constant="12" id="lbr-pM-MPW"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="374" height="49"/>
+                                    </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" reuseIdentifier="titleMyDecksCell" id="ykg-TT-cHu" customClass="TitleMyDecksCollectionViewCell" customModule="FlashCards" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="10" width="405" height="32"/>
+                                        <rect key="frame" x="0.0" y="118" width="405" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xg0-i3-RPz">
                                             <rect key="frame" x="0.0" y="0.0" width="405" height="32"/>
@@ -57,7 +103,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" reuseIdentifier="myDecksCell" id="ibU-hx-mB9" customClass="MyDecksCollectionViewCell" customModule="FlashCards" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="52" width="373" height="193"/>
+                                        <rect key="frame" x="4.5" y="160" width="373" height="193"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bt3-eq-Mc8">
                                             <rect key="frame" x="0.0" y="0.0" width="373" height="193"/>
@@ -176,6 +222,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="myDecksCollectionView" destination="cVp-0v-aHZ" id="iCR-Ue-3h5"/>
+                        <segue destination="A93-L4-2OB" kind="show" identifier="GoToDeckDetails" id="R6y-ID-u2e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yPt-l3-zls" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -192,11 +239,21 @@
             </objects>
             <point key="canvasLocation" x="2815" y="865"/>
         </scene>
+        <!--Deck-->
+        <scene sceneID="HsT-iO-Cc4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Deck" id="A93-L4-2OB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="iuT-nN-Bol"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jgk-6a-LxK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2798" y="998"/>
+        </scene>
         <!--MyDecks-->
         <scene sceneID="urB-VH-GmL">
             <objects>
                 <navigationController storyboardIdentifier="MyDecks" title="MyDecks" automaticallyAdjustsScrollViewInsets="NO" id="ryO-dv-4SI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Decks" image="star" catalog="system" id="WNN-jc-wAp"/>
+                    <tabBarItem key="tabBarItem" title="Decks" image="list.bullet.rectangle.fill" catalog="system" id="WNN-jc-wAp"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8iF-id-PgQ">
@@ -278,7 +335,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="list.bullet.rectangle.fill" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

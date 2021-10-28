@@ -31,6 +31,8 @@
 		C0BC72FD27287FBE0016DBF9 /* MyDecksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC72FC27287FBE0016DBF9 /* MyDecksViewController.swift */; };
 		C0BC72FF272886D70016DBF9 /* MyDecksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC72FE272886D70016DBF9 /* MyDecksCollectionViewCell.swift */; };
 		C0BC7301272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC7300272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift */; };
+		C0BDCF992729ED150021A5FC /* ProgressDecksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BDCF982729ED150021A5FC /* ProgressDecksCollectionViewCell.swift */; };
+		C0BDCF9B2729ED830021A5FC /* SearchDecksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BDCF9A2729ED830021A5FC /* SearchDecksCollectionViewCell.swift */; };
 		C0D297C92720A6AE00B9161C /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D297C12720A6AE00B9161C /* Card+CoreDataClass.swift */; };
 		C0D297CA2720A6AE00B9161C /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D297C22720A6AE00B9161C /* Card+CoreDataProperties.swift */; };
 		C0D297CB2720A6AE00B9161C /* Content+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D297C32720A6AE00B9161C /* Content+CoreDataClass.swift */; };
@@ -87,6 +89,8 @@
 		C0BC72FC27287FBE0016DBF9 /* MyDecksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDecksViewController.swift; sourceTree = "<group>"; };
 		C0BC72FE272886D70016DBF9 /* MyDecksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDecksCollectionViewCell.swift; sourceTree = "<group>"; };
 		C0BC7300272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleMyDecksCollectionViewCell.swift; sourceTree = "<group>"; };
+		C0BDCF982729ED150021A5FC /* ProgressDecksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDecksCollectionViewCell.swift; sourceTree = "<group>"; };
+		C0BDCF9A2729ED830021A5FC /* SearchDecksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDecksCollectionViewCell.swift; sourceTree = "<group>"; };
 		C0D297C12720A6AE00B9161C /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C0D297C22720A6AE00B9161C /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C0D297C32720A6AE00B9161C /* Content+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -223,6 +227,8 @@
 				C0BC72FE272886D70016DBF9 /* MyDecksCollectionViewCell.swift */,
 				C0BC72FC27287FBE0016DBF9 /* MyDecksViewController.swift */,
 				C0A2BB3A2727379F0069B525 /* MyDecks.storyboard */,
+				C0BDCF9A2729ED830021A5FC /* SearchDecksCollectionViewCell.swift */,
+				C0BDCF982729ED150021A5FC /* ProgressDecksCollectionViewCell.swift */,
 				C0BC7300272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift */,
 			);
 			path = MyDecks;
@@ -382,9 +388,11 @@
 			files = (
 				C067DF06271A15E9007F1EB5 /* CardTableViewCell.swift in Sources */,
 				C0BC7301272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift in Sources */,
+				C0BDCF992729ED150021A5FC /* ProgressDecksCollectionViewCell.swift in Sources */,
 				C0D297CE2720A6AE00B9161C /* Progress+CoreDataProperties.swift in Sources */,
 				C0D297C92720A6AE00B9161C /* Card+CoreDataClass.swift in Sources */,
 				9FF47A63271F551400A4C0CC /* PracticeViewController.swift in Sources */,
+				C0BDCF9B2729ED830021A5FC /* SearchDecksCollectionViewCell.swift in Sources */,
 				5DE602712718B86E00341772 /* ViewController.swift in Sources */,
 				5DE6026D2718B86E00341772 /* AppDelegate.swift in Sources */,
 				C0D297CB2720A6AE00B9161C /* Content+CoreDataClass.swift in Sources */,
