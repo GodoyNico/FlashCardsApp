@@ -34,22 +34,6 @@ class CreateDeckViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }
     
-    @IBAction func createCard(_ sender: Any) {
-        
-        let newCard = Card(context: self.context)
-        newCard.id = UUID()
-        //        newCard.front_content?.text =
-        //        newCard.back_content?.text =
-        //        newCard.front_content?.image =
-        //        newCard.back_content?.image =
-        
-        // Save the Data
-        do {
-            try self.context.save()
-        } catch { }
-        
-    }
-    
     @IBAction func createDeck(_ sender: Any) {
         
         // Create a Deck Object
@@ -66,12 +50,6 @@ class CreateDeckViewController: UIViewController, UITableViewDelegate, UITableVi
         self.fetchDecks()
         
     }
-    
-    //    func countCards() -> Int {
-    //        let numberOfCards = cards.count
-    //        numberOfCardsLabel.text = "\(numberOfCards) cards"
-    //        return numberOfCards
-    //    }
     
     func fetchDecks() {
         do {

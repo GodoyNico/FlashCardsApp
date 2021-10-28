@@ -14,4 +14,7 @@ class cardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var backSideLabel: UILabel!
     @IBOutlet weak var backSideTextField: UITextView!
     
+    override class func awakeFromNib() {
+        super.awakeFromNib()
+    }
 }
