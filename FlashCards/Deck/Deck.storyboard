@@ -1,31 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CVB-E6-asv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Single Deck View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="Deck" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Deck" id="Y6W-OH-hqX" customClass="SingleDeckViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lrp-Mp-6Pt">
-                                <rect key="frame" x="169.5" y="432.5" width="75" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Praticar"/>
-                                <connections>
-                                    <segue destination="F7a-KY-Dl0" kind="show" id="362-m5-b6t"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llq-zP-ezc">
-                                <rect key="frame" x="143.5" y="583.5" width="127" height="31"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Is-VC-cyr">
+                                <rect key="frame" x="19" y="61" width="376" height="695"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lrp-Mp-6Pt">
+                                        <rect key="frame" x="101" y="583" width="174" height="49"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="7tz-gp-I8l"/>
+                                            <constraint firstAttribute="width" constant="174" id="Njc-W6-VLp"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Praticar">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="F7a-KY-Dl0" kind="show" id="362-m5-b6t"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="25" verticalHuggingPriority="25" horizontalCompressionResistancePriority="75" verticalCompressionResistancePriority="75" image="DecksAB" translatesAutoresizingMaskIntoConstraints="NO" id="RJK-V2-fHC">
+                                        <rect key="frame" x="45" y="131" width="286" height="286"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="RJK-V2-fHC" secondAttribute="height" multiplier="1:1" id="J3p-J6-fv5"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" verticalCompressionResistancePriority="751" text="DeckTitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxB-JB-NZo">
+                                        <rect key="frame" x="62" y="45" width="252" height="37"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="RJK-V2-fHC" firstAttribute="top" secondItem="qxB-JB-NZo" secondAttribute="bottom" constant="49" id="A28-Wj-5rS"/>
+                                    <constraint firstAttribute="trailing" secondItem="qxB-JB-NZo" secondAttribute="trailing" constant="62" id="E5Q-Aq-VHe"/>
+                                    <constraint firstAttribute="trailing" secondItem="RJK-V2-fHC" secondAttribute="trailing" constant="45" id="Toh-vV-jH1"/>
+                                    <constraint firstItem="Lrp-Mp-6Pt" firstAttribute="centerX" secondItem="0Is-VC-cyr" secondAttribute="centerX" id="YYa-44-U1x"/>
+                                    <constraint firstItem="qxB-JB-NZo" firstAttribute="leading" secondItem="0Is-VC-cyr" secondAttribute="leading" constant="62" id="Yfb-62-ltj"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lrp-Mp-6Pt" secondAttribute="bottom" constant="63" id="bBu-Zs-5v0"/>
+                                    <constraint firstItem="RJK-V2-fHC" firstAttribute="leading" secondItem="0Is-VC-cyr" secondAttribute="leading" constant="45" id="ce8-rN-B9i"/>
+                                    <constraint firstItem="qxB-JB-NZo" firstAttribute="top" secondItem="0Is-VC-cyr" secondAttribute="top" constant="45" id="j2N-FZ-3Oe"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="255" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llq-zP-ezc">
+                                <rect key="frame" x="143.5" y="488" width="127" height="31"/>
+                                <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Adicionar Cards"/>
                                 <connections>
@@ -34,25 +72,35 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
-                            <constraint firstItem="llq-zP-ezc" firstAttribute="top" secondItem="Lrp-Mp-6Pt" secondAttribute="bottom" constant="120" id="22l-qV-4TH"/>
+                            <constraint firstItem="0Is-VC-cyr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="19" id="6Rm-cA-5uq"/>
                             <constraint firstItem="llq-zP-ezc" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Iyx-lB-ngo"/>
-                            <constraint firstItem="Lrp-Mp-6Pt" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="duF-Fm-i9E"/>
-                            <constraint firstItem="Lrp-Mp-6Pt" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="vi0-v4-hHF"/>
+                            <constraint firstItem="llq-zP-ezc" firstAttribute="top" secondItem="RJK-V2-fHC" secondAttribute="bottom" constant="10" id="QQT-bh-C6p"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0Is-VC-cyr" secondAttribute="trailing" constant="19" id="d6U-xi-ZPS"/>
+                            <constraint firstItem="0Is-VC-cyr" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="17" id="miY-7U-jGv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="0Is-VC-cyr" secondAttribute="bottom" constant="57" id="q7l-ab-4RY"/>
+                            <constraint firstItem="Lrp-Mp-6Pt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="llq-zP-ezc" secondAttribute="bottom" constant="1" id="rlX-sV-auM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="NVz-SY-F9r">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="6D5-Kh-TM7"/>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="NVz-SY-F9r">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="Riy-os-2Mg">
                             <connections>
                                 <segue destination="eCB-2z-GLB" kind="show" id="836-Sz-dWr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="deckTtitleLabel" destination="qxB-JB-NZo" id="ghy-gr-6x6"/>
+                        <outlet property="deckView" destination="0Is-VC-cyr" id="oSy-de-pYv"/>
+                        <outlet property="practiceButton" destination="Lrp-Mp-6Pt" id="zaX-6b-cGD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1300" y="41.517857142857139"/>
+            <point key="canvasLocation" x="1298.5507246376812" y="41.517857142857139"/>
         </scene>
         <!--Edit-->
         <scene sceneID="Avk-0G-7pA">
@@ -72,7 +120,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRX-ey-KOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2080" y="42"/>
+            <point key="canvasLocation" x="2073" y="100"/>
         </scene>
         <!--AddCards-->
         <scene sceneID="GZr-UU-b70">
@@ -82,33 +130,19 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TWr-x5-MJz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2080" y="74"/>
-        </scene>
-        <!--Deck-->
-        <scene sceneID="9lK-o1-oyf">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CVB-E6-asv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Deck" image="menucard" catalog="system" id="1mq-cL-tmV"/>
-                    <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rIz-EK-VJR">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="hjO-ts-kzQ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pVc-Vu-ub9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="389.85507246376812" y="41.517857142857139"/>
+            <point key="canvasLocation" x="2080" y="52"/>
         </scene>
     </scenes>
     <resources>
-        <image name="menucard" catalog="system" width="107" height="128"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="DecksAB" width="176" height="138"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

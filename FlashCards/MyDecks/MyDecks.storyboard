@@ -137,7 +137,7 @@
                                                                     </constraints>
                                                                 </stackView>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                            <color key="backgroundColor" systemColor="systemGray4Color"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="GLE-8l-L6k" secondAttribute="bottom" constant="14" id="Wzf-pc-iiI"/>
                                                                 <constraint firstItem="GLE-8l-L6k" firstAttribute="top" secondItem="jYg-ZP-lyz" secondAttribute="top" constant="14" id="XGn-36-3yN"/>
@@ -170,7 +170,7 @@
                                                                     </constraints>
                                                                 </stackView>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                            <color key="backgroundColor" systemColor="systemGray4Color"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="193" id="7kH-5y-AOJ"/>
                                                                 <constraint firstItem="9CH-oE-fVk" firstAttribute="centerX" secondItem="GkY-Vv-FK5" secondAttribute="centerX" id="UH1-Qx-RwW"/>
@@ -222,7 +222,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="myDecksCollectionView" destination="cVp-0v-aHZ" id="iCR-Ue-3h5"/>
-                        <segue destination="A93-L4-2OB" kind="show" identifier="GoToDeckDetails" id="R6y-ID-u2e"/>
+                        <segue destination="A93-L4-2OB" kind="show" identifier="GoToSingleDeck" id="R6y-ID-u2e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yPt-l3-zls" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -237,7 +237,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JUJ-bn-Lxz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2815" y="865"/>
+            <point key="canvasLocation" x="2815" y="850"/>
         </scene>
         <!--Deck-->
         <scene sceneID="HsT-iO-Cc4">
@@ -247,7 +247,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgk-6a-LxK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2798" y="998"/>
+            <point key="canvasLocation" x="2786" y="882"/>
         </scene>
         <!--MyDecks-->
         <scene sceneID="urB-VH-GmL">
@@ -342,8 +342,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

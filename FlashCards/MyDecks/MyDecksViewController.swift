@@ -6,7 +6,7 @@ class MyDecksViewController: UIViewController {
     
     static let myDecksCellID: String = "myDecksCell"
     static let titlemyDecksCellID: String = "titleMyDecksCell"
-    let deckSegueId: String = "GoToDeckDetails"
+    let deckSegueId: String = "GoToSingleDeck"
 
     var myDecks: [Deck] = []
     
@@ -92,22 +92,24 @@ extension MyDecksViewController: UICollectionViewDataSource {
             
             cell.configure(first: first, last: last)
             
+            cell.clickFirst = {
+                self.performSegue(withIdentifier: self.deckSegueId, sender: first)
+            }
+            
+            cell.clickLast = {
+                self.performSegue(withIdentifier: self.deckSegueId, sender: last)
+            }
+            
             return cell
         }
         
     }
     
     // MARK: Go To Deck Details
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: deckSegueId, sender: myDecks[indexPath.row])
-
-    }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let deckDetails = segue.destination as? DeckDetailsViewController else { return }
+        guard let singleDeckViewController = segue.destination as? SingleDeckViewController, let deck = sender as? Deck else { return }
 
-        deckDetails.deck = sender as? Deck
-
+        singleDeckViewController.deck = deck
     }
     
 }
