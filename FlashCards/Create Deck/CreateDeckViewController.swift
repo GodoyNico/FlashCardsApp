@@ -29,7 +29,7 @@ class CreateDeckViewController: UIViewController, UITableViewDelegate, UITableVi
         
         createDeckTableView.delegate = self
         createDeckTableView.dataSource = self
-                
+        
         fetchDecks()
         
     }
@@ -54,7 +54,6 @@ class CreateDeckViewController: UIViewController, UITableViewDelegate, UITableVi
         
         // Create a Deck Object
         let newDeck = Deck(context: self.context)
-        //newDeck.title = newDeckTextfield.text
         newDeck.id = UUID()
         newDeck.created_date = Date.now
         

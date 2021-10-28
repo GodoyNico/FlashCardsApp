@@ -206,8 +206,8 @@
                                                             <connections>
                                                                 <outlet property="backSideLabel" destination="qsS-eU-tEr" id="n7d-YX-yF5"/>
                                                                 <outlet property="backSideTextField" destination="ay7-Vq-2yW" id="4lF-Eb-TjE"/>
-                                                                <outlet property="frontSide" destination="l6b-Sg-ujJ" id="d1b-CH-DSr"/>
-                                                                <outlet property="frontSideText" destination="r8l-Se-FtT" id="zdQ-36-t6i"/>
+                                                                <outlet property="frontSideLabel" destination="l6b-Sg-ujJ" id="AJu-yO-8hg"/>
+                                                                <outlet property="frontSideTextField" destination="r8l-Se-FtT" id="acZ-PG-vVZ"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
