@@ -10,33 +10,13 @@ import UIKit
 class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    @IBOutlet weak var numberOfCardsLabel: UILabel!
-    @IBOutlet weak var cardImage: UIImageView!
-    @IBOutlet weak var addCardButton: UIButton!
-    
     let collectionCellID = "cardCollectionCell"
     var cards: [Card] = []
     
+    @IBOutlet weak var numberOfCardsLabel: UILabel!
+    @IBOutlet weak var addCardButton: UIButton!
     @IBOutlet weak var cardCollectionView: UICollectionView!
-    
-    @IBAction func createCard(_ sender: Any) {
         
-        let newCard = Card(context: self.context)
-        newCard.id = UUID()
-        //        newCard.front_content?.text =
-        //        newCard.back_content?.text =
-        //        newCard.front_content?.image =
-        //        newCard.back_content?.image =
-        
-        // Save the Data
-        do {
-            try self.context.save()
-        } catch { }
-    }
-    
-    @IBOutlet weak var deckImage: UIImageView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -64,4 +44,12 @@ extension NewCardTableViewCell: UICollectionViewDataSource {
         
         return cardCollectionCell
     }
+}
+
+extension NewCardTableViewCell: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.width * 0.8, height: 610)
+    }
+    
 }
