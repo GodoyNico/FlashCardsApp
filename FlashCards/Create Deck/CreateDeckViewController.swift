@@ -21,9 +21,7 @@ class CreateDeckViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    @IBOutlet weak var deckDone: UIBarButtonItem!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,21 +32,9 @@ class CreateDeckViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }
     
-    @IBAction func createDeck(_ sender: Any) {
-        
-        // Create a Deck Object
-        let newDeck = Deck(context: self.context)
-        newDeck.id = UUID()
-        newDeck.created_date = Date.now
-        
-        // Save the Data
-        do {
-            try self.context.save()
-        } catch { }
-        
-        // Re-Fetch the Data
-        self.fetchDecks()
-        
+    @IBAction func deckDone(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+                
     }
     
     func fetchDecks() {

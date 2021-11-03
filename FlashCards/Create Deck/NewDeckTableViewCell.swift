@@ -9,11 +9,13 @@ import UIKit
 
 class NewDeckTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var newDeckTextfield: UITextField!
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    @IBOutlet weak var newDeckTextfield: UITextField!
+        
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
