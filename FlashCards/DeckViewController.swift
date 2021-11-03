@@ -21,10 +21,10 @@ class DeckViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        decksTableView.delegate = self
-        decksTableView.dataSource = self
-        
-        fetchDecks()
+//        decksTableView.delegate = self
+//        decksTableView.dataSource = self
+//
+//        fetchDecks()
     }
     
     func fetchDecks() {
