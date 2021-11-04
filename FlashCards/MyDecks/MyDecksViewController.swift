@@ -69,8 +69,7 @@ extension MyDecksViewController: UICollectionViewDataSource {
             return 1
         }
         
-        let countCells: Int = Int(round(Double(myDecks.count)/2.0))
-        return countCells
+        return myDecks.count
     }
     
     // MARK: List MyDecks
@@ -84,21 +83,9 @@ extension MyDecksViewController: UICollectionViewDataSource {
             
         } else {
             
-            let offset: Int = indexPath.row * 2
-            let first: Deck? = myDecks[offset]
-            let last: Deck? = (offset + 1) < myDecks.count ? myDecks[offset+1] : nil
-            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Self.myDecksCellID, for: indexPath) as! MyDecksCollectionViewCell
             
-            cell.configure(first: first, last: last)
-            
-            cell.clickFirst = {
-                self.performSegue(withIdentifier: self.deckSegueId, sender: first)
-            }
-            
-            cell.clickLast = {
-                self.performSegue(withIdentifier: self.deckSegueId, sender: last)
-            }
+            cell.configure(deck: myDecks[indexPath.row])
             
             return cell
         }
@@ -106,25 +93,42 @@ extension MyDecksViewController: UICollectionViewDataSource {
     }
     
     // MARK: Go To Deck Details
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: self.deckSegueId, sender: myDecks[indexPath.row])
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let singleDeckViewController = segue.destination as? SingleDeckViewController, let deck = sender as? Deck else { return }
 
         singleDeckViewController.deck = deck
     }
     
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { menuElement in
+            return UIMenu(image: nil, identifier: nil, options: UIMenu.Options.destructive, children: [UIAction(title:"delete", attributes: .destructive ,handler: { action in
+                print("deu certo")
+            })])
+        }
+    }
+
 }
 
 extension MyDecksViewController: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let width = collectionView.frame.width
+        let width = (UIScreen.main.bounds.width-44)/2
 
         if indexPath.section == 0 {
             return CGSize(width: width, height: 44)
         }
 
         return CGSize(width: width, height: 197)
-
+        // largura da tela (358) - 44 (bordas (16+16) + meio (+12) == 44)
+        // 358 - 44 = 314/2 == 157
+        // 157/358 = 0.4385
+        // UIScreen.main.bounds.width * 0.4385
+        
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -136,4 +140,5 @@ extension MyDecksViewController: UICollectionViewDelegateFlowLayout {
         return UIEdgeInsets(top: 12, left: 0, bottom: 0, right: 0)
 
     }
+    
 }
