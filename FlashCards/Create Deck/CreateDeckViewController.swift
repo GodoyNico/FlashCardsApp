@@ -64,6 +64,9 @@ class CreateDeckViewController: UIViewController, UITableViewDelegate, UITableVi
         } else {
             
             let newCardCell = createDeckTableView.dequeueReusableCell(withIdentifier: newCardCell ) as! NewCardTableViewCell
+            
+            newCardCell.configure(newDeck: self.deck)
+            
             return newCardCell
         }
     }
