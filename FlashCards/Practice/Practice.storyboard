@@ -178,7 +178,7 @@
         <!--FeedbackViewController-->
         <scene sceneID="DHT-0Q-vcN">
             <objects>
-                <viewController title="FeedbackViewController" id="DWe-UG-3aA" customClass="FeedbackViewController" customModule="PraticaFlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="FeedbackViewController" id="DWe-UG-3aA" customClass="FeedbackViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7L8-wl-np3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,11 +205,17 @@
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Treinar novamente"/>
+                                        <connections>
+                                            <action selector="practiceAgain:" destination="DWe-UG-3aA" eventType="touchUpInside" id="atg-nd-jJg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cx9-ba-tpD">
                                         <rect key="frame" x="116" y="449" width="146.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Ir para meus decks"/>
+                                        <connections>
+                                            <action selector="myDecks:" destination="DWe-UG-3aA" eventType="touchUpInside" id="a0h-w3-dZA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -240,11 +246,33 @@
                         <outlet property="feedbackView" destination="i4q-fB-NAa" id="W1W-gU-6lQ"/>
                         <outlet property="goToDecks" destination="Cx9-ba-tpD" id="xGI-f9-IFI"/>
                         <outlet property="practiceAgain" destination="Yvy-hu-vuz" id="9Yk-tA-uZP"/>
+                        <segue destination="GRG-57-bs7" kind="show" identifier="goToSingleDeck" id="2YQ-s7-EgV"/>
+                        <segue destination="Oy8-xL-ENU" kind="show" identifier="goToMyDecks" id="OPe-dB-5IS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAg-tN-0cS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1894" y="135"/>
+        </scene>
+        <!--Deck-->
+        <scene sceneID="9Jw-Wv-rf6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Deck" id="GRG-57-bs7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pTu-zI-9Aa"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9B-K0-PD7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2495" y="102"/>
+        </scene>
+        <!--MyDecks-->
+        <scene sceneID="I8E-Gu-T7G">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyDecks" id="Oy8-xL-ENU" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="imh-wI-Ci7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mF6-NR-VDF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2513" y="170"/>
         </scene>
     </scenes>
     <resources>
