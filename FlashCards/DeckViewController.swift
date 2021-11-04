@@ -34,7 +34,6 @@ class DeckViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.decksTableView.reloadData()
             }
         } catch { }
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

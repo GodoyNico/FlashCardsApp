@@ -11,31 +11,35 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let collectionCellID = "cardCollectionCell"
+    var deck: Deck?
     var cards: [Card] = []
     
     @IBOutlet weak var numberOfCardsLabel: UILabel!
     @IBOutlet weak var addCardButton: UIButton!
     @IBOutlet weak var cardCollectionView: UICollectionView!
+    
+    @IBAction func addCard(_ sender: Any) {
         
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         cardCollectionView.dataSource = self
         cardCollectionView.delegate = self
         
+        numberOfCardsLabel.text = String("\(cards.count) cards")
     }
     
-    func countCards() -> Int {
-        let numberOfCards = cards.count
-        numberOfCardsLabel.text = "\(numberOfCards) cards"
-        return numberOfCards
+    func configure(newDeck: Deck?) {
+        self.deck = newDeck
     }
 }
 
 extension NewCardTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return cards.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
