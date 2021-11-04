@@ -61,7 +61,7 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="F7a-KY-Dl0" kind="show" id="362-m5-b6t"/>
+                                    <action selector="toPractice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BqU-Ev-Kj2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -89,6 +89,7 @@
                     <connections>
                         <outlet property="deckTtitleLabel" destination="qxB-JB-NZo" id="ghy-gr-6x6"/>
                         <outlet property="practiceButton" destination="Lrp-Mp-6Pt" id="zaX-6b-cGD"/>
+                        <segue destination="F7a-KY-Dl0" kind="show" identifier="goToPractice" id="unu-Ts-NIR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -113,7 +114,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRX-ey-KOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2073" y="100"/>
+            <point key="canvasLocation" x="2080" y="42"/>
         </scene>
         <!--AddCards-->
         <scene sceneID="GZr-UU-b70">
@@ -123,7 +124,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TWr-x5-MJz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2080" y="52"/>
+            <point key="canvasLocation" x="2078" y="79"/>
         </scene>
     </scenes>
     <resources>

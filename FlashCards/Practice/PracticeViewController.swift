@@ -13,16 +13,14 @@ class PracticeViewController: UIViewController {
     // MARK: - Variables
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    var deck: Deck?
+    
     var practiceData: PracticeData?
     var cards: [Card] = []
     var isFront: Bool = false
     var flipped: Bool = false
     var currentCard: Int = 0
     var qntSelected: Int = 0
-    
-    var deckTitle: String = "Matemática básica"
-    var frontContent: String = "Quanto é 1 + 1?"
-    var backContent: String = "11 🤡"
     
     var feedbackSegueID: String = "goToFeedback"
     var feedback: PracticeFeedback = PracticeFeedback(remembered: 0, noRemembered: 0)
@@ -43,19 +41,25 @@ class PracticeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleView.title = deckTitle
-        counterLabel.text = "\(currentCard)/20"
+        titleView.title = deck?.title
         
         rememberedButton.isHidden = true
         noRememberedButton.isHidden = true
         
         generateCards()
+        
+        counterLabel.text = "1/\(deck!.cards!.count)"
+        
         cardLayout()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.flip(_:)))
         cardView.addGestureRecognizer(tap)
         
         toPractice()
+    }
+    
+    func configure(deck: Deck) {
+        self.deck = deck
     }
     
     @IBAction func endPractice(_ sender: Any) {
@@ -89,6 +93,8 @@ class PracticeViewController: UIViewController {
     @IBAction func noRemembered(_ sender: Any) {
         if currentCard <= cards.count-1 {
             feedback.noRemembered += 1
+            
+            
             let card = cards[currentCard]
             let newPractice = Progress(context: self.context)
             newPractice.date = Date.now
@@ -105,6 +111,7 @@ class PracticeViewController: UIViewController {
                 finished()
             } else {
                 currentCard += 1;
+                counterLabel.text = "\(currentCard+1)/\(deck!.cards!.count)"
                 toPractice()
             }
         }
@@ -129,6 +136,7 @@ class PracticeViewController: UIViewController {
                 finished()
             } else {
                 currentCard += 1;
+                counterLabel.text = "\(currentCard+1)/\(deck!.cards!.count)"
                 toPractice()
             }
         }
@@ -168,33 +176,55 @@ class PracticeViewController: UIViewController {
     }
     
     func generateCards() {
-        var initialSet = Set((practiceData?.selectedDeck.cards?.allObjects as! [Card]).compactMap() { $0.self})
         
-        for _ in 0..<practiceData!.countCards {
-            let selectedCard = initialSet.randomElement()!
-            cards.append(selectedCard)
-            initialSet.remove(selectedCard)
+        self.cards = self.deck?.cards?.allObjects as! [Card]
+        
+        if self.cards.isEmpty {
+            for i in 1...5 {
+                let newCard = Card(context: self.context)
+                
+                let fContent = Content(context: self.context)
+                fContent.text = "frente \(i)"
+                
+                let vContent = Content(context: self.context)
+                vContent.text = "verso \(i)"
+                
+                newCard.front_content = fContent
+                newCard.back_content = vContent
+                
+                newCard.deck = self.deck
+                
+                // Save the Data
+                do {
+                    try self.context.save()
+                } catch { }
+                
+            }
+            
+            generateCards()
+            
         }
+        
     }
     
     func toPractice() {
         flipped = false
         rememberedButton.isHidden = true
         noRememberedButton.isHidden = true
-        isFront = practiceData!.isFront
+        isFront = true
         contentLabel.text = isFront ? cards[currentCard].front_content?.text : cards[currentCard].back_content?.text
     }
     
     @objc func flip(_ sender: UITapGestureRecognizer? = nil) {
         
         if isFront {
-            sideLabel.text = "A"
-            contentLabel.text = frontContent
+            sideLabel.text = "B"
+            contentLabel.text = cards[currentCard].back_content?.text
             isFront = false
             UIView.transition(with: cardView, duration: 0.5, options: .transitionFlipFromLeft, animations: .none, completion: nil)
         } else {
-            sideLabel.text = "B"
-            contentLabel.text = backContent
+            sideLabel.text = "A"
+            contentLabel.text = cards[currentCard].front_content?.text
             isFront = true
             UIView.transition(with: cardView, duration: 0.5, options: .transitionFlipFromRight, animations: .none, completion: nil)
         }
