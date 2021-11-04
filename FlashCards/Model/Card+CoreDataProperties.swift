@@ -2,7 +2,7 @@
 //  Card+CoreDataProperties.swift
 //  FlashCards
 //
-//  Created by Igor Marques Vicente on 20/10/21.
+//  Created by Igor Marques Vicente on 04/11/21.
 //
 //
 
@@ -18,9 +18,9 @@ extension Card {
 
     @NSManaged public var id: UUID?
     @NSManaged public var progress_counter: Int16
+    @NSManaged public var back_content: Content?
     @NSManaged public var deck: Deck?
     @NSManaged public var front_content: Content?
-    @NSManaged public var back_content: Content?
     @NSManaged public var progress: NSSet?
 
 }
