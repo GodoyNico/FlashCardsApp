@@ -7,7 +7,7 @@
 
 import UIKit
 
-typealias PracticeFeedback = (remembered: Int, noRemembered: Int)
+typealias PracticeFeedback = (remembered: Int, noRemembered: Int, deck: Deck?)
 
 class PracticeViewController: UIViewController {
     // MARK: - Variables
@@ -23,7 +23,7 @@ class PracticeViewController: UIViewController {
     var qntSelected: Int = 0
     
     var feedbackSegueID: String = "goToFeedback"
-    var feedback: PracticeFeedback = PracticeFeedback(remembered: 0, noRemembered: 0)
+    var feedback: PracticeFeedback = PracticeFeedback(remembered: 0, noRemembered: 0, deck: nil)
     
     // MARK: - Outlets
     @IBOutlet weak var titleView: UINavigationItem!
@@ -60,6 +60,7 @@ class PracticeViewController: UIViewController {
     
     func configure(deck: Deck) {
         self.deck = deck
+        self.feedback.deck = self.deck
     }
     
     @IBAction func endPractice(_ sender: Any) {
@@ -171,8 +172,8 @@ class PracticeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let feedbackViewController = segue.destination as? FeedbackViewController,
               let practiceFeedback = sender as? PracticeFeedback else { return }
-        
-        feedbackViewController.practiceFeedback = practiceFeedback
+
+        feedbackViewController.deckConfig(data: practiceFeedback)
     }
     
     func generateCards() {
