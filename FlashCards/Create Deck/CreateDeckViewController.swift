@@ -10,7 +10,7 @@ import UIKit
 class CreateDeckViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var decks: [Deck] = []
+    var deck: Deck?
     var cards: [Card] = []
     
     let deckNameCell: String = "NewDeckCell"
@@ -21,43 +21,26 @@ class CreateDeckViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    @IBOutlet weak var deckDone: UIBarButtonItem!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.deck = Deck(context: self.context)
+        
         createDeckTableView.delegate = self
         createDeckTableView.dataSource = self
-        
-        fetchDecks()
-        
+                
     }
     
-    @IBAction func createDeck(_ sender: Any) {
-        
-        // Create a Deck Object
-        let newDeck = Deck(context: self.context)
-        newDeck.id = UUID()
-        newDeck.created_date = Date.now
+    @IBAction func deckDone(_ sender: Any) {
         
         // Save the Data
         do {
             try self.context.save()
         } catch { }
         
-        // Re-Fetch the Data
-        self.fetchDecks()
+        self.dismiss(animated: true, completion: nil)
         
-    }
-    
-    func fetchDecks() {
-        do {
-            self.decks = try context.fetch(Deck.fetchRequest())
-            DispatchQueue.main.async {
-                self.createDeckTableView.reloadData()
-            }
-        } catch { }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -73,6 +56,9 @@ class CreateDeckViewController: UIViewController, UITableViewDelegate, UITableVi
         if indexPath.row == 0 {
             
             let deckNameCell = createDeckTableView.dequeueReusableCell(withIdentifier: deckNameCell ) as! NewDeckTableViewCell
+            
+            deckNameCell.configure(newDeck: self.deck)
+            
             return deckNameCell
             
         } else {

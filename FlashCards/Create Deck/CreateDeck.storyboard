@@ -33,6 +33,9 @@
                                                     <rect key="frame" x="20" y="21" width="374" height="38"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="setDeckTitle:" destination="OPO-12-hFk" eventType="editingChanged" id="He6-ul-dbS"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -78,6 +81,9 @@
                                                                     <rect key="frame" x="0.0" y="34.5" width="82.5" height="31"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain" title="Add card"/>
+                                                                    <connections>
+                                                                        <action selector="addCard:" destination="xcl-tH-GMn" eventType="touchUpInside" id="hp2-xh-YaL"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -279,14 +285,13 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="7lK-5U-yIp">
                             <connections>
-                                <action selector="createDeck:" destination="iah-8J-Ci9" id="At3-2r-G64"/>
+                                <action selector="deckDone:" destination="iah-8J-Ci9" id="5BC-ZY-Ega"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
                         <outlet property="createDeckTableView" destination="eYa-Ql-TlK" id="7qQ-jD-kf7"/>
-                        <outlet property="deckDone" destination="7lK-5U-yIp" id="n7t-fD-4h0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUL-i8-fzL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

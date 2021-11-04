@@ -9,11 +9,22 @@ import UIKit
 
 class NewDeckTableViewCell: UITableViewCell {
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var deck: Deck?
+    
     @IBOutlet weak var newDeckTextfield: UITextField!
+    
+    @IBAction func setDeckTitle(_ sender: Any) {
+        self.deck?.title = newDeckTextfield.text
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+    }
+        
+    func configure(newDeck: Deck?) {
+        self.deck = newDeck
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
