@@ -18,34 +18,52 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
     @IBOutlet weak var addCardButton: UIButton!
     @IBOutlet weak var cardCollectionView: UICollectionView!
     
-    @IBAction func addCard(_ sender: Any) {
-        
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         cardCollectionView.dataSource = self
         cardCollectionView.delegate = self
+                
+        numberOfCardsLabel.text = String("\(cards.count) cards")
         
+    }
+    
+    @IBAction func addCard(_ sender: Any) {
+        let newCard = Card(context: self.context)
+        newCard.deck = self.deck
+        
+        let fContent = Content(context: self.context)
+        fContent.text = "frente"
+        
+        let vContent = Content(context: self.context)
+        vContent.text = "verso"
+        
+        newCard.front_content = fContent
+        newCard.back_content = vContent
+        
+        cards.append(newCard)
+        
+        cardCollectionView.reloadData()
         numberOfCardsLabel.text = String("\(cards.count) cards")
     }
     
     func configure(newDeck: Deck?) {
         self.deck = newDeck
     }
+    
 }
 
 extension NewCardTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cards.count
+        return deck!.cards!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cardCollectionCell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: collectionCellID, for: indexPath) as! cardCollectionViewCell
         
+        cardCollectionCell.configure(card: cards[indexPath.row])
         return cardCollectionCell
     }
 }

@@ -14,6 +14,8 @@ class cardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var numberOfCharacterBack: UILabel!
     @IBOutlet weak var numberOfCharactersFront: UILabel!
     
+    var card: Card?
+    
     @IBAction func addImageFront(_ sender: Any) {
         print("clicou1")
     }
@@ -24,5 +26,13 @@ class cardCollectionViewCell: UICollectionViewCell {
     
     override class func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    
+    func configure(card: Card) {
+        self.card = card
+        
+        frontSideTextField.text = card.front_content?.text
+        backSideTextField.text = card.back_content?.text
     }
 }

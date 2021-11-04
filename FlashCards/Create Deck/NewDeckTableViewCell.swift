@@ -10,6 +10,7 @@ import UIKit
 class NewDeckTableViewCell: UITableViewCell {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     var deck: Deck?
     
     @IBOutlet weak var newDeckTextfield: UITextField!
@@ -20,7 +21,6 @@ class NewDeckTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
     }
         
     func configure(newDeck: Deck?) {
