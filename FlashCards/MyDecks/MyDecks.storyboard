@@ -114,6 +114,7 @@
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <action selector="addDeck:" destination="chZ-ES-L3i" id="6RX-hY-w28"/>
+                                <segue destination="UuY-xM-81d" kind="show" id="SaI-eO-6Mv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -288,6 +289,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dX-Zd-8bN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2128.985507246377" y="1597.7678571428571"/>
+        </scene>
+        <!--CreateDeck-->
+        <scene sceneID="1Ut-aV-Kmw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateDeck" id="UuY-xM-81d" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="qbl-rV-LKp"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zye-PF-nN5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2763" y="827"/>
         </scene>
         <!--Deck-->
         <scene sceneID="HsT-iO-Cc4">
