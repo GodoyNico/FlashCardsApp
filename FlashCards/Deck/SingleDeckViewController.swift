@@ -13,6 +13,7 @@ class SingleDeckViewController: UIViewController {
 
     @IBOutlet weak var deckTtitleLabel: UILabel!
     @IBOutlet weak var practiceButton: UIButton!
+    let goToPracticeSegueID: String = "goToPractice"
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,4 +22,14 @@ class SingleDeckViewController: UIViewController {
         practiceButton.backgroundColor = UIColor(named: "gray1")
     }
 
+    @IBAction func toPractice(_ sender: Any) {
+        performSegue(withIdentifier: self.goToPracticeSegueID, sender: deck)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let practiceViewController = segue.destination as? PracticeViewController, let deck = sender as? Deck else { return }
+
+        practiceViewController.configure(deck: deck)
+    }
+    
 }

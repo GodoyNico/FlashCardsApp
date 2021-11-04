@@ -114,7 +114,7 @@
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <action selector="addDeck:" destination="chZ-ES-L3i" id="6RX-hY-w28"/>
-                                <segue destination="UuY-xM-81d" kind="show" id="SaI-eO-6Mv"/>
+                                <segue destination="hPY-uT-H87" kind="show" id="6Ei-Fx-SEe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -291,14 +291,14 @@
             <point key="canvasLocation" x="2128.985507246377" y="1597.7678571428571"/>
         </scene>
         <!--CreateDeck-->
-        <scene sceneID="1Ut-aV-Kmw">
+        <scene sceneID="dQD-Ch-Hti">
             <objects>
-                <viewControllerPlaceholder storyboardName="CreateDeck" id="UuY-xM-81d" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="qbl-rV-LKp"/>
+                <viewControllerPlaceholder storyboardName="CreateDeck" id="hPY-uT-H87" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="GWG-qh-872"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zye-PF-nN5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m4V-5i-QcR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2763" y="827"/>
+            <point key="canvasLocation" x="2701" y="847"/>
         </scene>
         <!--Deck-->
         <scene sceneID="HsT-iO-Cc4">
@@ -308,7 +308,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgk-6a-LxK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2785" y="865"/>
+            <point key="canvasLocation" x="2672" y="881"/>
         </scene>
         <!--MyDecks-->
         <scene sceneID="urB-VH-GmL">
