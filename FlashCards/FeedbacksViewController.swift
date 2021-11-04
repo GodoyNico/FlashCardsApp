@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FeedbackViewController: UIViewController {
+class FeedbacksViewController: UIViewController {
     
     var practiceFeedback: PracticeFeedback?
 
