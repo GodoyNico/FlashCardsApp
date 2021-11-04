@@ -7,9 +7,9 @@
 
 import UIKit
 
-typealias PracticeFeedback = (remembered: Int, noRemembered: Int)
+typealias PracticesFeedback = (remembered: Int, noRemembered: Int)
 
-class PracticeViewController: UIViewController {
+class PracticesViewController: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
