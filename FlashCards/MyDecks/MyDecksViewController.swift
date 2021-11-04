@@ -104,11 +104,55 @@ extension MyDecksViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        
         return UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { menuElement in
-            return UIMenu(image: nil, identifier: nil, options: UIMenu.Options.destructive, children: [UIAction(title:"delete", attributes: .destructive ,handler: { action in
-                print("deu certo")
-            })])
+            
+            return UIMenu(
+                image: nil,
+                identifier: nil,
+                options: UIMenu.Options.destructive,
+                children: [ UIAction(
+                                title:"Apagar",
+                                image: UIImage(systemName: "trash"),
+                                attributes: .destructive,
+                                handler: { action in
+                                    
+                                    let alert = UIAlertController(title: nil, message: "Tem certeza que você quer deletar esse card? ", preferredStyle: .alert)
+                                    
+                                    let deleteButton = UIAlertAction(title: "Sim", style: .default) { (action) in
+                                        
+                                        // Which Deck to Remove
+                                        let deckToRemove = self.myDecks[indexPath.row]
+                                        
+                                        // Remove the Deck
+                                        self.context.delete(deckToRemove)
+                                        
+                                        // Save the Data
+                                        do {
+                                            try self.context.save()
+                                        } catch { }
+                                        
+                                        // Re-Fetch the Data
+                                        self.fetchDecks()
+                                        
+                                    }
+                                    
+                                    let cancelButton = UIAlertAction(title: "Não", style: .destructive) { (action) in
+                                        
+                                       return
+                                        
+                                    }
+                                    
+                                    alert.addAction(deleteButton)
+                                    alert.addAction(cancelButton)
+                                    
+                                    self.present(alert, animated: true, completion: nil)
+
+                                })
+                          ])
+            
         }
+        
     }
 
 }
