@@ -6,8 +6,10 @@ class MyDecksViewController: UIViewController {
     
     static let myDecksCellID: String = "myDecksCell"
     static let titlemyDecksCellID: String = "titleMyDecksCell"
+    static let progressCellID: String = "progressCellID"
+    static let searchDecksCellID: String = "searchDecksCellID"
+    
     let deckSegueId: String = "GoToSingleDeck"
-
     var myDecks: [Deck] = []
     
     @IBOutlet weak var myDecksCollectionView: UICollectionView!
@@ -20,10 +22,11 @@ class MyDecksViewController: UIViewController {
         
         fetchDecks()
         
+        // TODO: RETIRAR AO FIM DO PROJETO
         if myDecks.isEmpty {
             createFakeDecks()
         }
-                
+        
     }
     
     func fetchDecks() {
@@ -60,22 +63,32 @@ class MyDecksViewController: UIViewController {
 extension MyDecksViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        if section == 0 {
-            return 1
-        }
-        
-        return myDecks.count
+        return section == 3 ? myDecks.count : 1
     }
     
     // MARK: List MyDecks
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if indexPath.section == 0 {
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Self.progressCellID, for: indexPath) as! ProgressCollectionViewCell
+            
+            cell.configure()
+
+            return cell
+            
+        } else if indexPath.section == 1 {
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Self.searchDecksCellID, for: indexPath) as! SearchCollectionViewCell
+
+            return cell
+            
+        } else if indexPath.section == 2 {
+            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Self.titlemyDecksCellID, for: indexPath) as! TitleMyDecksCollectionViewCell
 
             cell.myDecksTitleLabel.text = "My Decks"
@@ -88,6 +101,7 @@ extension MyDecksViewController: UICollectionViewDataSource {
             cell.configure(deck: myDecks[indexPath.row])
             
             return cell
+            
         }
         
     }
@@ -100,7 +114,7 @@ extension MyDecksViewController: UICollectionViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let singleDeckViewController = segue.destination as? SingleDeckViewController, let deck = sender as? Deck else { return }
 
-        singleDeckViewController.deck = deck
+        singleDeckViewController.configure(deck: deck)
     }
     
     func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
@@ -111,45 +125,38 @@ extension MyDecksViewController: UICollectionViewDataSource {
                 image: nil,
                 identifier: nil,
                 options: UIMenu.Options.destructive,
-                children: [ UIAction(
-                                title:"Apagar",
-                                image: UIImage(systemName: "trash"),
-                                attributes: .destructive,
-                                handler: { action in
+                children: [ UIAction(title:"Apagar", image: UIImage(systemName: "trash"), attributes: .destructive,handler: { action in
                                     
-                                    let alert = UIAlertController(title: nil, message: "Tem certeza que você quer deletar esse card? ", preferredStyle: .alert)
-                                    
-                                    let deleteButton = UIAlertAction(title: "Sim", style: .default) { (action) in
-                                        
-                                        // Which Deck to Remove
-                                        let deckToRemove = self.myDecks[indexPath.row]
-                                        
-                                        // Remove the Deck
-                                        self.context.delete(deckToRemove)
-                                        
-                                        // Save the Data
-                                        do {
-                                            try self.context.save()
-                                        } catch { }
-                                        
-                                        // Re-Fetch the Data
-                                        self.fetchDecks()
-                                        
-                                    }
-                                    
-                                    let cancelButton = UIAlertAction(title: "Não", style: .destructive) { (action) in
-                                        
-                                       return
-                                        
-                                    }
-                                    
-                                    alert.addAction(deleteButton)
-                                    alert.addAction(cancelButton)
-                                    
-                                    self.present(alert, animated: true, completion: nil)
+                    let alert = UIAlertController(title: nil, message: "Tem certeza que você quer deletar esse card? ", preferredStyle: .alert)
+                    
+                    let deleteButton = UIAlertAction(title: "Sim", style: .default) { (action) in
+                        
+                        // Which Deck to Remove
+                        let deckToRemove = self.myDecks[indexPath.row]
+                        
+                        // Remove the Deck
+                        self.context.delete(deckToRemove)
+                        
+                        // Save the Data
+                        do {
+                            try self.context.save()
+                        } catch { }
+                        
+                        // Re-Fetch the Data
+                        self.fetchDecks()
+                        
+                    }
+                    
+                    let cancelButton = UIAlertAction(title: "Não", style: .destructive) { (action) in
+                       return
+                    }
+                    
+                    alert.addAction(deleteButton)
+                    alert.addAction(cancelButton)
+                    
+                    self.present(alert, animated: true, completion: nil)
 
-                                })
-                          ])
+                })])
             
         }
         
@@ -161,28 +168,22 @@ extension MyDecksViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let width = (UIScreen.main.bounds.width-44)/2
+        let width = UIScreen.main.bounds.width - 32.0
 
         if indexPath.section == 0 {
-            return CGSize(width: width, height: 44)
+            return CGSize(width: width, height: 92)
+        }else if indexPath.section == 1 {
+            return CGSize(width: width+16, height: 36)
+        } else if indexPath.section == 2 {
+            return CGSize(width: width, height: 39)
+        } else {
+            return CGSize(width: (width-12)/2, height: 197)
         }
 
-        return CGSize(width: width, height: 197)
-        // largura da tela (358) - 44 (bordas (16+16) + meio (+12) == 44)
-        // 358 - 44 = 314/2 == 157
-        // 157/358 = 0.4385
-        // UIScreen.main.bounds.width * 0.4385
-        
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-
-        if section == 0 {
-            return UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
-        }
-
-        return UIEdgeInsets(top: 12, left: 0, bottom: 0, right: 0)
-
+        return UIEdgeInsets(top: 22, left: 0, bottom: 0, right: 0)
     }
     
 }

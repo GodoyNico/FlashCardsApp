@@ -26,6 +26,8 @@
 		9F81EDEA272B31F200AFADC8 /* cardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81EDE9272B31F200AFADC8 /* cardCollectionViewCell.swift */; };
 		9FF47A63271F551400A4C0CC /* PracticesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF47A62271F551400A4C0CC /* PracticesViewController.swift */; };
 		9FF7A1B3272873A700FBCAE3 /* CreateDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7A1B2272873A700FBCAE3 /* CreateDeckViewController.swift */; };
+		C008826127351934009A27A0 /* ProgressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008826027351934009A27A0 /* ProgressCollectionViewCell.swift */; };
+		C008826327351959009A27A0 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008826227351959009A27A0 /* SearchCollectionViewCell.swift */; };
 		C044EEEF272B13790033B02B /* SingleDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C044EEEE272B13790033B02B /* SingleDeckViewController.swift */; };
 		C067DF042719F131007F1EB5 /* DeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF032719F131007F1EB5 /* DeckTableViewCell.swift */; };
 		C067DF06271A15E9007F1EB5 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF05271A15E9007F1EB5 /* CardTableViewCell.swift */; };
@@ -46,6 +48,7 @@
 		C0D8D3FA2734778500EDFA5B /* Content+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8D3F22734778500EDFA5B /* Content+CoreDataProperties.swift */; };
 		C0D8D3FB2734778500EDFA5B /* Deck+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8D3F32734778500EDFA5B /* Deck+CoreDataClass.swift */; };
 		C0D8D3FC2734778500EDFA5B /* Deck+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8D3F42734778500EDFA5B /* Deck+CoreDataProperties.swift */; };
+		C0D8D3FE27348CB800EDFA5B /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8D3FD27348CB800EDFA5B /* CircularProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,8 @@
 		9F81EDE9272B31F200AFADC8 /* cardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardCollectionViewCell.swift; sourceTree = "<group>"; };
 		9FF47A62271F551400A4C0CC /* PracticesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticesViewController.swift; sourceTree = "<group>"; };
 		9FF7A1B2272873A700FBCAE3 /* CreateDeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDeckViewController.swift; sourceTree = "<group>"; };
+		C008826027351934009A27A0 /* ProgressCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCollectionViewCell.swift; sourceTree = "<group>"; };
+		C008826227351959009A27A0 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		C044EEEE272B13790033B02B /* SingleDeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SingleDeckViewController.swift; path = FlashCards/Deck/SingleDeckViewController.swift; sourceTree = SOURCE_ROOT; };
 		C067DF032719F131007F1EB5 /* DeckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTableViewCell.swift; sourceTree = "<group>"; };
 		C067DF05271A15E9007F1EB5 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
@@ -109,6 +114,7 @@
 		C0D8D3F22734778500EDFA5B /* Content+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C0D8D3F32734778500EDFA5B /* Deck+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deck+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C0D8D3F42734778500EDFA5B /* Deck+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deck+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C0D8D3FD27348CB800EDFA5B /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,7 @@
 				C0BC72F727286C540016DBF9 /* Practice */,
 				9F4CF2612718BEB600C7BBA5 /* Model */,
 				5DE6026C2718B86E00341772 /* AppDelegate.swift */,
+				C0D8D3FD27348CB800EDFA5B /* CircularProgressView.swift */,
 				5DE6026E2718B86E00341772 /* SceneDelegate.swift */,
 				5DE602702718B86E00341772 /* ViewController.swift */,
 				9FF47A62271F551400A4C0CC /* PracticesViewController.swift */,
@@ -240,10 +247,12 @@
 		C0BC72F927286C7D0016DBF9 /* MyDecks */ = {
 			isa = PBXGroup;
 			children = (
-				C0A2BB3A2727379F0069B525 /* MyDecks.storyboard */,
 				C0BC72FC27287FBE0016DBF9 /* MyDecksViewController.swift */,
-				C0BC72FE272886D70016DBF9 /* MyDecksCollectionViewCell.swift */,
+				C0A2BB3A2727379F0069B525 /* MyDecks.storyboard */,
+				C008826027351934009A27A0 /* ProgressCollectionViewCell.swift */,
+				C008826227351959009A27A0 /* SearchCollectionViewCell.swift */,
 				C0BC7300272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift */,
+				C0BC72FE272886D70016DBF9 /* MyDecksCollectionViewCell.swift */,
 			);
 			path = MyDecks;
 			sourceTree = "<group>";
@@ -416,6 +425,7 @@
 				5DE602772718B86E00341772 /* FlashCards.xcdatamodeld in Sources */,
 				9FF7A1B3272873A700FBCAE3 /* CreateDeckViewController.swift in Sources */,
 				C067DF042719F131007F1EB5 /* DeckTableViewCell.swift in Sources */,
+				C008826327351959009A27A0 /* SearchCollectionViewCell.swift in Sources */,
 				5DE6026F2718B86E00341772 /* SceneDelegate.swift in Sources */,
 				C044EEEF272B13790033B02B /* SingleDeckViewController.swift in Sources */,
 				C067DF08271A160F007F1EB5 /* DeckDetailsViewController.swift in Sources */,
@@ -425,7 +435,9 @@
 				C0D8D3F92734778500EDFA5B /* Content+CoreDataClass.swift in Sources */,
 				C0D8D3FC2734778500EDFA5B /* Deck+CoreDataProperties.swift in Sources */,
 				9F4CF2632718C5A800C7BBA5 /* DeckViewController.swift in Sources */,
+				C0D8D3FE27348CB800EDFA5B /* CircularProgressView.swift in Sources */,
 				C0BC72FD27287FBE0016DBF9 /* MyDecksViewController.swift in Sources */,
+				C008826127351934009A27A0 /* ProgressCollectionViewCell.swift in Sources */,
 				C0D8D3F82734778500EDFA5B /* Card+CoreDataProperties.swift in Sources */,
 				C0D8D3F52734778500EDFA5B /* Progress+CoreDataClass.swift in Sources */,
 				5DAF0E4427344CF800E49A93 /* PracticeViewController.swift in Sources */,
@@ -613,6 +625,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -641,6 +654,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
