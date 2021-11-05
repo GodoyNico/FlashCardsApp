@@ -46,6 +46,7 @@
 		C0D8D3FA2734778500EDFA5B /* Content+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8D3F22734778500EDFA5B /* Content+CoreDataProperties.swift */; };
 		C0D8D3FB2734778500EDFA5B /* Deck+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8D3F32734778500EDFA5B /* Deck+CoreDataClass.swift */; };
 		C0D8D3FC2734778500EDFA5B /* Deck+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8D3F42734778500EDFA5B /* Deck+CoreDataProperties.swift */; };
+		C0D8D3FE27348CB800EDFA5B /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8D3FD27348CB800EDFA5B /* CircularProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		C0D8D3F22734778500EDFA5B /* Content+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C0D8D3F32734778500EDFA5B /* Deck+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deck+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C0D8D3F42734778500EDFA5B /* Deck+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deck+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C0D8D3FD27348CB800EDFA5B /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				C0BC72F727286C540016DBF9 /* Practice */,
 				9F4CF2612718BEB600C7BBA5 /* Model */,
 				5DE6026C2718B86E00341772 /* AppDelegate.swift */,
+				C0D8D3FD27348CB800EDFA5B /* CircularProgressView.swift */,
 				5DE6026E2718B86E00341772 /* SceneDelegate.swift */,
 				5DE602702718B86E00341772 /* ViewController.swift */,
 				9FF47A62271F551400A4C0CC /* PracticesViewController.swift */,
@@ -425,6 +428,7 @@
 				C0D8D3F92734778500EDFA5B /* Content+CoreDataClass.swift in Sources */,
 				C0D8D3FC2734778500EDFA5B /* Deck+CoreDataProperties.swift in Sources */,
 				9F4CF2632718C5A800C7BBA5 /* DeckViewController.swift in Sources */,
+				C0D8D3FE27348CB800EDFA5B /* CircularProgressView.swift in Sources */,
 				C0BC72FD27287FBE0016DBF9 /* MyDecksViewController.swift in Sources */,
 				C0D8D3F82734778500EDFA5B /* Card+CoreDataProperties.swift in Sources */,
 				C0D8D3F52734778500EDFA5B /* Progress+CoreDataClass.swift in Sources */,
@@ -613,6 +617,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -641,6 +646,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

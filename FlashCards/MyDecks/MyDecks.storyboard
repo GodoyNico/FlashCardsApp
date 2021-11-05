@@ -72,8 +72,17 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCg-uN-8LS">
-                                                            <rect key="frame" x="16.5" y="49" width="88" height="102.5"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCg-uN-8LS" customClass="CircularProgressView" customModule="FlashCards" customModuleProvider="target">
+                                                            <rect key="frame" x="9.5" y="49" width="102.5" height="102.5"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DecksAB" translatesAutoresizingMaskIntoConstraints="NO" id="6T1-Yh-A7J">
+                                                                    <rect key="frame" x="17" y="17" width="68.5" height="68.5"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="sCg-uN-8LS" secondAttribute="height" multiplier="1:1" id="Vtz-SX-IUy"/>
+                                                            </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00z-8c-ioH">
                                                             <rect key="frame" x="39.5" y="159.5" width="42.5" height="20.5"/>
@@ -94,6 +103,8 @@
                                         <size key="customSize" width="161" height="200"/>
                                         <connections>
                                             <outlet property="deckDeckView" destination="bt3-eq-Mc8" id="u5L-36-CG1"/>
+                                            <outlet property="deckProgressCircleView" destination="sCg-uN-8LS" id="skU-eH-uJF"/>
+                                            <outlet property="deckProgressLabel" destination="00z-8c-ioH" id="gl3-hG-4jc"/>
                                             <outlet property="deckTitleDeckLabel" destination="3sB-Fz-JdR" id="yAq-sI-mYI"/>
                                         </connections>
                                     </collectionViewCell>
@@ -350,6 +361,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="DecksAB" width="176" height="138"/>
         <image name="list.bullet.rectangle.fill" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
