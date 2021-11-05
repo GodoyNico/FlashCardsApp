@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Create Deck-->
+        <!--Criar deck-->
         <scene sceneID="hUK-G4-zdF">
             <objects>
                 <viewController id="iah-8J-Ci9" customClass="CreateDeckViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,20 +17,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eYa-Ql-TlK">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eYa-Ql-TlK">
                                 <rect key="frame" x="0.0" y="88" width="414" height="1112"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" systemColor="opaqueSeparatorColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewDeckCell" rowHeight="80" id="OPO-12-hFk" customClass="NewDeckTableViewCell" customModule="FlashCards" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NewDeckCell" rowHeight="100" id="OPO-12-hFk" customClass="NewDeckTableViewCell" customModule="FlashCards" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OPO-12-hFk" id="IHI-mR-J17">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rzu-ax-cnv">
+                                                    <rect key="frame" x="0.0" y="82" width="414" height="18"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="16v-P5-1UQ"/>
+                                                    </constraints>
+                                                </view>
                                                 <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New deck name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l0v-cR-d45">
-                                                    <rect key="frame" x="20" y="21" width="374" height="38"/>
+                                                    <rect key="frame" x="20" y="19" width="374" height="45"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
@@ -39,12 +46,16 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="l0v-cR-d45" secondAttribute="bottom" constant="10" id="Fbj-04-vys"/>
-                                                <constraint firstItem="l0v-cR-d45" firstAttribute="centerY" secondItem="IHI-mR-J17" secondAttribute="centerY" id="HL7-z8-14S"/>
+                                                <constraint firstAttribute="trailing" secondItem="Rzu-ax-cnv" secondAttribute="trailing" id="FGE-BQ-KnI"/>
                                                 <constraint firstItem="l0v-cR-d45" firstAttribute="leading" secondItem="IHI-mR-J17" secondAttribute="leadingMargin" id="KTt-hR-vzc"/>
+                                                <constraint firstItem="Rzu-ax-cnv" firstAttribute="top" secondItem="l0v-cR-d45" secondAttribute="bottom" constant="18" id="PUv-pM-bzl"/>
+                                                <constraint firstItem="l0v-cR-d45" firstAttribute="top" secondItem="IHI-mR-J17" secondAttribute="topMargin" constant="8" id="SvH-2M-cca"/>
+                                                <constraint firstItem="Rzu-ax-cnv" firstAttribute="leading" secondItem="IHI-mR-J17" secondAttribute="leading" id="WBX-T8-lea"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="l0v-cR-d45" secondAttribute="trailing" id="hOA-TU-Oaj"/>
+                                                <constraint firstItem="l0v-cR-d45" firstAttribute="trailing" secondItem="IHI-mR-J17" secondAttribute="trailingMargin" id="hjn-iy-7k1"/>
+                                                <constraint firstAttribute="bottom" secondItem="Rzu-ax-cnv" secondAttribute="bottom" id="jhm-gp-7bh"/>
                                                 <constraint firstItem="l0v-cR-d45" firstAttribute="centerX" secondItem="IHI-mR-J17" secondAttribute="centerX" id="kaq-Gw-dUx"/>
-                                                <constraint firstItem="l0v-cR-d45" firstAttribute="top" secondItem="IHI-mR-J17" secondAttribute="topMargin" constant="10" id="xTT-dV-nsc"/>
+                                                <constraint firstItem="l0v-cR-d45" firstAttribute="leading" secondItem="IHI-mR-J17" secondAttribute="leadingMargin" id="vyo-PP-ZWk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -52,14 +63,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewCardCell" rowHeight="900" id="xcl-tH-GMn" customClass="NewCardTableViewCell" customModule="FlashCards" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="124.5" width="414" height="900"/>
+                                        <rect key="frame" x="0.0" y="144.5" width="414" height="900"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xcl-tH-GMn" id="fEW-A7-OCs">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SSC-9S-boq">
-                                                    <rect key="frame" x="141" y="19" width="132" height="175.5"/>
+                                                    <rect key="frame" x="141" y="19" width="132" height="187.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="newCardImage" translatesAutoresizingMaskIntoConstraints="NO" id="y8m-EF-eaE">
                                                             <rect key="frame" x="0.0" y="0.0" width="132" height="102"/>
@@ -69,18 +80,18 @@
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="hml-Jf-ghy">
-                                                            <rect key="frame" x="25" y="110" width="82.5" height="65.5"/>
+                                                            <rect key="frame" x="7.5" y="110" width="117" height="77.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="0 cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pg0-Gs-A8M">
-                                                                    <rect key="frame" x="12.5" y="0.0" width="57" height="20.5"/>
+                                                                    <rect key="frame" x="30" y="0.0" width="57" height="32.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLW-dZ-LT3">
-                                                                    <rect key="frame" x="0.0" y="34.5" width="82.5" height="31"/>
+                                                                    <rect key="frame" x="0.0" y="46.5" width="117" height="31"/>
                                                                     <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain" title="Add card"/>
+                                                                    <buttonConfiguration key="configuration" style="plain" title="Adicionar card"/>
                                                                     <connections>
                                                                         <action selector="addCard:" destination="xcl-tH-GMn" eventType="touchUpInside" id="hp2-xh-YaL"/>
                                                                     </connections>
@@ -89,7 +100,7 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SVu-AV-dIl">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SVu-AV-dIl">
                                                     <rect key="frame" x="0.0" y="214.5" width="414" height="685.5"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
@@ -145,16 +156,14 @@
                                                                                             </button>
                                                                                         </subviews>
                                                                                     </stackView>
-                                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="hausdhausdhuashdahsduhasudhasuhduashuahsduashduhasudhuashduashduhasudhasuhduashduashduhasuhduashduha" translatesAutoresizingMaskIntoConstraints="NO" id="r8l-Se-FtT" userLabel="FrontSideTextfield">
+                                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="r8l-Se-FtT" userLabel="FrontSideTextfield">
                                                                                         <rect key="frame" x="0.0" y="30" width="296" height="175"/>
                                                                                         <color key="textColor" systemColor="labelColor"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                                                                     </textView>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtF-Iz-GsR" userLabel="Maximum 100 characters">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Máximo 100 caracteres" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtF-Iz-GsR" userLabel="Maximum 100 characters">
                                                                                         <rect key="frame" x="0.0" y="213" width="296" height="17"/>
-                                                                                        <string key="text">Maximum 100 characters
-</string>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
@@ -198,16 +207,14 @@
                                                                                             </button>
                                                                                         </subviews>
                                                                                     </stackView>
-                                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="hausdhausdhuashdahsduhasudhasuhduashuahsduashduhasudhuashduashduhasudhasuhduashduashduhasuhduashduha" translatesAutoresizingMaskIntoConstraints="NO" id="Heb-8O-SND" userLabel="backSideTextfield">
+                                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="Heb-8O-SND" userLabel="backSideTextfield">
                                                                                         <rect key="frame" x="0.0" y="30" width="296" height="175"/>
                                                                                         <color key="textColor" systemColor="labelColor"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                                                                     </textView>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60Z-1h-drf">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Máximo 100 caracteres" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60Z-1h-drf">
                                                                                         <rect key="frame" x="0.0" y="213" width="296" height="17"/>
-                                                                                        <string key="text">Maximum 100 characters
-</string>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
@@ -256,7 +263,7 @@
                                                 <constraint firstItem="SSC-9S-boq" firstAttribute="centerX" secondItem="fEW-A7-OCs" secondAttribute="centerX" id="Ave-JR-BiK"/>
                                                 <constraint firstItem="SSC-9S-boq" firstAttribute="top" secondItem="fEW-A7-OCs" secondAttribute="topMargin" constant="8" id="Tbd-98-sao"/>
                                                 <constraint firstAttribute="trailing" secondItem="SVu-AV-dIl" secondAttribute="trailing" id="WIs-TR-Dl8"/>
-                                                <constraint firstItem="SVu-AV-dIl" firstAttribute="top" secondItem="SSC-9S-boq" secondAttribute="bottom" constant="20" id="aV6-9R-sEk"/>
+                                                <constraint firstItem="SVu-AV-dIl" firstAttribute="top" secondItem="SSC-9S-boq" secondAttribute="bottom" constant="8" id="aV6-9R-sEk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -277,13 +284,13 @@
                             <constraint firstItem="eYa-Ql-TlK" firstAttribute="leading" secondItem="P6t-01-nvg" secondAttribute="leading" id="zsN-mw-cVV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Create Deck" id="HYQ-Lx-OhG">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="mON-MK-kKF">
+                    <navigationItem key="navigationItem" title="Criar deck" id="HYQ-Lx-OhG">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" style="plain" id="mON-MK-kKF">
                             <connections>
                                 <action selector="cancel:" destination="iah-8J-Ci9" id="n9G-pg-ZyS"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="7lK-5U-yIp">
+                        <barButtonItem key="rightBarButtonItem" title="Concluir" style="done" id="7lK-5U-yIp">
                             <connections>
                                 <action selector="deckDone:" destination="iah-8J-Ci9" id="5BC-ZY-Ega"/>
                             </connections>
