@@ -23,7 +23,7 @@ class MyDecksViewController: UIViewController {
         if myDecks.isEmpty {
             createFakeDecks()
         }
-                
+        
     }
     
     func fetchDecks() {
