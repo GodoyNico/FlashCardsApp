@@ -99,7 +99,8 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="deckProgressCircleView" destination="04c-yp-hbt" id="Cpj-fX-U2i"/>
-                        <outlet property="deckTtitleLabel" destination="qxB-JB-NZo" id="ghy-gr-6x6"/>
+                        <outlet property="deckProgressLabel" destination="Jmv-x0-47B" id="m26-7t-ajx"/>
+                        <outlet property="deckTitleLabel" destination="qxB-JB-NZo" id="zOf-qe-Gsq"/>
                         <outlet property="practiceButton" destination="Lrp-Mp-6Pt" id="zaX-6b-cGD"/>
                         <segue destination="F7a-KY-Dl0" kind="show" identifier="goToPractice" id="unu-Ts-NIR"/>
                         <segue destination="eCB-2z-GLB" kind="show" identifier="goToEdit" id="L1n-Yq-wvD"/>

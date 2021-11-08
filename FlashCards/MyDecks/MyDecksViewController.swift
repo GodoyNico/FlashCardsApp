@@ -29,6 +29,11 @@ class MyDecksViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchDecks()
+    }
+        
     func fetchDecks() {
         do {
             self.myDecks = try context.fetch(Deck.fetchRequest())
@@ -127,7 +132,7 @@ extension MyDecksViewController: UICollectionViewDataSource {
                 options: UIMenu.Options.destructive,
                 children: [ UIAction(title:"Apagar", image: UIImage(systemName: "trash"), attributes: .destructive,handler: { action in
                                     
-                    let alert = UIAlertController(title: nil, message: "Tem certeza que você quer deletar esse card? ", preferredStyle: .alert)
+                    let alert = UIAlertController(title: nil, message: "Tem certeza que você quer deletar esse deck? ", preferredStyle: .alert)
                     
                     let deleteButton = UIAlertAction(title: "Sim", style: .default) { (action) in
                         
@@ -151,8 +156,8 @@ extension MyDecksViewController: UICollectionViewDataSource {
                        return
                     }
                     
-                    alert.addAction(deleteButton)
                     alert.addAction(cancelButton)
+                    alert.addAction(deleteButton)
                     
                     self.present(alert, animated: true, completion: nil)
 
