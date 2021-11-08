@@ -26,8 +26,12 @@ class MyDecksViewController: UIViewController {
         if myDecks.isEmpty {
             createFakeDecks()
         }
-        print ("carregou")
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchDecks()
     }
         
     func fetchDecks() {
