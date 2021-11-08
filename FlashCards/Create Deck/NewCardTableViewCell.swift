@@ -73,6 +73,49 @@ extension NewCardTableViewCell: UICollectionViewDataSource {
         cardCollectionCell.configure(card: cards[indexPath.row])
         return cardCollectionCell
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+//
+//        return UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { menuElement in
+//
+//            return UIMenu(
+//                image: nil,
+//                identifier: nil,
+//                options: UIMenu.Options.destructive,
+//                children: [ UIAction(title:"Apagar", image: UIImage(systemName: "trash"), attributes: .destructive,handler: { action in
+//
+//                    let alert = UIAlertController(title: nil, message: "Tem certeza que você quer deletar esse card? ", preferredStyle: .alert)
+//
+//                    let deleteButton = UIAlertAction(title: "Sim", style: .default) { (action) in
+//
+//                        // Which Deck to Remove
+//                        let cardToRemove = self.cards[indexPath.row]
+//
+//                        // Remove the Deck
+//                        self.context.delete(cardToRemove)
+//
+//                        // Save the Data
+//                        do {
+//                            try self.context.save()
+//                        } catch { }
+//
+//                        // Re-Fetch the Data
+//                        self.fetchData()
+//
+//                    }
+//
+//                    let cancelButton = UIAlertAction(title: "Não", style: .destructive) { (action) in
+//                        return
+//                    }
+//
+//                    alert.addAction(deleteButton)
+//                    alert.addAction(cancelButton)
+//
+//                    self.present(alert, animated: true, completion: nil)
+//
+//                })])
+//        }
+//    }
 }
 
 extension NewCardTableViewCell: UICollectionViewDelegateFlowLayout {
@@ -80,5 +123,4 @@ extension NewCardTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.bounds.width * 0.8, height: 610)
     }
-    
 }
