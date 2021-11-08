@@ -15,9 +15,14 @@ class MyDecksCollectionViewCell: UICollectionViewCell {
         deckDeckView.backgroundColor = UIColor(named: "gray1")
         deckDeckView.layer.cornerRadius = 15
         deckTitleDeckLabel.text = deck.title
-        deckProgressLabel.text = "12/20"
         
-        deckProgressCircleView.setValue(value: 0.7)
+        if let cardsList = deck.cards {
+            deckProgressLabel.text = "\(deck.progress_counter)/\(cardsList.count)"
+            deckProgressCircleView.setValue(value: Double(deck.progress_counter)/Double(cardsList.count))
+        } else {
+            deckProgressCircleView.setValue(value: 0)
+        }
+       
         deckProgressCircleView.trackColor = UIColor.gray
         deckProgressCircleView.progressColor = UIColor.black
         

@@ -26,9 +26,10 @@ class MyDecksViewController: UIViewController {
         if myDecks.isEmpty {
             createFakeDecks()
         }
+        print ("carregou")
         
     }
-    
+        
     func fetchDecks() {
         do {
             self.myDecks = try context.fetch(Deck.fetchRequest())
