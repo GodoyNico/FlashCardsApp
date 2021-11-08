@@ -13,9 +13,10 @@ class SingleDeckViewController: UIViewController {
     
     var deck: Deck?
 
-    @IBOutlet weak var deckTtitleLabel: UILabel!
+    @IBOutlet weak var deckTitleLabel: UILabel!
     @IBOutlet weak var practiceButton: UIButton!
     @IBOutlet weak var deckProgressCircleView: CircularProgressView!
+    @IBOutlet weak var deckProgressLabel: UILabel!
     
     let goToPracticeSegueID: String = "goToPractice"
     let goToEditSegueID: String = "goToEdit"
@@ -26,16 +27,23 @@ class SingleDeckViewController: UIViewController {
         
         if let deckSelected = self.deck {
             
-            deckTtitleLabel.text = deckSelected.title
+            deckTitleLabel.text = deckSelected.title
             practiceButton.layer.cornerRadius = 10
             practiceButton.backgroundColor = UIColor(named: "gray1")
+            
+            if let cardsList = deckSelected.cards {
+                deckProgressLabel.text = "\(deckSelected.progress_counter)/\(cardsList.count)"
+                deckProgressCircleView.setValue(value: Double(deckSelected.progress_counter)/Double(cardsList.count))
+            } else {
+                deckProgressCircleView.setValue(value: 0)
+            }
             
         } else {
             
             self.deck = getRandomDeck()
             
             if let deckSelected = self.deck {
-                deckTtitleLabel.text = deckSelected.title
+                deckTitleLabel.text = deckSelected.title
                 practiceButton.layer.cornerRadius = 10
                 practiceButton.backgroundColor = UIColor(named: "gray1")
             } else {
@@ -43,9 +51,10 @@ class SingleDeckViewController: UIViewController {
                 print("Não há decks criados ainda")
             }
             
+            deckProgressCircleView.setValue(value: 0)
+           
         }
-        
-        deckProgressCircleView.setValue(value: 0.7)
+    
         deckProgressCircleView.trackColor = UIColor.gray
         deckProgressCircleView.progressColor = UIColor.black
         

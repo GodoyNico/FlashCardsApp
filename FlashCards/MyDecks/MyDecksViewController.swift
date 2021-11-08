@@ -29,6 +29,11 @@ class MyDecksViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchDecks()
+    }
+        
     func fetchDecks() {
         do {
             self.myDecks = try context.fetch(Deck.fetchRequest())

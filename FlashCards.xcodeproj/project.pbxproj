@@ -40,14 +40,14 @@
 		C0BC72FD27287FBE0016DBF9 /* MyDecksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC72FC27287FBE0016DBF9 /* MyDecksViewController.swift */; };
 		C0BC72FF272886D70016DBF9 /* MyDecksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC72FE272886D70016DBF9 /* MyDecksCollectionViewCell.swift */; };
 		C0BC7301272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC7300272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift */; };
-		C0D8D3F52734778500EDFA5B /* Progress+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8D3ED2734778500EDFA5B /* Progress+CoreDataClass.swift */; };
-		C0D8D3F62734778500EDFA5B /* Progress+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8D3EE2734778500EDFA5B /* Progress+CoreDataProperties.swift */; };
-		C0D8D3F72734778500EDFA5B /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8D3EF2734778500EDFA5B /* Card+CoreDataClass.swift */; };
-		C0D8D3F82734778500EDFA5B /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8D3F02734778500EDFA5B /* Card+CoreDataProperties.swift */; };
-		C0D8D3F92734778500EDFA5B /* Content+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8D3F12734778500EDFA5B /* Content+CoreDataClass.swift */; };
-		C0D8D3FA2734778500EDFA5B /* Content+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8D3F22734778500EDFA5B /* Content+CoreDataProperties.swift */; };
-		C0D8D3FB2734778500EDFA5B /* Deck+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8D3F32734778500EDFA5B /* Deck+CoreDataClass.swift */; };
-		C0D8D3FC2734778500EDFA5B /* Deck+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8D3F42734778500EDFA5B /* Deck+CoreDataProperties.swift */; };
+		C0C25AD627399BE900F6A46D /* Progress+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C25ACE27399BE900F6A46D /* Progress+CoreDataClass.swift */; };
+		C0C25AD727399BE900F6A46D /* Progress+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C25ACF27399BE900F6A46D /* Progress+CoreDataProperties.swift */; };
+		C0C25AD827399BE900F6A46D /* Content+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C25AD027399BE900F6A46D /* Content+CoreDataClass.swift */; };
+		C0C25AD927399BE900F6A46D /* Content+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C25AD127399BE900F6A46D /* Content+CoreDataProperties.swift */; };
+		C0C25ADA27399BE900F6A46D /* Deck+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C25AD227399BE900F6A46D /* Deck+CoreDataClass.swift */; };
+		C0C25ADB27399BE900F6A46D /* Deck+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C25AD327399BE900F6A46D /* Deck+CoreDataProperties.swift */; };
+		C0C25ADC27399BE900F6A46D /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C25AD427399BE900F6A46D /* Card+CoreDataClass.swift */; };
+		C0C25ADD27399BE900F6A46D /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C25AD527399BE900F6A46D /* Card+CoreDataProperties.swift */; };
 		C0D8D3FE27348CB800EDFA5B /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8D3FD27348CB800EDFA5B /* CircularProgressView.swift */; };
 /* End PBXBuildFile section */
 
@@ -106,14 +106,14 @@
 		C0BC72FC27287FBE0016DBF9 /* MyDecksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDecksViewController.swift; sourceTree = "<group>"; };
 		C0BC72FE272886D70016DBF9 /* MyDecksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDecksCollectionViewCell.swift; sourceTree = "<group>"; };
 		C0BC7300272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleMyDecksCollectionViewCell.swift; sourceTree = "<group>"; };
-		C0D8D3ED2734778500EDFA5B /* Progress+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Progress+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C0D8D3EE2734778500EDFA5B /* Progress+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Progress+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C0D8D3EF2734778500EDFA5B /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C0D8D3F02734778500EDFA5B /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C0D8D3F12734778500EDFA5B /* Content+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C0D8D3F22734778500EDFA5B /* Content+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C0D8D3F32734778500EDFA5B /* Deck+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deck+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C0D8D3F42734778500EDFA5B /* Deck+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deck+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C0C25ACE27399BE900F6A46D /* Progress+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Progress+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		C0C25ACF27399BE900F6A46D /* Progress+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Progress+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		C0C25AD027399BE900F6A46D /* Content+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		C0C25AD127399BE900F6A46D /* Content+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		C0C25AD227399BE900F6A46D /* Deck+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deck+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		C0C25AD327399BE900F6A46D /* Deck+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deck+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		C0C25AD427399BE900F6A46D /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		C0C25AD527399BE900F6A46D /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		C0D8D3FD27348CB800EDFA5B /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -210,14 +210,14 @@
 		9F4CF2612718BEB600C7BBA5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C0D8D3ED2734778500EDFA5B /* Progress+CoreDataClass.swift */,
-				C0D8D3EE2734778500EDFA5B /* Progress+CoreDataProperties.swift */,
-				C0D8D3EF2734778500EDFA5B /* Card+CoreDataClass.swift */,
-				C0D8D3F02734778500EDFA5B /* Card+CoreDataProperties.swift */,
-				C0D8D3F12734778500EDFA5B /* Content+CoreDataClass.swift */,
-				C0D8D3F22734778500EDFA5B /* Content+CoreDataProperties.swift */,
-				C0D8D3F32734778500EDFA5B /* Deck+CoreDataClass.swift */,
-				C0D8D3F42734778500EDFA5B /* Deck+CoreDataProperties.swift */,
+				C0C25ACE27399BE900F6A46D /* Progress+CoreDataClass.swift */,
+				C0C25ACF27399BE900F6A46D /* Progress+CoreDataProperties.swift */,
+				C0C25AD027399BE900F6A46D /* Content+CoreDataClass.swift */,
+				C0C25AD127399BE900F6A46D /* Content+CoreDataProperties.swift */,
+				C0C25AD227399BE900F6A46D /* Deck+CoreDataClass.swift */,
+				C0C25AD327399BE900F6A46D /* Deck+CoreDataProperties.swift */,
+				C0C25AD427399BE900F6A46D /* Card+CoreDataClass.swift */,
+				C0C25AD527399BE900F6A46D /* Card+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -413,33 +413,33 @@
 				C067DF06271A15E9007F1EB5 /* CardTableViewCell.swift in Sources */,
 				9F81EDE4272B1A2500AFADC8 /* NewDeckTableViewCell.swift in Sources */,
 				9F81EDEA272B31F200AFADC8 /* cardCollectionViewCell.swift in Sources */,
-				C0D8D3F72734778500EDFA5B /* Card+CoreDataClass.swift in Sources */,
 				C0BC7301272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift in Sources */,
 				9FF47A63271F551400A4C0CC /* PracticesViewController.swift in Sources */,
-				C0D8D3FA2734778500EDFA5B /* Content+CoreDataProperties.swift in Sources */,
 				5DE602712718B86E00341772 /* ViewController.swift in Sources */,
 				5DE6026D2718B86E00341772 /* AppDelegate.swift in Sources */,
+				C0C25AD827399BE900F6A46D /* Content+CoreDataClass.swift in Sources */,
 				5D4018512721DBE900036FB5 /* FeedbacksViewController.swift in Sources */,
+				C0C25ADB27399BE900F6A46D /* Deck+CoreDataProperties.swift in Sources */,
 				5DAF0E4627344D5E00E49A93 /* FeedbackViewController.swift in Sources */,
+				C0C25ADA27399BE900F6A46D /* Deck+CoreDataClass.swift in Sources */,
 				9F81EDE6272B1A4200AFADC8 /* NewCardTableViewCell.swift in Sources */,
 				5DE602772718B86E00341772 /* FlashCards.xcdatamodeld in Sources */,
 				9FF7A1B3272873A700FBCAE3 /* CreateDeckViewController.swift in Sources */,
 				C067DF042719F131007F1EB5 /* DeckTableViewCell.swift in Sources */,
+				C0C25ADD27399BE900F6A46D /* Card+CoreDataProperties.swift in Sources */,
 				C008826327351959009A27A0 /* SearchCollectionViewCell.swift in Sources */,
 				5DE6026F2718B86E00341772 /* SceneDelegate.swift in Sources */,
 				C044EEEF272B13790033B02B /* SingleDeckViewController.swift in Sources */,
+				C0C25AD627399BE900F6A46D /* Progress+CoreDataClass.swift in Sources */,
 				C067DF08271A160F007F1EB5 /* DeckDetailsViewController.swift in Sources */,
-				C0D8D3F62734778500EDFA5B /* Progress+CoreDataProperties.swift in Sources */,
-				C0D8D3FB2734778500EDFA5B /* Deck+CoreDataClass.swift in Sources */,
+				C0C25ADC27399BE900F6A46D /* Card+CoreDataClass.swift in Sources */,
 				C0BC72FF272886D70016DBF9 /* MyDecksCollectionViewCell.swift in Sources */,
-				C0D8D3F92734778500EDFA5B /* Content+CoreDataClass.swift in Sources */,
-				C0D8D3FC2734778500EDFA5B /* Deck+CoreDataProperties.swift in Sources */,
+				C0C25AD927399BE900F6A46D /* Content+CoreDataProperties.swift in Sources */,
 				9F4CF2632718C5A800C7BBA5 /* DeckViewController.swift in Sources */,
 				C0D8D3FE27348CB800EDFA5B /* CircularProgressView.swift in Sources */,
+				C0C25AD727399BE900F6A46D /* Progress+CoreDataProperties.swift in Sources */,
 				C0BC72FD27287FBE0016DBF9 /* MyDecksViewController.swift in Sources */,
 				C008826127351934009A27A0 /* ProgressCollectionViewCell.swift in Sources */,
-				C0D8D3F82734778500EDFA5B /* Card+CoreDataProperties.swift in Sources */,
-				C0D8D3F52734778500EDFA5B /* Progress+CoreDataClass.swift in Sources */,
 				5DAF0E4427344CF800E49A93 /* PracticeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
