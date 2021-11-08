@@ -21,6 +21,7 @@
 		5DE602912718B87100341772 /* FlashCardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE602902718B87100341772 /* FlashCardsUITests.swift */; };
 		5DE602932718B87100341772 /* FlashCardsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE602922718B87100341772 /* FlashCardsUITestsLaunchTests.swift */; };
 		9F4CF2632718C5A800C7BBA5 /* DeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CF2622718C5A800C7BBA5 /* DeckViewController.swift */; };
+		9F67A99F273991C300B63F8D /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F67A99E273991C300B63F8D /* SwitchTableViewCell.swift */; };
 		9F81EDE4272B1A2500AFADC8 /* NewDeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81EDE3272B1A2500AFADC8 /* NewDeckTableViewCell.swift */; };
 		9F81EDE6272B1A4200AFADC8 /* NewCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81EDE5272B1A4200AFADC8 /* NewCardTableViewCell.swift */; };
 		9F81EDEA272B31F200AFADC8 /* cardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81EDE9272B31F200AFADC8 /* cardCollectionViewCell.swift */; };
@@ -87,6 +88,7 @@
 		5DE602902718B87100341772 /* FlashCardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardsUITests.swift; sourceTree = "<group>"; };
 		5DE602922718B87100341772 /* FlashCardsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9F4CF2622718C5A800C7BBA5 /* DeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewController.swift; sourceTree = "<group>"; };
+		9F67A99E273991C300B63F8D /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		9F81EDE3272B1A2500AFADC8 /* NewDeckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDeckTableViewCell.swift; sourceTree = "<group>"; };
 		9F81EDE5272B1A4200AFADC8 /* NewCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardTableViewCell.swift; sourceTree = "<group>"; };
 		9F81EDE9272B31F200AFADC8 /* cardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				9F81EDE3272B1A2500AFADC8 /* NewDeckTableViewCell.swift */,
 				9F81EDE5272B1A4200AFADC8 /* NewCardTableViewCell.swift */,
 				9F81EDE9272B31F200AFADC8 /* cardCollectionViewCell.swift */,
+				9F67A99E273991C300B63F8D /* SwitchTableViewCell.swift */,
 			);
 			path = "Create Deck";
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				9FF47A63271F551400A4C0CC /* PracticesViewController.swift in Sources */,
 				5DE602712718B86E00341772 /* ViewController.swift in Sources */,
 				5DE6026D2718B86E00341772 /* AppDelegate.swift in Sources */,
+				9F67A99F273991C300B63F8D /* SwitchTableViewCell.swift in Sources */,
 				C0C25AD827399BE900F6A46D /* Content+CoreDataClass.swift in Sources */,
 				5D4018512721DBE900036FB5 /* FeedbacksViewController.swift in Sources */,
 				C0C25ADB27399BE900F6A46D /* Deck+CoreDataProperties.swift in Sources */,
@@ -619,7 +623,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J47N8VWCY6;
+				DEVELOPMENT_TEAM = 876KXU24XS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlashCards/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -648,7 +652,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J47N8VWCY6;
+				DEVELOPMENT_TEAM = 876KXU24XS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlashCards/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

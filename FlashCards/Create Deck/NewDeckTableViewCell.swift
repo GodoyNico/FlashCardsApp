@@ -17,6 +17,7 @@ class NewDeckTableViewCell: UITableViewCell {
     
     @IBAction func setDeckTitle(_ sender: Any) {
         self.deck?.title = newDeckTextfield.text
+        
     }
     
     override func awakeFromNib() {
