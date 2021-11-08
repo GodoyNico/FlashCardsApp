@@ -15,6 +15,7 @@ class CreateDeckViewController: UIViewController, UITableViewDelegate, UITableVi
     
     let deckNameCell: String = "NewDeckCell"
     let newCardCell: String = "NewCardCell"
+    let switchCell: String = "switchCell"
     
     @IBOutlet weak var createDeckTableView: UITableView!
     
@@ -38,7 +39,7 @@ class CreateDeckViewController: UIViewController, UITableViewDelegate, UITableVi
         do {
             try self.context.save()
         } catch { }
-        
+                
         self.dismiss(animated: true, completion: nil)
         
     }
@@ -48,7 +49,7 @@ class CreateDeckViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -56,18 +57,25 @@ class CreateDeckViewController: UIViewController, UITableViewDelegate, UITableVi
         if indexPath.row == 0 {
             
             let deckNameCell = createDeckTableView.dequeueReusableCell(withIdentifier: deckNameCell ) as! NewDeckTableViewCell
-            
+                        
             deckNameCell.configure(newDeck: self.deck)
             
             return deckNameCell
             
-        } else {
+        } else if indexPath.row == 1 {
             
             let newCardCell = createDeckTableView.dequeueReusableCell(withIdentifier: newCardCell ) as! NewCardTableViewCell
             
             newCardCell.configure(newDeck: self.deck)
             
             return newCardCell
+            
+        } else {
+            
+            let switchCell = createDeckTableView.dequeueReusableCell(withIdentifier: switchCell) as! SwitchTableViewCell
+            
+             return switchCell
         }
+        
     }
 }

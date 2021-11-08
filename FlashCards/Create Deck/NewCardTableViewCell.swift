@@ -23,27 +23,28 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
         
         cardCollectionView.dataSource = self
         cardCollectionView.delegate = self
-                
+        
         numberOfCardsLabel.text = String("\(cards.count) cards")
         
     }
     
     @IBAction func addCard(_ sender: Any) {
+        
         let newCard = Card(context: self.context)
         newCard.deck = self.deck
         
         let fContent = Content(context: self.context)
-        fContent.text = "frente"
+        fContent.text = ""
         
         let vContent = Content(context: self.context)
-        vContent.text = "verso"
+        vContent.text = ""
         
         newCard.front_content = fContent
         newCard.back_content = vContent
         
         cards.append(newCard)
         
-        cardCollectionView.reloadData()
+        fetchData()
         numberOfCardsLabel.text = String("\(cards.count) cards")
     }
     
@@ -51,6 +52,12 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
         self.deck = newDeck
     }
     
+    func fetchData() {
+        cards = deck?.cards?.allObjects as? [Card] ?? []
+        DispatchQueue.main.async {
+            self.cardCollectionView.reloadData()
+        }
+    }
 }
 
 extension NewCardTableViewCell: UICollectionViewDataSource {
