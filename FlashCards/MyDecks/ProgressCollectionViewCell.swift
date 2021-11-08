@@ -38,15 +38,10 @@ class ProgressCollectionViewCell: UICollectionViewCell {
                 progress_counter += Int(deck.progress_counter)
             }
             
-            if totalCards > 0 {
-                let progress : Float = Float(progress_counter)/Float(totalCards)
-                progressView.progress = progress
-                progressLabel.text = "\(Int(progress*100))%"
-            } else {
-                progressView.progress = 0
-                progressLabel.text = "0%"
-            }
-            
+            let progress : Float = Float(progress_counter)/Float(totalCards > 0 ? totalCards : 1)
+            progressView.progress = progress
+            progressLabel.text = "\(Int(progress*100))%"
+           
         } catch { }
         
     }
