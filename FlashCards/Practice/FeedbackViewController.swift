@@ -34,8 +34,9 @@ class FeedbackViewController: UIViewController {
     }
     
     @IBAction func practiceAgain( _ seg: UIStoryboardSegue) {
-        //performSegue(withIdentifier: deckSegueId, sender: self)
-        navigationController?.popToRootViewController(animated: true)
+        if let deckController = navigationController?.viewControllers[1] {
+            navigationController?.popToViewController(deckController, animated: true)
+        }
     }
     
     @IBAction func myDecks( _ seg: UIStoryboardUnwindSegueSource) {

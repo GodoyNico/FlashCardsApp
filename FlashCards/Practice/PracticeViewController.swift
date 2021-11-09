@@ -144,22 +144,27 @@ class PracticeViewController: UIViewController {
     }
     
     func cardLayout() {
+        view.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.background)
+        
+        counterLabel.textColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Primary)
+        
+        cardView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
         cardView.layer.cornerRadius = 16
         
+        //sideLabel.layer.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
         sideLabel.layer.cornerRadius = 30
         sideLabel.layer.borderWidth = 3
 //        sideLabel.layer.borderColor = CGColor(red: 166.0, green: 164.0, blue: 164.0, alpha: 10.0)
 //        sideLabel.textColor = UIColor(red: 166.0, green: 164.0, blue: 164.0, alpha: 10.0)
-        counterLabel.textColor = UIColor.black
-        sideLabel.textColor = UIColor.black
+        //sideLabel.textColor = UIColor.black
         
         imageView.layer.cornerRadius = 16
         
         sideView.layer.cornerRadius = 15
         sideView.layer.borderWidth = 3
-        sideView.layer.borderColor = CGColor.init(red: 201, green: 202, blue: 210, alpha: 1.0)
+        //sideView.layer.borderColor = CGColor.init(red: 201, green: 202, blue: 210, alpha: 1.0)
         //sideView.layer.backgroundColor = UIColor.gray
-        sideView.backgroundColor = UIColor.gray
+        //sideView.backgroundColor = UIColor.gray
         
         rememberedButton.layer.cornerRadius = 8
         noRememberedButton.layer.cornerRadius = 8
