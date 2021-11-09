@@ -20,6 +20,7 @@
 		5DE602872718B87100341772 /* FlashCardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE602862718B87100341772 /* FlashCardsTests.swift */; };
 		5DE602912718B87100341772 /* FlashCardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE602902718B87100341772 /* FlashCardsUITests.swift */; };
 		5DE602932718B87100341772 /* FlashCardsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE602922718B87100341772 /* FlashCardsUITestsLaunchTests.swift */; };
+		5DEF47B1273AFEC6004B46BA /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEF47B0273AFEC6004B46BA /* DesignSystem.swift */; };
 		9F4CF2632718C5A800C7BBA5 /* DeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CF2622718C5A800C7BBA5 /* DeckViewController.swift */; };
 		9F67A99F273991C300B63F8D /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F67A99E273991C300B63F8D /* SwitchTableViewCell.swift */; };
 		9F81EDE4272B1A2500AFADC8 /* NewDeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81EDE3272B1A2500AFADC8 /* NewDeckTableViewCell.swift */; };
@@ -87,6 +88,7 @@
 		5DE6028C2718B87100341772 /* FlashCardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashCardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE602902718B87100341772 /* FlashCardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardsUITests.swift; sourceTree = "<group>"; };
 		5DE602922718B87100341772 /* FlashCardsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5DEF47B0273AFEC6004B46BA /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		9F4CF2622718C5A800C7BBA5 /* DeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewController.swift; sourceTree = "<group>"; };
 		9F67A99E273991C300B63F8D /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		9F81EDE3272B1A2500AFADC8 /* NewDeckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDeckTableViewCell.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				C0BC72F927286C7D0016DBF9 /* MyDecks */,
 				C0BC72F827286C5F0016DBF9 /* Create Deck */,
 				C0BC72F727286C540016DBF9 /* Practice */,
+				5DEF47B2273AFF0D004B46BA /* DesignSystem */,
 				C0C25ADE2739BB9E00F6A46D /* Model */,
 				5DE6026C2718B86E00341772 /* AppDelegate.swift */,
 				C0D8D3FD27348CB800EDFA5B /* CircularProgressView.swift */,
@@ -207,6 +210,29 @@
 				5DE602922718B87100341772 /* FlashCardsUITestsLaunchTests.swift */,
 			);
 			path = FlashCardsUITests;
+			sourceTree = "<group>";
+		};
+		5DEF47B2273AFF0D004B46BA /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				5DEF47B0273AFEC6004B46BA /* DesignSystem.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		9F4CF2612718BEB600C7BBA5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C0D8D3ED2734778500EDFA5B /* Progress+CoreDataClass.swift */,
+				C0D8D3EE2734778500EDFA5B /* Progress+CoreDataProperties.swift */,
+				C0D8D3EF2734778500EDFA5B /* Card+CoreDataClass.swift */,
+				C0D8D3F02734778500EDFA5B /* Card+CoreDataProperties.swift */,
+				C0D8D3F12734778500EDFA5B /* Content+CoreDataClass.swift */,
+				C0D8D3F22734778500EDFA5B /* Content+CoreDataProperties.swift */,
+				C0D8D3F32734778500EDFA5B /* Deck+CoreDataClass.swift */,
+				C0D8D3F42734778500EDFA5B /* Deck+CoreDataProperties.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C0BC72F727286C540016DBF9 /* Practice */ = {
@@ -427,6 +453,7 @@
 				5DAF0E4627344D5E00E49A93 /* FeedbackViewController.swift in Sources */,
 				C0C25ADA27399BE900F6A46D /* Deck+CoreDataClass.swift in Sources */,
 				9F81EDE6272B1A4200AFADC8 /* NewCardTableViewCell.swift in Sources */,
+				5DEF47B1273AFEC6004B46BA /* DesignSystem.swift in Sources */,
 				5DE602772718B86E00341772 /* FlashCards.xcdatamodeld in Sources */,
 				9FF7A1B3272873A700FBCAE3 /* CreateDeckViewController.swift in Sources */,
 				C067DF042719F131007F1EB5 /* DeckTableViewCell.swift in Sources */,
