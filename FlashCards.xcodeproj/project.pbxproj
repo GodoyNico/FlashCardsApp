@@ -33,7 +33,6 @@
 		C067DF042719F131007F1EB5 /* DeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF032719F131007F1EB5 /* DeckTableViewCell.swift */; };
 		C067DF06271A15E9007F1EB5 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF05271A15E9007F1EB5 /* CardTableViewCell.swift */; };
 		C067DF08271A160F007F1EB5 /* DeckDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF07271A160F007F1EB5 /* DeckDetailsViewController.swift */; };
-		C08C1FC3273AE133002A6EDD /* EditDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08C1FC2273AE133002A6EDD /* EditDeckViewController.swift */; };
 		C0A2BB3427272E990069B525 /* Deck.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A2BB3327272E990069B525 /* Deck.storyboard */; };
 		C0A2BB37272734170069B525 /* Practice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A2BB36272734170069B525 /* Practice.storyboard */; };
 		C0A2BB392727350D0069B525 /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A2BB382727350D0069B525 /* Edit.storyboard */; };
@@ -101,7 +100,6 @@
 		C067DF032719F131007F1EB5 /* DeckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTableViewCell.swift; sourceTree = "<group>"; };
 		C067DF05271A15E9007F1EB5 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		C067DF07271A160F007F1EB5 /* DeckDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailsViewController.swift; sourceTree = "<group>"; };
-		C08C1FC2273AE133002A6EDD /* EditDeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeckViewController.swift; sourceTree = "<group>"; };
 		C0A2BB3327272E990069B525 /* Deck.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Deck.storyboard; sourceTree = "<group>"; };
 		C0A2BB36272734170069B525 /* Practice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Practice.storyboard; sourceTree = "<group>"; };
 		C0A2BB382727350D0069B525 /* Edit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Edit.storyboard; sourceTree = "<group>"; };
@@ -260,7 +258,6 @@
 			isa = PBXGroup;
 			children = (
 				C0A2BB382727350D0069B525 /* Edit.storyboard */,
-				C08C1FC2273AE133002A6EDD /* EditDeckViewController.swift */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
@@ -443,7 +440,6 @@
 				C0BC72FF272886D70016DBF9 /* MyDecksCollectionViewCell.swift in Sources */,
 				C0C25AD927399BE900F6A46D /* Content+CoreDataProperties.swift in Sources */,
 				9F4CF2632718C5A800C7BBA5 /* DeckViewController.swift in Sources */,
-				C08C1FC3273AE133002A6EDD /* EditDeckViewController.swift in Sources */,
 				C0D8D3FE27348CB800EDFA5B /* CircularProgressView.swift in Sources */,
 				C0C25AD727399BE900F6A46D /* Progress+CoreDataProperties.swift in Sources */,
 				C0BC72FD27287FBE0016DBF9 /* MyDecksViewController.swift in Sources */,

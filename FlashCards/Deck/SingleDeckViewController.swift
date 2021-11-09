@@ -96,8 +96,8 @@ class SingleDeckViewController: UIViewController {
         
         if segue.identifier == goToEditSegueID {
             
-            guard let editDeckViewController = segue.destination as? EditDeckViewController, let deck = sender as? Deck else { return }
-            
+            guard let editDeckViewController = segue.destination as? CreateDeckViewController, let deck = sender as? Deck else { return }
+
             editDeckViewController.configure(deck: deck)
 
         } else if segue.identifier == goToPracticeSegueID {

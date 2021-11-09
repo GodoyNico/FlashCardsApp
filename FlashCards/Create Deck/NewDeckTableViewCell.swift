@@ -17,7 +17,6 @@ class NewDeckTableViewCell: UITableViewCell {
     
     @IBAction func setDeckTitle(_ sender: Any) {
         self.deck?.title = newDeckTextfield.text
-        
     }
     
     override func awakeFromNib() {
@@ -31,8 +30,6 @@ class NewDeckTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
 }

@@ -1,13 +1,6 @@
-//
-//  CreateDeckViewController.swift
-//  FlashCards
-//
-//  Created by Julia Silveira de Souza on 26/10/21.
-//
-
 import UIKit
 
-class CreateDeckViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CreateDeckViewController: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var deck: Deck?
@@ -18,32 +11,40 @@ class CreateDeckViewController: UIViewController, UITableViewDelegate, UITableVi
     let switchCell: String = "switchCell"
     
     @IBOutlet weak var createDeckTableView: UITableView!
-    
-    @IBAction func cancel(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.deck = Deck(context: self.context)
+        if self.deck == nil {
+            self.deck = Deck(context: self.context)
+        }
         
         createDeckTableView.delegate = self
         createDeckTableView.dataSource = self
                 
     }
     
+    func configure(deck: Deck?) {
+        self.deck = deck
+    }
+    
+    @IBAction func cancel(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func deckDone(_ sender: Any) {
         
-        // Save the Data
         do {
             try self.context.save()
         } catch { }
                 
-        self.dismiss(animated: true, completion: nil)
-        
+        navigationController?.popViewController(animated: true)
     }
     
+}
+
+extension CreateDeckViewController: UITableViewDelegate, UITableViewDataSource {
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

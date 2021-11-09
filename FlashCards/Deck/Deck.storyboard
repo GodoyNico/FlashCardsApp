@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="1298.5507246376812" y="41.517857142857139"/>
         </scene>
-        <!--Edit-->
+        <!--CreateDeck-->
         <scene sceneID="Avk-0G-7pA">
             <objects>
-                <viewControllerPlaceholder storyboardName="Edit" id="eCB-2z-GLB" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="CreateDeck" id="eCB-2z-GLB" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="CFc-hf-IGX"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EHk-IG-RZ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
