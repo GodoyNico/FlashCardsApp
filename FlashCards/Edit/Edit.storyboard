@@ -140,7 +140,7 @@
                                                         <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCollectionCell" id="gXb-Bk-cGo" customClass="cardCollectionViewCell" customModule="FlashCards" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCollectionCell" id="gXb-Bk-cGo" customClass="CardCollectionViewCell" customModule="FlashCards" customModuleProvider="target">
                                                             <rect key="frame" x="20" y="38" width="312" height="610"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Zhi-Qf-KeB">
@@ -177,9 +177,6 @@
                                                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                                                 <state key="normal" title="Button"/>
                                                                                                 <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system" title=""/>
-                                                                                                <connections>
-                                                                                                    <action selector="addImageFront:" destination="gXb-Bk-cGo" eventType="touchUpInside" id="xdM-g1-B4P"/>
-                                                                                                </connections>
                                                                                             </button>
                                                                                         </subviews>
                                                                                     </stackView>
@@ -228,9 +225,6 @@
                                                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                                                 <state key="normal" title="Button"/>
                                                                                                 <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system"/>
-                                                                                                <connections>
-                                                                                                    <action selector="addImageBack:" destination="gXb-Bk-cGo" eventType="touchUpInside" id="YWh-Jj-h2P"/>
-                                                                                                </connections>
                                                                                             </button>
                                                                                         </subviews>
                                                                                     </stackView>
@@ -275,10 +269,10 @@
                                                             <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                             <size key="customSize" width="312" height="610"/>
                                                             <connections>
-                                                                <outlet property="backSideTextField" destination="dKO-Ks-e7Z" id="uhv-BE-dFj"/>
-                                                                <outlet property="frontSideTextField" destination="Inc-xe-K30" id="BhN-rU-WSB"/>
-                                                                <outlet property="numberOfCharacterBack" destination="aBD-vB-Q0A" id="wFt-Gk-SFo"/>
-                                                                <outlet property="numberOfCharactersFront" destination="ewn-di-IBs" id="KIV-SA-yxu"/>
+                                                                <outlet property="backSideTextField" destination="dKO-Ks-e7Z" id="Bh5-wv-hOn"/>
+                                                                <outlet property="frontSideTextField" destination="Inc-xe-K30" id="nX1-bU-c1v"/>
+                                                                <outlet property="numberOfCharacterBack" destination="aBD-vB-Q0A" id="hoK-Lf-r1o"/>
+                                                                <outlet property="numberOfCharactersFront" destination="ewn-di-IBs" id="rbm-Xb-YUX"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>

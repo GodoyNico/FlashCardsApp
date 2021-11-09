@@ -47,7 +47,7 @@ class SingleDeckViewController: UIViewController {
                 practiceButton.layer.cornerRadius = 10
                 practiceButton.backgroundColor = UIColor(named: "gray1")
             } else {
-                // TODO : EMPTY STATE
+                // TODO: EMPTY STATE
                 print("Não há decks criados ainda")
             }
             

@@ -23,9 +23,7 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
         
         cardCollectionView.dataSource = self
         cardCollectionView.delegate = self
-        print(cards)
-        numberOfCardsLabel.text = String("\(cards.count) cards")
-        
+
     }
     
     @IBAction func addCard(_ sender: Any) {
@@ -51,6 +49,7 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
     func configure(newDeck: Deck?) {
         self.deck = newDeck
         fetchData()
+        numberOfCardsLabel.text = String("\(cards.count) cards")
     }
     
     func fetchData() {
