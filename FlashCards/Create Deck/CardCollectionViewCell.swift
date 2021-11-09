@@ -7,7 +7,7 @@
 
 import UIKit
 
-class cardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
+class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
