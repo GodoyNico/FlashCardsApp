@@ -113,7 +113,7 @@
                                                         <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCollectionCell" id="gfs-N0-9Fb" customClass="cardCollectionViewCell" customModule="FlashCards" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCollectionCell" id="gfs-N0-9Fb" customClass="CardCollectionViewCell" customModule="FlashCards" customModuleProvider="target">
                                                             <rect key="frame" x="20" y="38" width="312" height="610"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8l7-5L-ctQ">
@@ -338,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUL-i8-fzL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="921.73913043478262" y="1592.4107142857142"/>
+            <point key="canvasLocation" x="925" y="1557"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kfh-Vg-JOS">
