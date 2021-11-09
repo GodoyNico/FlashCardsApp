@@ -92,16 +92,31 @@ class PracticeViewController: UIViewController {
     }
     
     @IBAction func noRemembered(_ sender: Any) {
-        if currentCard <= cards.count-1 {
+        
+        if currentCard < cards.count {
+            
             feedback.noRemembered += 1
-            
-            
             let card = cards[currentCard]
+            
+            // Progress history
             let newPractice = Progress(context: self.context)
             newPractice.date = Date.now
             newPractice.status = false
             newPractice.card = card
             card.addToProgress(newPractice)
+            
+            // Progress Counter
+            if card.progress_counter == 5 {
+                
+                if let deck = card.deck {
+                    deck.progress_counter = deck.progress_counter - 1
+                }
+                
+                card.progress_counter = card.progress_counter - 1
+                
+            } else if card.progress_counter > 0 {
+                card.progress_counter = card.progress_counter - 1
+            }
             
             // Save the Data
             do {
@@ -119,14 +134,30 @@ class PracticeViewController: UIViewController {
     }
     
     @IBAction func remembered(_ sender: Any) {
-        if currentCard <= cards.count-1 {
+        
+        if currentCard < cards.count {
+            
             feedback.remembered += 1
             let card = cards[currentCard]
+            
+            // Progress History
             let newPractice = Progress(context: self.context)
             newPractice.date = Date.now
             newPractice.status = true
             newPractice.card = card
             card.addToProgress(newPractice)
+            
+            // Progress Counter
+            if card.progress_counter < 5 {
+                
+                if card.progress_counter == 4 {
+                    if let deck = card.deck  {
+                        deck.progress_counter = deck.progress_counter + 1
+                    }
+                }
+                
+                card.progress_counter = card.progress_counter + 1
+            }
             
             // Save the Data
             do {

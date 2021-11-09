@@ -2,7 +2,7 @@
 //  Deck+CoreDataProperties.swift
 //  FlashCards
 //
-//  Created by Igor Marques Vicente on 04/11/21.
+//  Created by Igor Marques Vicente on 08/11/21.
 //
 //
 
@@ -18,9 +18,9 @@ extension Deck {
 
     @NSManaged public var created_date: Date?
     @NSManaged public var id: UUID?
-    @NSManaged public var progress: Double
-    @NSManaged public var title: String?
     @NSManaged public var isFront: Bool
+    @NSManaged public var progress_counter: Int16
+    @NSManaged public var title: String?
     @NSManaged public var cards: NSSet?
 
 }

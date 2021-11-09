@@ -9,13 +9,40 @@ import UIKit
 
 class ProgressCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var progressView: UIView!
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    @IBOutlet weak var yourProgressView: UIView!
+    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var progressLabel: UILabel!
     
     override class func awakeFromNib() {
         super.awakeFromNib()
     }
     
     func configure() {
-        progressView.layer.cornerRadius = 6
+        
+        yourProgressView.layer.cornerRadius = 6
+        
+        var myDecks: [Deck]
+        do {
+            myDecks = try context.fetch(Deck.fetchRequest())
+            var totalCards = 0;
+            var progress_counter = 0;
+            
+            for deck in myDecks {
+                
+                if let listCards = deck.cards {
+                    totalCards += listCards.count
+                }
+                
+                progress_counter += Int(deck.progress_counter)
+            }
+            
+            let progress : Float = Float(progress_counter)/Float(totalCards > 0 ? totalCards : 1)
+            progressView.progress = progress
+            progressLabel.text = "\(Int(progress*100))%"
+           
+        } catch { }
+        
     }
 }

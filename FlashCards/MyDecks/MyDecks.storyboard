@@ -101,7 +101,9 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="377" height="66"/>
                                         <connections>
-                                            <outlet property="progressView" destination="cWM-VU-baK" id="AgV-E4-pQ4"/>
+                                            <outlet property="progressLabel" destination="O7e-1f-dBG" id="Nwt-SX-Bg4"/>
+                                            <outlet property="progressView" destination="TfF-Ro-h1s" id="o3g-fi-Azg"/>
+                                            <outlet property="yourProgressView" destination="cWM-VU-baK" id="U5K-2O-AAT"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="searchDecksCellID" id="X6H-LS-wlt" customClass="SearchCollectionViewCell" customModule="FlashCards" customModuleProvider="target">
@@ -162,6 +164,9 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matemática Básica" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sB-Fz-JdR">
                                                             <rect key="frame" x="12.5" y="0.0" width="96" height="41"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="41" id="qWi-93-r27"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
