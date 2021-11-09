@@ -47,7 +47,7 @@ class SingleDeckViewController: UIViewController {
                 practiceButton.layer.cornerRadius = 10
                 practiceButton.backgroundColor = UIColor(named: "gray1")
             } else {
-                // TODO : EMPTY STATE
+                // TODO: EMPTY STATE
                 print("Não há decks criados ainda")
             }
             
@@ -58,6 +58,11 @@ class SingleDeckViewController: UIViewController {
         deckProgressCircleView.trackColor = UIColor.gray
         deckProgressCircleView.progressColor = UIColor.black
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewDidLoad()
     }
     
     func configure(deck: Deck) {
@@ -90,12 +95,11 @@ class SingleDeckViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == goToEditSegueID {
-            // TODO : Configurar tela de edit
-            /*
-            guard let editViewController = segue.destination as? EditViewController, let deck = sender as? Deck else { return }
+            
+            guard let editDeckViewController = segue.destination as? CreateDeckViewController, let deck = sender as? Deck else { return }
 
-            editViewController.configure(deck: deck)
-            */
+            editDeckViewController.configure(deck: deck)
+
         } else if segue.identifier == goToPracticeSegueID {
             
             guard let practiceViewController = segue.destination as? PracticeViewController, let deck = sender as? Deck else { return }
