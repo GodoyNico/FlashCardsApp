@@ -26,6 +26,7 @@ class NewDeckTableViewCell: UITableViewCell {
         
     func configure(newDeck: Deck?) {
         self.deck = newDeck
+        newDeckTextfield.text = self.deck?.title
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

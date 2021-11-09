@@ -23,7 +23,7 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
         
         cardCollectionView.dataSource = self
         cardCollectionView.delegate = self
-        
+        print(cards)
         numberOfCardsLabel.text = String("\(cards.count) cards")
         
     }
@@ -50,10 +50,12 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
     
     func configure(newDeck: Deck?) {
         self.deck = newDeck
+        fetchData()
     }
     
     func fetchData() {
-        cards = deck?.cards?.allObjects as? [Card] ?? []
+        self.cards = deck?.cards?.allObjects as? [Card] ?? []
+
         DispatchQueue.main.async {
             self.cardCollectionView.reloadData()
         }
@@ -63,7 +65,7 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
 extension NewCardTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return deck!.cards!.count
+        return cards.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

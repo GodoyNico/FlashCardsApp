@@ -60,6 +60,11 @@ class SingleDeckViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewDidLoad()
+    }
+    
     func configure(deck: Deck) {
         self.deck = deck
     }
@@ -90,12 +95,11 @@ class SingleDeckViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == goToEditSegueID {
-            // TODO : Configurar tela de edit
-            /*
-            guard let editViewController = segue.destination as? EditViewController, let deck = sender as? Deck else { return }
+            
+            guard let editDeckViewController = segue.destination as? EditDeckViewController, let deck = sender as? Deck else { return }
+            
+            editDeckViewController.configure(deck: deck)
 
-            editViewController.configure(deck: deck)
-            */
         } else if segue.identifier == goToPracticeSegueID {
             
             guard let practiceViewController = segue.destination as? PracticeViewController, let deck = sender as? Deck else { return }

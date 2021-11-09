@@ -54,7 +54,7 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="toPractice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BqU-Ev-Kj2"/>
+                                    <action selector="toPractice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Jz7-I6-5Pq"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" verticalCompressionResistancePriority="751" text="DeckTitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxB-JB-NZo">
@@ -92,7 +92,7 @@
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="NVz-SY-F9r">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="Riy-os-2Mg">
                             <connections>
-                                <action selector="toEdit:" destination="Y6W-OH-hqX" id="TwJ-1r-5bK"/>
+                                <action selector="toEdit:" destination="Y6W-OH-hqX" id="GiT-3Y-J5l"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -103,8 +103,8 @@
                         <outlet property="deckTitleLabel" destination="qxB-JB-NZo" id="zOf-qe-Gsq"/>
                         <outlet property="practiceButton" destination="Lrp-Mp-6Pt" id="zaX-6b-cGD"/>
                         <segue destination="F7a-KY-Dl0" kind="show" identifier="goToPractice" id="unu-Ts-NIR"/>
-                        <segue destination="eCB-2z-GLB" kind="show" identifier="goToEdit" id="L1n-Yq-wvD"/>
                         <segue destination="2Xf-0f-iQ6" kind="show" identifier="goToAddCards" id="Wig-Vn-rgG"/>
+                        <segue destination="eCB-2z-GLB" kind="show" identifier="goToEdit" id="Lqn-cy-qaH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
