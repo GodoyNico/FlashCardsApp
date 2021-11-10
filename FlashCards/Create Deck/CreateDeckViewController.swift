@@ -11,17 +11,18 @@ class CreateDeckViewController: UIViewController {
     let switchCell: String = "switchCell"
     
     @IBOutlet weak var createDeckTableView: UITableView!
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if self.deck == nil {
             self.deck = Deck(context: self.context)
+            self.deck?.isFront = true
         }
         
         createDeckTableView.delegate = self
         createDeckTableView.dataSource = self
-                
+        
     }
     
     func configure(deck: Deck?) {
@@ -37,14 +38,14 @@ class CreateDeckViewController: UIViewController {
         do {
             try self.context.save()
         } catch { }
-                
+        
         navigationController?.popViewController(animated: true)
     }
     
 }
 
 extension CreateDeckViewController: UITableViewDelegate, UITableViewDataSource {
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -58,7 +59,7 @@ extension CreateDeckViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             
             let deckNameCell = createDeckTableView.dequeueReusableCell(withIdentifier: deckNameCell ) as! NewDeckTableViewCell
-                        
+            
             deckNameCell.configure(newDeck: self.deck)
             
             return deckNameCell
@@ -75,7 +76,9 @@ extension CreateDeckViewController: UITableViewDelegate, UITableViewDataSource {
             
             let switchCell = createDeckTableView.dequeueReusableCell(withIdentifier: switchCell) as! SwitchTableViewCell
             
-             return switchCell
+            switchCell.configure(newDeck: self.deck)
+            
+            return switchCell
         }
         
     }
