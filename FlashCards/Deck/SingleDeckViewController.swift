@@ -12,7 +12,7 @@ class SingleDeckViewController: UIViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var deck: Deck?
-
+    
     @IBOutlet weak var deckTitleLabel: UILabel!
     @IBOutlet weak var practiceButton: UIButton!
     @IBOutlet weak var deckProgressCircleView: CircularProgressView!
@@ -21,7 +21,7 @@ class SingleDeckViewController: UIViewController {
     let goToPracticeSegueID: String = "goToPractice"
     let goToEditSegueID: String = "goToEdit"
     let goToAddCardsSegueID: String = "goToAddCards"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,9 +52,9 @@ class SingleDeckViewController: UIViewController {
             }
             
             deckProgressCircleView.setValue(value: 0)
-           
+            
         }
-    
+        
         deckProgressCircleView.trackColor = UIColor.gray
         deckProgressCircleView.progressColor = UIColor.black
         
@@ -81,7 +81,23 @@ class SingleDeckViewController: UIViewController {
     }
     
     @IBAction func toPractice(_ sender: Any) {
-        performSegue(withIdentifier: self.goToPracticeSegueID, sender: deck)
+        if let currentDeck = deck, let currentCards = currentDeck.cards {
+            if currentCards.count > 0 {
+                performSegue(withIdentifier: self.goToPracticeSegueID, sender: deck)
+                
+            } else {
+                
+                let alert = UIAlertController(title: nil, message: "Este deck está vazio 🥲 ", preferredStyle: .alert)
+                
+                let okButton = UIAlertAction(title: "Ok", style: .default) { (action) in
+                   return
+                }
+                
+                alert.addAction(okButton)
+
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
     
     @IBAction func toEdit(_ sender: Any) {
@@ -97,9 +113,9 @@ class SingleDeckViewController: UIViewController {
         if segue.identifier == goToEditSegueID {
             
             guard let editDeckViewController = segue.destination as? CreateDeckViewController, let deck = sender as? Deck else { return }
-
+            
             editDeckViewController.configure(deck: deck, screen: .edit)
-
+            
         } else if segue.identifier == goToPracticeSegueID {
             
             guard let practiceViewController = segue.destination as? PracticeViewController, let deck = sender as? Deck else { return }
@@ -109,9 +125,9 @@ class SingleDeckViewController: UIViewController {
         } else if segue.identifier == goToAddCardsSegueID {
             
             guard let editDeckViewController = segue.destination as? CreateDeckViewController, let deck = sender as? Deck else { return }
-
+            
             editDeckViewController.configure(deck: deck, screen: .addCard)
-
+            
         }
         
     }
