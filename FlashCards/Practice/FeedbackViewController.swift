@@ -8,7 +8,6 @@
 import UIKit
 
 class FeedbackViewController: UIViewController {
-    
     var practiceFeedback: PracticeFeedback?
     let deckSegueId: String = "goToSingleDeck"
     let myDecksSegueId: String = "goToMyDecks"

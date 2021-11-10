@@ -13,11 +13,13 @@ public enum DesignSystem {
     public enum AssetsColor: String {
         case background
         case basicQuaternary
+        case basicQuinary
         case basicSecondary
         case basicTertiary
         case color1Primary
         case color1Secondary
         case color2Primary
+        case color2Quaternary
         case color2Secondary
         case color2Tertiary
         case graySecondary
