@@ -98,7 +98,7 @@ class SingleDeckViewController: UIViewController {
             
             guard let editDeckViewController = segue.destination as? CreateDeckViewController, let deck = sender as? Deck else { return }
 
-            editDeckViewController.configure(deck: deck)
+            editDeckViewController.configure(deck: deck, screen: .edit)
 
         } else if segue.identifier == goToPracticeSegueID {
             
@@ -107,12 +107,11 @@ class SingleDeckViewController: UIViewController {
             practiceViewController.configure(deck: deck)
             
         } else if segue.identifier == goToAddCardsSegueID {
-            // TODO : Configurar tela de add cards
-            /*
-            guard let addViewController = segue.destination as? AddCardsViewController, let deck = sender as? Deck else { return }
+            
+            guard let editDeckViewController = segue.destination as? CreateDeckViewController, let deck = sender as? Deck else { return }
 
-            addViewController.configure(deck: deck)
-            */
+            editDeckViewController.configure(deck: deck, screen: .addCard)
+
         }
         
     }
