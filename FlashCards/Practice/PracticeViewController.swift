@@ -237,7 +237,7 @@ class PracticeViewController: UIViewController {
         flipped = false
         rememberedButton.isHidden = true
         noRememberedButton.isHidden = true
-        isFront = true
+        isFront = self.deck?.isFront ?? true
         contentLabel.text = isFront ? cards[currentCard].front_content?.text : cards[currentCard].back_content?.text
     }
     
