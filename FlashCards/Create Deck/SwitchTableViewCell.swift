@@ -17,21 +17,13 @@ class SwitchTableViewCell: UITableViewCell {
     
     @IBAction func switchAction(_ sender: UISwitch) {
 
-        if switchButton.isOn {
-            self.deck?.isFront = false
-                        
-        } else {
-            self.deck?.isFront = true
-        }
-                
-        // Save the Data
-        do {
-            try self.context.save()
-        } catch { }
+        self.deck?.isFront = switchButton.isOn ? false : true
+
     }
     
     func configure(newDeck: Deck?) {
         self.deck = newDeck
+        switchButton.isOn = !(self.deck?.isFront ?? true)
     }
     
     override func awakeFromNib() {
@@ -45,5 +37,4 @@ class SwitchTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }
