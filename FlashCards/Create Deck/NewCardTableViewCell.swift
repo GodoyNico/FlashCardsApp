@@ -7,12 +7,23 @@
 
 import UIKit
 
+protocol DeleteCardDelegate: AnyObject {
+    
+    func didTapDeleteAlert(fromCell cell: UITableViewCell, card: Card)
+    
+}
+
 class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     let collectionCellID = "cardCollectionCell"
+    
     var deck: Deck?
+    
     var cards: [Card] = []
+    
+    weak var delegate: DeleteCardDelegate?
     
     @IBOutlet weak var numberOfCardsLabel: UILabel!
     @IBOutlet weak var addCardButton: UIButton!
@@ -23,7 +34,7 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
         
         cardCollectionView.dataSource = self
         cardCollectionView.delegate = self
-
+        
     }
     
     @IBAction func addCard(_ sender: Any) {
@@ -85,35 +96,8 @@ extension NewCardTableViewCell: UICollectionViewDataSource {
                 options: UIMenu.Options.destructive,
                 children: [ UIAction(title:"Apagar", image: UIImage(systemName: "trash"), attributes: .destructive,handler: { action in
 
-                    let alert = UIAlertController(title: nil, message: "Tem certeza que você quer deletar esse card? ", preferredStyle: .alert)
-
-                    let deleteButton = UIAlertAction(title: "Sim", style: .default) { (action) in
-
-                        // Which Deck to Remove
-                        let cardToRemove = self.cards[indexPath.row]
-
-                        // Remove the Deck
-                        self.context.delete(cardToRemove)
-
-                        // Save the Data
-                        do {
-                            try self.context.save()
-                        } catch { }
-
-                        // Re-Fetch the Data
-                        self.fetchData()
-
-                    }
-
-                    let cancelButton = UIAlertAction(title: "Não", style: .destructive) { (action) in
-                        return
-                    }
-
-                    alert.addAction(deleteButton)
-                    alert.addAction(cancelButton)
+                    self.delegate?.didTapDeleteAlert(fromCell: self, card: self.cards[indexPath.row])
                     
-                    //self.present(alert, animated: true, completion: nil)
-
                 })])
         }
     }
