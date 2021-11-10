@@ -17,7 +17,7 @@ class CreateDeckViewController: UIViewController {
     let deleteCell: String = "removeDeckCell"
     
     @IBOutlet weak var createDeckTableView: UITableView!
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +29,7 @@ class CreateDeckViewController: UIViewController {
         switch screen {
         case .create:
             navigationItem.title = "Create Deck"
+            self.deck?.isFront = true
         case .edit:
             navigationItem.title = "Edit Deck"
         case .addCard:
@@ -57,14 +58,14 @@ class CreateDeckViewController: UIViewController {
         do {
             try self.context.save()
         } catch { }
-                
+        
         navigationController?.popViewController(animated: true)
     }
     
 }
 
 extension CreateDeckViewController: UITableViewDelegate, UITableViewDataSource {
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -114,7 +115,9 @@ extension CreateDeckViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 let switchCell = createDeckTableView.dequeueReusableCell(withIdentifier: switchCell) as! SwitchTableViewCell
                 
-                 return switchCell
+                switchCell.configure(newDeck: self.deck)
+            
+                return switchCell
                 
             } else {
                 

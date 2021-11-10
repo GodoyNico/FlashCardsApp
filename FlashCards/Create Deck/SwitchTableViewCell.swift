@@ -9,16 +9,27 @@ import UIKit
 
 class SwitchTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var switchLabel: UILabel!
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var deck: Deck?
     
+    @IBOutlet weak var switchLabel: UILabel!
     @IBOutlet weak var switchButton: UISwitch!
     
-    @IBAction func switchAction(_ sender: Any) {
+    @IBAction func switchAction(_ sender: UISwitch) {
+
+        self.deck?.isFront = switchButton.isOn ? false : true
+
+    }
+    
+    func configure(newDeck: Deck?) {
+        self.deck = newDeck
+        switchButton.isOn = !(self.deck?.isFront ?? true)
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        switchButton.onTintColor = .blue
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,5 +37,4 @@ class SwitchTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

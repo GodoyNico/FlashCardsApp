@@ -14,14 +14,12 @@ class PracticeViewController: UIViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var deck: Deck?
-    
     var practiceData: PracticeData?
     var cards: [Card] = []
     var isFront: Bool = false
     var flipped: Bool = false
     var currentCard: Int = 0
     var qntSelected: Int = 0
-    
     var feedbackSegueID: String = "goToFeedback"
     var feedback: PracticeFeedback = PracticeFeedback(remembered: 0, noRemembered: 0, deck: nil)
     
@@ -64,18 +62,16 @@ class PracticeViewController: UIViewController {
     }
     
     @IBAction func endPractice(_ sender: Any) {
-        // Criar botões do alerta
         let cancelAction = UIAlertAction(title: "Cancel",
                                          style: .cancel) { (action) in
-            // Ação do botão
             print("Seguiu a prática")
         }
+        
         let confirmAction = UIAlertAction(title: "Confirm",
                                           style: .default) { (action) in
             print("Parou a prática")
         }
         
-        // Configurar alerta
         let alert = UIAlertController(title: "Parar prática",
                                       message: "Deseja realmente interromper a prática?",
                                       preferredStyle: .alert)
@@ -83,7 +79,6 @@ class PracticeViewController: UIViewController {
         alert.addAction(confirmAction)
         
         self.present(alert, animated: true) {
-            // The alert was presented
         }
     }
     
@@ -92,7 +87,6 @@ class PracticeViewController: UIViewController {
     }
     
     @IBAction func noRemembered(_ sender: Any) {
-        
         if currentCard < cards.count {
             
             feedback.noRemembered += 1
@@ -134,7 +128,6 @@ class PracticeViewController: UIViewController {
     }
     
     @IBAction func remembered(_ sender: Any) {
-        
         if currentCard < cards.count {
             
             feedback.remembered += 1
@@ -183,10 +176,11 @@ class PracticeViewController: UIViewController {
         cardView.layer.cornerRadius = 16
         
         //sideLabel.layer.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
+        sideLabel.layer.backgroundColor = CGColor(red: 157, green: 126, blue: 204, alpha: 10.0)
         sideLabel.layer.cornerRadius = 30
         sideLabel.layer.borderWidth = 3
-//        sideLabel.layer.borderColor = CGColor(red: 166.0, green: 164.0, blue: 164.0, alpha: 10.0)
-//        sideLabel.textColor = UIColor(red: 166.0, green: 164.0, blue: 164.0, alpha: 10.0)
+        sideLabel.layer.borderColor = CGColor(red: 157, green: 126, blue: 204, alpha: 10.0)
+        //        sideLabel.textColor = UIColor(red: 166.0, green: 164.0, blue: 164.0, alpha: 10.0)
         //sideLabel.textColor = UIColor.black
         
         imageView.layer.cornerRadius = 16
@@ -208,12 +202,11 @@ class PracticeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let feedbackViewController = segue.destination as? FeedbackViewController,
               let practiceFeedback = sender as? PracticeFeedback else { return }
-
+        
         feedbackViewController.deckConfig(data: practiceFeedback)
     }
     
     func generateCards() {
-        
         self.cards = self.deck?.cards?.allObjects as! [Card]
         
         if self.cards.isEmpty {
@@ -235,20 +228,16 @@ class PracticeViewController: UIViewController {
                 do {
                     try self.context.save()
                 } catch { }
-                
             }
-            
             generateCards()
-            
         }
-        
     }
     
     func toPractice() {
         flipped = false
         rememberedButton.isHidden = true
         noRememberedButton.isHidden = true
-        isFront = true
+        isFront = self.deck?.isFront ?? true
         contentLabel.text = isFront ? cards[currentCard].front_content?.text : cards[currentCard].back_content?.text
     }
     
