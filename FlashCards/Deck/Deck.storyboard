@@ -119,7 +119,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EHk-IG-RZ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2048" y="7"/>
+            <point key="canvasLocation" x="2080" y="7"/>
         </scene>
         <!--Practice-->
         <scene sceneID="C0r-Ce-OF5">
@@ -131,15 +131,15 @@
             </objects>
             <point key="canvasLocation" x="2067" y="42"/>
         </scene>
-        <!--AddCards-->
+        <!--CreateDeck-->
         <scene sceneID="GZr-UU-b70">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="AddCards" storyboardName="Edit" referencedIdentifier="AddCards" id="2Xf-0f-iQ6" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="AddCards" storyboardName="CreateDeck" id="2Xf-0f-iQ6" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="IZS-QX-MoV"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TWr-x5-MJz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2067" y="76"/>
+            <point key="canvasLocation" x="2080" y="76"/>
         </scene>
     </scenes>
     <resources>
