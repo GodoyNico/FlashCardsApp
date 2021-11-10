@@ -23,6 +23,7 @@ public enum DesignSystem {
         case color2Secondary
         case color2Tertiary
         case graySecondary
+        case button
     }
 }
 
@@ -31,3 +32,9 @@ public extension UIColor {
         self.init(named: designSystem.rawValue)
     }
 }
+
+//public extension CGColor {
+//    convenience init?(designSystem: DesignSystem.AssetsColor) {
+//        self.init(named: designSystem.rawValue)
+//    }
+//}

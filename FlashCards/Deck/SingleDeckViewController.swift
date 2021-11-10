@@ -24,12 +24,13 @@ class SingleDeckViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        layoutConfig()
         
         if let deckSelected = self.deck {
             
             deckTitleLabel.text = deckSelected.title
             practiceButton.layer.cornerRadius = 10
-            practiceButton.backgroundColor = UIColor(named: "gray1")
+            practiceButton.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Primary)
             
             if let cardsList = deckSelected.cards {
                 deckProgressLabel.text = "\(deckSelected.progress_counter)/\(cardsList.count)"
@@ -50,19 +51,23 @@ class SingleDeckViewController: UIViewController {
                 // TODO: EMPTY STATE
                 print("Não há decks criados ainda")
             }
-            
             deckProgressCircleView.setValue(value: 0)
-           
         }
-    
-        deckProgressCircleView.trackColor = UIColor.gray
-        deckProgressCircleView.progressColor = UIColor.black
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewDidLoad()
+    }
+    
+    func layoutConfig() {
+        view.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
+        
+        deckTitleLabel.textColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Secondary)
+        deckProgressCircleView.trackColor = UIColor.white
+        deckProgressCircleView.progressColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Secondary) ?? .white
+        
+        deckProgressLabel.textColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Secondary)
     }
     
     func configure(deck: Deck) {

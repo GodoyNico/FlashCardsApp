@@ -48,17 +48,17 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G09-cI-kZI" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="660"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="670"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02/20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COh-Wq-jXd">
-                                                <rect key="frame" x="184.5" y="12" width="45" height="21"/>
+                                                <rect key="frame" x="182.5" y="12" width="49" height="21"/>
                                                 <color key="tintColor" name="color1Primary"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8i-jc-jLK">
-                                                <rect key="frame" x="36" y="45" width="342" height="504"/>
+                                                <rect key="frame" x="36" y="53" width="342" height="504"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GzW-KC-ccE">
                                                         <rect key="frame" x="156" y="12" width="30" height="30"/>
@@ -71,7 +71,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="color2Primary"/>
+                                                        <color key="tintColor" name="color2Secondary"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="0N3-mx-UwA"/>
                                                             <constraint firstItem="6CH-bT-vja" firstAttribute="centerX" secondItem="GzW-KC-ccE" secondAttribute="centerX" id="X1L-aA-yIf"/>
@@ -121,7 +121,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixs-Mg-TTD">
-                                                <rect key="frame" x="36" y="589" width="130" height="40"/>
+                                                <rect key="frame" x="36" y="597" width="130" height="40"/>
                                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Kqj-PN-kGK"/>
@@ -135,7 +135,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a80-DM-krm">
-                                                <rect key="frame" x="248" y="589" width="130" height="40"/>
+                                                <rect key="frame" x="248" y="597" width="130" height="40"/>
                                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="IiF-Xc-otI"/>
@@ -150,8 +150,8 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="Z8i-jc-jLK" firstAttribute="top" secondItem="COh-Wq-jXd" secondAttribute="bottom" constant="12" id="09u-74-mbk"/>
-                                            <constraint firstAttribute="height" constant="660" id="2rH-AN-aWa"/>
+                                            <constraint firstItem="Z8i-jc-jLK" firstAttribute="top" secondItem="COh-Wq-jXd" secondAttribute="bottom" constant="20" id="09u-74-mbk"/>
+                                            <constraint firstAttribute="height" constant="670" id="2rH-AN-aWa"/>
                                             <constraint firstAttribute="trailing" secondItem="Z8i-jc-jLK" secondAttribute="trailing" constant="36" id="Aic-QS-45a"/>
                                             <constraint firstItem="a80-DM-krm" firstAttribute="trailing" secondItem="Z8i-jc-jLK" secondAttribute="trailing" id="EQ4-pQ-zhf"/>
                                             <constraint firstItem="COh-Wq-jXd" firstAttribute="centerX" secondItem="G09-cI-kZI" secondAttribute="centerX" id="KKQ-F0-91I"/>
@@ -342,11 +342,8 @@
         <namedColor name="color1Primary">
             <color red="0.93725490196078431" green="0.52156862745098043" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="color2Primary">
-            <color red="0.89411764705882357" green="0.89411764705882357" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="color2Secondary">
-            <color red="0.78823529411764703" green="0.75686274509803919" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.36862745098039218" green="0.3411764705882353" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
