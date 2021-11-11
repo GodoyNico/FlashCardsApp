@@ -30,6 +30,7 @@
 		9FF7A1B3272873A700FBCAE3 /* CreateDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7A1B2272873A700FBCAE3 /* CreateDeckViewController.swift */; };
 		C008826127351934009A27A0 /* ProgressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008826027351934009A27A0 /* ProgressCollectionViewCell.swift */; };
 		C008826327351959009A27A0 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008826227351959009A27A0 /* SearchCollectionViewCell.swift */; };
+		C03DFC44273D87DA00599436 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03DFC43273D87DA00599436 /* TabBarController.swift */; };
 		C044EEEF272B13790033B02B /* SingleDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C044EEEE272B13790033B02B /* SingleDeckViewController.swift */; };
 		C067DF042719F131007F1EB5 /* DeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF032719F131007F1EB5 /* DeckTableViewCell.swift */; };
 		C067DF06271A15E9007F1EB5 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF05271A15E9007F1EB5 /* CardTableViewCell.swift */; };
@@ -99,6 +100,7 @@
 		9FF7A1B2272873A700FBCAE3 /* CreateDeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDeckViewController.swift; sourceTree = "<group>"; };
 		C008826027351934009A27A0 /* ProgressCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCollectionViewCell.swift; sourceTree = "<group>"; };
 		C008826227351959009A27A0 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		C03DFC43273D87DA00599436 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		C044EEEE272B13790033B02B /* SingleDeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SingleDeckViewController.swift; path = FlashCards/Deck/SingleDeckViewController.swift; sourceTree = SOURCE_ROOT; };
 		C067DF032719F131007F1EB5 /* DeckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTableViewCell.swift; sourceTree = "<group>"; };
 		C067DF05271A15E9007F1EB5 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				C067DF032719F131007F1EB5 /* DeckTableViewCell.swift */,
 				C067DF05271A15E9007F1EB5 /* CardTableViewCell.swift */,
 				5DE602722718B86E00341772 /* Main.storyboard */,
+				C03DFC43273D87DA00599436 /* TabBarController.swift */,
 				5DE6027A2718B87000341772 /* LaunchScreen.storyboard */,
 				5DE602782718B87000341772 /* Assets.xcassets */,
 				5DE6027D2718B87000341772 /* Info.plist */,
@@ -445,6 +448,7 @@
 				5DE602772718B86E00341772 /* FlashCards.xcdatamodeld in Sources */,
 				9FF7A1B3272873A700FBCAE3 /* CreateDeckViewController.swift in Sources */,
 				C067DF042719F131007F1EB5 /* DeckTableViewCell.swift in Sources */,
+				C03DFC44273D87DA00599436 /* TabBarController.swift in Sources */,
 				C0C25ADD27399BE900F6A46D /* Card+CoreDataProperties.swift in Sources */,
 				C0D4C0D3273C38DC0078BF00 /* DeleteDeckTableViewCell.swift in Sources */,
 				C008826327351959009A27A0 /* SearchCollectionViewCell.swift in Sources */,
