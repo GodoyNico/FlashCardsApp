@@ -295,7 +295,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="color2Primary"/>
                                 <constraints>
                                     <constraint firstItem="vff-x8-U9B" firstAttribute="top" secondItem="7Qx-aV-MZ8" secondAttribute="top" id="Siw-SR-NcM"/>
                                     <constraint firstAttribute="trailing" secondItem="vff-x8-U9B" secondAttribute="trailing" id="bPK-fx-va5"/>
@@ -346,6 +346,9 @@
         <image name="return" catalog="system" width="128" height="101"/>
         <namedColor name="color1Primary">
             <color red="0.93725490196078431" green="0.52156862745098043" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color2Primary">
+            <color red="0.89411764705882357" green="0.89411764705882357" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="color2Secondary">
             <color red="0.36862745098039218" green="0.3411764705882353" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
