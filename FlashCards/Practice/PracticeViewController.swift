@@ -85,31 +85,24 @@ class PracticeViewController: UIViewController {
     
     @IBAction func noRemembered(_ sender: Any) {
         if currentCard < cards.count {
-            
             feedback.noRemembered += 1
             let card = cards[currentCard]
             
-            // Progress history
             let newPractice = Progress(context: self.context)
             newPractice.date = Date.now
             newPractice.status = false
             newPractice.card = card
             card.addToProgress(newPractice)
             
-            // Progress Counter
             if card.progress_counter == 5 {
-                
                 if let deck = card.deck {
                     deck.progress_counter = deck.progress_counter - 1
                 }
-                
                 card.progress_counter = card.progress_counter - 1
-                
             } else if card.progress_counter > 0 {
                 card.progress_counter = card.progress_counter - 1
             }
             
-            // Save the Data
             do {
                 try self.context.save()
             } catch { }
@@ -126,30 +119,24 @@ class PracticeViewController: UIViewController {
     
     @IBAction func remembered(_ sender: Any) {
         if currentCard < cards.count {
-            
             feedback.remembered += 1
             let card = cards[currentCard]
             
-            // Progress History
             let newPractice = Progress(context: self.context)
             newPractice.date = Date.now
             newPractice.status = true
             newPractice.card = card
             card.addToProgress(newPractice)
             
-            // Progress Counter
             if card.progress_counter < 5 {
-                
                 if card.progress_counter == 4 {
                     if let deck = card.deck  {
                         deck.progress_counter = deck.progress_counter + 1
                     }
                 }
-                
                 card.progress_counter = card.progress_counter + 1
             }
             
-            // Save the Data
             do {
                 try self.context.save()
             } catch { }
@@ -169,27 +156,33 @@ class PracticeViewController: UIViewController {
         
         counterLabel.textColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Primary)
         
-        cardView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
+        cardColor()
         cardView.layer.cornerRadius = 16
         
-        //sideLabel.layer.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
-        sideLabel.layer.backgroundColor = CGColor(red: 157, green: 126, blue: 204, alpha: 10.0)
         sideLabel.layer.cornerRadius = 30
         sideLabel.layer.borderWidth = 3
-        sideLabel.layer.borderColor = CGColor(red: 157, green: 126, blue: 204, alpha: 10.0)
-        //        sideLabel.textColor = UIColor(red: 166.0, green: 164.0, blue: 164.0, alpha: 10.0)
-        //sideLabel.textColor = UIColor.black
+//        sideLabel.layer.borderColor = UIColor(designSystem: DesignSystem.AssetsColor.button)?.cgColor
         
         imageView.layer.cornerRadius = 16
         
         sideView.layer.cornerRadius = 15
         sideView.layer.borderWidth = 3
-        //sideView.layer.borderColor = CGColor.init(red: 201, green: 202, blue: 210, alpha: 1.0)
-        //sideView.layer.backgroundColor = UIColor.gray
-        //sideView.backgroundColor = UIColor.gray
         
         rememberedButton.layer.cornerRadius = 8
         noRememberedButton.layer.cornerRadius = 8
+        
+        rememberedButton.layer.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.button)?.cgColor
+        noRememberedButton.layer.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Primary)?.cgColor
+    }
+    
+    func cardColor() {
+        if isFront == true {
+            cardView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
+            sideView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
+        } else {
+            cardView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Secondary)
+            sideView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Secondary)
+        }
     }
     
     func finished() {
@@ -205,6 +198,27 @@ class PracticeViewController: UIViewController {
     
     func fetchCards() {
         self.cards = self.deck?.cards?.allObjects as! [Card]
+        
+        if self.cards.isEmpty {
+            for i in 1...5 {
+                let newCard = Card(context: self.context)
+                
+                let fContent = Content(context: self.context)
+                fContent.text = "frente \(i)"
+                
+                let vContent = Content(context: self.context)
+                vContent.text = "verso \(i)"
+                
+                newCard.front_content = fContent
+                newCard.back_content = vContent
+                
+                newCard.deck = self.deck
+                
+                do {
+                    try self.context.save()
+                } catch { }
+            }
+        }
     }
     
     func toPractice() {
@@ -217,15 +231,18 @@ class PracticeViewController: UIViewController {
     }
     
     @objc func flip(_ sender: UITapGestureRecognizer? = nil) {
-        
         if isFront {
             sideLabel.text = "B"
             contentLabel.text = cards[currentCard].back_content?.text
+            cardView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Secondary)
+            sideView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Secondary)
             isFront = false
             UIView.transition(with: cardView, duration: 0.5, options: .transitionFlipFromLeft, animations: .none, completion: nil)
         } else {
             sideLabel.text = "A"
             contentLabel.text = cards[currentCard].front_content?.text
+            cardView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
+            sideView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
             isFront = true
             UIView.transition(with: cardView, duration: 0.5, options: .transitionFlipFromRight, animations: .none, completion: nil)
         }
