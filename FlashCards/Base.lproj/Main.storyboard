@@ -22,6 +22,7 @@
                     <connections>
                         <segue destination="tq2-oz-X4a" kind="relationship" relationship="viewControllers" id="oJw-h4-zz6"/>
                         <segue destination="Xz2-8P-dKD" kind="relationship" relationship="viewControllers" id="ERd-wO-huc"/>
+                        <segue destination="WPk-1j-Hdj" kind="relationship" relationship="viewControllers" id="wst-Gh-qcX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7C-sv-INe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -38,12 +39,12 @@
                         <viewLayoutGuide key="safeArea" id="knb-Wd-hag"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Random" image="square.and.arrow.up.circle" catalog="system" id="B8U-gJ-seb"/>
+                    <tabBarItem key="tabBarItem" title="Random" image="randomIcon" id="B8U-gJ-seb"/>
                     <navigationItem key="navigationItem" id="HNp-cq-vGU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X0L-Tl-vVI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="669.56521739130437" y="1681.4732142857142"/>
+            <point key="canvasLocation" x="132" y="1637"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="v3p-kW-hWj">
@@ -60,16 +61,15 @@
             </objects>
             <point key="canvasLocation" x="-770" y="865"/>
         </scene>
-        <!--Deck-->
-        <scene sceneID="V0K-5k-5x0">
+        <!--Settings-->
+        <scene sceneID="pc1-1X-Jun">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Deck" storyboardName="Deck" id="GRd-vb-PRc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Lee-tq-cYw"/>
-                    <navigationItem key="navigationItem" id="zYG-dN-h6A"/>
+                <viewControllerPlaceholder storyboardName="Settings" id="WPk-1j-Hdj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="QS7-RM-mhp"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4DK-yH-swr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r3r-ih-foB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="670" y="1186"/>
+            <point key="canvasLocation" x="373" y="1283"/>
         </scene>
         <!--MyDecks-->
         <scene sceneID="L8S-n3-w24">
@@ -79,11 +79,11 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uY3-ek-lV7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-106" y="1294"/>
+            <point key="canvasLocation" x="-106" y="1283"/>
         </scene>
     </scenes>
     <resources>
-        <image name="square.and.arrow.up.circle" catalog="system" width="128" height="121"/>
+        <image name="randomIcon" width="24" height="28"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

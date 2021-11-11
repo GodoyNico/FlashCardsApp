@@ -19,13 +19,14 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         
-        if viewController === viewControllers?.first {
+        if viewController === viewControllers?.first || viewController === viewControllers?.last {
             return true
         }
         
         let storyBoard = UIStoryboard(name: "Deck", bundle: .main)
         
-        guard let singleDeckController = storyBoard.instantiateInitialViewController() else { return false }
+        guard let singleDeckController = storyBoard.instantiateInitialViewController()
+        else { return false }
         
         navigationController?.pushViewController(singleDeckController, animated: true)
         

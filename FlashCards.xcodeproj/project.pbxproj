@@ -31,6 +31,7 @@
 		C008826127351934009A27A0 /* ProgressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008826027351934009A27A0 /* ProgressCollectionViewCell.swift */; };
 		C008826327351959009A27A0 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008826227351959009A27A0 /* SearchCollectionViewCell.swift */; };
 		C03DFC44273D87DA00599436 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03DFC43273D87DA00599436 /* TabBarController.swift */; };
+		C03DFC47273D922D00599436 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C03DFC46273D922D00599436 /* Settings.storyboard */; };
 		C044EEEF272B13790033B02B /* SingleDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C044EEEE272B13790033B02B /* SingleDeckViewController.swift */; };
 		C067DF042719F131007F1EB5 /* DeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF032719F131007F1EB5 /* DeckTableViewCell.swift */; };
 		C067DF06271A15E9007F1EB5 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF05271A15E9007F1EB5 /* CardTableViewCell.swift */; };
@@ -101,6 +102,7 @@
 		C008826027351934009A27A0 /* ProgressCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCollectionViewCell.swift; sourceTree = "<group>"; };
 		C008826227351959009A27A0 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		C03DFC43273D87DA00599436 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		C03DFC46273D922D00599436 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		C044EEEE272B13790033B02B /* SingleDeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SingleDeckViewController.swift; path = FlashCards/Deck/SingleDeckViewController.swift; sourceTree = SOURCE_ROOT; };
 		C067DF032719F131007F1EB5 /* DeckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTableViewCell.swift; sourceTree = "<group>"; };
 		C067DF05271A15E9007F1EB5 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 		5DE6026B2718B86E00341772 /* FlashCards */ = {
 			isa = PBXGroup;
 			children = (
+				C03DFC45273D91FA00599436 /* Settings */,
 				C0BC72FB27286CA00016DBF9 /* Edit */,
 				C0BC72FA27286C990016DBF9 /* Deck */,
 				C0BC72F927286C7D0016DBF9 /* MyDecks */,
@@ -223,6 +226,14 @@
 				5DEF47B0273AFEC6004B46BA /* DesignSystem.swift */,
 			);
 			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		C03DFC45273D91FA00599436 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C03DFC46273D922D00599436 /* Settings.storyboard */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		C0BC72F727286C540016DBF9 /* Practice */ = {
@@ -404,6 +415,7 @@
 				C0A2BB3427272E990069B525 /* Deck.storyboard in Resources */,
 				5DE602792718B87000341772 /* Assets.xcassets in Resources */,
 				C0A2BB392727350D0069B525 /* Edit.storyboard in Resources */,
+				C03DFC47273D922D00599436 /* Settings.storyboard in Resources */,
 				5DE602742718B86E00341772 /* Main.storyboard in Resources */,
 				C0A2BB3D2727393F0069B525 /* CreateDeck.storyboard in Resources */,
 			);
