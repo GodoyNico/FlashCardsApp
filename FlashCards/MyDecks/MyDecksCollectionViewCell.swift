@@ -12,9 +12,16 @@ class MyDecksCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(deck: Deck) {
-        deckDeckView.backgroundColor = UIColor(named: "gray1")
+        deckDeckView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
         deckDeckView.layer.cornerRadius = 15
+        
         deckTitleDeckLabel.text = deck.title
+        deckTitleDeckLabel.textColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Quaternary)
+        
+        deckProgressCircleView.trackColor = UIColor.white
+        deckProgressCircleView.progressColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Quaternary) ?? .white
+        
+        deckProgressLabel.textColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Quaternary)
         
         if let cardsList = deck.cards {
             deckProgressLabel.text = "\(deck.progress_counter)/\(cardsList.count)"
@@ -22,10 +29,6 @@ class MyDecksCollectionViewCell: UICollectionViewCell {
         } else {
             deckProgressCircleView.setValue(value: 0)
         }
-       
-        deckProgressCircleView.trackColor = UIColor.gray
-        deckProgressCircleView.progressColor = UIColor.black
-        
     }
     
 }

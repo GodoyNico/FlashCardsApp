@@ -16,6 +16,7 @@ public enum DesignSystem {
         case basicQuinary
         case basicSecondary
         case basicTertiary
+        case button
         case color1Primary
         case color1Secondary
         case color2Primary
@@ -23,7 +24,7 @@ public enum DesignSystem {
         case color2Secondary
         case color2Tertiary
         case graySecondary
-        case button
+        case tabBar
     }
 }
 
