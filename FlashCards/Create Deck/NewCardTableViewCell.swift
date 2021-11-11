@@ -18,13 +18,13 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     let collectionCellID = "cardCollectionCell"
-    
+
     var deck: Deck?
-    
     var cards: [Card] = []
     
     weak var delegate: DeleteCardDelegate?
     
+    @IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var numberOfCardsLabel: UILabel!
     @IBOutlet weak var addCardButton: UIButton!
     @IBOutlet weak var cardCollectionView: UICollectionView!
@@ -34,7 +34,6 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
         
         cardCollectionView.dataSource = self
         cardCollectionView.delegate = self
-        
     }
     
     @IBAction func addCard(_ sender: Any) {
@@ -58,6 +57,8 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
     }
     
     func configure(newDeck: Deck?) {
+        viewBackground.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.background)
+        
         self.deck = newDeck
         fetchData()
         numberOfCardsLabel.text = String("\(cards.count) cards")
