@@ -17,7 +17,7 @@ class SwitchTableViewCell: UITableViewCell {
     
     @IBAction func switchAction(_ sender: UISwitch) {
 
-        self.deck?.isFront = switchButton.isOn ? false : true
+        self.deck?.isFront = !(switchButton.isOn)
 
     }
     

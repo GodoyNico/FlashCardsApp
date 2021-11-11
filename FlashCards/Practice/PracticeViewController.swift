@@ -44,7 +44,7 @@ class PracticeViewController: UIViewController {
         rememberedButton.isHidden = true
         noRememberedButton.isHidden = true
         
-        generateCards()
+        fetchCards()
         
         counterLabel.text = "1/\(deck!.cards!.count)"
         
@@ -58,6 +58,7 @@ class PracticeViewController: UIViewController {
     
     func configure(deck: Deck) {
         self.deck = deck
+        self.isFront = deck.isFront
         self.feedback.deck = self.deck
     }
     
@@ -80,10 +81,6 @@ class PracticeViewController: UIViewController {
         
         self.present(alert, animated: true) {
         }
-    }
-    
-    @IBAction func flipCard(_ sender: Any) {
-        print("Virou")
     }
     
     @IBAction func noRemembered(_ sender: Any) {
@@ -199,7 +196,7 @@ class PracticeViewController: UIViewController {
         feedbackViewController.deckConfig(data: practiceFeedback)
     }
     
-    func generateCards() {
+    func fetchCards() {
         self.cards = self.deck?.cards?.allObjects as! [Card]
         
         if self.cards.isEmpty {
@@ -221,7 +218,6 @@ class PracticeViewController: UIViewController {
                     try self.context.save()
                 } catch { }
             }
-            generateCards()
         }
     }
     
@@ -231,6 +227,7 @@ class PracticeViewController: UIViewController {
         noRememberedButton.isHidden = true
         isFront = self.deck?.isFront ?? true
         contentLabel.text = isFront ? cards[currentCard].front_content?.text : cards[currentCard].back_content?.text
+        sideLabel.text = isFront ? "A" : "B"
     }
     
     @objc func flip(_ sender: UITapGestureRecognizer? = nil) {
