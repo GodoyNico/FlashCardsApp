@@ -124,7 +124,9 @@ extension MyDecksViewController: UICollectionViewDataSource {
     
     // MARK: Go To Deck Details
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: self.deckSegueId, sender: myDecks[indexPath.row])
+        if indexPath.section == 3 {
+            performSegue(withIdentifier: self.deckSegueId, sender: myDecks[indexPath.row])
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
