@@ -101,8 +101,11 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="377" height="66"/>
                                         <connections>
+                                            <outlet property="keepPracticingLabel" destination="O7e-1f-dBG" id="dm9-Ud-EjK"/>
                                             <outlet property="progressLabel" destination="O7e-1f-dBG" id="Nwt-SX-Bg4"/>
                                             <outlet property="progressView" destination="TfF-Ro-h1s" id="o3g-fi-Azg"/>
+                                            <outlet property="viewBackground" destination="Dvb-OD-cxe" id="b8t-6d-PHg"/>
+                                            <outlet property="yourProgressLabel" destination="wus-vY-Gag" id="eET-EH-Kfw"/>
                                             <outlet property="yourProgressView" destination="cWM-VU-baK" id="U5K-2O-AAT"/>
                                         </connections>
                                     </collectionViewCell>
@@ -125,6 +128,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="377" height="64"/>
+                                        <connections>
+                                            <outlet property="searchBar" destination="S4N-W3-AMh" id="vS8-HA-gaD"/>
+                                            <outlet property="viewSearch" destination="gnR-l3-1Pt" id="d8W-xa-jrw"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" reuseIdentifier="titleMyDecksCell" id="ykg-TT-cHu" customClass="TitleMyDecksCollectionViewCell" customModule="FlashCards" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="150" width="405" height="32"/>

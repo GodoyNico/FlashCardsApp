@@ -16,6 +16,7 @@ class MyDecksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewConfig()
         
         myDecksCollectionView.dataSource = self
         myDecksCollectionView.delegate = self
@@ -60,9 +61,13 @@ class MyDecksViewController: UIViewController {
         
         // Re-Fetch the Data
         self.fetchDecks()
-        
     }
     
+    func viewConfig() {
+        view.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.background)
+        
+        myDecksCollectionView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.background)
+    }
 }
 
 extension MyDecksViewController: UICollectionViewDataSource {
@@ -89,6 +94,8 @@ extension MyDecksViewController: UICollectionViewDataSource {
         } else if indexPath.section == 1 {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Self.searchDecksCellID, for: indexPath) as! SearchCollectionViewCell
+            
+            cell.configure()
 
             return cell
             
@@ -97,6 +104,8 @@ extension MyDecksViewController: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Self.titlemyDecksCellID, for: indexPath) as! TitleMyDecksCollectionViewCell
 
             cell.myDecksTitleLabel.text = "My Decks"
+            cell.configure()
+            
             return cell
             
         } else {

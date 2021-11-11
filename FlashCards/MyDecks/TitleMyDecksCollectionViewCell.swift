@@ -15,4 +15,7 @@ class TitleMyDecksCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
+    func configure() {
+        myDecksTitleLabel.textColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Primary)
+    }
 }
