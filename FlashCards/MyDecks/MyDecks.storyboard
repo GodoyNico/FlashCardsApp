@@ -119,6 +119,9 @@
                                                 <searchBar contentMode="redraw" text="" placeholder="Pesquisar um deck" translatesAutoresizingMaskIntoConstraints="NO" id="S4N-W3-AMh">
                                                     <rect key="frame" x="0.0" y="6.5" width="377" height="51"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="chZ-ES-L3i" id="luI-pj-k0c"/>
+                                                    </connections>
                                                 </searchBar>
                                             </subviews>
                                             <constraints>

@@ -11,6 +11,7 @@ class MyDecksViewController: UIViewController {
     
     let deckSegueId: String = "GoToSingleDeck"
     var myDecks: [Deck] = []
+    var realData: [Deck] = []
     
     @IBOutlet weak var myDecksCollectionView: UICollectionView!
     
@@ -37,7 +38,8 @@ class MyDecksViewController: UIViewController {
         
     func fetchDecks() {
         do {
-            self.myDecks = try context.fetch(Deck.fetchRequest())
+            self.realData = try context.fetch(Deck.fetchRequest())
+            self.myDecks = self.realData
             DispatchQueue.main.async {
                 self.myDecksCollectionView.reloadData()
             }
@@ -198,6 +200,31 @@ extension MyDecksViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 22, left: 0, bottom: 0, right: 0)
+    }
+    
+}
+
+extension MyDecksViewController: UISearchBarDelegate {
+     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.myDecks.removeAll()
+             
+        for item in self.realData {
+            
+            guard let title = item.title else {
+                continue
+            }
+            
+            if title.lowercased().contains(searchBar.text!.lowercased()) {
+                self.myDecks.append(item)
+            }
+        }
+             
+        if (searchBar.text!.isEmpty) {
+            self.myDecks = self.realData
+        }
+        
+        self.myDecksCollectionView.reloadData()
     }
     
 }
