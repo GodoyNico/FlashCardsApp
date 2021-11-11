@@ -98,7 +98,7 @@ extension CreateDeckViewController: UITableViewDelegate, UITableViewDataSource {
             if indexPath.row == 0 {
                 
                 let deckNameCell = createDeckTableView.dequeueReusableCell(withIdentifier: deckNameCell ) as! NewDeckTableViewCell
-                            
+                
                 deckNameCell.configure(newDeck: self.deck)
                 
                 return deckNameCell
@@ -108,6 +108,7 @@ extension CreateDeckViewController: UITableViewDelegate, UITableViewDataSource {
                 let newCardCell = createDeckTableView.dequeueReusableCell(withIdentifier: newCardCell ) as! NewCardTableViewCell
                 
                 newCardCell.configure(newDeck: self.deck)
+                newCardCell.delegate = self
                 
                 return newCardCell
                 
@@ -116,7 +117,7 @@ extension CreateDeckViewController: UITableViewDelegate, UITableViewDataSource {
                 let switchCell = createDeckTableView.dequeueReusableCell(withIdentifier: switchCell) as! SwitchTableViewCell
                 
                 switchCell.configure(newDeck: self.deck)
-            
+                
                 return switchCell
                 
             } else {
@@ -131,6 +132,38 @@ extension CreateDeckViewController: UITableViewDelegate, UITableViewDataSource {
             }
             
         }
+    }
+}
+
+extension CreateDeckViewController: DeleteCardDelegate {
+    
+    func didTapDeleteAlert(fromCell cell: UITableViewCell, card: Card) {
+        
+        let alert = UIAlertController(title: nil, message: "Tem certeza que você quer deletar esse card? ", preferredStyle: .alert)
+        
+        let deleteButton = UIAlertAction(title: "Sim", style: .default) { (action) in
+            
+            //Card to remove
+            self.context.delete(card)
+            
+            // Save the Data
+            do {
+                try self.context.save()
+            } catch { }
+            
+            // Re-Fetch the Data
+            self.createDeckTableView.reloadData()
+            
+        }
+        
+        let cancelButton = UIAlertAction(title: "Não", style: .destructive) { (action) in
+            return
+        }
+        
+        alert.addAction(deleteButton)
+        alert.addAction(cancelButton)
+        
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -157,12 +190,12 @@ extension CreateDeckViewController: DeleteDeckDelegate {
         }
         
         let cancelButton = UIAlertAction(title: "Não", style: .default) { (action) in
-           return
+            return
         }
         
         alert.addAction(cancelButton)
         alert.addAction(deleteButton)
-
+        
         self.present(alert, animated: true, completion: nil)
     }
     
