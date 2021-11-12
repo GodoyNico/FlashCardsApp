@@ -52,6 +52,8 @@
 		C0C25ADD27399BE900F6A46D /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C25AD527399BE900F6A46D /* Card+CoreDataProperties.swift */; };
 		C0D4C0D3273C38DC0078BF00 /* DeleteDeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D4C0D2273C38DC0078BF00 /* DeleteDeckTableViewCell.swift */; };
 		C0D8D3FE27348CB800EDFA5B /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8D3FD27348CB800EDFA5B /* CircularProgressView.swift */; };
+		C0ED7E20273EDA990011C59C /* EscolherImagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ED7E1F273EDA990011C59C /* EscolherImagem.swift */; };
+		C0ED7E22273EDF2A0011C59C /* SelectImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ED7E21273EDF2A0011C59C /* SelectImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,8 @@
 		C0C25AD527399BE900F6A46D /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Card+CoreDataProperties.swift"; path = "FlashCards/Model/Card+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		C0D4C0D2273C38DC0078BF00 /* DeleteDeckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDeckTableViewCell.swift; sourceTree = "<group>"; };
 		C0D8D3FD27348CB800EDFA5B /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		C0ED7E1F273EDA990011C59C /* EscolherImagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolherImagem.swift; sourceTree = "<group>"; };
+		C0ED7E21273EDF2A0011C59C /* SelectImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,11 +240,12 @@
 			isa = PBXGroup;
 			children = (
 				9FF7A1B2272873A700FBCAE3 /* CreateDeckViewController.swift */,
+				C0ED7E1F273EDA990011C59C /* EscolherImagem.swift */,
 				C0A2BB3C2727393F0069B525 /* CreateDeck.storyboard */,
-				C0D4C0D2273C38DC0078BF00 /* DeleteDeckTableViewCell.swift */,
 				9F81EDE3272B1A2500AFADC8 /* NewDeckTableViewCell.swift */,
 				9F81EDE5272B1A4200AFADC8 /* NewCardTableViewCell.swift */,
 				9F81EDE9272B31F200AFADC8 /* CardCollectionViewCell.swift */,
+				C0D4C0D2273C38DC0078BF00 /* DeleteDeckTableViewCell.swift */,
 				9F67A99E273991C300B63F8D /* SwitchTableViewCell.swift */,
 			);
 			path = "Create Deck";
@@ -251,6 +256,7 @@
 			children = (
 				C0BC72FC27287FBE0016DBF9 /* MyDecksViewController.swift */,
 				C0A2BB3A2727379F0069B525 /* MyDecks.storyboard */,
+				C0ED7E21273EDF2A0011C59C /* SelectImageViewController.swift */,
 				C008826027351934009A27A0 /* ProgressCollectionViewCell.swift */,
 				C008826227351959009A27A0 /* SearchCollectionViewCell.swift */,
 				C0BC7300272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift */,
@@ -428,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C067DF06271A15E9007F1EB5 /* CardTableViewCell.swift in Sources */,
+				C0ED7E20273EDA990011C59C /* EscolherImagem.swift in Sources */,
 				9F81EDE4272B1A2500AFADC8 /* NewDeckTableViewCell.swift in Sources */,
 				9F81EDEA272B31F200AFADC8 /* CardCollectionViewCell.swift in Sources */,
 				C0BC7301272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift in Sources */,
@@ -458,6 +465,7 @@
 				9F4CF2632718C5A800C7BBA5 /* DeckViewController.swift in Sources */,
 				C0D8D3FE27348CB800EDFA5B /* CircularProgressView.swift in Sources */,
 				C0C25AD727399BE900F6A46D /* Progress+CoreDataProperties.swift in Sources */,
+				C0ED7E22273EDF2A0011C59C /* SelectImageViewController.swift in Sources */,
 				C0BC72FD27287FBE0016DBF9 /* MyDecksViewController.swift in Sources */,
 				C008826127351934009A27A0 /* ProgressCollectionViewCell.swift in Sources */,
 				5DAF0E4427344CF800E49A93 /* PracticeViewController.swift in Sources */,
@@ -639,7 +647,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 876KXU24XS;
+				DEVELOPMENT_TEAM = 8G4UL7Z7AB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlashCards/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -668,7 +676,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 876KXU24XS;
+				DEVELOPMENT_TEAM = 8G4UL7Z7AB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlashCards/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

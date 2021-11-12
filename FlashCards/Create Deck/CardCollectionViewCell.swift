@@ -9,7 +9,7 @@ import UIKit
 
 protocol AddCardImageDelegate: AnyObject {
     
-    func selectImage(fromCell cell: UICollectionViewCell, card: Card?)
+    func selectImage(completion: @escaping (UIImage?) -> Void )
     
 }
 
@@ -25,18 +25,20 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
     @IBOutlet weak var backImage: UIImageView!
     
     weak var delegate: AddCardImageDelegate?
-    
-    var selectedImage: ((UIImage) -> ())?
-    
     var card: Card?
     
     @IBAction func addImageFront(_ sender: Any) {
-        let image = delegate?.selectImage(fromCell: self, card: self.card)
-        self.card?.front_content?.image = image
+        self.delegate?.selectImage { image in
+            self.frontImage.image = image
+            self.card?.front_content?.image = image?.pngData()
+        }
     }
     
     @IBAction func addImageBack(_ sender: Any) {
-        delegate?.selectImage(fromCell: self, card: self.card)
+        self.delegate?.selectImage { image in
+            self.backImage.image = image
+            self.card?.back_content?.image = image?.pngData()
+        }
     }
     
     func textViewDidChange(_ textView: UITextView) {
@@ -53,6 +55,9 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         
         frontSideTextField.text = card.front_content?.text
         backSideTextField.text = card.back_content?.text
+        
+        frontImage.image = card.front_content?.image.flatMap(UIImage.init(data: ))
+        backImage.image = card.back_content?.image.flatMap(UIImage.init(data: ))
         
         frontSideTextField.delegate = self
         backSideTextField.delegate = self
