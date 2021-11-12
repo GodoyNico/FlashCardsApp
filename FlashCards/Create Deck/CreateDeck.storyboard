@@ -59,7 +59,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="divisorView" destination="Rzu-ax-cnv" id="ha0-pJ-SBE"/>
                                             <outlet property="newDeckTextfield" destination="l0v-cR-d45" id="McX-sn-OHY"/>
+                                            <outlet property="viewBackground" destination="IHI-mR-J17" id="8NV-T6-euL"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewCardCell" rowHeight="900" id="xcl-tH-GMn" customClass="NewCardTableViewCell" customModule="FlashCards" customModuleProvider="target">
@@ -252,6 +254,7 @@
                                                                 <outlet property="frontSideTextField" destination="r8l-Se-FtT" id="acZ-PG-vVZ"/>
                                                                 <outlet property="numberOfCharacterBack" destination="60Z-1h-drf" id="PTF-vt-ML9"/>
                                                                 <outlet property="numberOfCharactersFront" destination="NtF-Iz-GsR" id="czZ-iY-BGr"/>
+                                                                <outlet property="viewBackground" destination="8l7-5L-ctQ" id="Aft-Wl-gMh"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -270,6 +273,7 @@
                                             <outlet property="addCardButton" destination="xLW-dZ-LT3" id="uKA-iF-XGE"/>
                                             <outlet property="cardCollectionView" destination="SVu-AV-dIl" id="cbA-T2-7V5"/>
                                             <outlet property="numberOfCardsLabel" destination="pg0-Gs-A8M" id="PdE-0m-l8k"/>
+                                            <outlet property="viewBackground" destination="fEW-A7-OCs" id="Vhw-Pt-LqH"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="switchCell" rowHeight="78" id="LeD-KA-ylP" customClass="SwitchTableViewCell" customModule="FlashCards" customModuleProvider="target">

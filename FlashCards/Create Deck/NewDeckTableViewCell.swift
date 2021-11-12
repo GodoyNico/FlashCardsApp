@@ -13,7 +13,9 @@ class NewDeckTableViewCell: UITableViewCell {
     
     var deck: Deck?
     
+    @IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var newDeckTextfield: UITextField!
+    @IBOutlet weak var divisorView: UIView!
     
     @IBAction func setDeckTitle(_ sender: Any) {
         self.deck?.title = newDeckTextfield.text
@@ -24,8 +26,12 @@ class NewDeckTableViewCell: UITableViewCell {
     }
         
     func configure(newDeck: Deck?) {
+        viewBackground.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.background)
+        
         self.deck = newDeck
         newDeckTextfield.text = self.deck?.title
+        
+        divisorView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
