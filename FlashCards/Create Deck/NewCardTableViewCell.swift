@@ -83,6 +83,8 @@ extension NewCardTableViewCell: UICollectionViewDataSource {
         let cardCollectionCell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: collectionCellID, for: indexPath) as! CardCollectionViewCell
         
         cardCollectionCell.configure(card: cards[indexPath.row])
+//        cardCollectionCell.selectedImage = 
+        
         return cardCollectionCell
     }
     

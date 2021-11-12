@@ -201,3 +201,22 @@ extension CreateDeckViewController: DeleteDeckDelegate {
     
 }
 
+extension CreateDeckViewController: AddCardImageDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    func selectImage(fromCell cell: UICollectionViewCell, card: Card?) {
+
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
+        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            
+        }
+
+        picker.dismiss(animated: true, completion: nil)
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+}

@@ -248,7 +248,9 @@
                                                             <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                             <size key="customSize" width="312" height="610"/>
                                                             <connections>
+                                                                <outlet property="backImage" destination="ux2-dU-AA2" id="FMy-RZ-7bd"/>
                                                                 <outlet property="backSideTextField" destination="Heb-8O-SND" id="0fP-mc-tWL"/>
+                                                                <outlet property="frontImage" destination="mWQ-Ev-kcL" id="P5V-qN-Ex9"/>
                                                                 <outlet property="frontSideTextField" destination="r8l-Se-FtT" id="acZ-PG-vVZ"/>
                                                                 <outlet property="numberOfCharacterBack" destination="60Z-1h-drf" id="PTF-vt-ML9"/>
                                                                 <outlet property="numberOfCharactersFront" destination="NtF-Iz-GsR" id="czZ-iY-BGr"/>
