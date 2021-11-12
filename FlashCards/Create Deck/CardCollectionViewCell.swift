@@ -11,7 +11,7 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    @IBOutlet weak var viewBackground: UIView!
+    //@IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var frontSideTextField: UITextView!
     @IBOutlet weak var backSideTextField: UITextView!
     @IBOutlet weak var numberOfCharacterBack: UILabel!
@@ -38,8 +38,6 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
     
     func configure(card: Card) {
         self.card = card
-        
-        viewBackground.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
         
         frontSideTextField.text = card.front_content?.text
         backSideTextField.text = card.back_content?.text
