@@ -8,7 +8,6 @@
 import UIKit
 
 class SingleDeckViewController: UIViewController {
-    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var deck: Deck?
@@ -24,12 +23,12 @@ class SingleDeckViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        layoutConfig()
         
         if let deckSelected = self.deck {
-            
             deckTitleLabel.text = deckSelected.title
             practiceButton.layer.cornerRadius = 10
-            practiceButton.backgroundColor = UIColor(named: "gray1")
+            practiceButton.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Primary)
             
             if let cardsList = deckSelected.cards {
                 deckProgressLabel.text = "\(deckSelected.progress_counter)/\(cardsList.count)"
@@ -37,9 +36,7 @@ class SingleDeckViewController: UIViewController {
             } else {
                 deckProgressCircleView.setValue(value: 0)
             }
-            
         } else {
-            
             self.deck = getRandomDeck()
             
             if let deckSelected = self.deck {
@@ -50,19 +47,23 @@ class SingleDeckViewController: UIViewController {
                 // TODO: EMPTY STATE
                 print("Não há decks criados ainda")
             }
-            
             deckProgressCircleView.setValue(value: 0)
-            
         }
-        
-        deckProgressCircleView.trackColor = UIColor.gray
-        deckProgressCircleView.progressColor = UIColor.black
-        
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewDidLoad()
+    }
+    
+    func layoutConfig() {
+        view.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
+        
+        deckTitleLabel.textColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Secondary)
+        deckProgressCircleView.trackColor = UIColor.white
+        deckProgressCircleView.progressColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Secondary) ?? .white
+        
+        deckProgressLabel.textColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Secondary)
     }
     
     func configure(deck: Deck) {
@@ -84,9 +85,7 @@ class SingleDeckViewController: UIViewController {
         if let currentDeck = deck, let currentCards = currentDeck.cards {
             if currentCards.count > 0 {
                 performSegue(withIdentifier: self.goToPracticeSegueID, sender: deck)
-                
             } else {
-                
                 let alert = UIAlertController(title: nil, message: "Este deck está vazio 🥲 ", preferredStyle: .alert)
                 
                 let okButton = UIAlertAction(title: "Ok", style: .default) { (action) in
@@ -109,27 +108,20 @@ class SingleDeckViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == goToEditSegueID {
-            
             guard let editDeckViewController = segue.destination as? CreateDeckViewController, let deck = sender as? Deck else { return }
             
             editDeckViewController.configure(deck: deck, screen: .edit)
             
         } else if segue.identifier == goToPracticeSegueID {
-            
             guard let practiceViewController = segue.destination as? PracticeViewController, let deck = sender as? Deck else { return }
             
             practiceViewController.configure(deck: deck)
             
         } else if segue.identifier == goToAddCardsSegueID {
-            
             guard let editDeckViewController = segue.destination as? CreateDeckViewController, let deck = sender as? Deck else { return }
             
             editDeckViewController.configure(deck: deck, screen: .addCard)
-            
         }
-        
     }
-    
 }

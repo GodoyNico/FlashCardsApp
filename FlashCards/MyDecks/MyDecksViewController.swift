@@ -11,11 +11,13 @@ class MyDecksViewController: UIViewController {
     
     let deckSegueId: String = "GoToSingleDeck"
     var myDecks: [Deck] = []
+    var realData: [Deck] = []
     
     @IBOutlet weak var myDecksCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewConfig()
         
         myDecksCollectionView.dataSource = self
         myDecksCollectionView.delegate = self
@@ -36,7 +38,8 @@ class MyDecksViewController: UIViewController {
         
     func fetchDecks() {
         do {
-            self.myDecks = try context.fetch(Deck.fetchRequest())
+            self.realData = try context.fetch(Deck.fetchRequest())
+            self.myDecks = self.realData
             DispatchQueue.main.async {
                 self.myDecksCollectionView.reloadData()
             }
@@ -60,9 +63,13 @@ class MyDecksViewController: UIViewController {
         
         // Re-Fetch the Data
         self.fetchDecks()
-        
     }
     
+    func viewConfig() {
+        view.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.background)
+        
+        myDecksCollectionView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.background)
+    }
 }
 
 extension MyDecksViewController: UICollectionViewDataSource {
@@ -89,6 +96,8 @@ extension MyDecksViewController: UICollectionViewDataSource {
         } else if indexPath.section == 1 {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Self.searchDecksCellID, for: indexPath) as! SearchCollectionViewCell
+            
+            cell.configure()
 
             return cell
             
@@ -97,6 +106,8 @@ extension MyDecksViewController: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Self.titlemyDecksCellID, for: indexPath) as! TitleMyDecksCollectionViewCell
 
             cell.myDecksTitleLabel.text = "My Decks"
+            cell.configure()
+            
             return cell
             
         } else {
@@ -113,7 +124,9 @@ extension MyDecksViewController: UICollectionViewDataSource {
     
     // MARK: Go To Deck Details
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: self.deckSegueId, sender: myDecks[indexPath.row])
+        if indexPath.section == 3 {
+            performSegue(withIdentifier: self.deckSegueId, sender: myDecks[indexPath.row])
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -189,6 +202,31 @@ extension MyDecksViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 22, left: 0, bottom: 0, right: 0)
+    }
+    
+}
+
+extension MyDecksViewController: UISearchBarDelegate {
+     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.myDecks.removeAll()
+             
+        for item in self.realData {
+            
+            guard let title = item.title else {
+                continue
+            }
+            
+            if title.lowercased().contains(searchBar.text!.lowercased()) {
+                self.myDecks.append(item)
+            }
+        }
+             
+        if (searchBar.text!.isEmpty) {
+            self.myDecks = self.realData
+        }
+        
+        self.myDecksCollectionView.reloadData()
     }
     
 }

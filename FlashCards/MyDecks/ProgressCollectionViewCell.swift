@@ -14,14 +14,27 @@ class ProgressCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var yourProgressView: UIView!
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var progressLabel: UILabel!
+    @IBOutlet weak var viewBackground: UIView!
+    @IBOutlet weak var yourProgressLabel: UILabel!
+    @IBOutlet weak var keepPracticingLabel: UILabel!
     
     override class func awakeFromNib() {
         super.awakeFromNib()
     }
     
     func configure() {
+        yourProgressView.layer.cornerRadius = 16
+        yourProgressView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Primary)
         
-        yourProgressView.layer.cornerRadius = 6
+        viewBackground.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Primary)
+        
+        yourProgressLabel.textColor = UIColor.white
+        keepPracticingLabel.textColor = UIColor.white
+        progressLabel.textColor = UIColor.white
+        
+        progressView.layer.cornerRadius = 6
+        progressView.tintColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Secondary)
+        progressView.trackTintColor = UIColor.white
         
         var myDecks: [Deck]
         do {
@@ -43,6 +56,5 @@ class ProgressCollectionViewCell: UICollectionViewCell {
             progressLabel.text = "\(Int(progress*100))%"
            
         } catch { }
-        
     }
 }
