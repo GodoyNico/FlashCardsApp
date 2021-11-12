@@ -23,6 +23,8 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
     var cards: [Card] = []
     
     weak var delegate: DeleteCardDelegate?
+    weak var delegateImage: AddCardImageDelegate?
+        
     
     @IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var numberOfCardsLabel: UILabel!
@@ -34,6 +36,28 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
         
         cardCollectionView.dataSource = self
         cardCollectionView.delegate = self
+        
+        setupLayout()
+        
+    }
+    
+    func setupLayout() {
+        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 6, bottom: 0, trailing: 6)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8), heightDimension: .absolute(610))
+        
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .groupPagingCentered
+        
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        cardCollectionView.collectionViewLayout = layout
+        
     }
     
     @IBAction func addCard(_ sender: Any) {
@@ -84,6 +108,8 @@ extension NewCardTableViewCell: UICollectionViewDataSource {
         let cardCollectionCell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: collectionCellID, for: indexPath) as! CardCollectionViewCell
         
         cardCollectionCell.configure(card: cards[indexPath.row])
+        cardCollectionCell.delegate = self
+        
         return cardCollectionCell
     }
     
@@ -104,9 +130,17 @@ extension NewCardTableViewCell: UICollectionViewDataSource {
     }
 }
 
-extension NewCardTableViewCell: UICollectionViewDelegateFlowLayout {
+//extension NewCardTableViewCell: UICollectionViewDelegateFlowLayout {
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: collectionView.bounds.width * 0.8, height: 610)
+//    }
+//}
+
+extension NewCardTableViewCell: AddCardImageDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width * 0.8, height: 610)
+    func selectImage(completion: @escaping (UIImage?) -> Void) {
+        delegateImage?.selectImage(completion: completion)
     }
+    
 }

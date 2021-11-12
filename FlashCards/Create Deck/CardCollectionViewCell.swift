@@ -7,6 +7,12 @@
 
 import UIKit
 
+protocol AddCardImageDelegate: AnyObject {
+    
+    func selectImage(completion: @escaping (UIImage?) -> Void )
+    
+}
+
 class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -16,15 +22,24 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
     @IBOutlet weak var backSideTextField: UITextView!
     @IBOutlet weak var numberOfCharacterBack: UILabel!
     @IBOutlet weak var numberOfCharactersFront: UILabel!
+    @IBOutlet weak var frontImage: UIImageView!
+    @IBOutlet weak var backImage: UIImageView!
     
+    weak var delegate: AddCardImageDelegate?
     var card: Card?
     
     @IBAction func addImageFront(_ sender: Any) {
-        print("clicou1")
+        self.delegate?.selectImage { image in
+            self.frontImage.image = image
+            self.card?.front_content?.image = image?.pngData()
+        }
     }
     
     @IBAction func addImageBack(_ sender: Any) {
-        print("clicou2")
+        self.delegate?.selectImage { image in
+            self.backImage.image = image
+            self.card?.back_content?.image = image?.pngData()
+        }
     }
     
     func textViewDidChange(_ textView: UITextView) {
@@ -44,8 +59,11 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         frontSideTextField.text = card.front_content?.text
         backSideTextField.text = card.back_content?.text
         
+        frontImage.image = card.front_content?.image.flatMap(UIImage.init(data: ))
+        backImage.image = card.back_content?.image.flatMap(UIImage.init(data: ))
+        
         frontSideTextField.delegate = self
         backSideTextField.delegate = self
-        
+                
     }
 }

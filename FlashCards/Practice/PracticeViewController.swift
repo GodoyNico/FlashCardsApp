@@ -63,13 +63,11 @@ class PracticeViewController: UIViewController {
     }
     
     @IBAction func endPractice(_ sender: Any) {
-        let cancelAction = UIAlertAction(title: "Cancel",
-                                         style: .cancel) { (action) in
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
             print("Seguiu a prática")
         }
         
-        let confirmAction = UIAlertAction(title: "Confirm",
-                                          style: .default) { (action) in
+        let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (action) in
             print("Parou a prática")
         }
         
@@ -226,14 +224,21 @@ class PracticeViewController: UIViewController {
         rememberedButton.isHidden = true
         noRememberedButton.isHidden = true
         isFront = self.deck?.isFront ?? true
-        contentLabel.text = isFront ? cards[currentCard].front_content?.text : cards[currentCard].back_content?.text
+        
+        let cardContent = isFront ? cards[currentCard].front_content : cards[currentCard].back_content
+        
+        contentLabel.text = cardContent?.text
+        imageView.image = cardContent?.image.flatMap(UIImage.init(data: ))
         sideLabel.text = isFront ? "A" : "B"
+        
     }
     
     @objc func flip(_ sender: UITapGestureRecognizer? = nil) {
         if isFront {
             sideLabel.text = "B"
             contentLabel.text = cards[currentCard].back_content?.text
+            imageView.image = cards[currentCard].back_content?.image.flatMap(UIImage.init(data: ))
+
             cardView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Secondary)
             sideView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Secondary)
             isFront = false
@@ -241,6 +246,7 @@ class PracticeViewController: UIViewController {
         } else {
             sideLabel.text = "A"
             contentLabel.text = cards[currentCard].front_content?.text
+            imageView.image = cards[currentCard].front_content?.image.flatMap(UIImage.init(data: ))
             cardView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
             sideView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
             isFront = true
