@@ -20,6 +20,7 @@ class CreateDeckViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewConfig()
         
         if self.deck == nil {
             self.deck = Deck(context: self.context)
@@ -62,6 +63,9 @@ class CreateDeckViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    func viewConfig() {
+        view.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.background)
+    }
 }
 
 extension CreateDeckViewController: UITableViewDelegate, UITableViewDataSource {
