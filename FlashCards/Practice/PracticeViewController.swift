@@ -87,7 +87,7 @@ class PracticeViewController: UIViewController {
             let card = cards[currentCard]
             
             let newPractice = Progress(context: self.context)
-            newPractice.date = Date.now
+            newPractice.date = Date()
             newPractice.status = false
             newPractice.card = card
             card.addToProgress(newPractice)
@@ -121,7 +121,7 @@ class PracticeViewController: UIViewController {
             let card = cards[currentCard]
             
             let newPractice = Progress(context: self.context)
-            newPractice.date = Date.now
+            newPractice.date = Date()
             newPractice.status = true
             newPractice.card = card
             card.addToProgress(newPractice)
