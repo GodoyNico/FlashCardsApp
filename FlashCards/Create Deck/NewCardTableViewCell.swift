@@ -31,7 +31,7 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
     @IBOutlet weak var numberOfCardsLabel: UILabel!
     @IBOutlet weak var addCardButton: UIButton!
     @IBOutlet weak var cardCollectionView: UICollectionView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
