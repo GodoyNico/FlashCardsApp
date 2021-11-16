@@ -7,15 +7,26 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         delegate = self
         
         tabBar.items?[0].title = "Decks"
-        tabBar.items?[1].title = "Praticar"
+        //tabBar.items?[1].title = "Praticar"
         tabBar.items?[2].title = "Ajustes"
 
         tabBar.items?[0].image = UIImage(systemName: selectedIndex == 0 ? "list.bullet.rectangle.fill":"list.bullet.rectangle")
         tabBar.items?[2].image = UIImage(systemName: selectedIndex == 2 ? "gearshape.fill":"gearshape")
 
         tabBar.tintColor = UIColor(designSystem: DesignSystem.AssetsColor.tabBarTint)
-        tabBar.barTintColor = UIColor(designSystem: DesignSystem.AssetsColor.tabBar)
         setupMiddleButton()
+        
+        tabBar.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.tabBar)
+        setupMiddleButton()
+        
+        if #available(iOS 15.0, *) {
+            let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.tabBar)
+            tabBar.standardAppearance = appearance
+            tabBar.scrollEdgeAppearance = tabBar.standardAppearance
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,7 +62,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     func setupMiddleButton() {
         let middleButton = UIButton(frame: CGRect(x: (self.view.bounds.width / 2) - 30, y: -30, width: 60, height: 60))
         
-        middleButton.setBackgroundImage(UIImage(named: "home-icon-bg"), for: .normal)
+        middleButton.setBackgroundImage(UIImage(named: "tabBarButton"), for: .normal)
         middleButton.layer.shadowColor = UIColor.black.cgColor
         middleButton.layer.shadowOpacity = 0.1
         middleButton.layer.shadowOffset = CGSize(width: 4, height: 4)
