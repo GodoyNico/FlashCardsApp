@@ -24,11 +24,6 @@ class MyDecksViewController: UIViewController {
         
         fetchDecks()
         
-        // TODO: RETIRAR AO FIM DO PROJETO
-        if myDecks.isEmpty {
-            createFakeDecks()
-        }
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,25 +39,6 @@ class MyDecksViewController: UIViewController {
                 self.myDecksCollectionView.reloadData()
             }
         } catch { }
-    }
-    
-    func createFakeDecks() {
-        
-        for i in 1...5 {
-            let newDeck = Deck(context: self.context)
-            newDeck.title = "Deck Matemática \(i)"
-            newDeck.id = UUID()
-            newDeck.created_date = Date.now
-            
-            // Save the Data
-            do {
-                try self.context.save()
-            } catch { }
-            
-        }
-        
-        // Re-Fetch the Data
-        self.fetchDecks()
     }
     
     func viewConfig() {
