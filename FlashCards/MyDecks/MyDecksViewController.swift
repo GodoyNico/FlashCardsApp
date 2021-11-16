@@ -25,6 +25,17 @@ class MyDecksViewController: UIViewController {
         
         fetchDecks()
         
+//        self.navigationItem.leftBarButtonItem?.image = UIImage(named: "winnieCard")
+        
+//        let button = UIButton(type: .custom)
+//        button.setImage(UIImage(named: "winnieCard"), for: .normal)
+//
+//        let barButton = UIBarButtonItem(customView: button)
+//        self.navigationItem.leftBarButtonItem = barButton
+
+        let image = UIImage(named: "winnieCard")
+        navigationItem.titleView = UIImageView(image: image)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
