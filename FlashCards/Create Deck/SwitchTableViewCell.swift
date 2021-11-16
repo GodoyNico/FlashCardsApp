@@ -12,6 +12,7 @@ class SwitchTableViewCell: UITableViewCell {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var deck: Deck?
     
+    @IBOutlet weak var switchBackground: UIView!
     @IBOutlet weak var switchLabel: UILabel!
     @IBOutlet weak var switchButton: UISwitch!
     
@@ -22,6 +23,8 @@ class SwitchTableViewCell: UITableViewCell {
     }
     
     func configure(newDeck: Deck?) {
+        switchBackground.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.background)
+        
         self.deck = newDeck
         switchButton.isOn = !(self.deck?.isFront ?? true)
     }

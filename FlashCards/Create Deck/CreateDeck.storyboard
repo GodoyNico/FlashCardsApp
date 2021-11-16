@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -19,7 +20,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eYa-Ql-TlK">
                                 <rect key="frame" x="0.0" y="44" width="414" height="1262"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="background"/>
                                 <color key="separatorColor" systemColor="opaqueSeparatorColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NewDeckCell" rowHeight="100" id="OPO-12-hFk" customClass="NewDeckTableViewCell" customModule="FlashCards" customModuleProvider="target">
@@ -104,7 +105,7 @@
                                                 </stackView>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SVu-AV-dIl">
                                                     <rect key="frame" x="0.0" y="214.5" width="414" height="685.5"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="backgroundColor" name="background"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="685.5" id="YFP-42-seB"/>
                                                     </constraints>
@@ -141,7 +142,7 @@
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Lado A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U14-AG-9Me">
                                                                                                 <rect key="frame" x="35" y="0.0" width="197.5" height="22"/>
                                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                                <nil key="textColor"/>
+                                                                                                <color key="textColor" name="color2Secondary"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUA-iL-nDq">
@@ -149,7 +150,7 @@
                                                                                                 <constraints>
                                                                                                     <constraint firstAttribute="width" constant="47.5" id="8Yh-oM-oh1"/>
                                                                                                 </constraints>
-                                                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                                                <color key="tintColor" name="basicQuaternary"/>
                                                                                                 <state key="normal" title="Button"/>
                                                                                                 <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system" title=""/>
                                                                                                 <connections>
@@ -160,7 +161,8 @@
                                                                                     </stackView>
                                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="r8l-Se-FtT" userLabel="FrontSideTextfield">
                                                                                         <rect key="frame" x="0.0" y="30" width="296" height="175"/>
-                                                                                        <color key="textColor" systemColor="labelColor"/>
+                                                                                        <color key="backgroundColor" name="basicQuaternary"/>
+                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                                                                     </textView>
@@ -195,12 +197,12 @@
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Lado B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVq-Mr-PwG">
                                                                                                 <rect key="frame" x="35" y="0.0" width="196.5" height="22"/>
                                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                                <nil key="textColor"/>
+                                                                                                <color key="textColor" name="color1Primary"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qs-RF-tF5">
                                                                                                 <rect key="frame" x="247.5" y="0.0" width="48.5" height="22"/>
-                                                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                                                <color key="tintColor" name="basicQuaternary"/>
                                                                                                 <state key="normal" title="Button"/>
                                                                                                 <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system"/>
                                                                                                 <connections>
@@ -211,7 +213,8 @@
                                                                                     </stackView>
                                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="Heb-8O-SND" userLabel="backSideTextfield">
                                                                                         <rect key="frame" x="0.0" y="30" width="296" height="175"/>
-                                                                                        <color key="textColor" systemColor="labelColor"/>
+                                                                                        <color key="backgroundColor" name="basicQuaternary"/>
+                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                                                                     </textView>
@@ -247,7 +250,7 @@
                                                                     <constraint firstAttribute="trailing" secondItem="y6b-tY-b0F" secondAttribute="trailing" constant="8" id="g0b-C1-7R1"/>
                                                                 </constraints>
                                                             </collectionViewCellContentView>
-                                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                            <color key="backgroundColor" name="color2Primary"/>
                                                             <size key="customSize" width="312" height="610"/>
                                                             <connections>
                                                                 <outlet property="backImage" destination="ux2-dU-AA2" id="FMy-RZ-7bd"/>
@@ -256,7 +259,6 @@
                                                                 <outlet property="frontSideTextField" destination="r8l-Se-FtT" id="acZ-PG-vVZ"/>
                                                                 <outlet property="numberOfCharacterBack" destination="60Z-1h-drf" id="PTF-vt-ML9"/>
                                                                 <outlet property="numberOfCharactersFront" destination="NtF-Iz-GsR" id="czZ-iY-BGr"/>
-                                                                <outlet property="viewBackground" destination="8l7-5L-ctQ" id="Aft-Wl-gMh"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -309,6 +311,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="switchBackground" destination="knf-iU-53J" id="H9y-lB-75O"/>
                                             <outlet property="switchButton" destination="GnT-91-V4Z" id="SNG-2e-VF2"/>
                                             <outlet property="switchLabel" destination="esw-Ns-dQM" id="5Mp-tx-b90"/>
                                         </connections>
@@ -344,6 +347,9 @@
                                                 <constraint firstItem="jii-NR-zYP" firstAttribute="centerY" secondItem="wAO-Li-ekQ" secondAttribute="centerY" id="K0j-of-tRg"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="deleteDeckBackground" destination="wAO-Li-ekQ" id="hIF-PA-dQA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -384,9 +390,21 @@
         <image name="miniCardsImage" width="76" height="88"/>
         <image name="newCardImage" width="473" height="370"/>
         <image name="trash" catalog="system" width="121" height="128"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="basicQuaternary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color1Primary">
+            <color red="0.93725490196078431" green="0.52156862745098043" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color2Primary">
+            <color red="0.89411764705882357" green="0.89411764705882357" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color2Secondary">
+            <color red="0.36862745098039218" green="0.3411764705882353" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -17,6 +17,8 @@ protocol DeleteDeckDelegate: AnyObject {
 
 class DeleteDeckTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var deleteDeckBackground: UIView!
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var deck: Deck?
@@ -28,6 +30,8 @@ class DeleteDeckTableViewCell: UITableViewCell {
     }
 
     func configure(deck: Deck?) {
+        deleteDeckBackground.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.background)
+        
         self.deck = deck
     }
     
