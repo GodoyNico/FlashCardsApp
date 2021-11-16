@@ -120,7 +120,7 @@ class DeckViewController: UIViewController, UITableViewDelegate, UITableViewData
             let newDeck = Deck(context: self.context)
             newDeck.title = textField?.text
             newDeck.id = UUID()
-            newDeck.created_date = Date.now
+            newDeck.created_date = Date()
             
             // Save the Data
             do {

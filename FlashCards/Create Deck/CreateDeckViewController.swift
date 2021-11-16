@@ -56,11 +56,32 @@ class CreateDeckViewController: UIViewController {
     
     @IBAction func deckDone(_ sender: Any) {
         
-        do {
-            try self.context.save()
-        } catch { }
+        let alert = UIAlertController(title: nil, message: "O deck precisa ter um título!", preferredStyle: .alert)
         
-        navigationController?.popViewController(animated: true)
+        let okButton = UIAlertAction(title: "Ok", style: .default) { (action) in
+            return
+        }
+        
+        alert.addAction(okButton)
+        
+        if let currentDeck = deck, let currentDeckTitle = currentDeck.title {
+            
+            if currentDeckTitle.isEmpty {
+                
+                self.present(alert, animated: true, completion: nil)
+                
+            } else {
+                
+                do {
+                    try self.context.save()
+                } catch { }
+                
+                navigationController?.popViewController(animated: true)
+            }
+            
+        } else {
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func viewConfig() {
@@ -113,6 +134,7 @@ extension CreateDeckViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 newCardCell.configure(newDeck: self.deck)
                 newCardCell.delegate = self
+                newCardCell.delegateImage = self
                 
                 return newCardCell
                 
@@ -205,3 +227,12 @@ extension CreateDeckViewController: DeleteDeckDelegate {
     
 }
 
+extension CreateDeckViewController: AddCardImageDelegate {
+        
+    func selectImage(completion: @escaping (UIImage?) -> Void) {
+        EscolherImagem().selecionadorImagem(self) { imagem in
+            completion(imagem)
+        }
+    }
+    
+}

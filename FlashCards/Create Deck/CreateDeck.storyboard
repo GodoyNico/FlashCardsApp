@@ -109,7 +109,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="685.5" id="YFP-42-seB"/>
                                                     </constraints>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FBI-fw-9gL">
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FBI-fw-9gL">
                                                         <size key="itemSize" width="335" height="349.5"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -117,7 +117,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCollectionCell" id="gfs-N0-9Fb" customClass="CardCollectionViewCell" customModule="FlashCards" customModuleProvider="target">
-                                                            <rect key="frame" x="20" y="38" width="312" height="610"/>
+                                                            <rect key="frame" x="51" y="0.0" width="312" height="610"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8l7-5L-ctQ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="312" height="610"/>
@@ -174,7 +174,7 @@
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" image="newCardImage" translatesAutoresizingMaskIntoConstraints="NO" id="mWQ-Ev-kcL">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" image="newCardImage" translatesAutoresizingMaskIntoConstraints="NO" id="mWQ-Ev-kcL">
                                                                                 <rect key="frame" x="0.0" y="248" width="64" height="40"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="40.219999999999999" id="jbR-t1-MLd"/>
@@ -226,7 +226,7 @@
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" image="newCardImage" translatesAutoresizingMaskIntoConstraints="NO" id="ux2-dU-AA2">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" image="newCardImage" translatesAutoresizingMaskIntoConstraints="NO" id="ux2-dU-AA2">
                                                                                 <rect key="frame" x="0.0" y="554" width="64.5" height="40"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="64.599999999999994" id="01L-FA-hfN"/>
@@ -253,7 +253,9 @@
                                                             <color key="backgroundColor" name="color2Primary"/>
                                                             <size key="customSize" width="312" height="610"/>
                                                             <connections>
+                                                                <outlet property="backImage" destination="ux2-dU-AA2" id="FMy-RZ-7bd"/>
                                                                 <outlet property="backSideTextField" destination="Heb-8O-SND" id="0fP-mc-tWL"/>
+                                                                <outlet property="frontImage" destination="mWQ-Ev-kcL" id="P5V-qN-Ex9"/>
                                                                 <outlet property="frontSideTextField" destination="r8l-Se-FtT" id="acZ-PG-vVZ"/>
                                                                 <outlet property="numberOfCharacterBack" destination="60Z-1h-drf" id="PTF-vt-ML9"/>
                                                                 <outlet property="numberOfCharactersFront" destination="NtF-Iz-GsR" id="czZ-iY-BGr"/>

@@ -33,6 +33,8 @@
 		C03DFC44273D87DA00599436 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03DFC43273D87DA00599436 /* TabBarController.swift */; };
 		C03DFC47273D922D00599436 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C03DFC46273D922D00599436 /* Settings.storyboard */; };
 		C044EEEF272B13790033B02B /* SingleDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C044EEEE272B13790033B02B /* SingleDeckViewController.swift */; };
+		C05713332743EBF900A9F854 /* ThemeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05713322743EBF900A9F854 /* ThemeSettings.swift */; };
+		C05713352743ED7700A9F854 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05713342743ED7700A9F854 /* SettingsViewController.swift */; };
 		C067DF042719F131007F1EB5 /* DeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF032719F131007F1EB5 /* DeckTableViewCell.swift */; };
 		C067DF06271A15E9007F1EB5 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF05271A15E9007F1EB5 /* CardTableViewCell.swift */; };
 		C067DF08271A160F007F1EB5 /* DeckDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF07271A160F007F1EB5 /* DeckDetailsViewController.swift */; };
@@ -54,6 +56,8 @@
 		C0C25ADD27399BE900F6A46D /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C25AD527399BE900F6A46D /* Card+CoreDataProperties.swift */; };
 		C0D4C0D3273C38DC0078BF00 /* DeleteDeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D4C0D2273C38DC0078BF00 /* DeleteDeckTableViewCell.swift */; };
 		C0D8D3FE27348CB800EDFA5B /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8D3FD27348CB800EDFA5B /* CircularProgressView.swift */; };
+		C0ED7E20273EDA990011C59C /* EscolherImagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ED7E1F273EDA990011C59C /* EscolherImagem.swift */; };
+		C0ED7E22273EDF2A0011C59C /* SelectImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ED7E21273EDF2A0011C59C /* SelectImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +108,8 @@
 		C03DFC43273D87DA00599436 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		C03DFC46273D922D00599436 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		C044EEEE272B13790033B02B /* SingleDeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SingleDeckViewController.swift; path = FlashCards/Deck/SingleDeckViewController.swift; sourceTree = SOURCE_ROOT; };
+		C05713322743EBF900A9F854 /* ThemeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSettings.swift; sourceTree = "<group>"; };
+		C05713342743ED7700A9F854 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C067DF032719F131007F1EB5 /* DeckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTableViewCell.swift; sourceTree = "<group>"; };
 		C067DF05271A15E9007F1EB5 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		C067DF07271A160F007F1EB5 /* DeckDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailsViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +131,8 @@
 		C0C25AD527399BE900F6A46D /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Card+CoreDataProperties.swift"; path = "FlashCards/Model/Card+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		C0D4C0D2273C38DC0078BF00 /* DeleteDeckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDeckTableViewCell.swift; sourceTree = "<group>"; };
 		C0D8D3FD27348CB800EDFA5B /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		C0ED7E1F273EDA990011C59C /* EscolherImagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolherImagem.swift; sourceTree = "<group>"; };
+		C0ED7E21273EDF2A0011C59C /* SelectImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,8 +192,8 @@
 				5DEF47B2273AFF0D004B46BA /* DesignSystem */,
 				C0C25ADE2739BB9E00F6A46D /* Model */,
 				5DE6026C2718B86E00341772 /* AppDelegate.swift */,
-				C0D8D3FD27348CB800EDFA5B /* CircularProgressView.swift */,
 				5DE6026E2718B86E00341772 /* SceneDelegate.swift */,
+				C0D8D3FD27348CB800EDFA5B /* CircularProgressView.swift */,
 				5DE602702718B86E00341772 /* ViewController.swift */,
 				9FF47A62271F551400A4C0CC /* PracticesViewController.swift */,
 				9F4CF2622718C5A800C7BBA5 /* DeckViewController.swift */,
@@ -232,6 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				C03DFC46273D922D00599436 /* Settings.storyboard */,
+				C05713322743EBF900A9F854 /* ThemeSettings.swift */,
+				C05713342743ED7700A9F854 /* SettingsViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -250,11 +260,12 @@
 			isa = PBXGroup;
 			children = (
 				9FF7A1B2272873A700FBCAE3 /* CreateDeckViewController.swift */,
+				C0ED7E1F273EDA990011C59C /* EscolherImagem.swift */,
 				C0A2BB3C2727393F0069B525 /* CreateDeck.storyboard */,
-				C0D4C0D2273C38DC0078BF00 /* DeleteDeckTableViewCell.swift */,
 				9F81EDE3272B1A2500AFADC8 /* NewDeckTableViewCell.swift */,
 				9F81EDE5272B1A4200AFADC8 /* NewCardTableViewCell.swift */,
 				9F81EDE9272B31F200AFADC8 /* CardCollectionViewCell.swift */,
+				C0D4C0D2273C38DC0078BF00 /* DeleteDeckTableViewCell.swift */,
 				9F67A99E273991C300B63F8D /* SwitchTableViewCell.swift */,
 			);
 			path = "Create Deck";
@@ -265,6 +276,7 @@
 			children = (
 				C0BC72FC27287FBE0016DBF9 /* MyDecksViewController.swift */,
 				C0A2BB3A2727379F0069B525 /* MyDecks.storyboard */,
+				C0ED7E21273EDF2A0011C59C /* SelectImageViewController.swift */,
 				C008826027351934009A27A0 /* ProgressCollectionViewCell.swift */,
 				C008826227351959009A27A0 /* SearchCollectionViewCell.swift */,
 				C0BC7300272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift */,
@@ -443,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C067DF06271A15E9007F1EB5 /* CardTableViewCell.swift in Sources */,
+				C0ED7E20273EDA990011C59C /* EscolherImagem.swift in Sources */,
 				9F81EDE4272B1A2500AFADC8 /* NewDeckTableViewCell.swift in Sources */,
 				9F81EDEA272B31F200AFADC8 /* CardCollectionViewCell.swift in Sources */,
 				C0BC7301272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift in Sources */,
@@ -464,7 +477,9 @@
 				C0C25ADD27399BE900F6A46D /* Card+CoreDataProperties.swift in Sources */,
 				C0D4C0D3273C38DC0078BF00 /* DeleteDeckTableViewCell.swift in Sources */,
 				C008826327351959009A27A0 /* SearchCollectionViewCell.swift in Sources */,
+				C05713352743ED7700A9F854 /* SettingsViewController.swift in Sources */,
 				5DE6026F2718B86E00341772 /* SceneDelegate.swift in Sources */,
+				C05713332743EBF900A9F854 /* ThemeSettings.swift in Sources */,
 				C044EEEF272B13790033B02B /* SingleDeckViewController.swift in Sources */,
 				C0C25AD627399BE900F6A46D /* Progress+CoreDataClass.swift in Sources */,
 				C067DF08271A160F007F1EB5 /* DeckDetailsViewController.swift in Sources */,
@@ -474,6 +489,7 @@
 				9F4CF2632718C5A800C7BBA5 /* DeckViewController.swift in Sources */,
 				C0D8D3FE27348CB800EDFA5B /* CircularProgressView.swift in Sources */,
 				C0C25AD727399BE900F6A46D /* Progress+CoreDataProperties.swift in Sources */,
+				C0ED7E22273EDF2A0011C59C /* SelectImageViewController.swift in Sources */,
 				C0BC72FD27287FBE0016DBF9 /* MyDecksViewController.swift in Sources */,
 				C008826127351934009A27A0 /* ProgressCollectionViewCell.swift in Sources */,
 				5DAF0E4427344CF800E49A93 /* PracticeViewController.swift in Sources */,
@@ -583,7 +599,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -638,7 +654,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -655,7 +671,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 876KXU24XS;
+				DEVELOPMENT_TEAM = 8G4UL7Z7AB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlashCards/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -664,6 +680,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -684,7 +701,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 876KXU24XS;
+				DEVELOPMENT_TEAM = 8G4UL7Z7AB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlashCards/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -693,6 +710,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

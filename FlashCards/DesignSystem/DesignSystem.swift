@@ -25,6 +25,7 @@ public enum DesignSystem {
         case color2Tertiary
         case graySecondary
         case tabBar
+        case tabBarTint
     }
 }
 
