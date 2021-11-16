@@ -11,7 +11,7 @@
         <!--Settings-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="SettingsViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,6 +23,9 @@
                                     <segment title="Light Mode"/>
                                     <segment title="System"/>
                                 </segments>
+                                <connections>
+                                    <action selector="themeSegmentedControl:" destination="Y6W-OH-hqX" eventType="valueChanged" id="iUe-hn-Mnj"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -34,6 +37,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="JnM-eg-8ly"/>
+                    <connections>
+                        <outlet property="themeSC" destination="ZD7-Ky-VN4" id="7SU-FX-q5j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
