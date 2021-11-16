@@ -21,6 +21,7 @@
 		5DE602912718B87100341772 /* FlashCardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE602902718B87100341772 /* FlashCardsUITests.swift */; };
 		5DE602932718B87100341772 /* FlashCardsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE602922718B87100341772 /* FlashCardsUITestsLaunchTests.swift */; };
 		5DEF47B1273AFEC6004B46BA /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEF47B0273AFEC6004B46BA /* DesignSystem.swift */; };
+		9F34EC7327443D2900C66AF0 /* TextView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F34EC7227443D2900C66AF0 /* TextView+Additions.swift */; };
 		9F4CF2632718C5A800C7BBA5 /* DeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CF2622718C5A800C7BBA5 /* DeckViewController.swift */; };
 		9F67A99F273991C300B63F8D /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F67A99E273991C300B63F8D /* SwitchTableViewCell.swift */; };
 		9F81EDE4272B1A2500AFADC8 /* NewDeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81EDE3272B1A2500AFADC8 /* NewDeckTableViewCell.swift */; };
@@ -96,6 +97,7 @@
 		5DE602902718B87100341772 /* FlashCardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardsUITests.swift; sourceTree = "<group>"; };
 		5DE602922718B87100341772 /* FlashCardsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5DEF47B0273AFEC6004B46BA /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		9F34EC7227443D2900C66AF0 /* TextView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextView+Additions.swift"; sourceTree = "<group>"; };
 		9F4CF2622718C5A800C7BBA5 /* DeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewController.swift; sourceTree = "<group>"; };
 		9F67A99E273991C300B63F8D /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		9F81EDE3272B1A2500AFADC8 /* NewDeckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDeckTableViewCell.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				9F81EDE9272B31F200AFADC8 /* CardCollectionViewCell.swift */,
 				C0D4C0D2273C38DC0078BF00 /* DeleteDeckTableViewCell.swift */,
 				9F67A99E273991C300B63F8D /* SwitchTableViewCell.swift */,
+				9F34EC7227443D2900C66AF0 /* TextView+Additions.swift */,
 			);
 			path = "Create Deck";
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				C067DF042719F131007F1EB5 /* DeckTableViewCell.swift in Sources */,
 				C03DFC44273D87DA00599436 /* TabBarController.swift in Sources */,
 				C0C25ADD27399BE900F6A46D /* Card+CoreDataProperties.swift in Sources */,
+				9F34EC7327443D2900C66AF0 /* TextView+Additions.swift in Sources */,
 				C0D4C0D3273C38DC0078BF00 /* DeleteDeckTableViewCell.swift in Sources */,
 				C008826327351959009A27A0 /* SearchCollectionViewCell.swift in Sources */,
 				C05713352743ED7700A9F854 /* SettingsViewController.swift in Sources */,
@@ -671,7 +675,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8G4UL7Z7AB;
+				DEVELOPMENT_TEAM = 876KXU24XS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlashCards/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -701,7 +705,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8G4UL7Z7AB;
+				DEVELOPMENT_TEAM = 876KXU24XS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlashCards/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

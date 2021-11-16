@@ -14,17 +14,16 @@ protocol DeleteDeckDelegate: AnyObject {
     
 }
 
-
 class DeleteDeckTableViewCell: UITableViewCell {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
+    @IBOutlet weak var view: UIView!
     var deck: Deck?
-    
     weak var delegate: DeleteDeckDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        view.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.background)
     }
 
     func configure(deck: Deck?) {

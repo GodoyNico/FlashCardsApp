@@ -20,11 +20,11 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
     @IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var frontSideTextField: UITextView!
     @IBOutlet weak var backSideTextField: UITextView!
-    @IBOutlet weak var numberOfCharacterBack: UILabel!
-    @IBOutlet weak var numberOfCharactersFront: UILabel!
+    @IBOutlet weak var numberOfCharBackLabel: UILabel!
+    @IBOutlet weak var numberOfCharFrontLabel: UILabel!
     @IBOutlet weak var frontImage: UIImageView!
     @IBOutlet weak var backImage: UIImageView!
-    
+    var maxCharacter = 100
     weak var delegate: AddCardImageDelegate?
     var card: Card?
     
@@ -43,8 +43,20 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
     }
     
     func textViewDidChange(_ textView: UITextView) {
+        
         self.card?.front_content?.text = frontSideTextField.text
         self.card?.back_content?.text = backSideTextField.text
+        
+        numberOfCharFrontLabel.text = String("\(frontSideTextField.text.count)")
+        numberOfCharBackLabel.text = String("\(backSideTextField.text.count)")
+        
+        if frontSideTextField.text.count >= maxCharacter {
+            self.frontSideTextField.endEditing(true)
+        }
+        
+        if backSideTextField.text.count >= maxCharacter {
+            self.backSideTextField.endEditing(true)
+        }
     }
     
     override class func awakeFromNib() {
@@ -55,7 +67,7 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         self.card = card
         
         viewBackground.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
-        
+                
         frontSideTextField.text = card.front_content?.text
         backSideTextField.text = card.back_content?.text
         
@@ -64,6 +76,9 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         
         frontSideTextField.delegate = self
         backSideTextField.delegate = self
+        
+        numberOfCharFrontLabel.text = String("\(frontSideTextField.text.count)")
+        numberOfCharBackLabel.text = String("\(backSideTextField.text.count)")
                 
     }
 }

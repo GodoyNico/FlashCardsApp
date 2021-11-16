@@ -13,12 +13,14 @@ class SwitchTableViewCell: UITableViewCell {
     var deck: Deck?
     
     @IBOutlet weak var switchLabel: UILabel!
+    @IBOutlet weak var sideB: UILabel!
+    @IBOutlet weak var sideA: UILabel!
     @IBOutlet weak var switchButton: UISwitch!
+    @IBOutlet weak var view: UIView!
     
     @IBAction func switchAction(_ sender: UISwitch) {
-
+        
         self.deck?.isFront = !(switchButton.isOn)
-
     }
     
     func configure(newDeck: Deck?) {
@@ -29,12 +31,18 @@ class SwitchTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        switchButton.onTintColor = .blue
-    }
+        switchButton.onTintColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Primary)
+        switchButton.tintColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Secondary)
+        
+        view.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.background)
+        
+        sideA.textColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Secondary)
+        sideB.textColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Primary)
 
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
     }
 }

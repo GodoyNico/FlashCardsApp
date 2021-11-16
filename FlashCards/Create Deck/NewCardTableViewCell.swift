@@ -34,6 +34,9 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        cardCollectionView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.background)
+        viewBackground.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.background)
+        
         cardCollectionView.dataSource = self
         cardCollectionView.delegate = self
         
@@ -81,8 +84,6 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
     }
     
     func configure(newDeck: Deck?) {
-        viewBackground.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.background)
-        
         self.deck = newDeck
         fetchData()
         numberOfCardsLabel.text = String("\(cards.count) cards")
@@ -130,12 +131,12 @@ extension NewCardTableViewCell: UICollectionViewDataSource {
     }
 }
 
-//extension NewCardTableViewCell: UICollectionViewDelegateFlowLayout {
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: collectionView.bounds.width * 0.8, height: 610)
-//    }
-//}
+extension NewCardTableViewCell: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.width * 0.8, height: 610)
+    }
+}
 
 extension NewCardTableViewCell: AddCardImageDelegate {
     
