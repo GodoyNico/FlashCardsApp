@@ -19,28 +19,29 @@ class MyDecksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewConfig()
+        configureNavBar()
         
         myDecksCollectionView.dataSource = self
         myDecksCollectionView.delegate = self
         
         fetchDecks()
-        
-//        self.navigationItem.leftBarButtonItem?.image = UIImage(named: "winnieCard")
-        
-//        let button = UIButton(type: .custom)
-//        button.setImage(UIImage(named: "winnieCard"), for: .normal)
-//
-//        let barButton = UIBarButtonItem(customView: button)
-//        self.navigationItem.leftBarButtonItem = barButton
 
-        let image = UIImage(named: "winnieCard")
-        navigationItem.titleView = UIImageView(image: image)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchDecks()
+    }
+    
+    func configureNavBar() {
+        let image = UIImage(named: "winnieCard")
+        let imageView = UIImageView(image: image)
+        imageView.frame.size.width = 250
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: (self.view.frame.width) - 40 * 2, height: 65))
+        view.addSubview(imageView)
+        imageView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        imageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = view
     }
     
     func fetchDecks() {

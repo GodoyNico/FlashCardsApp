@@ -39,6 +39,7 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
     }
     
     @IBAction func addImageBack(_ sender: Any) {
+        print("add image back")
         self.delegate?.selectImage { image in
             self.backImage.image = image
             self.card?.back_content?.image = image?.pngData()

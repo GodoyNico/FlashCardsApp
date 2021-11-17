@@ -33,8 +33,9 @@ class FeedbackViewController: UIViewController {
             feedbackText.text = NSLocalizedString("good_feedback", comment: "")
         }
         
-        counterLabel.text = "\(practiceFeedback!.remembered)/\(practiceFeedback!.deck!.cards!.count)"
+        counterLabel.text = "\(practiceFeedback!.remembered)/\(practiceFeedback!.remembered+practiceFeedback!.noRemembered)"
         deckNameLabel.text = practiceFeedback?.deck?.title
+        self.navigationItem.hidesBackButton = true
     }
     
     @IBAction func practiceAgain( _ seg: UIStoryboardSegue) {

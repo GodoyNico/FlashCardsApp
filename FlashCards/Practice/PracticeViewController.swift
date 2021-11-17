@@ -70,9 +70,8 @@ class PracticeViewController: UIViewController {
             return
         }
         
-        let confirmAction = UIAlertAction(title: NSLocalizedString("confirm", comment: ""), style: .default) { (action) in
-            // TODO: PARAR
-            
+        let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (action) in
+            self.finished()
         }
         
         let alert = UIAlertController(title: NSLocalizedString("stop_practice", comment: ""),
