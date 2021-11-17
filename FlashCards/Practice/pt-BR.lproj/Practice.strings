@@ -1,0 +1,60 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "3eb-yl-bzI"; */
+"3eb-yl-bzI.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "A"; ObjectID = "6CH-bT-vja"; */
+"6CH-bT-vja.text" = "A";
+
+/* Class = "UIViewController"; title = "PraticeViewController"; ObjectID = "6Jy-aR-Dz0"; */
+"6Jy-aR-Dz0.title" = "PraticeViewController";
+
+/* Class = "UIButton"; configuration.title = "Treinar novamente"; ObjectID = "Ba4-Uy-SFw"; */
+"Ba4-Uy-SFw.configuration.title" = "Treinar novamente";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Ba4-Uy-SFw"; */
+"Ba4-Uy-SFw.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "02/20"; ObjectID = "COh-Wq-jXd"; */
+"COh-Wq-jXd.text" = "02/20";
+
+/* Class = "UIViewController"; title = "FeedbackViewController"; ObjectID = "DWe-UG-3aA"; */
+"DWe-UG-3aA.title" = "FeedbackViewController";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "M93-Tm-yqk"; */
+"M93-Tm-yqk.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Ir para meus decks"; ObjectID = "OnS-Dk-dNh"; */
+"OnS-Dk-dNh.configuration.title" = "Ir para meus decks";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "OnS-Dk-dNh"; */
+"OnS-Dk-dNh.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "R4J-qv-pWG"; */
+"R4J-qv-pWG.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Rbn-CS-56y"; */
+"Rbn-CS-56y.text" = "Label";
+
+/* Class = "UIViewController"; title = "Pratica"; ObjectID = "Y6W-OH-hqX"; */
+"Y6W-OH-hqX.title" = "Pratica";
+
+/* Class = "UIButton"; configuration.title = "Memorizei!"; ObjectID = "a80-DM-krm"; */
+"a80-DM-krm.configuration.title" = "Memorizei!";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "a80-DM-krm"; */
+"a80-DM-krm.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "bQe-fn-TAh"; */
+"bQe-fn-TAh.text" = "Label";
+
+/* Class = "UILabel"; text = "Praticando"; ObjectID = "bRa-pc-mjv"; */
+"bRa-pc-mjv.text" = "Praticando";
+
+/* Class = "UIButton"; configuration.title = "Treinar mais!"; ObjectID = "ixs-Mg-TTD"; */
+"ixs-Mg-TTD.configuration.title" = "Treinar mais!";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ixs-Mg-TTD"; */
+"ixs-Mg-TTD.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zqL-pm-rde"; */
+"zqL-pm-rde.text" = "Label";

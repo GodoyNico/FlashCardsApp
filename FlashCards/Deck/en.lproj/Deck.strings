@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; configuration.title = "Adicionar Cards"; ObjectID = "073-16-wFm"; */
+"073-16-wFm.configuration.title" = "Adicionar Cards";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "073-16-wFm"; */
+"073-16-wFm.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Praticar"; ObjectID = "Lrp-Mp-6Pt"; */
+"Lrp-Mp-6Pt.configuration.title" = "Praticar";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Lrp-Mp-6Pt"; */
+"Lrp-Mp-6Pt.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "DeckTitle"; ObjectID = "qxB-JB-NZo"; */
+"qxB-JB-NZo.text" = "DeckTitle";
