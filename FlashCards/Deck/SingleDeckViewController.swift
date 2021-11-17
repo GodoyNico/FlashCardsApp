@@ -86,7 +86,7 @@ class SingleDeckViewController: UIViewController {
             if currentCards.count > 0 {
                 performSegue(withIdentifier: self.goToPracticeSegueID, sender: deck)
             } else {
-                let alert = UIAlertController(title: nil, message: "Este deck está vazio 🥲 ", preferredStyle: .alert)
+                let alert = UIAlertController(title: nil, message: NSLocalizedString("deck_empty", comment: ""), preferredStyle: .alert)
                 
                 let okButton = UIAlertAction(title: "Ok", style: .default) { (action) in
                    return

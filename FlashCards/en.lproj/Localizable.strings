@@ -28,6 +28,7 @@
 "side_a" = "Side A";
 "side_b" = "Side B";
 "max_characters" = "Maximum of 100 characters";
+"deck_empty" = "This deck is empty 🥲";
 "practice_side" = "Start practice by:";
 "delete_deck" = "Delete deck";
 "delete_image" = "Are you sure you want to delete this image?";
