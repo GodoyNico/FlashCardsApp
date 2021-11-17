@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  FlashCards
+
+  Created by Nicolas Godoy on 16/11/21.
+  
+*/
+
+// MARK: - My Decks
+"your_progress" = "Your progress";
+"keep_practicing" = "Keep practicing";
+"search_bar" = "Search deck";
+"my_decks" = "My decks";
+"delete" = "Delete";
+
+// MARK: - Deck
+"cancel" = "Cancel";
+"finish" = "Finish";
+"create_deck" = "Create deck";
+"edit_deck" = "Edit deck";
+"deck_title" = "Deck title";
+"add_card" = "Add card";
+"side_a" = "Side A";
+"side_b" = "Side B";
+"max_characters" = "Maximum of 100 characters";
+
+
+// MARK: - Practice
+
+// MARK: - Feedback
+
+// MARK: - Settings
