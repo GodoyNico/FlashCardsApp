@@ -22,6 +22,7 @@
 "create_deck" = "Criar deck";
 "edit_deck" = "Editar deck";
 "deck_title" = "Título do deck";
+"deck_title_message" = "O deck precisa ter um título!";
 "add_card" = "Adicionar card";
 "side_a" = "Lado A";
 "side_b" = "Lado B";

@@ -14,7 +14,6 @@
 "delete" = "Delete";
 "empty_state_deck" = "Click + to create a deck and organize your practice areas!";
 
-
 // MARK: - Deck
 "cancel" = "Cancel";
 "confirm" = "Confirm";
@@ -23,6 +22,7 @@
 "create_deck" = "Create deck";
 "edit_deck" = "Edit deck";
 "deck_title" = "Deck title";
+"deck_title_message" = "The deck must have a title!";
 "add_card" = "Add card";
 "side_a" = "Side A";
 "side_b" = "Side B";

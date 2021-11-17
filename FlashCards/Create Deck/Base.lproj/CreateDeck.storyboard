@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eYa-Ql-TlK">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1262"/>
+                                <rect key="frame" x="0.0" y="44" width="415" height="1661"/>
                                 <color key="backgroundColor" name="background"/>
                                 <color key="separatorColor" systemColor="opaqueSeparatorColor"/>
                                 <prototypes>
@@ -105,7 +105,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SVu-AV-dIl">
-                                                    <rect key="frame" x="0.0" y="214.5" width="414" height="685.5"/>
+                                                    <rect key="frame" x="0.0" y="214.5" width="415" height="685.5"/>
                                                     <color key="backgroundColor" name="background"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="685.5" id="YFP-42-seB"/>
@@ -260,9 +260,7 @@
                                                                 <outlet property="frontSideTextField" destination="r8l-Se-FtT" id="acZ-PG-vVZ"/>
                                                                 <outlet property="numberOfCharacterBack" destination="60Z-1h-drf" id="PTF-vt-ML9"/>
                                                                 <outlet property="numberOfCharactersFront" destination="NtF-Iz-GsR" id="czZ-iY-BGr"/>
-                                                                <outlet property="sideACounter" destination="NtF-Iz-GsR" id="Oew-hE-lXz"/>
                                                                 <outlet property="sideALabel" destination="U14-AG-9Me" id="shw-df-LVB"/>
-                                                                <outlet property="sideBCounter" destination="60Z-1h-drf" id="m31-rP-jZL"/>
                                                                 <outlet property="sideBLabel" destination="IVq-Mr-PwG" id="Xcf-hZ-JwQ"/>
                                                             </connections>
                                                         </collectionViewCell>
@@ -437,17 +435,11 @@
         <image name="miniCardsImage" width="76" height="88"/>
         <image name="newCardImage" width="473" height="370"/>
         <image name="trash" catalog="system" width="121" height="128"/>
-        <namedColor name="color4Secondary">
-            <color red="0.94117647058823528" green="0.5490196078431373" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <namedColor name="background">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="basicQuaternary">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="color1Primary">
             <color red="0.93725490196078431" green="0.52156862745098043" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -457,6 +449,9 @@
         </namedColor>
         <namedColor name="color2Secondary">
             <color red="0.36862745098039218" green="0.3411764705882353" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color4Secondary">
+            <color red="0.94117647058823528" green="0.5490196078431373" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

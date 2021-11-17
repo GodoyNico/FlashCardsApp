@@ -63,8 +63,8 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         
         sideALabel.text = NSLocalizedString("side_a", comment: "")
         sideBLabel.text = NSLocalizedString("side_b", comment: "")
-        sideACounter.text = NSLocalizedString("max_characters", comment: "")
-        sideBCounter.text = NSLocalizedString("max_characters", comment: "")
+        numberOfCharactersFront.text = NSLocalizedString("max_characters", comment: "")
+        numberOfCharacterBack.text = NSLocalizedString("max_characters", comment: "")
         
         frontImage.image = card.front_content?.image.flatMap(UIImage.init(data: ))
         backImage.image = card.back_content?.image.flatMap(UIImage.init(data: ))
