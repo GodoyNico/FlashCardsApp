@@ -1,0 +1,15 @@
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "JnM-eg-8ly"; */
+"JnM-eg-8ly.title" = "Settings";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "S3n-d4-jfD"; */
+"S3n-d4-jfD.title" = "Settings";
+
+/* Class = "UISegmentedControl"; ZD7-Ky-VN4.segmentTitles[0] = "Dark Mode"; ObjectID = "ZD7-Ky-VN4"; */
+"ZD7-Ky-VN4.segmentTitles[0]" = "Dark Mode";
+
+/* Class = "UISegmentedControl"; ZD7-Ky-VN4.segmentTitles[1] = "Light Mode"; ObjectID = "ZD7-Ky-VN4"; */
+"ZD7-Ky-VN4.segmentTitles[1]" = "Light Mode";
+
+/* Class = "UISegmentedControl"; ZD7-Ky-VN4.segmentTitles[2] = "System"; ObjectID = "ZD7-Ky-VN4"; */
+"ZD7-Ky-VN4.segmentTitles[2]" = "System";

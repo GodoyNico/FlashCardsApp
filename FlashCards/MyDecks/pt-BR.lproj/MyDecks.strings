@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "12/20"; ObjectID = "00z-8c-ioH"; */
+"00z-8c-ioH.text" = "12/20";
+
+/* Class = "UILabel"; text = "Matemática Básica"; ObjectID = "3sB-Fz-JdR"; */
+"3sB-Fz-JdR.text" = "Matemática Básica";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "9Gp-9M-7Yb"; */
+"9Gp-9M-7Yb.text" = "Label";
+
+/* Class = "UILabel"; text = "72%"; ObjectID = "O7e-1f-dBG"; */
+"O7e-1f-dBG.text" = "72%";
+
+/* Class = "UILabel"; text = "Continue Praticando!"; ObjectID = "RN8-hJ-rHr"; */
+"RN8-hJ-rHr.text" = "Continue Praticando!";
+
+/* Class = "UISearchBar"; placeholder = "Pesquisar um deck"; ObjectID = "S4N-W3-AMh"; */
+"S4N-W3-AMh.placeholder" = "Pesquisar um deck";
+
+/* Class = "UITabBarItem"; title = "Decks"; ObjectID = "WNN-jc-wAp"; */
+"WNN-jc-wAp.title" = "Decks";
+
+/* Class = "UILabel"; text = "Meus Decks"; ObjectID = "jwr-jC-Uol"; */
+"jwr-jC-Uol.text" = "Meus Decks";
+
+/* Class = "UINavigationController"; title = "MyDecks"; ObjectID = "ryO-dv-4SI"; */
+"ryO-dv-4SI.title" = "MyDecks";
+
+/* Class = "UIButton"; configuration.title = "Escolher Imagem"; ObjectID = "udM-sW-P7Q"; */
+"udM-sW-P7Q.configuration.title" = "Escolher Imagem";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "udM-sW-P7Q"; */
+"udM-sW-P7Q.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Seu Progresso"; ObjectID = "wus-vY-Gag"; */
+"wus-vY-Gag.text" = "Seu Progresso";

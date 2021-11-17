@@ -32,6 +32,8 @@ class NewDeckTableViewCell: UITableViewCell {
         newDeckTextfield.text = self.deck?.title
         
         divisorView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
+        
+        newDeckTextfield.placeholder = NSLocalizedString("deck_title", comment: "")
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

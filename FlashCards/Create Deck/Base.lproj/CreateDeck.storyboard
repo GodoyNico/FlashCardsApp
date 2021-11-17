@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iah-8J-Ci9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -258,9 +257,11 @@
                                                                 <outlet property="backSideTextField" destination="Heb-8O-SND" id="0fP-mc-tWL"/>
                                                                 <outlet property="frontImage" destination="mWQ-Ev-kcL" id="P5V-qN-Ex9"/>
                                                                 <outlet property="frontSideTextField" destination="r8l-Se-FtT" id="acZ-PG-vVZ"/>
-                                                                <outlet property="numberOfCharBackLabel" destination="60Z-1h-drf" id="vLA-IQ-DX9"/>
-                                                                <outlet property="numberOfCharFrontLabel" destination="NtF-Iz-GsR" id="gz4-xd-ZRB"/>
-                                                                <outlet property="viewBackground" destination="aQl-2V-UPx" id="zeY-Fb-z0i"/>
+                                                                <outlet property="numberOfCharBackLabel" destination="60Z-1h-drf" id="fQx-Qc-vTv"/>
+                                                                <outlet property="numberOfCharFrontLabel" destination="NtF-Iz-GsR" id="vS0-j3-PSm"/>
+                                                                <outlet property="sideALabel" destination="U14-AG-9Me" id="shw-df-LVB"/>
+                                                                <outlet property="sideBLabel" destination="IVq-Mr-PwG" id="Xcf-hZ-JwQ"/>
+                                                                <outlet property="viewBackground" destination="8l7-5L-ctQ" id="FF1-BZ-Ong"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="emptyStateCell" id="FaY-NV-9kT" customClass="EmptyStateCreateDeckCollectionViewCell" customModule="FlashCards" customModuleProvider="target">
@@ -270,32 +271,28 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="349.5"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="2ns-ta-PbN">
-                                                                        <rect key="frame" x="68" y="75" width="199" height="200"/>
-                                                                        <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coruja" translatesAutoresizingMaskIntoConstraints="NO" id="TRw-JF-8KE">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="199" height="120.5"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="width" secondItem="TRw-JF-8KE" secondAttribute="height" multiplier="56:34" id="qLo-3s-NHs"/>
-                                                                                </constraints>
-                                                                            </imageView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bg-49-3Gr">
-                                                                                <rect key="frame" x="0.0" y="179.5" width="199" height="20.5"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                <color key="textColor" name="color4Secondary"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
-                                                                        </subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coruja" translatesAutoresizingMaskIntoConstraints="NO" id="TRw-JF-8KE">
+                                                                        <rect key="frame" x="100" y="90" width="135" height="69.5"/>
                                                                         <constraints>
-                                                                            <constraint firstItem="TRw-JF-8KE" firstAttribute="centerX" secondItem="2ns-ta-PbN" secondAttribute="centerX" id="CW8-QH-Wh1"/>
-                                                                            <constraint firstAttribute="height" constant="200" id="L65-js-zb4"/>
+                                                                            <constraint firstAttribute="width" constant="135" id="hpk-gK-k04"/>
+                                                                            <constraint firstAttribute="width" secondItem="TRw-JF-8KE" secondAttribute="height" multiplier="56:34" constant="20.352941176470608" id="qLo-3s-NHs"/>
                                                                         </constraints>
-                                                                    </stackView>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bg-49-3Gr">
+                                                                        <rect key="frame" x="47.5" y="171.5" width="240" height="20.5"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="240" id="t3N-Tn-nIW"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <color key="textColor" name="color4Secondary"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="trailing" secondItem="2ns-ta-PbN" secondAttribute="trailing" constant="68" id="2bI-sU-kmr"/>
-                                                                    <constraint firstItem="2ns-ta-PbN" firstAttribute="centerY" secondItem="kjW-vG-tKR" secondAttribute="centerY" id="g9n-SX-hf6"/>
-                                                                    <constraint firstItem="2ns-ta-PbN" firstAttribute="leading" secondItem="kjW-vG-tKR" secondAttribute="leading" constant="68" id="rsD-sX-Jo4"/>
+                                                                    <constraint firstItem="TRw-JF-8KE" firstAttribute="top" secondItem="kjW-vG-tKR" secondAttribute="top" constant="90" id="MIm-fk-Pa7"/>
+                                                                    <constraint firstItem="7bg-49-3Gr" firstAttribute="top" secondItem="TRw-JF-8KE" secondAttribute="bottom" constant="12" id="PmO-EW-uKv"/>
+                                                                    <constraint firstItem="7bg-49-3Gr" firstAttribute="centerX" secondItem="kjW-vG-tKR" secondAttribute="centerX" id="Ynz-PQ-lec"/>
+                                                                    <constraint firstItem="TRw-JF-8KE" firstAttribute="centerX" secondItem="kjW-vG-tKR" secondAttribute="centerX" id="pwr-uC-bFh"/>
                                                                 </constraints>
                                                             </collectionViewCellContentView>
                                                             <connections>
@@ -406,6 +403,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="deleteDeckBackground" destination="wAO-Li-ekQ" id="hIF-PA-dQA"/>
+                                            <outlet property="deleteLabel" destination="d1F-ie-Lbz" id="zrd-Iw-Miv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

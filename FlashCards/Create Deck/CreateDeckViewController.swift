@@ -15,7 +15,7 @@ class CreateDeckViewController: UIViewController {
     let newCardCell: String = "NewCardCell"
     let switchCell: String = "switchCell"
     let deleteCell: String = "removeDeckCell"
-
+    
     @IBOutlet weak var createDeckTableView: UITableView!
     
     override func viewDidLoad() {
@@ -29,14 +29,14 @@ class CreateDeckViewController: UIViewController {
         
         switch screen {
         case .create:
-            navigationItem.title = "Create Deck"
+            navigationItem.title = NSLocalizedString("create_deck", comment: "")
             self.deck?.isFront = true
         case .edit:
-            navigationItem.title = "Edit Deck"
+            navigationItem.title = NSLocalizedString("edit_deck", comment: "")
         case .addCard:
-            navigationItem.title = "Add Card"
+            navigationItem.title = NSLocalizedString("add_card", comment: "")
         default:
-            navigationItem.title = "Create Deck"
+            navigationItem.title = NSLocalizedString("create_deck", comment: "")
         }
         
         createDeckTableView.delegate = self
@@ -50,13 +50,16 @@ class CreateDeckViewController: UIViewController {
     }
     
     @IBAction func cancel(_ sender: Any) {
-        context.reset()
+//        reloadDelegate?.didTapReturn(deck: self.deck)
+
+        context.rollback()
+
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func deckDone(_ sender: Any) {
         
-        let alert = UIAlertController(title: nil, message: "O deck precisa ter um título!", preferredStyle: .alert)
+        let alert = UIAlertController(title: nil, message: NSLocalizedString("deck_title_message", comment: ""), preferredStyle: .alert)
         
         let okButton = UIAlertAction(title: "Ok", style: .default) { (action) in
             return
@@ -75,7 +78,6 @@ class CreateDeckViewController: UIViewController {
                 do {
                     try self.context.save()
                 } catch { }
-                
                 navigationController?.popViewController(animated: true)
             }
             
@@ -115,6 +117,8 @@ extension CreateDeckViewController: UITableViewDelegate, UITableViewDataSource {
             let newCardCell = createDeckTableView.dequeueReusableCell(withIdentifier: newCardCell ) as! NewCardTableViewCell
             
             newCardCell.configure(newDeck: self.deck)
+            newCardCell.delegate = self
+            newCardCell.delegateImage = self
             
             return newCardCell
             

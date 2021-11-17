@@ -20,7 +20,7 @@ class SingleDeckViewController: UIViewController {
     let goToPracticeSegueID: String = "goToPractice"
     let goToEditSegueID: String = "goToEdit"
     let goToAddCardsSegueID: String = "goToAddCards"
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         layoutConfig()
@@ -66,7 +66,7 @@ class SingleDeckViewController: UIViewController {
         deckProgressLabel.textColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Secondary)
     }
     
-    func configure(deck: Deck) {
+    func configure(deck: Deck?) {
         self.deck = deck
     }
     
@@ -86,7 +86,7 @@ class SingleDeckViewController: UIViewController {
             if currentCards.count > 0 {
                 performSegue(withIdentifier: self.goToPracticeSegueID, sender: deck)
             } else {
-                let alert = UIAlertController(title: nil, message: "Este deck está vazio 🥲 ", preferredStyle: .alert)
+                let alert = UIAlertController(title: nil, message: NSLocalizedString("deck_empty", comment: ""), preferredStyle: .alert)
                 
                 let okButton = UIAlertAction(title: "Ok", style: .default) { (action) in
                    return

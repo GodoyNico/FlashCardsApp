@@ -19,28 +19,29 @@ class MyDecksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewConfig()
+        configureNavBar()
         
         myDecksCollectionView.dataSource = self
         myDecksCollectionView.delegate = self
         
         fetchDecks()
-        
-//        self.navigationItem.leftBarButtonItem?.image = UIImage(named: "winnieCard")
-        
-//        let button = UIButton(type: .custom)
-//        button.setImage(UIImage(named: "winnieCard"), for: .normal)
-//
-//        let barButton = UIBarButtonItem(customView: button)
-//        self.navigationItem.leftBarButtonItem = barButton
 
-        let image = UIImage(named: "winnieCard")
-        navigationItem.titleView = UIImageView(image: image)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchDecks()
+    }
+    
+    func configureNavBar() {
+        let image = UIImage(named: "winnieCard")
+        let imageView = UIImageView(image: image)
+        imageView.frame.size.width = 250
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: (self.view.frame.width) - 40 * 2, height: 65))
+        view.addSubview(imageView)
+        imageView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        imageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = view
     }
     
     func fetchDecks() {
@@ -146,11 +147,11 @@ extension MyDecksViewController: UICollectionViewDataSource {
                 image: nil,
                 identifier: nil,
                 options: UIMenu.Options.destructive,
-                children: [ UIAction(title:"Apagar", image: UIImage(systemName: "trash"), attributes: .destructive,handler: { action in
+                children: [ UIAction(title: NSLocalizedString("delete", comment: ""), image: UIImage(systemName: "trash"), attributes: .destructive,handler: { action in
                     
-                    let alert = UIAlertController(title: nil, message: "Tem certeza que você quer deletar esse deck? ", preferredStyle: .alert)
+                    let alert = UIAlertController(title: nil, message: NSLocalizedString("delete_deck_message", comment: ""), preferredStyle: .alert)
                     
-                    let deleteButton = UIAlertAction(title: "Sim", style: .default) { (action) in
+                    let deleteButton = UIAlertAction(title: NSLocalizedString("confirm", comment: ""), style: .default) { (action) in
                         
                         // Which Deck to Remove
                         let deckToRemove = self.myDecks[indexPath.row]
@@ -168,7 +169,7 @@ extension MyDecksViewController: UICollectionViewDataSource {
                         
                     }
                     
-                    let cancelButton = UIAlertAction(title: "Não", style: .destructive) { (action) in
+                    let cancelButton = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .destructive) { (action) in
                         return
                     }
                     
