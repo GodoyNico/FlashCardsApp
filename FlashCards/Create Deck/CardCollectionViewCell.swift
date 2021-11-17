@@ -26,8 +26,6 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
     @IBOutlet weak var backImage: UIImageView!
     @IBOutlet weak var sideALabel: UILabel!
     @IBOutlet weak var sideBLabel: UILabel!
-    @IBOutlet weak var sideACounter: UILabel!
-    @IBOutlet weak var sideBCounter: UILabel!
     var maxCharacter = 100
     
     weak var delegate: AddCardImageDelegate?
@@ -52,8 +50,8 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         self.card?.front_content?.text = frontSideTextField.text
         self.card?.back_content?.text = backSideTextField.text
         
-        numberOfCharFrontLabel.text = String("\(frontSideTextField.text.count)")
-        numberOfCharBackLabel.text = String("\(backSideTextField.text.count)")
+        numberOfCharFrontLabel.text = String("\(frontSideTextField.text.count)/100")
+        numberOfCharBackLabel.text = String("\(backSideTextField.text.count)/100")
         
         if frontSideTextField.text.count >= maxCharacter {
             self.frontSideTextField.endEditing(true)
@@ -76,8 +74,6 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         
         sideALabel.text = NSLocalizedString("side_a", comment: "")
         sideBLabel.text = NSLocalizedString("side_b", comment: "")
-        sideACounter.text = NSLocalizedString("max_characters", comment: "")
-        sideBCounter.text = NSLocalizedString("max_characters", comment: "")
         
         frontImage.image = card.front_content?.image.flatMap(UIImage.init(data: ))
         backImage.image = card.back_content?.image.flatMap(UIImage.init(data: ))
@@ -85,8 +81,8 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         frontSideTextField.delegate = self
         backSideTextField.delegate = self
         
-        numberOfCharFrontLabel.text = String("\(frontSideTextField.text.count)")
-        numberOfCharBackLabel.text = String("\(backSideTextField.text.count)")
+        numberOfCharFrontLabel.text = String("\(frontSideTextField.text.count)/100")
+        numberOfCharBackLabel.text = String("\(backSideTextField.text.count)/100")
         
         frontSideTextField.layer.cornerRadius = 4
         backSideTextField.layer.cornerRadius = 4

@@ -126,19 +126,22 @@ extension NewCardTableViewCell: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        
+        if cards.count > 0 {
+            return UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { menuElement in
 
-        return UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { menuElement in
+                return UIMenu(
+                    image: nil,
+                    identifier: nil,
+                    options: UIMenu.Options.destructive,
+                    children: [ UIAction(title:"Apagar", image: UIImage(systemName: "trash"), attributes: .destructive,handler: { action in
 
-            return UIMenu(
-                image: nil,
-                identifier: nil,
-                options: UIMenu.Options.destructive,
-                children: [ UIAction(title:"Apagar", image: UIImage(systemName: "trash"), attributes: .destructive,handler: { action in
-
-                    self.delegate?.didTapDeleteAlert(fromCell: self, card: self.cards[indexPath.row])
-                    
-                })])
+                        self.delegate?.didTapDeleteAlert(fromCell: self, card: self.cards[indexPath.row])
+                        
+                    })])
+            }
         }
+        return nil
     }
 }
 
