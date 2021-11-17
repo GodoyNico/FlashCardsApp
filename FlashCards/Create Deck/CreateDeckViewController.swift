@@ -15,7 +15,7 @@ class CreateDeckViewController: UIViewController {
     let newCardCell: String = "NewCardCell"
     let switchCell: String = "switchCell"
     let deleteCell: String = "removeDeckCell"
-
+    
     @IBOutlet weak var createDeckTableView: UITableView!
     
     override func viewDidLoad() {
@@ -50,7 +50,10 @@ class CreateDeckViewController: UIViewController {
     }
     
     @IBAction func cancel(_ sender: Any) {
-        context.reset()
+//        reloadDelegate?.didTapReturn(deck: self.deck)
+
+        context.rollback()
+
         navigationController?.popViewController(animated: true)
     }
     
@@ -75,7 +78,6 @@ class CreateDeckViewController: UIViewController {
                 do {
                     try self.context.save()
                 } catch { }
-                
                 navigationController?.popViewController(animated: true)
             }
             

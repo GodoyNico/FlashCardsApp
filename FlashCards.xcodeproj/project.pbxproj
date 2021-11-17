@@ -36,7 +36,6 @@
 		C057133927443E0E00A9F854 /* EmptyStateCreateDeckCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057133827443E0E00A9F854 /* EmptyStateCreateDeckCollectionViewCell.swift */; };
 		C0A2BB3427272E990069B525 /* Deck.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A2BB3327272E990069B525 /* Deck.storyboard */; };
 		C0A2BB37272734170069B525 /* Practice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A2BB36272734170069B525 /* Practice.storyboard */; };
-		C0A2BB392727350D0069B525 /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A2BB382727350D0069B525 /* Edit.storyboard */; };
 		C0A2BB3B2727379F0069B525 /* MyDecks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A2BB3A2727379F0069B525 /* MyDecks.storyboard */; };
 		C0A2BB3D2727393F0069B525 /* CreateDeck.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A2BB3C2727393F0069B525 /* CreateDeck.storyboard */; };
 		C0BC72FD27287FBE0016DBF9 /* MyDecksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC72FC27287FBE0016DBF9 /* MyDecksViewController.swift */; };
@@ -110,7 +109,6 @@
 		C057133827443E0E00A9F854 /* EmptyStateCreateDeckCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateCreateDeckCollectionViewCell.swift; sourceTree = "<group>"; };
 		C0A2BB3327272E990069B525 /* Deck.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Deck.storyboard; sourceTree = "<group>"; };
 		C0A2BB36272734170069B525 /* Practice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Practice.storyboard; sourceTree = "<group>"; };
-		C0A2BB382727350D0069B525 /* Edit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Edit.storyboard; sourceTree = "<group>"; };
 		C0A2BB3A2727379F0069B525 /* MyDecks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyDecks.storyboard; sourceTree = "<group>"; };
 		C0A2BB3C2727393F0069B525 /* CreateDeck.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateDeck.storyboard; sourceTree = "<group>"; };
 		C0BC72FC27287FBE0016DBF9 /* MyDecksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDecksViewController.swift; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				C03DFC45273D91FA00599436 /* Settings */,
-				C0BC72FB27286CA00016DBF9 /* Edit */,
 				C0BC72FA27286C990016DBF9 /* Deck */,
 				C0BC72F927286C7D0016DBF9 /* MyDecks */,
 				C0BC72F827286C5F0016DBF9 /* Create Deck */,
@@ -228,9 +225,9 @@
 		C03DFC45273D91FA00599436 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				C05713342743ED7700A9F854 /* SettingsViewController.swift */,
 				C03DFC46273D922D00599436 /* Settings.storyboard */,
 				C05713322743EBF900A9F854 /* ThemeSettings.swift */,
-				C05713342743ED7700A9F854 /* SettingsViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -238,8 +235,8 @@
 		C0BC72F727286C540016DBF9 /* Practice */ = {
 			isa = PBXGroup;
 			children = (
-				C0A2BB36272734170069B525 /* Practice.storyboard */,
 				5DAF0E4327344CF800E49A93 /* PracticeViewController.swift */,
+				C0A2BB36272734170069B525 /* Practice.storyboard */,
 				5DAF0E4527344D5E00E49A93 /* FeedbackViewController.swift */,
 			);
 			path = Practice;
@@ -249,8 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				9FF7A1B2272873A700FBCAE3 /* CreateDeckViewController.swift */,
-				C0ED7E1F273EDA990011C59C /* EscolherImagem.swift */,
 				C0A2BB3C2727393F0069B525 /* CreateDeck.storyboard */,
+				C0ED7E1F273EDA990011C59C /* EscolherImagem.swift */,
 				9F81EDE3272B1A2500AFADC8 /* NewDeckTableViewCell.swift */,
 				9F81EDE5272B1A4200AFADC8 /* NewCardTableViewCell.swift */,
 				9F81EDE9272B31F200AFADC8 /* CardCollectionViewCell.swift */,
@@ -283,14 +280,6 @@
 				C0A2BB3327272E990069B525 /* Deck.storyboard */,
 			);
 			path = Deck;
-			sourceTree = "<group>";
-		};
-		C0BC72FB27286CA00016DBF9 /* Edit */ = {
-			isa = PBXGroup;
-			children = (
-				C0A2BB382727350D0069B525 /* Edit.storyboard */,
-			);
-			path = Edit;
 			sourceTree = "<group>";
 		};
 		C0C25ADE2739BB9E00F6A46D /* Model */ = {
@@ -419,7 +408,6 @@
 				C0A2BB3427272E990069B525 /* Deck.storyboard in Resources */,
 				5DE602792718B87000341772 /* Assets.xcassets in Resources */,
 				5D9BCBBC274484C20046969C /* Localizable.strings in Resources */,
-				C0A2BB392727350D0069B525 /* Edit.storyboard in Resources */,
 				C03DFC47273D922D00599436 /* Settings.storyboard in Resources */,
 				5DE602742718B86E00341772 /* Main.storyboard in Resources */,
 				C0A2BB3D2727393F0069B525 /* CreateDeck.storyboard in Resources */,
