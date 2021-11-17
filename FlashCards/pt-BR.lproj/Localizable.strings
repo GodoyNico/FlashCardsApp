@@ -36,7 +36,7 @@
 "practice" = "Praticar";
 "stop" = "Parar";
 "stop_practice" = "Parar prática";
-"stop_practice" = "Tem certeza que deseja finalizar a prática?";
+"stop_practice_text" = "Tem certeza que deseja finalizar a prática?";
 "remembered" = "Acertei :)";
 "no_remembered" = "Ops :(";
 
