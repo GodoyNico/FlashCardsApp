@@ -1,0 +1,13 @@
+
+/* Class = "UIButton"; configuration.title = "Adicionar Cards"; ObjectID = "073-16-wFm"; */
+"073-16-wFm.configuration.title" = "Add Cards";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "073-16-wFm"; */
+"073-16-wFm.normalTitle" = "Add Cards";
+
+/* Class = "UIButton"; configuration.title = "Praticar"; ObjectID = "Lrp-Mp-6Pt"; */
+"Lrp-Mp-6Pt.configuration.title" = "Practice";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Lrp-Mp-6Pt"; */
+"Lrp-Mp-6Pt.normalTitle" = "Practice";
+
