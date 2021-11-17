@@ -51,3 +51,6 @@
 
 // MARK: - Settings
 "settings" = "Ajustes";
+
+// MARK: TabBar
+"without_decks" = "Você ainda não tem Deck para praticar! 🥲";
