@@ -329,6 +329,7 @@
                                         <connections>
                                             <outlet property="SideB" destination="9YT-pU-Gzv" id="Wfa-x4-LL0"/>
                                             <outlet property="sideA" destination="sZf-lF-ZsX" id="nxl-wo-ueb"/>
+                                            <outlet property="sideB" destination="9YT-pU-Gzv" id="MgS-dB-VOQ"/>
                                             <outlet property="switchButton" destination="GnT-91-V4Z" id="SNG-2e-VF2"/>
                                             <outlet property="switchLabel" destination="esw-Ns-dQM" id="5Mp-tx-b90"/>
                                             <outlet property="view" destination="knf-iU-53J" id="RbL-Iq-3eE"/>
