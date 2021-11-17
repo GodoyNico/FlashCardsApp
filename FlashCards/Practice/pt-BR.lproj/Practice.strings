@@ -1,0 +1,24 @@
+
+/* Class = "UIButton"; configuration.title = "Memorizei!"; ObjectID = "a80-DM-krm"; */
+"a80-DM-krm.configuration.title" = "Acertei :)";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "a80-DM-krm"; */
+"a80-DM-krm.normalTitle" = "Acertei :)";
+
+/* Class = "UIButton"; configuration.title = "Treinar mais!"; ObjectID = "ixs-Mg-TTD"; */
+"ixs-Mg-TTD.configuration.title" = "Ops :(";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ixs-Mg-TTD"; */
+"ixs-Mg-TTD.normalTitle" = "Ops :(";
+
+/* Class = "UIButton"; configuration.title = "Treinar novamente"; ObjectID = "Ba4-Uy-SFw"; */
+"Ba4-Uy-SFw.configuration.title" = "Treinar novamente";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Ba4-Uy-SFw"; */
+"Ba4-Uy-SFw.normalTitle" = "Treinar novamente";
+
+/* Class = "UIButton"; configuration.title = "Ir para meus decks"; ObjectID = "OnS-Dk-dNh"; */
+"OnS-Dk-dNh.configuration.title" = "Ir para meus decks";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "OnS-Dk-dNh"; */
+"OnS-Dk-dNh.normalTitle" = "Ir para meus decks";

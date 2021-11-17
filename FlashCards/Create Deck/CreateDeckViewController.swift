@@ -59,7 +59,7 @@ class CreateDeckViewController: UIViewController {
     
     @IBAction func deckDone(_ sender: Any) {
         
-        let alert = UIAlertController(title: nil, message: "O deck precisa ter um título!", preferredStyle: .alert)
+        let alert = UIAlertController(title: nil, message: NSLocalizedString("deck_title_message", comment: ""), preferredStyle: .alert)
         
         let okButton = UIAlertAction(title: "Ok", style: .default) { (action) in
             return

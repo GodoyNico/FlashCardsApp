@@ -155,7 +155,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="lpw-L5-Fc5">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="9Go-Uw-0Bm">
+                        <barButtonItem key="rightBarButtonItem" title="Parar" style="plain" id="9Go-Uw-0Bm">
                             <connections>
                                 <action selector="endPractice:" destination="6Jy-aR-Dz0" id="jxZ-PQ-Dzh"/>
                             </connections>
@@ -200,7 +200,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="decks_AB" translatesAutoresizingMaskIntoConstraints="NO" id="dfd-h0-NIw">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dfd-h0-NIw">
                                                 <rect key="frame" x="130.5" y="196" width="153" height="119"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="119" id="QVD-55-afb"/>
@@ -316,7 +316,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="decks_AB" width="234" height="183"/>
         <image name="return" catalog="system" width="128" height="101"/>
         <namedColor name="color1Primary">
             <color red="0.93725490196078431" green="0.52156862745098043" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

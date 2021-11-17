@@ -147,11 +147,11 @@ extension MyDecksViewController: UICollectionViewDataSource {
                 image: nil,
                 identifier: nil,
                 options: UIMenu.Options.destructive,
-                children: [ UIAction(title:"Apagar", image: UIImage(systemName: "trash"), attributes: .destructive,handler: { action in
+                children: [ UIAction(title: NSLocalizedString("delete", comment: ""), image: UIImage(systemName: "trash"), attributes: .destructive,handler: { action in
                     
-                    let alert = UIAlertController(title: nil, message: "Tem certeza que você quer deletar esse deck? ", preferredStyle: .alert)
+                    let alert = UIAlertController(title: nil, message: NSLocalizedString("delete_deck_message", comment: ""), preferredStyle: .alert)
                     
-                    let deleteButton = UIAlertAction(title: "Sim", style: .default) { (action) in
+                    let deleteButton = UIAlertAction(title: NSLocalizedString("confirm", comment: ""), style: .default) { (action) in
                         
                         // Which Deck to Remove
                         let deckToRemove = self.myDecks[indexPath.row]
@@ -169,7 +169,7 @@ extension MyDecksViewController: UICollectionViewDataSource {
                         
                     }
                     
-                    let cancelButton = UIAlertAction(title: "Não", style: .destructive) { (action) in
+                    let cancelButton = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .destructive) { (action) in
                         return
                     }
                     

@@ -45,6 +45,8 @@ class PracticeViewController: UIViewController {
         rememberedButton.isHidden = true
         noRememberedButton.isHidden = true
         
+        stopButton.title = NSLocalizedString("stop", comment: "")
+        
         fetchCards()
         
         counterLabel.text = "1/\(deck!.cards!.count)"
@@ -64,7 +66,7 @@ class PracticeViewController: UIViewController {
     }
     
     @IBAction func endPractice(_ sender: Any) {
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+        let cancelAction = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel) { (action) in
             return
         }
         
@@ -72,8 +74,8 @@ class PracticeViewController: UIViewController {
             self.finished()
         }
         
-        let alert = UIAlertController(title: "Parar prática",
-                                      message: "Deseja realmente interromper a prática?",
+        let alert = UIAlertController(title: NSLocalizedString("stop_practice", comment: ""),
+                                      message: NSLocalizedString("stop_practice_text", comment: ""),
                                       preferredStyle: .alert)
         alert.addAction(cancelAction)
         alert.addAction(confirmAction)
@@ -160,7 +162,6 @@ class PracticeViewController: UIViewController {
         
         sideLabel.layer.cornerRadius = 30
         sideLabel.layer.borderWidth = 3
-//        sideLabel.layer.borderColor = UIColor(designSystem: DesignSystem.AssetsColor.button)?.cgColor
         
         imageView.layer.cornerRadius = 16
         
