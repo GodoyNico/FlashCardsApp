@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   FlashCards
 
@@ -12,22 +12,40 @@
 "search_bar" = "Pesquisar deck";
 "my_decks" = "Meus decks";
 "delete" = "Apagar";
+"empty_state_deck" = "Clique em + para criar um deck e organize suas áreas de prática!";
 
 // MARK: - Deck
 "cancel" = "Cancelar";
+"confirm" = "Confirmar";
 "finish" = "Concluir";
+"edit" = "Editar";
 "create_deck" = "Criar deck";
 "edit_deck" = "Editar deck";
 "deck_title" = "Título do deck";
+"deck_title_message" = "O deck precisa ter um título!";
 "add_card" = "Adicionar card";
 "side_a" = "Lado A";
 "side_b" = "Lado B";
 "max_characters" = "Máximo 100 caracteres";
 "practice_side" = "Começar prática por:";
 "delete_deck" = "Deletar deck";
+"delete_image" = "Tem certeza que você quer deletar essa imagem?";
+"empty_deck_message" = "Adicione cards com perguntas e respostas e começe a praticar!";
 
 // MARK: - Practice
+"practice" = "Praticar";
+"stop" = "Parar";
+"stop_practice" = "Parar prática";
+"stop_practice_text" = "Tem certeza que deseja finalizar a prática?";
+"remembered" = "Acertei :)";
+"no_remembered" = "Ops :(";
 
 // MARK: - Feedback
+"congrats" = "Parabéns";
+"good_feedback" = "Você memorizou";
+"bad_feedback" = "Vamos praticar mais";
+"practice_again" = "Treinar novamente";
+"go_to_decks" = "Ir para meus decks";
 
 // MARK: - Settings
+"settings" = "Ajustes";

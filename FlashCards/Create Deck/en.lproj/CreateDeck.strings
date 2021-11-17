@@ -1,0 +1,12 @@
+
+/* Class = "UIBarButtonItem"; title = "Concluir"; ObjectID = "7lK-5U-yIp"; */
+"7lK-5U-yIp.title" = "Confirm";
+
+/* Class = "UIBarButtonItem"; title = "Cancelar"; ObjectID = "mON-MK-kKF"; */
+"mON-MK-kKF.title" = "Cancel";
+
+/* Class = "UIButton"; configuration.title = "Adicionar card"; ObjectID = "xLW-dZ-LT3"; */
+"xLW-dZ-LT3.configuration.title" = "Add card";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xLW-dZ-LT3"; */
+"xLW-dZ-LT3.normalTitle" = "Add card";

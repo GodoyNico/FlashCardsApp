@@ -18,7 +18,7 @@ class EmptyStateMyDecksCollectionViewCell: UICollectionViewCell {
     }
     
     func configure() {
-        self.emptyStateLabel.text = "Clique em + para criar um deck e organize suas áreas de prática!"
+        self.emptyStateLabel.text = NSLocalizedString("empty_state_deck", comment: "")
     }
     
 }
