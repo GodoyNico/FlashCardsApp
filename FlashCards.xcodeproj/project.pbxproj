@@ -39,6 +39,8 @@
 		C044EEEF272B13790033B02B /* SingleDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C044EEEE272B13790033B02B /* SingleDeckViewController.swift */; };
 		C05713332743EBF900A9F854 /* ThemeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05713322743EBF900A9F854 /* ThemeSettings.swift */; };
 		C05713352743ED7700A9F854 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05713342743ED7700A9F854 /* SettingsViewController.swift */; };
+		C057133727442CC500A9F854 /* EmptyStateMyDecksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057133627442CC500A9F854 /* EmptyStateMyDecksCollectionViewCell.swift */; };
+		C057133927443E0E00A9F854 /* EmptyStateCreateDeckCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057133827443E0E00A9F854 /* EmptyStateCreateDeckCollectionViewCell.swift */; };
 		C067DF042719F131007F1EB5 /* DeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF032719F131007F1EB5 /* DeckTableViewCell.swift */; };
 		C067DF06271A15E9007F1EB5 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF05271A15E9007F1EB5 /* CardTableViewCell.swift */; };
 		C067DF08271A160F007F1EB5 /* DeckDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF07271A160F007F1EB5 /* DeckDetailsViewController.swift */; };
@@ -124,6 +126,8 @@
 		C044EEEE272B13790033B02B /* SingleDeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SingleDeckViewController.swift; path = FlashCards/Deck/SingleDeckViewController.swift; sourceTree = SOURCE_ROOT; };
 		C05713322743EBF900A9F854 /* ThemeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSettings.swift; sourceTree = "<group>"; };
 		C05713342743ED7700A9F854 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C057133627442CC500A9F854 /* EmptyStateMyDecksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateMyDecksCollectionViewCell.swift; sourceTree = "<group>"; };
+		C057133827443E0E00A9F854 /* EmptyStateCreateDeckCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateCreateDeckCollectionViewCell.swift; sourceTree = "<group>"; };
 		C067DF032719F131007F1EB5 /* DeckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTableViewCell.swift; sourceTree = "<group>"; };
 		C067DF05271A15E9007F1EB5 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		C067DF07271A160F007F1EB5 /* DeckDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailsViewController.swift; sourceTree = "<group>"; };
@@ -279,6 +283,7 @@
 				9F81EDE9272B31F200AFADC8 /* CardCollectionViewCell.swift */,
 				C0D4C0D2273C38DC0078BF00 /* DeleteDeckTableViewCell.swift */,
 				9F67A99E273991C300B63F8D /* SwitchTableViewCell.swift */,
+				C057133827443E0E00A9F854 /* EmptyStateCreateDeckCollectionViewCell.swift */,
 			);
 			path = "Create Deck";
 			sourceTree = "<group>";
@@ -293,6 +298,7 @@
 				C008826227351959009A27A0 /* SearchCollectionViewCell.swift */,
 				C0BC7300272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift */,
 				C0BC72FE272886D70016DBF9 /* MyDecksCollectionViewCell.swift */,
+				C057133627442CC500A9F854 /* EmptyStateMyDecksCollectionViewCell.swift */,
 			);
 			path = MyDecks;
 			sourceTree = "<group>";
@@ -488,6 +494,7 @@
 				9FF7A1B3272873A700FBCAE3 /* CreateDeckViewController.swift in Sources */,
 				C067DF042719F131007F1EB5 /* DeckTableViewCell.swift in Sources */,
 				C03DFC44273D87DA00599436 /* TabBarController.swift in Sources */,
+				C057133927443E0E00A9F854 /* EmptyStateCreateDeckCollectionViewCell.swift in Sources */,
 				C0C25ADD27399BE900F6A46D /* Card+CoreDataProperties.swift in Sources */,
 				C0D4C0D3273C38DC0078BF00 /* DeleteDeckTableViewCell.swift in Sources */,
 				C008826327351959009A27A0 /* SearchCollectionViewCell.swift in Sources */,
@@ -495,6 +502,7 @@
 				5DE6026F2718B86E00341772 /* SceneDelegate.swift in Sources */,
 				C05713332743EBF900A9F854 /* ThemeSettings.swift in Sources */,
 				C044EEEF272B13790033B02B /* SingleDeckViewController.swift in Sources */,
+				C057133727442CC500A9F854 /* EmptyStateMyDecksCollectionViewCell.swift in Sources */,
 				C0C25AD627399BE900F6A46D /* Progress+CoreDataClass.swift in Sources */,
 				C067DF08271A160F007F1EB5 /* DeckDetailsViewController.swift in Sources */,
 				C0C25ADC27399BE900F6A46D /* Card+CoreDataClass.swift in Sources */,
