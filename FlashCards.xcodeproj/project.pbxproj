@@ -75,7 +75,6 @@
 
 /* Begin PBXFileReference section */
 		5D9BCBB8274484AA0046969C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
-		5D9BCBB9274484AA0046969C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		5D9BCBBD274484C20046969C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5D9BCBBF274484C40046969C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5D9BCBE127458AC90046969C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Deck.storyboard; sourceTree = "<group>"; };
@@ -591,7 +590,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				5DE6027B2718B87000341772 /* Base */,
-				5D9BCBB9274484AA0046969C /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
