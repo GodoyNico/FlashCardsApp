@@ -11,6 +11,7 @@
 		5D9BCBBC274484C20046969C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D9BCBBE274484C20046969C /* Localizable.strings */; };
 		5D9BCBC027456AF80046969C /* Practice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9BCBC227456AF80046969C /* Practice.storyboard */; };
 		5D9BCBC727456ED30046969C /* Deck.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9BCBC927456ED30046969C /* Deck.storyboard */; };
+		5D9BCBCE27456F570046969C /* CreateDeck.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9BCBD027456F570046969C /* CreateDeck.storyboard */; };
 		5DAF0E4427344CF800E49A93 /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAF0E4327344CF800E49A93 /* PracticeViewController.swift */; };
 		5DAF0E4627344D5E00E49A93 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAF0E4527344D5E00E49A93 /* FeedbackViewController.swift */; };
 		5DE6026D2718B86E00341772 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6026C2718B86E00341772 /* AppDelegate.swift */; };
@@ -43,7 +44,6 @@
 		C067DF08271A160F007F1EB5 /* DeckDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF07271A160F007F1EB5 /* DeckDetailsViewController.swift */; };
 		C0A2BB392727350D0069B525 /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A2BB382727350D0069B525 /* Edit.storyboard */; };
 		C0A2BB3B2727379F0069B525 /* MyDecks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A2BB3A2727379F0069B525 /* MyDecks.storyboard */; };
-		C0A2BB3D2727393F0069B525 /* CreateDeck.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A2BB3C2727393F0069B525 /* CreateDeck.storyboard */; };
 		C0BC72FD27287FBE0016DBF9 /* MyDecksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC72FC27287FBE0016DBF9 /* MyDecksViewController.swift */; };
 		C0BC72FF272886D70016DBF9 /* MyDecksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC72FE272886D70016DBF9 /* MyDecksCollectionViewCell.swift */; };
 		C0BC7301272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC7300272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift */; };
@@ -90,6 +90,9 @@
 		5D9BCBC827456ED30046969C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Deck.storyboard; sourceTree = "<group>"; };
 		5D9BCBCB27456ED60046969C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Deck.strings; sourceTree = "<group>"; };
 		5D9BCBCD27456ED60046969C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Deck.strings"; sourceTree = "<group>"; };
+		5D9BCBCF27456F570046969C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CreateDeck.storyboard; sourceTree = "<group>"; };
+		5D9BCBD227456F590046969C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CreateDeck.strings; sourceTree = "<group>"; };
+		5D9BCBD427456F590046969C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/CreateDeck.strings"; sourceTree = "<group>"; };
 		5DAF0E4327344CF800E49A93 /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		5DAF0E4527344D5E00E49A93 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		5DE602692718B86E00341772 /* FlashCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,7 +129,6 @@
 		C067DF07271A160F007F1EB5 /* DeckDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailsViewController.swift; sourceTree = "<group>"; };
 		C0A2BB382727350D0069B525 /* Edit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Edit.storyboard; sourceTree = "<group>"; };
 		C0A2BB3A2727379F0069B525 /* MyDecks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyDecks.storyboard; sourceTree = "<group>"; };
-		C0A2BB3C2727393F0069B525 /* CreateDeck.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateDeck.storyboard; sourceTree = "<group>"; };
 		C0BC72FC27287FBE0016DBF9 /* MyDecksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDecksViewController.swift; sourceTree = "<group>"; };
 		C0BC72FE272886D70016DBF9 /* MyDecksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDecksCollectionViewCell.swift; sourceTree = "<group>"; };
 		C0BC7300272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleMyDecksCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -271,7 +273,7 @@
 			children = (
 				9FF7A1B2272873A700FBCAE3 /* CreateDeckViewController.swift */,
 				C0ED7E1F273EDA990011C59C /* EscolherImagem.swift */,
-				C0A2BB3C2727393F0069B525 /* CreateDeck.storyboard */,
+				5D9BCBD027456F570046969C /* CreateDeck.storyboard */,
 				9F81EDE3272B1A2500AFADC8 /* NewDeckTableViewCell.swift */,
 				9F81EDE5272B1A4200AFADC8 /* NewCardTableViewCell.swift */,
 				9F81EDE9272B31F200AFADC8 /* CardCollectionViewCell.swift */,
@@ -441,7 +443,7 @@
 				C0A2BB392727350D0069B525 /* Edit.storyboard in Resources */,
 				C03DFC47273D922D00599436 /* Settings.storyboard in Resources */,
 				5DE602742718B86E00341772 /* Main.storyboard in Resources */,
-				C0A2BB3D2727393F0069B525 /* CreateDeck.storyboard in Resources */,
+				5D9BCBCE27456F570046969C /* CreateDeck.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +570,16 @@
 				5D9BCBCD27456ED60046969C /* pt-BR */,
 			);
 			name = Deck.storyboard;
+			sourceTree = "<group>";
+		};
+		5D9BCBD027456F570046969C /* CreateDeck.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D9BCBCF27456F570046969C /* Base */,
+				5D9BCBD227456F590046969C /* en */,
+				5D9BCBD427456F590046969C /* pt-BR */,
+			);
+			name = CreateDeck.storyboard;
 			sourceTree = "<group>";
 		};
 		5DE602722718B86E00341772 /* Main.storyboard */ = {

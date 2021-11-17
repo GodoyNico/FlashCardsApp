@@ -64,10 +64,6 @@ class SingleDeckViewController: UIViewController {
         deckProgressCircleView.trackColor = UIColor.white
         deckProgressCircleView.progressColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Secondary) ?? .white
         
-        // TODO: - Botão está trocando texto ao clicar
-        addCards.titleLabel?.text = NSLocalizedString("add_card", comment: "")
-        practiceButton.titleLabel?.text = NSLocalizedString("practice", comment: "")
-        
         deckProgressLabel.textColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Secondary)
     }
     
