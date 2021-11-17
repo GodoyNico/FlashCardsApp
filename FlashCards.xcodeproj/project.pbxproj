@@ -26,6 +26,7 @@
 		9F81EDE4272B1A2500AFADC8 /* NewDeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81EDE3272B1A2500AFADC8 /* NewDeckTableViewCell.swift */; };
 		9F81EDE6272B1A4200AFADC8 /* NewCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81EDE5272B1A4200AFADC8 /* NewCardTableViewCell.swift */; };
 		9F81EDEA272B31F200AFADC8 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81EDE9272B31F200AFADC8 /* CardCollectionViewCell.swift */; };
+		9FB8A1932745783900252310 /* TextView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB8A1922745783900252310 /* TextView+Additions.swift */; };
 		9FF47A63271F551400A4C0CC /* PracticesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF47A62271F551400A4C0CC /* PracticesViewController.swift */; };
 		9FF7A1B3272873A700FBCAE3 /* CreateDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7A1B2272873A700FBCAE3 /* CreateDeckViewController.swift */; };
 		C008826127351934009A27A0 /* ProgressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008826027351934009A27A0 /* ProgressCollectionViewCell.swift */; };
@@ -103,6 +104,7 @@
 		9F81EDE3272B1A2500AFADC8 /* NewDeckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDeckTableViewCell.swift; sourceTree = "<group>"; };
 		9F81EDE5272B1A4200AFADC8 /* NewCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardTableViewCell.swift; sourceTree = "<group>"; };
 		9F81EDE9272B31F200AFADC8 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		9FB8A1922745783900252310 /* TextView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextView+Additions.swift"; sourceTree = "<group>"; };
 		9FF47A62271F551400A4C0CC /* PracticesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticesViewController.swift; sourceTree = "<group>"; };
 		9FF7A1B2272873A700FBCAE3 /* CreateDeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDeckViewController.swift; sourceTree = "<group>"; };
 		C008826027351934009A27A0 /* ProgressCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				C0D4C0D2273C38DC0078BF00 /* DeleteDeckTableViewCell.swift */,
 				9F67A99E273991C300B63F8D /* SwitchTableViewCell.swift */,
 				C057133827443E0E00A9F854 /* EmptyStateCreateDeckCollectionViewCell.swift */,
+				9FB8A1922745783900252310 /* TextView+Additions.swift */,
 			);
 			path = "Create Deck";
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				9F81EDE4272B1A2500AFADC8 /* NewDeckTableViewCell.swift in Sources */,
 				9F81EDEA272B31F200AFADC8 /* CardCollectionViewCell.swift in Sources */,
 				C0BC7301272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift in Sources */,
+				9FB8A1932745783900252310 /* TextView+Additions.swift in Sources */,
 				9FF47A63271F551400A4C0CC /* PracticesViewController.swift in Sources */,
 				5DE602712718B86E00341772 /* ViewController.swift in Sources */,
 				5DE6026D2718B86E00341772 /* AppDelegate.swift in Sources */,
@@ -607,7 +611,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -662,7 +666,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -688,7 +692,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -718,7 +722,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

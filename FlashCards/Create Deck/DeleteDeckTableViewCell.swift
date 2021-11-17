@@ -18,11 +18,8 @@ protocol DeleteDeckDelegate: AnyObject {
 class DeleteDeckTableViewCell: UITableViewCell {
     
     @IBOutlet weak var deleteDeckBackground: UIView!
-    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     var deck: Deck?
-    
     weak var delegate: DeleteDeckDelegate?
 
     override func awakeFromNib() {

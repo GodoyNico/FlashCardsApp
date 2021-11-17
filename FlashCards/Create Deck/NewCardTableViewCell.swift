@@ -43,7 +43,6 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
     }
     
     func setupLayout() {
-        if cards.count > 0 {
             let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
             
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -58,7 +57,6 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
             
             let layout = UICollectionViewCompositionalLayout(section: section)
             cardCollectionView.collectionViewLayout = layout
-        }
     }
     
     @IBAction func addCard(_ sender: Any) {
@@ -141,12 +139,12 @@ extension NewCardTableViewCell: UICollectionViewDataSource {
     }
 }
 
-//extension NewCardTableViewCell: UICollectionViewDelegateFlowLayout {
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: collectionView.bounds.width * 0.8, height: 610)
-//    }
-//}
+extension NewCardTableViewCell: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.width * 0.8, height: 610)
+    }
+}
 
 extension NewCardTableViewCell: AddCardImageDelegate {
     
