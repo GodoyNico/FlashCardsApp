@@ -45,6 +45,8 @@ class PracticeViewController: UIViewController {
         rememberedButton.isHidden = true
         noRememberedButton.isHidden = true
         
+        stopButton.title = NSLocalizedString("stop", comment: "")
+        
         fetchCards()
         
         counterLabel.text = "1/\(deck!.cards!.count)"
