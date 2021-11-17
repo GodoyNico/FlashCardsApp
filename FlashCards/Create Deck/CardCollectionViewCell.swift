@@ -86,8 +86,6 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         
         frontSideTextField.layer.cornerRadius = 4
         backSideTextField.layer.cornerRadius = 4
-        
-        viewBackground.layer.cornerRadius = 12
-        
+                
     }
 }
