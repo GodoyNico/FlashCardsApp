@@ -15,7 +15,7 @@ class CreateDeckViewController: UIViewController {
     let newCardCell: String = "NewCardCell"
     let switchCell: String = "switchCell"
     let deleteCell: String = "removeDeckCell"
-    
+
     @IBOutlet weak var createDeckTableView: UITableView!
     
     override func viewDidLoad() {

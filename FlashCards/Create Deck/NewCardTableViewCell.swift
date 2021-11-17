@@ -18,6 +18,7 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     let collectionCellID = "cardCollectionCell"
+    let emptyStateCell: String = "emptyStateCell"
 
     var deck: Deck?
     var cards: [Card] = []
@@ -42,22 +43,22 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
     }
     
     func setupLayout() {
-        
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
-        
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 6, bottom: 0, trailing: 6)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8), heightDimension: .absolute(610))
-        
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .groupPagingCentered
-        
-        let layout = UICollectionViewCompositionalLayout(section: section)
-        cardCollectionView.collectionViewLayout = layout
-        
+        if cards.count > 0 {
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+            
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 6, bottom: 0, trailing: 6)
+            
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8), heightDimension: .absolute(610))
+            
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
+            
+            let section = NSCollectionLayoutSection(group: group)
+            section.orthogonalScrollingBehavior = .groupPagingCentered
+            
+            let layout = UICollectionViewCompositionalLayout(section: section)
+            cardCollectionView.collectionViewLayout = layout
+        }
     }
     
     @IBAction func addCard(_ sender: Any) {
@@ -100,17 +101,27 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
 extension NewCardTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cards.count
+        return cards.count > 0 ? cards.count : 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cardCollectionCell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: collectionCellID, for: indexPath) as! CardCollectionViewCell
-        
-        cardCollectionCell.configure(card: cards[indexPath.row])
-        cardCollectionCell.delegate = self
-        
-        return cardCollectionCell
+        if cards.count > 0 {
+            let cardCollectionCell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: collectionCellID, for: indexPath) as! CardCollectionViewCell
+            
+            cardCollectionCell.configure(card: cards[indexPath.row])
+            cardCollectionCell.delegate = self
+            
+            return cardCollectionCell
+            
+        } else {
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.emptyStateCell, for: indexPath) as! EmptyStateCreateDeckCollectionViewCell
+            
+            cell.configure()
+            
+            return cell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
