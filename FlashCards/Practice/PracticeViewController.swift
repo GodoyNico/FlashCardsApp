@@ -69,8 +69,7 @@ class PracticeViewController: UIViewController {
         }
         
         let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (action) in
-            // TODO: PARAR
-            
+            self.finished()
         }
         
         let alert = UIAlertController(title: "Parar prática",

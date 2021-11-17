@@ -117,6 +117,8 @@ extension CreateDeckViewController: UITableViewDelegate, UITableViewDataSource {
             let newCardCell = createDeckTableView.dequeueReusableCell(withIdentifier: newCardCell ) as! NewCardTableViewCell
             
             newCardCell.configure(newDeck: self.deck)
+            newCardCell.delegate = self
+            newCardCell.delegateImage = self
             
             return newCardCell
             

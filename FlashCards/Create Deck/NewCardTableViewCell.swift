@@ -26,7 +26,6 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
     weak var delegate: DeleteCardDelegate?
     weak var delegateImage: AddCardImageDelegate?
         
-    
     @IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var numberOfCardsLabel: UILabel!
     @IBOutlet weak var addCardButton: UIButton!
@@ -43,20 +42,20 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
     }
     
     func setupLayout() {
-            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
-            
-            let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 6, bottom: 0, trailing: 6)
-            
-            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8), heightDimension: .absolute(610))
-            
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
-            
-            let section = NSCollectionLayoutSection(group: group)
-            section.orthogonalScrollingBehavior = .groupPagingCentered
-            
-            let layout = UICollectionViewCompositionalLayout(section: section)
-            cardCollectionView.collectionViewLayout = layout
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 6, bottom: 0, trailing: 6)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8), heightDimension: .absolute(610))
+        
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .groupPagingCentered
+        
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        cardCollectionView.collectionViewLayout = layout
     }
     
     @IBAction func addCard(_ sender: Any) {
