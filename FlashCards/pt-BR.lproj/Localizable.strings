@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  FlashCards
+
+  Created by Nicolas Godoy on 16/11/21.
+  
+*/
+
+// MARK: - My Decks
+"your_progress" = "Seu progresso";
+"keep_practicing" = "Continue praticando";
+"search_bar" = "Pesquisar deck";
+"my_decks" = "Meus decks";
+"delete" = "Apagar";
+
+// MARK: - Deck
+"cancel" = "Cancelar";
+"finish" = "Concluir";
+"create_deck" = "Criar deck";
+"edit_deck" = "Editar deck";
+"deck_title" = "Título do deck";
+"add_card" = "Adicionar card";
+"side_a" = "Lado A";
+"side_b" = "Lado B";
+"max_characters" = "Máximo 100 caracteres";
+"practice_side" = "Começar prática por:";
+"delete_deck" = "Deletar deck";
+
+// MARK: - Practice
+
+// MARK: - Feedback
+
+// MARK: - Settings

@@ -8,6 +8,7 @@
 import UIKit
 
 typealias PracticeFeedback = (remembered: Int, noRemembered: Int, deck: Deck?)
+typealias PracticeData = (countCards: Int, isFront: Bool, selectedDeck: Deck)
 
 class PracticeViewController: UIViewController {
     // MARK: - Variables
@@ -64,11 +65,12 @@ class PracticeViewController: UIViewController {
     
     @IBAction func endPractice(_ sender: Any) {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
-            print("Seguiu a prática")
+            return
         }
         
         let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (action) in
-            print("Parou a prática")
+            // TODO: PARAR
+            
         }
         
         let alert = UIAlertController(title: "Parar prática",
