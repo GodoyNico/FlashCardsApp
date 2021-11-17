@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iah-8J-Ci9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -259,6 +260,10 @@
                                                                 <outlet property="frontSideTextField" destination="r8l-Se-FtT" id="acZ-PG-vVZ"/>
                                                                 <outlet property="numberOfCharacterBack" destination="60Z-1h-drf" id="PTF-vt-ML9"/>
                                                                 <outlet property="numberOfCharactersFront" destination="NtF-Iz-GsR" id="czZ-iY-BGr"/>
+                                                                <outlet property="sideACounter" destination="NtF-Iz-GsR" id="Oew-hE-lXz"/>
+                                                                <outlet property="sideALabel" destination="U14-AG-9Me" id="shw-df-LVB"/>
+                                                                <outlet property="sideBCounter" destination="60Z-1h-drf" id="m31-rP-jZL"/>
+                                                                <outlet property="sideBLabel" destination="IVq-Mr-PwG" id="Xcf-hZ-JwQ"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -349,6 +354,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="deleteDeckBackground" destination="wAO-Li-ekQ" id="hIF-PA-dQA"/>
+                                            <outlet property="deleteLabel" destination="d1F-ie-Lbz" id="zrd-Iw-Miv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

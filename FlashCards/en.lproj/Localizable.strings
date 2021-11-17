@@ -23,6 +23,8 @@
 "side_a" = "Side A";
 "side_b" = "Side B";
 "max_characters" = "Maximum of 100 characters";
+"practice_side" = "Start practice by:";
+"delete_deck" = "Delete deck";
 
 
 // MARK: - Practice

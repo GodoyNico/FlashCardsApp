@@ -25,6 +25,8 @@ class SwitchTableViewCell: UITableViewCell {
     func configure(newDeck: Deck?) {
         switchBackground.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.background)
         
+        switchLabel.text = NSLocalizedString("practice_side", comment: "")
+        
         self.deck = newDeck
         switchButton.isOn = !(self.deck?.isFront ?? true)
     }

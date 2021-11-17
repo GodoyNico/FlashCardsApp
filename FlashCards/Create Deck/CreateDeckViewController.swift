@@ -29,14 +29,14 @@ class CreateDeckViewController: UIViewController {
         
         switch screen {
         case .create:
-            navigationItem.title = "Create Deck"
+            navigationItem.title = NSLocalizedString("create_deck", comment: "")
             self.deck?.isFront = true
         case .edit:
-            navigationItem.title = "Edit Deck"
+            navigationItem.title = NSLocalizedString("edit_deck", comment: "")
         case .addCard:
-            navigationItem.title = "Add Card"
+            navigationItem.title = NSLocalizedString("add_card", comment: "")
         default:
-            navigationItem.title = "Create Deck"
+            navigationItem.title = NSLocalizedString("create_deck", comment: "")
         }
         
         createDeckTableView.delegate = self

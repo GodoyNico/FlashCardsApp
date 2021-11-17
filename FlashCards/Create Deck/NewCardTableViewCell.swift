@@ -83,6 +83,9 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
     func configure(newDeck: Deck?) {
         viewBackground.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.background)
         
+        // TODO: - Ajustar tradução do botão
+        addCardButton.titleLabel?.text = NSLocalizedString("add_card", comment: "")
+        
         self.deck = newDeck
         fetchData()
         numberOfCardsLabel.text = String("\(cards.count) cards")
