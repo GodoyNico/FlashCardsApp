@@ -228,7 +228,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="decks_AB" translatesAutoresizingMaskIntoConstraints="NO" id="dfd-h0-NIw">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dfd-h0-NIw">
                                                 <rect key="frame" x="130.5" y="196" width="153" height="119"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="119" id="QVD-55-afb"/>
@@ -344,7 +344,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="decks_AB" width="234" height="183"/>
         <image name="return" catalog="system" width="128" height="101"/>
         <namedColor name="color1Primary">
             <color red="0.93725490196078431" green="0.52156862745098043" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
