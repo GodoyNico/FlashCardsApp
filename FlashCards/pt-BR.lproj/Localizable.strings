@@ -12,6 +12,7 @@
 "search_bar" = "Pesquisar deck";
 "my_decks" = "Meus decks";
 "delete" = "Apagar";
+"delete_deck_message" = "Tem certeza que você quer deletar esse deck?";
 "empty_state_deck" = "Clique em + para criar um deck e organize suas áreas de prática!";
 
 // MARK: - Deck
