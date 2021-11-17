@@ -21,9 +21,7 @@ class DeleteDeckTableViewCell: UITableViewCell {
     @IBOutlet weak var deleteLabel: UIButton!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     var deck: Deck?
-    
     weak var delegate: DeleteDeckDelegate?
 
     override func awakeFromNib() {

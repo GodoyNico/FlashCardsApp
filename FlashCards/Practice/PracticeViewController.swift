@@ -8,6 +8,7 @@
 import UIKit
 
 typealias PracticeFeedback = (remembered: Int, noRemembered: Int, deck: Deck?)
+typealias PracticeData = (countCards: Int, isFront: Bool, selectedDeck: Deck)
 
 class PracticeViewController: UIViewController {
     // MARK: - Variables

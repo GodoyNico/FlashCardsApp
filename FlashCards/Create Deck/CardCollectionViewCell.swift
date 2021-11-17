@@ -17,17 +17,16 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    //@IBOutlet weak var viewBackground: UIView!
+    @IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var frontSideTextField: UITextView!
     @IBOutlet weak var backSideTextField: UITextView!
-    @IBOutlet weak var numberOfCharacterBack: UILabel!
-    @IBOutlet weak var numberOfCharactersFront: UILabel!
+    @IBOutlet weak var numberOfCharBackLabel: UILabel!
+    @IBOutlet weak var numberOfCharFrontLabel: UILabel!
     @IBOutlet weak var frontImage: UIImageView!
     @IBOutlet weak var backImage: UIImageView!
     @IBOutlet weak var sideALabel: UILabel!
     @IBOutlet weak var sideBLabel: UILabel!
-    @IBOutlet weak var sideACounter: UILabel!
-    @IBOutlet weak var sideBCounter: UILabel!
+    var maxCharacter = 100
     
     weak var delegate: AddCardImageDelegate?
     var card: Card?
@@ -47,8 +46,20 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
     }
     
     func textViewDidChange(_ textView: UITextView) {
+        
         self.card?.front_content?.text = frontSideTextField.text
         self.card?.back_content?.text = backSideTextField.text
+        
+        numberOfCharFrontLabel.text = String("\(frontSideTextField.text.count)/100")
+        numberOfCharBackLabel.text = String("\(backSideTextField.text.count)/100")
+        
+        if frontSideTextField.text.count >= maxCharacter {
+            self.frontSideTextField.endEditing(true)
+        }
+        
+        if backSideTextField.text.count >= maxCharacter {
+            self.backSideTextField.endEditing(true)
+        }
     }
     
     override class func awakeFromNib() {
@@ -63,14 +74,20 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         
         sideALabel.text = NSLocalizedString("side_a", comment: "")
         sideBLabel.text = NSLocalizedString("side_b", comment: "")
-        numberOfCharactersFront.text = NSLocalizedString("max_characters", comment: "")
-        numberOfCharacterBack.text = NSLocalizedString("max_characters", comment: "")
         
         frontImage.image = card.front_content?.image.flatMap(UIImage.init(data: ))
         backImage.image = card.back_content?.image.flatMap(UIImage.init(data: ))
         
         frontSideTextField.delegate = self
         backSideTextField.delegate = self
-                
+        
+        numberOfCharFrontLabel.text = String("\(frontSideTextField.text.count)/100")
+        numberOfCharBackLabel.text = String("\(backSideTextField.text.count)/100")
+        
+        frontSideTextField.layer.cornerRadius = 4
+        backSideTextField.layer.cornerRadius = 4
+        
+        viewBackground.layer.cornerRadius = 12
+        
     }
 }

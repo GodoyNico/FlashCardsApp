@@ -21,7 +21,7 @@ class SingleDeckViewController: UIViewController {
     let goToPracticeSegueID: String = "goToPractice"
     let goToEditSegueID: String = "goToEdit"
     let goToAddCardsSegueID: String = "goToAddCards"
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         layoutConfig()
@@ -67,7 +67,7 @@ class SingleDeckViewController: UIViewController {
         deckProgressLabel.textColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Secondary)
     }
     
-    func configure(deck: Deck) {
+    func configure(deck: Deck?) {
         self.deck = deck
     }
     
