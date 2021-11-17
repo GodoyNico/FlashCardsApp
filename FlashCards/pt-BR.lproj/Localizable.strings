@@ -12,6 +12,7 @@
 "search_bar" = "Pesquisar deck";
 "my_decks" = "Meus decks";
 "delete" = "Apagar";
+"empty_state_deck" = "Clique em + para criar um deck e organize suas áreas de prática!";
 
 // MARK: - Deck
 "cancel" = "Cancelar";
@@ -27,7 +28,6 @@
 "max_characters" = "Máximo 100 caracteres";
 "practice_side" = "Começar prática por:";
 "delete_deck" = "Deletar deck";
-
 "delete_image" = "Tem certeza que você quer deletar essa imagem?";
 "empty_deck_message" = "Adicione cards com perguntas e respostas e começe a praticar!";
 
@@ -47,3 +47,4 @@
 "go_to_decks" = "Ir para meus decks";
 
 // MARK: - Settings
+"settings" = "Ajustes";

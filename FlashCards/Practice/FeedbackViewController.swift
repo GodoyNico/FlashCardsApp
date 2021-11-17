@@ -25,8 +25,14 @@ class FeedbackViewController: UIViewController {
         super.viewDidLoad()
         configView()
         
-        feedbackLabel.text = "Parabéns!"
-        feedbackText.text = "Você memorizou"
+        if practiceFeedback?.remembered == 0 {
+            feedbackLabel.text = NSLocalizedString("no_remembered", comment: "")
+            feedbackText.text = NSLocalizedString("bad_feedback", comment: "")
+        } else {
+        feedbackLabel.text = NSLocalizedString("congrats", comment: "")
+        feedbackText.text = NSLocalizedString("good_feedback", comment: "")
+        }
+        
         counterLabel.text = "\(practiceFeedback!.remembered)/\(practiceFeedback!.deck!.cards!.count)"
         deckNameLabel.text = practiceFeedback?.deck?.title
     }
@@ -59,6 +65,6 @@ class FeedbackViewController: UIViewController {
         practiceAgain.tintColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
         
         goToDecks.layer.cornerRadius = 8
-        goToDecks.tintColor = UIColor(designSystem: DesignSystem.AssetsColor.basicQuaternary)
+        goToDecks.tintColor = UIColor(designSystem: DesignSystem.AssetsColor.basicQuaternary2)
     }
 }
