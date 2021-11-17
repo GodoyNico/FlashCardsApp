@@ -1,6 +1,8 @@
 import UIKit
 
 class TabBarController: UITabBarController, UITabBarControllerDelegate {
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +47,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
             return true
         }
         
-        randomPractice()
         return false
     }
     
@@ -74,16 +75,41 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     @objc func menuButtonAction(sender: UIButton) {
-        randomPractice()
+        
+        var myDecksCount = 0
+
+        do {
+            myDecksCount = try context.fetch(Deck.fetchRequest()).count
+        } catch { }
+                
+        if myDecksCount == 0 {
+            
+            let alert = UIAlertController(title: nil, message: NSLocalizedString("without_decks", comment: ""), preferredStyle: .alert)
+            
+            let okButton = UIAlertAction(title: "Ok", style: .default) { (action) in
+               return
+            }
+            
+            alert.addAction(okButton)
+
+            self.present(alert, animated: true, completion: nil)
+            
+        } else {
+            randomPractice()
+        }
+        
     }
     
+    
     func randomPractice() {
+        
         let storyBoard = UIStoryboard(name: "Deck", bundle: .main)
         
         guard let singleDeckController = storyBoard.instantiateInitialViewController()
         else { return }
         
         navigationController?.pushViewController(singleDeckController, animated: true)
+        
     }
     
 }
