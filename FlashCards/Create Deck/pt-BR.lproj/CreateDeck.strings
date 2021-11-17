@@ -1,51 +1,11 @@
-
-/* Class = "UILabel"; text = "Label"; ObjectID = "7bg-49-3Gr"; */
-"7bg-49-3Gr.text" = "Label";
-
 /* Class = "UIBarButtonItem"; title = "Concluir"; ObjectID = "7lK-5U-yIp"; */
-"7lK-5U-yIp.title" = "Concluir";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "8qs-RF-tF5"; */
-"8qs-RF-tF5.normalTitle" = "Button";
-
-/* Class = "UILabel"; text = "B"; ObjectID = "D0R-Il-CKv"; */
-"D0R-Il-CKv.text" = "B";
-
-/* Class = "UINavigationItem"; title = "Criar deck"; ObjectID = "HYQ-Lx-OhG"; */
-"HYQ-Lx-OhG.title" = "Criar deck";
-
-/* Class = "UILabel"; text = "Lado B"; ObjectID = "IVq-Mr-PwG"; */
-"IVq-Mr-PwG.text" = "Lado B";
-
-/* Class = "UILabel"; text = "Lado A"; ObjectID = "U14-AG-9Me"; */
-"U14-AG-9Me.text" = "Lado A";
-
-/* Class = "UIButton"; configuration.title = "Deletar deck"; ObjectID = "d1F-ie-Lbz"; */
-"d1F-ie-Lbz.configuration.title" = "Deletar deck";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "d1F-ie-Lbz"; */
-"d1F-ie-Lbz.normalTitle" = "Button";
-
-/* Class = "UILabel"; text = "A"; ObjectID = "ePP-C6-0CU"; */
-"ePP-C6-0CU.text" = "A";
-
-/* Class = "UILabel"; text = "Começar prática por:"; ObjectID = "esw-Ns-dQM"; */
-"esw-Ns-dQM.text" = "Começar prática por:";
-
-/* Class = "UITextField"; placeholder = "Nome do deck"; ObjectID = "l0v-cR-d45"; */
-"l0v-cR-d45.placeholder" = "Nome do deck";
+"7lK-5U-yIp.title" = "Confirmar";
 
 /* Class = "UIBarButtonItem"; title = "Cancelar"; ObjectID = "mON-MK-kKF"; */
 "mON-MK-kKF.title" = "Cancelar";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mUA-iL-nDq"; */
-"mUA-iL-nDq.normalTitle" = "Button";
-
-/* Class = "UILabel"; text = "0 cards"; ObjectID = "pg0-Gs-A8M"; */
-"pg0-Gs-A8M.text" = "0 cards";
 
 /* Class = "UIButton"; configuration.title = "Adicionar card"; ObjectID = "xLW-dZ-LT3"; */
 "xLW-dZ-LT3.configuration.title" = "Adicionar card";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xLW-dZ-LT3"; */
-"xLW-dZ-LT3.normalTitle" = "Button";
+"xLW-dZ-LT3.normalTitle" = "Adicionar card";

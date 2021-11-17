@@ -16,7 +16,7 @@ class EmptyStateCreateDeckCollectionViewCell: UICollectionViewCell {
     }
     
     func configure() {
-        self.emptyStateLabel.text = "Adicione cards  com perguntas e respostas e comece praticar!"
+        self.emptyStateLabel.text = NSLocalizedString("empty_deck_message", comment: "")
     }
 
 }
