@@ -15,7 +15,9 @@
 
 // MARK: - Deck
 "cancel" = "Cancel";
+"confirm" = "Confirm";
 "finish" = "Finish";
+"edit" = "Edit";
 "create_deck" = "Create deck";
 "edit_deck" = "Edit deck";
 "deck_title" = "Deck title";
@@ -26,9 +28,23 @@
 "practice_side" = "Start practice by:";
 "delete_deck" = "Delete deck";
 
+"delete_image" = "Are you sure you want to delete this image?";
+"empty_deck_message" = "Add cards with questions and answers to start practicing!";
+
 
 // MARK: - Practice
+"practice" = "Practice";
+"stop" = "Stop";
+"stop_practice" = "Stop practice";
+"stop_practice_text" = "Are you sure you want to end the practice?";
+"remembered" = "I got it :)";
+"no_remembered" = "Oops :(";
 
 // MARK: - Feedback
+"congrats" = "Congrats";
+"good_feedback" = "Did you memorize";
+"bad_feedback" = "Vamos praticar mais";
+"practice_again" = "Practice again";
+"go_to_decks" = "Go to my decks";
 
 // MARK: - Settings

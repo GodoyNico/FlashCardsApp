@@ -16,6 +16,7 @@ class SingleDeckViewController: UIViewController {
     @IBOutlet weak var practiceButton: UIButton!
     @IBOutlet weak var deckProgressCircleView: CircularProgressView!
     @IBOutlet weak var deckProgressLabel: UILabel!
+    @IBOutlet weak var addCards: UIButton!
     
     let goToPracticeSegueID: String = "goToPractice"
     let goToEditSegueID: String = "goToEdit"
@@ -62,6 +63,10 @@ class SingleDeckViewController: UIViewController {
         deckTitleLabel.textColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Secondary)
         deckProgressCircleView.trackColor = UIColor.white
         deckProgressCircleView.progressColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Secondary) ?? .white
+        
+        // TODO: - Botão está trocando texto ao clicar
+        addCards.titleLabel?.text = NSLocalizedString("add_card", comment: "")
+        practiceButton.titleLabel?.text = NSLocalizedString("practice", comment: "")
         
         deckProgressLabel.textColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Secondary)
     }

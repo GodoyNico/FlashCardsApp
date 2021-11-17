@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5D4018512721DBE900036FB5 /* FeedbacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4018502721DBE900036FB5 /* FeedbacksViewController.swift */; };
 		5D9BCBBC274484C20046969C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D9BCBBE274484C20046969C /* Localizable.strings */; };
+		5D9BCBC027456AF80046969C /* Practice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9BCBC227456AF80046969C /* Practice.storyboard */; };
 		5DAF0E4427344CF800E49A93 /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAF0E4327344CF800E49A93 /* PracticeViewController.swift */; };
 		5DAF0E4627344D5E00E49A93 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAF0E4527344D5E00E49A93 /* FeedbackViewController.swift */; };
 		5DE6026D2718B86E00341772 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6026C2718B86E00341772 /* AppDelegate.swift */; };
@@ -40,7 +41,6 @@
 		C067DF06271A15E9007F1EB5 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF05271A15E9007F1EB5 /* CardTableViewCell.swift */; };
 		C067DF08271A160F007F1EB5 /* DeckDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C067DF07271A160F007F1EB5 /* DeckDetailsViewController.swift */; };
 		C0A2BB3427272E990069B525 /* Deck.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A2BB3327272E990069B525 /* Deck.storyboard */; };
-		C0A2BB37272734170069B525 /* Practice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A2BB36272734170069B525 /* Practice.storyboard */; };
 		C0A2BB392727350D0069B525 /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A2BB382727350D0069B525 /* Edit.storyboard */; };
 		C0A2BB3B2727379F0069B525 /* MyDecks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A2BB3A2727379F0069B525 /* MyDecks.storyboard */; };
 		C0A2BB3D2727393F0069B525 /* CreateDeck.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A2BB3C2727393F0069B525 /* CreateDeck.storyboard */; };
@@ -84,6 +84,9 @@
 		5D9BCBB9274484AA0046969C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		5D9BCBBD274484C20046969C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5D9BCBBF274484C40046969C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		5D9BCBC127456AF80046969C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Practice.storyboard; sourceTree = "<group>"; };
+		5D9BCBC427456AFD0046969C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Practice.strings"; sourceTree = "<group>"; };
+		5D9BCBC627456B310046969C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Practice.strings; sourceTree = "<group>"; };
 		5DAF0E4327344CF800E49A93 /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		5DAF0E4527344D5E00E49A93 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		5DE602692718B86E00341772 /* FlashCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,7 +122,6 @@
 		C067DF05271A15E9007F1EB5 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		C067DF07271A160F007F1EB5 /* DeckDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailsViewController.swift; sourceTree = "<group>"; };
 		C0A2BB3327272E990069B525 /* Deck.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Deck.storyboard; sourceTree = "<group>"; };
-		C0A2BB36272734170069B525 /* Practice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Practice.storyboard; sourceTree = "<group>"; };
 		C0A2BB382727350D0069B525 /* Edit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Edit.storyboard; sourceTree = "<group>"; };
 		C0A2BB3A2727379F0069B525 /* MyDecks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyDecks.storyboard; sourceTree = "<group>"; };
 		C0A2BB3C2727393F0069B525 /* CreateDeck.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateDeck.storyboard; sourceTree = "<group>"; };
@@ -255,7 +257,7 @@
 		C0BC72F727286C540016DBF9 /* Practice */ = {
 			isa = PBXGroup;
 			children = (
-				C0A2BB36272734170069B525 /* Practice.storyboard */,
+				5D9BCBC227456AF80046969C /* Practice.storyboard */,
 				5DAF0E4327344CF800E49A93 /* PracticeViewController.swift */,
 				5DAF0E4527344D5E00E49A93 /* FeedbackViewController.swift */,
 			);
@@ -430,7 +432,7 @@
 			files = (
 				5DE6027C2718B87000341772 /* LaunchScreen.storyboard in Resources */,
 				C0A2BB3B2727379F0069B525 /* MyDecks.storyboard in Resources */,
-				C0A2BB37272734170069B525 /* Practice.storyboard in Resources */,
+				5D9BCBC027456AF80046969C /* Practice.storyboard in Resources */,
 				C0A2BB3427272E990069B525 /* Deck.storyboard in Resources */,
 				5DE602792718B87000341772 /* Assets.xcassets in Resources */,
 				5D9BCBBC274484C20046969C /* Localizable.strings in Resources */,
@@ -544,6 +546,16 @@
 				5D9BCBBF274484C40046969C /* pt-BR */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		5D9BCBC227456AF80046969C /* Practice.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D9BCBC127456AF80046969C /* Base */,
+				5D9BCBC427456AFD0046969C /* pt-BR */,
+				5D9BCBC627456B310046969C /* en */,
+			);
+			name = Practice.storyboard;
 			sourceTree = "<group>";
 		};
 		5DE602722718B86E00341772 /* Main.storyboard */ = {

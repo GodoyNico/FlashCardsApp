@@ -43,6 +43,9 @@ class PracticeViewController: UIViewController {
         
         rememberedButton.isHidden = true
         noRememberedButton.isHidden = true
+        // TODO: - Botão está com texto errado
+        rememberedButton.titleLabel?.text = NSLocalizedString("remembered", comment: "")
+        noRememberedButton.titleLabel?.text = NSLocalizedString("no_remembered", comment: "")
         
         fetchCards()
         
@@ -63,16 +66,16 @@ class PracticeViewController: UIViewController {
     }
     
     @IBAction func endPractice(_ sender: Any) {
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+        let cancelAction = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel) { (action) in
             print("Seguiu a prática")
         }
         
-        let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (action) in
+        let confirmAction = UIAlertAction(title: NSLocalizedString("confirm", comment: ""), style: .default) { (action) in
             print("Parou a prática")
         }
         
-        let alert = UIAlertController(title: "Parar prática",
-                                      message: "Deseja realmente interromper a prática?",
+        let alert = UIAlertController(title: NSLocalizedString("stop_practice", comment: ""),
+                                      message: NSLocalizedString("stop_practice_text", comment: ""),
                                       preferredStyle: .alert)
         alert.addAction(cancelAction)
         alert.addAction(confirmAction)
@@ -168,6 +171,8 @@ class PracticeViewController: UIViewController {
         
         rememberedButton.layer.cornerRadius = 8
         noRememberedButton.layer.cornerRadius = 8
+        rememberedButton.titleLabel?.text = NSLocalizedString("remembered", comment: "")
+        noRememberedButton.titleLabel?.text = NSLocalizedString("no_remembered", comment: "")
         
         rememberedButton.layer.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.button)?.cgColor
         noRememberedButton.layer.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Primary)?.cgColor
@@ -241,6 +246,8 @@ class PracticeViewController: UIViewController {
 
             cardView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Secondary)
             sideView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Secondary)
+            rememberedButton.titleLabel?.text = NSLocalizedString("remembered", comment: "")
+            noRememberedButton.titleLabel?.text = NSLocalizedString("no_remembered", comment: "")
             isFront = false
             UIView.transition(with: cardView, duration: 0.5, options: .transitionFlipFromLeft, animations: .none, completion: nil)
         } else {
@@ -249,6 +256,8 @@ class PracticeViewController: UIViewController {
             imageView.image = cards[currentCard].front_content?.image.flatMap(UIImage.init(data: ))
             cardView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
             sideView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
+            rememberedButton.titleLabel?.text = NSLocalizedString("remembered", comment: "")
+            noRememberedButton.titleLabel?.text = NSLocalizedString("no_remembered", comment: "")
             isFront = true
             UIView.transition(with: cardView, duration: 0.5, options: .transitionFlipFromRight, animations: .none, completion: nil)
         }
