@@ -103,6 +103,7 @@
                                         <size key="customSize" width="377" height="66"/>
                                         <connections>
                                             <outlet property="keepPracticingLabel" destination="O7e-1f-dBG" id="dm9-Ud-EjK"/>
+                                            <outlet property="keepPracticingText" destination="RN8-hJ-rHr" id="BAx-Es-ICZ"/>
                                             <outlet property="progressLabel" destination="O7e-1f-dBG" id="Nwt-SX-Bg4"/>
                                             <outlet property="progressView" destination="TfF-Ro-h1s" id="o3g-fi-Azg"/>
                                             <outlet property="viewBackground" destination="Dvb-OD-cxe" id="b8t-6d-PHg"/>

@@ -17,6 +17,7 @@ class ProgressCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var yourProgressLabel: UILabel!
     @IBOutlet weak var keepPracticingLabel: UILabel!
+    @IBOutlet weak var keepPracticingText: UILabel!
     
     override class func awakeFromNib() {
         super.awakeFromNib()
@@ -27,6 +28,9 @@ class ProgressCollectionViewCell: UICollectionViewCell {
         yourProgressView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Primary)
         
         viewBackground.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Primary)
+        
+        yourProgressLabel.text = NSLocalizedString("your_progress", comment: "")
+        keepPracticingText.text = NSLocalizedString("keep_practicing", comment: "")
         
         yourProgressLabel.textColor = UIColor.white
         keepPracticingLabel.textColor = UIColor.white

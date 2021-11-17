@@ -15,6 +15,8 @@ class MyDecksCollectionViewCell: UICollectionViewCell {
         deckDeckView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
         deckDeckView.layer.cornerRadius = 15
         
+        
+        
         deckTitleDeckLabel.text = deck.title
         deckTitleDeckLabel.textColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Quaternary)
         
