@@ -18,6 +18,7 @@ protocol DeleteDeckDelegate: AnyObject {
 class DeleteDeckTableViewCell: UITableViewCell {
     
     @IBOutlet weak var deleteDeckBackground: UIView!
+    @IBOutlet weak var deleteLabel: UIButton!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -31,6 +32,8 @@ class DeleteDeckTableViewCell: UITableViewCell {
 
     func configure(deck: Deck?) {
         deleteDeckBackground.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.background)
+        
+        deleteLabel.titleLabel?.text = NSLocalizedString("delete_deck", comment: "")
         
         self.deck = deck
     }

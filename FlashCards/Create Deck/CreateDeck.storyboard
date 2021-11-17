@@ -260,6 +260,10 @@
                                                                 <outlet property="frontSideTextField" destination="r8l-Se-FtT" id="acZ-PG-vVZ"/>
                                                                 <outlet property="numberOfCharacterBack" destination="60Z-1h-drf" id="PTF-vt-ML9"/>
                                                                 <outlet property="numberOfCharactersFront" destination="NtF-Iz-GsR" id="czZ-iY-BGr"/>
+                                                                <outlet property="sideACounter" destination="NtF-Iz-GsR" id="Oew-hE-lXz"/>
+                                                                <outlet property="sideALabel" destination="U14-AG-9Me" id="shw-df-LVB"/>
+                                                                <outlet property="sideBCounter" destination="60Z-1h-drf" id="m31-rP-jZL"/>
+                                                                <outlet property="sideBLabel" destination="IVq-Mr-PwG" id="Xcf-hZ-JwQ"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="emptyStateCell" id="FaY-NV-9kT" customClass="EmptyStateCreateDeckCollectionViewCell" customModule="FlashCards" customModuleProvider="target">
@@ -389,6 +393,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="deleteDeckBackground" destination="wAO-Li-ekQ" id="hIF-PA-dQA"/>
+                                            <outlet property="deleteLabel" destination="d1F-ie-Lbz" id="zrd-Iw-Miv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
