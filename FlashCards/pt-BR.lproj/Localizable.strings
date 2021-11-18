@@ -27,10 +27,10 @@
 "add_card" = "Adicionar card";
 "side_a" = "Lado A";
 "side_b" = "Lado B";
-"max_characters" = "Máximo 100 caracteres";
 "deck_empty" = "Este deck está vazio 🥲";
 "practice_side" = "Começar prática por:";
 "delete_deck" = "Deletar deck";
+"delete_card_message" = "Tem certeza que você quer deletar esse deck?";
 "delete_image" = "Tem certeza que você quer deletar essa imagem?";
 "empty_deck_message" = "Adicione cards com perguntas e respostas e começe a praticar!";
 
@@ -51,6 +51,7 @@
 
 // MARK: - Settings
 "settings" = "Ajustes";
+"credits" = "Desenvolvido por Camila Prates, Carolina Nobre, Igor  Vicente, Júlia Souza e Nícolas Godoy.";
 
 // MARK: TabBar
-"without_decks" = "Você ainda não tem Deck para praticar! 🥲";
+"without_decks" = "Você ainda não tem deck para praticar! 🥲";

@@ -14,6 +14,7 @@ class SettingsViewController: UIViewController {
     var defaults = UserDefaults.standard
     
     @IBOutlet weak var themeSC: UISegmentedControl!
+    @IBOutlet weak var creditsLabel: UILabel!
     
     private var theme: Theme {
         get {
@@ -28,6 +29,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         themeSC.selectedSegmentIndex = theme.rawValue
+        creditsLabel.text = NSLocalizedString("credits", comment: "")
     }
     
     @IBAction func themeSegmentedControl(_ sender: UISegmentedControl) {

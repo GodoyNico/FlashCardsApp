@@ -27,10 +27,10 @@
 "add_card" = "Add card";
 "side_a" = "Side A";
 "side_b" = "Side B";
-"max_characters" = "Maximum of 100 characters";
 "deck_empty" = "This deck is empty 🥲";
 "practice_side" = "Start practice by:";
 "delete_deck" = "Delete deck";
+"delete_card_message" = "Are you sure you want to delete this card?";
 "delete_image" = "Are you sure you want to delete this image?";
 "empty_deck_message" = "Add cards with questions and answers to start practicing!";
 
@@ -51,6 +51,7 @@
 
 // MARK: - Settings
 "settings" = "Settings";
+"credits" = "Developed by por Camila Prates, Carolina Nobre, Igor  Vicente, Júlia Souza e Nícolas Godoy.";
 
 // MARK: TabBar
-"without_decks" = "You dont't have Deck to practice! 🥲";
+"without_decks" = "You dont't have a deck to practice! 🥲";

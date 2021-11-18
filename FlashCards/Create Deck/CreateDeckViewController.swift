@@ -192,9 +192,9 @@ extension CreateDeckViewController: DeleteCardDelegate {
     
     func didTapDeleteAlert(fromCell cell: UITableViewCell, card: Card) {
         
-        let alert = UIAlertController(title: nil, message: "Tem certeza que você quer deletar esse card? ", preferredStyle: .alert)
+        let alert = UIAlertController(title: nil, message: NSLocalizedString("delete_card_message", comment: ""), preferredStyle: .alert)
         
-        let deleteButton = UIAlertAction(title: "Sim", style: .default) { (action) in
+        let deleteButton = UIAlertAction(title: NSLocalizedString("confirm", comment: ""), style: .default) { (action) in
             
             //Card to remove
             self.context.delete(card)
@@ -209,7 +209,7 @@ extension CreateDeckViewController: DeleteCardDelegate {
             
         }
         
-        let cancelButton = UIAlertAction(title: "Não", style: .destructive) { (action) in
+        let cancelButton = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .destructive) { (action) in
             return
         }
         
@@ -224,9 +224,9 @@ extension CreateDeckViewController: DeleteDeckDelegate {
     
     func didTapDeleteButton(fromCell cell: UITableViewCell) {
         
-        let alert = UIAlertController(title: nil, message: "Tem certeza que você quer deletar esse deck? ", preferredStyle: .alert)
+        let alert = UIAlertController(title: nil, message: NSLocalizedString("delete_deck_message", comment: ""), preferredStyle: .alert)
         
-        let deleteButton = UIAlertAction(title: "Sim", style: .destructive) { (action) in
+        let deleteButton = UIAlertAction(title: NSLocalizedString("confirm", comment: ""), style: .default) { (action) in
             
             guard let deckToRemove = self.deck else { return }
             
@@ -242,7 +242,7 @@ extension CreateDeckViewController: DeleteDeckDelegate {
             
         }
         
-        let cancelButton = UIAlertAction(title: "Não", style: .default) { (action) in
+        let cancelButton = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .destructive) { (action) in
             return
         }
         

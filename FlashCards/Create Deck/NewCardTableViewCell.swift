@@ -134,7 +134,7 @@ extension NewCardTableViewCell: UICollectionViewDataSource {
                     image: nil,
                     identifier: nil,
                     options: UIMenu.Options.destructive,
-                    children: [ UIAction(title:"Apagar", image: UIImage(systemName: "trash"), attributes: .destructive,handler: { action in
+                    children: [ UIAction(title: NSLocalizedString("delete", comment: ""), image: UIImage(systemName: "trash"), attributes: .destructive, handler: { action in
 
                         self.delegate?.didTapDeleteAlert(fromCell: self, card: self.cards[indexPath.row])
                         

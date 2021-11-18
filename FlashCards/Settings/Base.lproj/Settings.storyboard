@@ -49,6 +49,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="JnM-eg-8ly"/>
                     <connections>
+                        <outlet property="creditsLabel" destination="62q-lA-Gyx" id="5FS-Dc-JQc"/>
                         <outlet property="themeSC" destination="ZD7-Ky-VN4" id="7SU-FX-q5j"/>
                     </connections>
                 </viewController>
