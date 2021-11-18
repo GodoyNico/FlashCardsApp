@@ -33,7 +33,6 @@ class PracticeViewController: UIViewController {
     @IBOutlet weak var sideView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var contentLabel: UILabel!
-    @IBOutlet weak var flipButton: UIButton!
     @IBOutlet weak var rememberedButton: UIButton!
     @IBOutlet weak var noRememberedButton: UIButton!
     
@@ -234,6 +233,9 @@ class PracticeViewController: UIViewController {
         sideLabel.text = isFront ? "A" : "B"
         
     }
+    
+    
+    @IBAction func flipButton(_ sender: UIButton) { flip() }
     
     @objc func flip(_ sender: UITapGestureRecognizer? = nil) {
         if isFront {

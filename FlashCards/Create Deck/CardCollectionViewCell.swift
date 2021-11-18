@@ -26,22 +26,44 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
     @IBOutlet weak var backImage: UIImageView!
     @IBOutlet weak var sideALabel: UILabel!
     @IBOutlet weak var sideBLabel: UILabel!
+    @IBOutlet weak var sideAcamImage: UIButton!
+    @IBOutlet weak var sideBcamImage: UIButton!
+    
     var maxCharacter = 100
     
     weak var delegate: AddCardImageDelegate?
     var card: Card?
     
+    override class func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
     @IBAction func addImageFront(_ sender: Any) {
-        self.delegate?.selectImage { image in
-            self.frontImage.image = image
-            self.card?.front_content?.image = image?.pngData()
+        if let _ = frontImage.image {
+            self.frontImage.image = nil
+            self.card?.front_content?.image = nil
+            self.sideAcamImage.setImage(UIImage(named: "camAdd"), for: .normal)
+        } else {
+            self.delegate?.selectImage { image in
+                self.frontImage.image = image
+                self.card?.front_content?.image = image?.pngData()
+                self.sideAcamImage.setImage(UIImage(named: "camDelete"), for: .normal)
+            }
         }
+        
     }
     
     @IBAction func addImageBack(_ sender: Any) {
-        self.delegate?.selectImage { image in
-            self.backImage.image = image
-            self.card?.back_content?.image = image?.pngData()
+        if let _ = backImage.image {
+            self.backImage.image = nil
+            self.card?.back_content?.image = nil
+            self.sideBcamImage.setImage(UIImage(named: "camAdd"), for: .normal)
+        } else {
+            self.delegate?.selectImage { image in
+                self.backImage.image = image
+                self.card?.back_content?.image = image?.pngData()
+                self.sideBcamImage.setImage(UIImage(named: "camDelete"), for: .normal)
+            }
         }
     }
     
@@ -62,9 +84,6 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         }
     }
     
-    override class func awakeFromNib() {
-        super.awakeFromNib()
-    }
     
     func configure(card: Card) {
         self.card = card
@@ -87,7 +106,17 @@ class CardCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         frontSideTextField.layer.cornerRadius = 4
         backSideTextField.layer.cornerRadius = 4
         
-        viewBackground.layer.cornerRadius = 12
+        if let sideAcontent = card.front_content, let _ = sideAcontent.image {
+            sideAcamImage.setImage(UIImage(named: "camDelete"), for: .normal)
+        } else {
+            sideAcamImage.setImage(UIImage(named: "camAdd"), for: .normal)
+        }
         
+        if let sideBcontent = card.back_content, let _ =  sideBcontent.image {
+            sideBcamImage.setImage(UIImage(named: "camDelete"), for: .normal)
+        } else {
+            sideBcamImage.setImage(UIImage(named: "camAdd"), for: .normal)
+        }
+                
     }
 }
