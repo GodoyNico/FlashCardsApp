@@ -24,7 +24,7 @@ class SingleDeckViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         layoutConfig()
-        
+                        
         if let deckSelected = self.deck {
             deckTitleLabel.text = deckSelected.title
             practiceButton.layer.cornerRadius = 10
@@ -64,6 +64,8 @@ class SingleDeckViewController: UIViewController {
         deckProgressCircleView.progressColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Secondary) ?? .white
         
         deckProgressLabel.textColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Secondary)
+        
+        self.navigationController?.navigationBar.tintColor = UIColor(designSystem: DesignSystem.AssetsColor.basicQuaternary2)
     }
     
     func configure(deck: Deck?) {

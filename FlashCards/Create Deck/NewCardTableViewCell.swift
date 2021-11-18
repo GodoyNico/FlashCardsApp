@@ -147,7 +147,7 @@ extension NewCardTableViewCell: UICollectionViewDataSource {
 extension NewCardTableViewCell: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width * 0.8, height: 610)
+        return CGSize(width: collectionView.bounds.width * 0.9, height: 620)
     }
 }
 

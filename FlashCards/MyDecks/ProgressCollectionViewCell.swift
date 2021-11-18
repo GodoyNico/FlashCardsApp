@@ -32,8 +32,8 @@ class ProgressCollectionViewCell: UICollectionViewCell {
         yourProgressLabel.text = NSLocalizedString("your_progress", comment: "")
         keepPracticingText.text = NSLocalizedString("keep_practicing", comment: "")
         
-        yourProgressLabel.textColor = UIColor.white
-        keepPracticingLabel.textColor = UIColor.white
+        yourProgressLabel.textColor = UIColor(designSystem: DesignSystem.AssetsColor.tabBarTint)
+        keepPracticingLabel.textColor = UIColor(designSystem: DesignSystem.AssetsColor.tabBarTint)
         progressLabel.textColor = UIColor.white
         
         progressView.layer.cornerRadius = 6

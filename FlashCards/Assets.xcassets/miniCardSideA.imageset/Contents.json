@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "miniCardSideA-light-1.png",
+      "filename" : "lightA.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,7 @@
           "value" : "light"
         }
       ],
-      "filename" : "miniCardSideA-light.png",
+      "filename" : "lightA-1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -23,7 +23,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "miniCardSideA-dark.png",
+      "filename" : "darkA.png",
       "idiom" : "universal",
       "scale" : "1x"
     },

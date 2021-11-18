@@ -29,7 +29,6 @@
 		9F81EDE4272B1A2500AFADC8 /* NewDeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81EDE3272B1A2500AFADC8 /* NewDeckTableViewCell.swift */; };
 		9F81EDE6272B1A4200AFADC8 /* NewCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81EDE5272B1A4200AFADC8 /* NewCardTableViewCell.swift */; };
 		9F81EDEA272B31F200AFADC8 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81EDE9272B31F200AFADC8 /* CardCollectionViewCell.swift */; };
-		9FB8A1932745783900252310 /* TextView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB8A1922745783900252310 /* TextView+Additions.swift */; };
 		9FF7A1B3272873A700FBCAE3 /* CreateDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7A1B2272873A700FBCAE3 /* CreateDeckViewController.swift */; };
 		C008826127351934009A27A0 /* ProgressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008826027351934009A27A0 /* ProgressCollectionViewCell.swift */; };
 		C008826327351959009A27A0 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008826227351959009A27A0 /* SearchCollectionViewCell.swift */; };
@@ -112,7 +111,6 @@
 		9F81EDE3272B1A2500AFADC8 /* NewDeckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDeckTableViewCell.swift; sourceTree = "<group>"; };
 		9F81EDE5272B1A4200AFADC8 /* NewCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardTableViewCell.swift; sourceTree = "<group>"; };
 		9F81EDE9272B31F200AFADC8 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
-		9FB8A1922745783900252310 /* TextView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextView+Additions.swift"; sourceTree = "<group>"; };
 		9FF7A1B2272873A700FBCAE3 /* CreateDeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDeckViewController.swift; sourceTree = "<group>"; };
 		C008826027351934009A27A0 /* ProgressCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCollectionViewCell.swift; sourceTree = "<group>"; };
 		C008826227351959009A27A0 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -265,7 +263,6 @@
 				C0D4C0D2273C38DC0078BF00 /* DeleteDeckTableViewCell.swift */,
 				9F67A99E273991C300B63F8D /* SwitchTableViewCell.swift */,
 				C057133827443E0E00A9F854 /* EmptyStateCreateDeckCollectionViewCell.swift */,
-				9FB8A1922745783900252310 /* TextView+Additions.swift */,
 			);
 			path = "Create Deck";
 			sourceTree = "<group>";
@@ -451,7 +448,6 @@
 				9F81EDE4272B1A2500AFADC8 /* NewDeckTableViewCell.swift in Sources */,
 				9F81EDEA272B31F200AFADC8 /* CardCollectionViewCell.swift in Sources */,
 				C0BC7301272893220016DBF9 /* TitleMyDecksCollectionViewCell.swift in Sources */,
-				9FB8A1932745783900252310 /* TextView+Additions.swift in Sources */,
 				5DE6026D2718B86E00341772 /* AppDelegate.swift in Sources */,
 				9F67A99F273991C300B63F8D /* SwitchTableViewCell.swift in Sources */,
 				C0C25AD827399BE900F6A46D /* Content+CoreDataClass.swift in Sources */,

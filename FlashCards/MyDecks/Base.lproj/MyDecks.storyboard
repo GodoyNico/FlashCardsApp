@@ -42,23 +42,23 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="260" height="102"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seu Progresso" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wus-vY-Gag">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="8" width="260" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" name="tabBarTint"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.71999999999999997" translatesAutoresizingMaskIntoConstraints="NO" id="TfF-Ro-h1s">
-                                                                    <rect key="frame" x="0.0" y="27.5" width="260" height="4"/>
+                                                                    <rect key="frame" x="0.0" y="35.5" width="260" height="4"/>
                                                                     <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </progressView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue Praticando!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RN8-hJ-rHr">
-                                                                    <rect key="frame" x="0.0" y="37.5" width="110.5" height="13.5"/>
+                                                                    <rect key="frame" x="0.0" y="45.5" width="110.5" height="13.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" name="tabBarTint"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="72%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7e-1f-dBG">
-                                                                    <rect key="frame" x="235" y="37.5" width="25" height="13.5"/>
+                                                                    <rect key="frame" x="235" y="45.5" width="25" height="13.5"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                             <constraints>
-                                                                <constraint firstItem="wus-vY-Gag" firstAttribute="top" secondItem="Dvb-OD-cxe" secondAttribute="top" id="1Qr-hf-wN7"/>
+                                                                <constraint firstItem="wus-vY-Gag" firstAttribute="top" secondItem="Dvb-OD-cxe" secondAttribute="top" constant="8" id="1Qr-hf-wN7"/>
                                                                 <constraint firstAttribute="trailing" secondItem="wus-vY-Gag" secondAttribute="trailing" id="8cE-Jy-jGI"/>
                                                                 <constraint firstItem="RN8-hJ-rHr" firstAttribute="leading" secondItem="Dvb-OD-cxe" secondAttribute="leading" id="CWd-XG-kTE"/>
                                                                 <constraint firstAttribute="trailing" secondItem="TfF-Ro-h1s" secondAttribute="trailing" id="JO9-9z-4Ol"/>
@@ -268,7 +268,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="QTX-0l-ydI">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="Vw2-Ew-uQf">
-                            <color key="tintColor" systemColor="labelColor"/>
+                            <color key="tintColor" name="color1Primary"/>
                             <connections>
                                 <action selector="addDeck:" destination="chZ-ES-L3i" id="6RX-hY-w28"/>
                                 <segue destination="hPY-uT-H87" kind="show" id="6Ei-Fx-SEe"/>
@@ -330,12 +330,15 @@
         <image name="decks_AB" width="234" height="183"/>
         <image name="dekcs_?!" width="504" height="396"/>
         <image name="list.bullet.rectangle.fill" catalog="system" width="128" height="93"/>
+        <namedColor name="color1Primary">
+            <color red="0.93725490196078431" green="0.52156862745098043" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="color4Secondary">
             <color red="0.94117647058823528" green="0.5490196078431373" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="tabBarTint">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

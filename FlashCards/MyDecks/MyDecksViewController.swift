@@ -25,6 +25,8 @@ class MyDecksViewController: UIViewController {
         myDecksCollectionView.delegate = self
         
         fetchDecks()
+        
+        self.myDecksCollectionView.contentInset.bottom += 100
 
     }
     
