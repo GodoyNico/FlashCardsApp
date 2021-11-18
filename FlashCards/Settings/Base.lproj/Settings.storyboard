@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z0k-ci-4dh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -30,12 +29,21 @@
                                     <action selector="themeSegmentedControl:" destination="Y6W-OH-hqX" eventType="valueChanged" id="iUe-hn-Mnj"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desenvolvido por Camila Prates, Carolina Nobre, Igor  Vicente, Júlia Souza e Nícolas Godoy." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62q-lA-Gyx">
+                                <rect key="frame" x="32" y="707" width="350" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="creditsColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="ZD7-Ky-VN4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="44" id="XnC-x5-xSO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="62q-lA-Gyx" secondAttribute="bottom" constant="77" id="d1i-ts-rxW"/>
+                            <constraint firstItem="62q-lA-Gyx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="hWM-qy-kKL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZD7-Ky-VN4" secondAttribute="trailing" constant="16" id="kjK-fH-Wcu"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="62q-lA-Gyx" secondAttribute="trailing" constant="32" id="owu-P7-HXx"/>
                             <constraint firstItem="ZD7-Ky-VN4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="s1O-Xj-rG3"/>
                         </constraints>
                     </view>
@@ -79,6 +87,9 @@
         </namedColor>
         <namedColor name="color1Secondary">
             <color red="0.97254901960784312" green="0.84705882352941175" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="creditsColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
