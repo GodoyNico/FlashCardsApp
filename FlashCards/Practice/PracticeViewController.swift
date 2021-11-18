@@ -195,39 +195,24 @@ class PracticeViewController: UIViewController {
     
     func fetchCards() {
         self.cards = self.deck?.cards?.allObjects as! [Card]
-        
-        if self.cards.isEmpty {
-            for i in 1...5 {
-                let newCard = Card(context: self.context)
-                
-                let fContent = Content(context: self.context)
-                fContent.text = "frente \(i)"
-                
-                let vContent = Content(context: self.context)
-                vContent.text = "verso \(i)"
-                
-                newCard.front_content = fContent
-                newCard.back_content = vContent
-                
-                newCard.deck = self.deck
-                
-                do {
-                    try self.context.save()
-                } catch { }
-            }
-        }
+
     }
     
     func toPractice() {
         flipped = false
         rememberedButton.isHidden = true
         noRememberedButton.isHidden = true
-        isFront = self.deck?.isFront ?? true
         
+        isFront = self.deck?.isFront ?? true
         let cardContent = isFront ? cards[currentCard].front_content : cards[currentCard].back_content
         
         contentLabel.text = cardContent?.text
         imageView.image = cardContent?.image.flatMap(UIImage.init(data: ))
+        
+        cardView.backgroundColor = UIColor(designSystem: isFront ? DesignSystem.AssetsColor.color2Primary : DesignSystem.AssetsColor.color1Secondary )
+        sideStatus.image = UIImage(named: isFront ? "iconA" : "iconB")
+        flipButton.setImage(UIImage(named: isFront ? "setaFlipA" : "setaFlipB"), for: .normal)
+        
     }
     
     
@@ -237,18 +222,23 @@ class PracticeViewController: UIViewController {
         if isFront {
             contentLabel.text = cards[currentCard].back_content?.text
             imageView.image = cards[currentCard].back_content?.image.flatMap(UIImage.init(data: ))
-            cardView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Secondary)
-            isFront = false
+            cardView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color1Secondary )
+            sideStatus.image = UIImage(named: "iconB")
+            flipButton.setImage(UIImage(named: "setaFlipB"), for: .normal)
+            
             UIView.transition(with: cardView, duration: 0.5, options: .transitionFlipFromLeft, animations: .none, completion: nil)
-            cardColor()
+            isFront = false
 
         } else {
             contentLabel.text = cards[currentCard].front_content?.text
             imageView.image = cards[currentCard].front_content?.image.flatMap(UIImage.init(data: ))
-            cardView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary)
-            isFront = true
+            cardView.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.color2Primary )
+
+            sideStatus.image = UIImage(named: "iconA")
+            flipButton.setImage(UIImage(named: "setaFlipA"), for: .normal)
+            
             UIView.transition(with: cardView, duration: 0.5, options: .transitionFlipFromRight, animations: .none, completion: nil)
-            cardColor()
+            isFront = true
         }
         
         if !flipped {

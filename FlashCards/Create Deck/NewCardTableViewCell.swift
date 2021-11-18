@@ -74,7 +74,8 @@ class NewCardTableViewCell: UITableViewCell, UICollectionViewDelegate {
         
         cards.append(newCard)
         
-        fetchData()
+        //fetchData()
+        cardCollectionView.reloadData()
         numberOfCardsLabel.text = String("\(cards.count) cards")
     }
     

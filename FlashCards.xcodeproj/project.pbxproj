@@ -721,6 +721,9 @@
 				DEVELOPMENT_TEAM = 8G4UL7Z7AB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlashCards/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Winnie Card";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Permissão para usar a câmera";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Permissão para acessar a galeria";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -751,6 +754,9 @@
 				DEVELOPMENT_TEAM = 8G4UL7Z7AB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlashCards/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Winnie Card";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Permissão para usar a câmera";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Permissão para acessar a galeria";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

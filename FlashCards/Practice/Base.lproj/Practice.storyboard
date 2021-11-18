@@ -35,6 +35,9 @@
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PHh-wT-uda">
                                                         <rect key="frame" x="20" y="101" width="302" height="182"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="182" id="qWo-wZ-YWI"/>
+                                                        </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqL-pm-rde">
                                                         <rect key="frame" x="20" y="303" width="302" height="130"/>
@@ -69,14 +72,14 @@
                                                     <constraint firstAttribute="trailing" secondItem="3eb-yl-bzI" secondAttribute="trailing" constant="12" id="5kp-Ik-gm5"/>
                                                     <constraint firstAttribute="height" constant="505" id="7VS-Rj-TpT"/>
                                                     <constraint firstItem="zqL-pm-rde" firstAttribute="top" secondItem="PHh-wT-uda" secondAttribute="bottom" constant="20" id="ACX-nz-Ao8"/>
+                                                    <constraint firstItem="3eb-yl-bzI" firstAttribute="top" secondItem="zqL-pm-rde" secondAttribute="bottom" constant="29" id="Een-9l-bKM"/>
                                                     <constraint firstAttribute="trailing" secondItem="zqL-pm-rde" secondAttribute="trailing" constant="20" id="JJ4-xz-KTn"/>
                                                     <constraint firstItem="PHh-wT-uda" firstAttribute="top" secondItem="Hw0-wg-Hui" secondAttribute="bottom" constant="45" id="KaD-ym-Hm5"/>
                                                     <constraint firstAttribute="bottom" secondItem="3eb-yl-bzI" secondAttribute="bottom" constant="12" id="NXz-8Y-4zg"/>
-                                                    <constraint firstItem="3eb-yl-bzI" firstAttribute="top" secondItem="zqL-pm-rde" secondAttribute="bottom" constant="29" id="Ya2-yg-nbZ"/>
                                                     <constraint firstAttribute="trailing" secondItem="PHh-wT-uda" secondAttribute="trailing" constant="20" id="Z3h-8a-VgI"/>
                                                     <constraint firstItem="zqL-pm-rde" firstAttribute="leading" secondItem="Z8i-jc-jLK" secondAttribute="leading" constant="20" id="d0A-hc-c2e"/>
                                                     <constraint firstItem="Hw0-wg-Hui" firstAttribute="top" secondItem="Z8i-jc-jLK" secondAttribute="top" constant="22" id="dM4-xU-lfL"/>
-                                                    <constraint firstItem="PHh-wT-uda" firstAttribute="leading" secondItem="Z8i-jc-jLK" secondAttribute="leading" constant="20" id="xK4-zZ-G4E"/>
+                                                    <constraint firstItem="PHh-wT-uda" firstAttribute="centerX" secondItem="Z8i-jc-jLK" secondAttribute="centerX" id="yjm-3A-N81"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixs-Mg-TTD">
