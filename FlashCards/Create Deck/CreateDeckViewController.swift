@@ -16,6 +16,8 @@ class CreateDeckViewController: UIViewController {
     let switchCell: String = "switchCell"
     let deleteCell: String = "removeDeckCell"
     
+    var keybordIsOpen = false
+    
     @IBOutlet weak var createDeckTableView: UITableView!
     
     override func viewDidLoad() {
@@ -41,8 +43,31 @@ class CreateDeckViewController: UIViewController {
         
         createDeckTableView.delegate = self
         createDeckTableView.dataSource = self
+
+        self.hideKeyboardWhenTappedAround()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardApear), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisapear), name: UIResponder.keyboardWillHideNotification, object: nil)
+
     }
+    
+    @objc func keyboardApear() {
+        if !keybordIsOpen {
+            self.createDeckTableView.contentInset.bottom += 250
+            self.createDeckTableView.verticalScrollIndicatorInsets.bottom += 250
+            keybordIsOpen = true
+        }
+    }
+    
+    @objc func keyboardDisapear() {
+        if keybordIsOpen {
+            self.createDeckTableView.contentInset.bottom -= 250
+            self.createDeckTableView.verticalScrollIndicatorInsets.bottom -= 250
+            keybordIsOpen = false
+        }
+    }
+
     
     func configure(deck: Deck?, screen: Screen) {
         self.deck = deck
@@ -50,8 +75,6 @@ class CreateDeckViewController: UIViewController {
     }
     
     @IBAction func cancel(_ sender: Any) {
-//        reloadDelegate?.didTapReturn(deck: self.deck)
-
         context.rollback()
 
         navigationController?.popViewController(animated: true)
@@ -239,4 +262,16 @@ extension CreateDeckViewController: AddCardImageDelegate {
         }
     }
     
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

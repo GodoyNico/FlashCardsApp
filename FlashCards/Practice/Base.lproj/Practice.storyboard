@@ -73,7 +73,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="return" catalog="system"/>
                                                         <connections>
-                                                            <action selector="flipCard:" destination="6Jy-aR-Dz0" eventType="touchUpInside" id="WKQ-Sg-V97"/>
+                                                            <action selector="flipButton:" destination="6Jy-aR-Dz0" eventType="touchUpInside" id="wuV-x1-EqK"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -165,7 +165,6 @@
                         <outlet property="cardView" destination="Z8i-jc-jLK" id="sAa-H3-V0n"/>
                         <outlet property="contentLabel" destination="zqL-pm-rde" id="JbT-Jf-SjJ"/>
                         <outlet property="counterLabel" destination="COh-Wq-jXd" id="d74-gs-icd"/>
-                        <outlet property="flipButton" destination="3eb-yl-bzI" id="4tV-y4-ShJ"/>
                         <outlet property="imageView" destination="PHh-wT-uda" id="Ala-st-85r"/>
                         <outlet property="noRememberedButton" destination="ixs-Mg-TTD" id="eHe-MC-PAf"/>
                         <outlet property="rememberedButton" destination="a80-DM-krm" id="j4b-V8-io5"/>
@@ -200,7 +199,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dfd-h0-NIw">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="decks_AB" translatesAutoresizingMaskIntoConstraints="NO" id="dfd-h0-NIw">
                                                 <rect key="frame" x="130.5" y="196" width="153" height="119"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="119" id="QVD-55-afb"/>
@@ -316,6 +315,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="decks_AB" width="234" height="183"/>
         <image name="return" catalog="system" width="128" height="101"/>
         <namedColor name="color1Primary">
             <color red="0.93725490196078431" green="0.52156862745098043" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

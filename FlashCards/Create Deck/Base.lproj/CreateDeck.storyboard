@@ -132,7 +132,7 @@
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="6MB-TG-eT9" userLabel="Stack View A">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="296" height="22"/>
                                                                                         <subviews>
-                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="miniCardsImage" translatesAutoresizingMaskIntoConstraints="NO" id="U6b-XT-Bit">
+                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="miniCardSideA" translatesAutoresizingMaskIntoConstraints="NO" id="U6b-XT-Bit">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="19" height="22"/>
                                                                                                 <constraints>
                                                                                                     <constraint firstAttribute="height" constant="22" id="kRf-Is-yqD"/>
@@ -140,19 +140,16 @@
                                                                                                 </constraints>
                                                                                             </imageView>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Lado A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U14-AG-9Me">
-                                                                                                <rect key="frame" x="35" y="0.0" width="197.5" height="22"/>
+                                                                                                <rect key="frame" x="35" y="0.0" width="185" height="22"/>
                                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                                 <color key="textColor" name="color2Secondary"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
-                                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUA-iL-nDq">
-                                                                                                <rect key="frame" x="248.5" y="0.0" width="47.5" height="22"/>
-                                                                                                <constraints>
-                                                                                                    <constraint firstAttribute="width" constant="47.5" id="8Yh-oM-oh1"/>
-                                                                                                </constraints>
+                                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUA-iL-nDq">
+                                                                                                <rect key="frame" x="236" y="0.0" width="60" height="22"/>
                                                                                                 <color key="tintColor" name="basicQuaternary"/>
                                                                                                 <state key="normal" title="Button"/>
-                                                                                                <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system" title=""/>
+                                                                                                <buttonConfiguration key="configuration" style="plain" image="camAdd" title=""/>
                                                                                                 <connections>
                                                                                                     <action selector="addImageFront:" destination="gfs-N0-9Fb" eventType="touchUpInside" id="dTA-Uh-NK1"/>
                                                                                                 </connections>
@@ -174,7 +171,7 @@
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" image="newCardImage" translatesAutoresizingMaskIntoConstraints="NO" id="mWQ-Ev-kcL">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="mWQ-Ev-kcL">
                                                                                 <rect key="frame" x="0.0" y="248" width="64" height="40"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="40.219999999999999" id="jbR-t1-MLd"/>
@@ -187,7 +184,7 @@
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="euU-YI-1wO" userLabel="Stack View B">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="296" height="22"/>
                                                                                         <subviews>
-                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="miniCardsImage" translatesAutoresizingMaskIntoConstraints="NO" id="qWf-lH-zk5">
+                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="miniCardSideB" translatesAutoresizingMaskIntoConstraints="NO" id="qWf-lH-zk5">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="19" height="22"/>
                                                                                                 <constraints>
                                                                                                     <constraint firstAttribute="width" constant="19" id="KS1-uX-LZD"/>
@@ -195,16 +192,16 @@
                                                                                                 </constraints>
                                                                                             </imageView>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Lado B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVq-Mr-PwG">
-                                                                                                <rect key="frame" x="35" y="0.0" width="196.5" height="22"/>
+                                                                                                <rect key="frame" x="35" y="0.0" width="185" height="22"/>
                                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                                 <color key="textColor" name="color1Primary"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
-                                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qs-RF-tF5">
-                                                                                                <rect key="frame" x="247.5" y="0.0" width="48.5" height="22"/>
+                                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qs-RF-tF5">
+                                                                                                <rect key="frame" x="236" y="0.0" width="60" height="22"/>
                                                                                                 <color key="tintColor" name="basicQuaternary"/>
                                                                                                 <state key="normal" title="Button"/>
-                                                                                                <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system"/>
+                                                                                                <buttonConfiguration key="configuration" style="plain" image="camAdd"/>
                                                                                                 <connections>
                                                                                                     <action selector="addImageBack:" destination="gfs-N0-9Fb" eventType="touchUpInside" id="Tmx-OK-XgH"/>
                                                                                                 </connections>
@@ -226,7 +223,7 @@
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" image="newCardImage" translatesAutoresizingMaskIntoConstraints="NO" id="ux2-dU-AA2">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="ux2-dU-AA2">
                                                                                 <rect key="frame" x="0.0" y="554" width="64.5" height="40"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="64.599999999999994" id="01L-FA-hfN"/>
@@ -260,7 +257,9 @@
                                                                 <outlet property="numberOfCharBackLabel" destination="60Z-1h-drf" id="fQx-Qc-vTv"/>
                                                                 <outlet property="numberOfCharFrontLabel" destination="NtF-Iz-GsR" id="vS0-j3-PSm"/>
                                                                 <outlet property="sideALabel" destination="U14-AG-9Me" id="shw-df-LVB"/>
+                                                                <outlet property="sideAcamImage" destination="mUA-iL-nDq" id="dWy-vN-HfK"/>
                                                                 <outlet property="sideBLabel" destination="IVq-Mr-PwG" id="Xcf-hZ-JwQ"/>
+                                                                <outlet property="sideBcamImage" destination="8qs-RF-tF5" id="Twn-x3-qc1"/>
                                                                 <outlet property="viewBackground" destination="8l7-5L-ctQ" id="FF1-BZ-Ong"/>
                                                             </connections>
                                                         </collectionViewCell>
@@ -441,11 +440,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="camAdd" width="36" height="30"/>
         <image name="coruja" width="560" height="340"/>
         <image name="decks_AB" width="234" height="183"/>
-        <image name="miniCardsImage" width="76" height="88"/>
-        <image name="newCardImage" width="473" height="370"/>
+        <image name="miniCardSideA" width="19" height="22"/>
+        <image name="miniCardSideB" width="19" height="23"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="background">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -16,8 +16,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         tabBar.items?[2].image = UIImage(systemName: selectedIndex == 2 ? "gearshape.fill":"gearshape")
 
         tabBar.tintColor = UIColor(designSystem: DesignSystem.AssetsColor.tabBarTint)
-        setupMiddleButton()
-        
         tabBar.backgroundColor = UIColor(designSystem: DesignSystem.AssetsColor.tabBar)
         setupMiddleButton()
         
