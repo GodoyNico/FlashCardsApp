@@ -10,3 +10,15 @@
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xLW-dZ-LT3"; */
 "xLW-dZ-LT3.normalTitle" = "Adicionar card";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "8qs-RF-tF5"; */
+"8qs-RF-tF5.normalTitle" = "";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mUA-iL-nDq"; */
+"mUA-iL-nDq.normalTitle" = "";
+
+/* Class = "UIButton"; configuration.title = "Deletar deck"; ObjectID = "d1F-ie-Lbz"; */
+"d1F-ie-Lbz.configuration.title" = "Deletar deck";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "d1F-ie-Lbz"; */
+"d1F-ie-Lbz.normalTitle" = "Deletar deck";
