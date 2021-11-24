@@ -18,7 +18,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
     
     func configure() {
         searchBar.barTintColor = UIColor(designSystem: DesignSystem.AssetsColor.background)
-        
         searchBar.placeholder = NSLocalizedString("search_bar", comment: "")
     }
 }
