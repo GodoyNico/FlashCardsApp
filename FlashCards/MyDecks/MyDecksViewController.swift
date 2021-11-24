@@ -257,7 +257,8 @@ extension MyDecksViewController: UISearchBarDelegate {
             self.myDecks = self.realData
         }
         
-        self.myDecksCollectionView.reloadData()
+        myDecksCollectionView.reloadSections(IndexSet(integer: 3))
+        
     }
     
 }
