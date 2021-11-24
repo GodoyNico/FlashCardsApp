@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Jy-aR-Dz0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -48,11 +49,11 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eb-yl-bzI">
-                                                        <rect key="frame" x="284.5" y="462" width="45.5" height="31"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eb-yl-bzI">
+                                                        <rect key="frame" x="306" y="462" width="24" height="31"/>
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="return" catalog="system"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
                                                         <connections>
                                                             <action selector="flipButton:" destination="6Jy-aR-Dz0" eventType="touchUpInside" id="wuV-x1-EqK"/>
                                                         </connections>
@@ -71,6 +72,7 @@
                                                     <constraint firstItem="Hw0-wg-Hui" firstAttribute="centerX" secondItem="Z8i-jc-jLK" secondAttribute="centerX" id="4xb-sA-DaC"/>
                                                     <constraint firstAttribute="trailing" secondItem="3eb-yl-bzI" secondAttribute="trailing" constant="12" id="5kp-Ik-gm5"/>
                                                     <constraint firstAttribute="height" constant="505" id="7VS-Rj-TpT"/>
+                                                    <constraint firstItem="3eb-yl-bzI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Z8i-jc-jLK" secondAttribute="leading" constant="20" symbolic="YES" id="9r2-LT-h4z"/>
                                                     <constraint firstItem="zqL-pm-rde" firstAttribute="top" secondItem="PHh-wT-uda" secondAttribute="bottom" constant="20" id="ACX-nz-Ao8"/>
                                                     <constraint firstItem="3eb-yl-bzI" firstAttribute="top" secondItem="zqL-pm-rde" secondAttribute="bottom" constant="29" id="Een-9l-bKM"/>
                                                     <constraint firstAttribute="trailing" secondItem="zqL-pm-rde" secondAttribute="trailing" constant="20" id="JJ4-xz-KTn"/>
@@ -87,7 +89,7 @@
                                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Kqj-PN-kGK"/>
-                                                    <constraint firstAttribute="width" constant="130" id="kn9-n9-0On"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="kn9-n9-0On"/>
                                                 </constraints>
                                                 <color key="tintColor" name="background"/>
                                                 <state key="normal" title="Button"/>
@@ -101,7 +103,7 @@
                                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="IiF-Xc-otI"/>
-                                                    <constraint firstAttribute="width" constant="130" id="OnJ-xr-mik"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="OnJ-xr-mik"/>
                                                 </constraints>
                                                 <color key="tintColor" name="background"/>
                                                 <state key="normal" title="Button"/>
@@ -117,6 +119,7 @@
                                             <constraint firstAttribute="trailing" secondItem="Z8i-jc-jLK" secondAttribute="trailing" constant="36" id="Aic-QS-45a"/>
                                             <constraint firstItem="a80-DM-krm" firstAttribute="trailing" secondItem="Z8i-jc-jLK" secondAttribute="trailing" id="EQ4-pQ-zhf"/>
                                             <constraint firstItem="COh-Wq-jXd" firstAttribute="centerX" secondItem="G09-cI-kZI" secondAttribute="centerX" id="KKQ-F0-91I"/>
+                                            <constraint firstItem="a80-DM-krm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ixs-Mg-TTD" secondAttribute="trailing" constant="8" symbolic="YES" id="Th2-tA-pBW"/>
                                             <constraint firstItem="Z8i-jc-jLK" firstAttribute="leading" secondItem="G09-cI-kZI" secondAttribute="leading" constant="36" id="cC6-hh-M2T"/>
                                             <constraint firstItem="COh-Wq-jXd" firstAttribute="top" secondItem="G09-cI-kZI" secondAttribute="top" constant="12" id="cIX-0V-lCR"/>
                                             <constraint firstItem="a80-DM-krm" firstAttribute="centerY" secondItem="ixs-Mg-TTD" secondAttribute="centerY" id="fjv-7b-9CR"/>
@@ -144,7 +147,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="lpw-L5-Fc5">
-                        <barButtonItem key="rightBarButtonItem" title="Parar" style="plain" id="9Go-Uw-0Bm">
+                        <barButtonItem key="rightBarButtonItem" title="Parar" id="9Go-Uw-0Bm">
                             <connections>
                                 <action selector="endPractice:" destination="6Jy-aR-Dz0" id="jxZ-PQ-Dzh"/>
                             </connections>
@@ -307,7 +310,6 @@
     <resources>
         <image name="decks_AB" width="234" height="183"/>
         <image name="iconA" width="33" height="33"/>
-        <image name="return" catalog="system" width="128" height="101"/>
         <namedColor name="background">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
