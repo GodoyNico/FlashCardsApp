@@ -239,4 +239,26 @@ extension MyDecksViewController: UISearchBarDelegate {
         self.myDecksCollectionView.reloadData()
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.myDecks.removeAll()
+        
+        for item in self.realData {
+            
+            guard let title = item.title else {
+                continue
+            }
+            
+            if title.lowercased().contains(searchBar.text!.lowercased()) {
+                self.myDecks.append(item)
+            }
+        }
+        
+        if (searchBar.text!.isEmpty) {
+            self.myDecks = self.realData
+        }
+        
+        myDecksCollectionView.reloadSections(IndexSet(integer: 3))
+        
+    }
+    
 }
