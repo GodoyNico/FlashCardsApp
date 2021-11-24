@@ -94,13 +94,20 @@ class PracticeViewController: UIViewController {
             newPractice.card = card
             card.addToProgress(newPractice)
             
-            if card.progress_counter == 5 {
-                if let deck = card.deck {
-                    deck.progress_counter = deck.progress_counter - 1
+//            if card.progress_counter == 5 {
+//                if let deck = card.deck {
+//                    deck.progress_counter = deck.progress_counter - 1
+//                }
+//                card.progress_counter = card.progress_counter - 1
+//            } else if card.progress_counter > 0 {
+//                card.progress_counter = card.progress_counter - 1
+//            }
+            
+            if card.progress_counter == 1 {
+                card.progress_counter = 0
+                if let deck = card.deck  {
+                    deck.progress_counter -= 1
                 }
-                card.progress_counter = card.progress_counter - 1
-            } else if card.progress_counter > 0 {
-                card.progress_counter = card.progress_counter - 1
             }
             
             do {
@@ -128,13 +135,20 @@ class PracticeViewController: UIViewController {
             newPractice.card = card
             card.addToProgress(newPractice)
             
-            if card.progress_counter < 5 {
-                if card.progress_counter == 4 {
-                    if let deck = card.deck  {
-                        deck.progress_counter = deck.progress_counter + 1
-                    }
+//            if card.progress_counter < 5 {
+//                if card.progress_counter == 4 {
+//                    if let deck = card.deck  {
+//                        deck.progress_counter = deck.progress_counter + 1
+//                    }
+//                }
+//                card.progress_counter = card.progress_counter + 1
+//            }
+            
+            if card.progress_counter == 0 {
+                card.progress_counter = 1
+                if let deck = card.deck  {
+                    deck.progress_counter += 1
                 }
-                card.progress_counter = card.progress_counter + 1
             }
             
             do {
@@ -195,7 +209,6 @@ class PracticeViewController: UIViewController {
     
     func fetchCards() {
         self.cards = self.deck?.cards?.allObjects as! [Card]
-
     }
     
     func toPractice() {
