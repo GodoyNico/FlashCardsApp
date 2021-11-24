@@ -27,6 +27,7 @@ class MyDecksViewController: UIViewController {
         fetchDecks()
         
         self.myDecksCollectionView.contentInset.bottom += 100
+        self.hideKeyboardWhenTappedAround()
 
     }
     
