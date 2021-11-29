@@ -724,8 +724,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlashCards/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Winnie Card";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Permissão para usar a câmera";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Permissão para acessar a galeria";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access if you want to take a picture and add to your card";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow access if you want to add an image to your card";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -742,7 +742,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -757,8 +757,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlashCards/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Winnie Card";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Permissão para usar a câmera";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Permissão para acessar a galeria";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access if you want to take a picture and add to your card";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow access if you want to add an image to your card";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -775,7 +775,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
